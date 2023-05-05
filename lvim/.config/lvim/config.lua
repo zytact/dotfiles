@@ -24,7 +24,6 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- Bufferline
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
 
 -- For moving(not cutting and pasting) blocks of code at once
 lvim.keys.visual_mode["J"] = ":m '>+1<CR>gv=gv"
