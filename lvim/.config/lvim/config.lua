@@ -5,6 +5,8 @@ require('keymaps')
 require('formatting-linting')
 require('plugins')
 require('debug')
+require('lsp')
+require('commands')
 
 -- ---configure a server manually. IMPORTANT: Requires `:LvimCacheReset` to take effect
 -- ---see the full default list `:lua =lvim.lsp.automatic_configuration.skipped_servers`
