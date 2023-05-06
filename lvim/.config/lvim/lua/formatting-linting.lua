@@ -14,6 +14,7 @@ linters.setup {
   {
     command = "shellcheck",
     args = { "--severity", "warning" },
+    filetypes = { "sh" }
   },
 }
 -- local code_actions = require "lvim.lsp.null-ls.code_actions"
