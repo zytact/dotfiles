@@ -1,13 +1,17 @@
 -- -- linters, formatters and code actions <https://www.lunarvim.org/docs/configuration/language-features/linting-and-formatting>
--- local formatters = require "lvim.lsp.null-ls.formatters"
--- formatters.setup {
---   { command = "stylua" },
---   {
---     command = "prettier",
---     extra_args = { "--print-width", "100" },
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  {
+    command = "rustfmt",
+    filetypes = { "rust" }
+  },
+  -- { command = "stylua" },
+  --   {
+  --     command = "prettier",
+  --     extra_args = { "--print-width", "100" },
+  --     filetypes = { "typescript", "typescriptreact" },
+  --   },
+}
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   -- { command = "flake8", filetypes = { "python" } },
