@@ -1,5 +1,5 @@
 -- -- Change theme settings
-lvim.colorscheme = "rose-pine-moon"
+lvim.colorscheme = "ayu-mirage"
 lvim.transparent_window = true
 lvim.builtin.lualine.style = "lvim"
 

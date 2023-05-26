@@ -25,5 +25,6 @@ lvim.plugins = {
     config = function()
       require('colorizer').setup()
     end
-  }
+  },
+  { "Shatur/neovim-ayu" }
 }
