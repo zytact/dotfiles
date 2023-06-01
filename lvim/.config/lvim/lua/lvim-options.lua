@@ -1,10 +1,5 @@
 -- general lvim options
 lvim.log.level = "info"
-lvim.format_on_save = {
-  enabled = true,
-  pattern = { "*.lua", "*.rs" },
-  timeout = 1000,
-}
 
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
