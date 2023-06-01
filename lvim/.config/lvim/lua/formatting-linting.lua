@@ -11,6 +11,10 @@ formatters.setup {
     command = "rustfmt",
     filetypes = { "rust" }
   },
+  {
+    name = "autopep8",
+    filetypes = { "python" }
+  }
   -- { command = "stylua" },
   --   {
   --     command = "prettier",
