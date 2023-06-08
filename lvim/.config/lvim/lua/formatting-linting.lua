@@ -8,7 +8,7 @@ lvim.format_on_save = {
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
-    command = "rustfmt",
+    name = "rustfmt",
     filetypes = { "rust" }
   },
   {
