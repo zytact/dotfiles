@@ -2,4 +2,6 @@ export PATH="$HOME/.local/bin:$PATH"
 . "$HOME/.cargo/env"
 
 export PATH="$HOME/.node_modules/bin:$PATH"
+export PATH="/usr/local/node/bin:$PATH"
+
 export EDITOR="lvim"
