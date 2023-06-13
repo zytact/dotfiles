@@ -12,4 +12,4 @@ lvim.builtin.treesitter.auto_install = true
 -- -- generic LSP settings <https://www.lunarvim.org/docs/configuration/language-features/language-servers>
 
 -- --- disable automatic installation of servers
--- lvim.lsp.installer.setup.automatic_installation = false
+lvim.lsp.installer.setup.automatic_installation = false
