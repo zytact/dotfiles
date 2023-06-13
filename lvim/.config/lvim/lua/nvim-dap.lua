@@ -35,3 +35,9 @@ lvim.builtin.dap.on_config_done = function(dap)
     dap.configurations.c = dap.configurations.cpp
     dap.configurations.rust = dap.configurations.cpp
 end
+
+-- Configure python debug
+local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
+pcall(function()
+    require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
+end)
