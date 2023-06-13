@@ -1,6 +1,6 @@
 lvim.format_on_save = {
   enabled = true,
-  pattern = { "*.lua", "*.rs", "*.py" },
+  pattern = { "*.lua", "*.rs", "*.py", "*.js", ".ts", "*.cpp" },
   timeout = 1000,
 }
 
