@@ -4,7 +4,7 @@ require('lvim-options')
 require('keymaps')
 require('formatting-linting')
 require('plugins')
-require('debug')
+require('nvim-dap')
 require('lsp')
 require('commands')
 
