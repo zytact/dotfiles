@@ -24,7 +24,7 @@ lvim.plugins = {
         end
     },
     { "Shatur/neovim-ayu" },
-    { "mfussenegger/nvim-dap-python" }
+    { "mfussenegger/nvim-dap-python" },
     {
         'akinsho/flutter-tools.nvim',
         lazy = false,
