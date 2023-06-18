@@ -1,5 +1,5 @@
 -- -- Change theme settings
-lvim.colorscheme = "onedark"
+lvim.colorscheme = "catppuccin"
 -- lvim.transparent_window = false
 lvim.builtin.lualine.style = "lvim"
 
@@ -11,14 +11,20 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- Onedark
-require('onedark').setup {
-  style = 'deep',
-  transparent = true,
-  code_style = {
-    comments = 'italic',
-    keywords = 'bold',
-    functions = 'bold',
-    strings = 'italic',
-    variables = 'none'
-  }
-}
+-- require('onedark').setup {
+--   style = 'deep',
+--   transparent = true,
+--   code_style = {
+--     comments = 'italic',
+--     keywords = 'bold',
+--     functions = 'bold',
+--     strings = 'italic',
+--     variables = 'none'
+--   }
+-- }
+
+-- catppuccin
+require('catppuccin').setup({
+    flavour = "mocha",
+    transparent_background = true
+})
