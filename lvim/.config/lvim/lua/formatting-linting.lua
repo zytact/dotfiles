@@ -31,11 +31,12 @@ linters.setup {
         args = { "--severity", "warning" },
         filetypes = { "sh" }
     },
+    { name = "eslint_d" }
 }
--- local code_actions = require "lvim.lsp.null-ls.code_actions"
--- code_actions.setup {
---   {
---     exe = "eslint",
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
+local code_actions = require "lvim.lsp.null-ls.code_actions"
+code_actions.setup {
+    {
+        exe = "eslint_d",
+        filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "astro" },
+    },
+}
