@@ -1,5 +1,10 @@
 -- Debug configuration
+
 lvim.builtin.dap.on_config_done = function(dap)
+    dap.listeners.before.event_terminated["dapui_config"] = function()
+        require 'dapui'.close()
+    end
+
     -- Configure codelldb for C/C++/Rust
     dap.adapters.codelldb = {
         type = "server",
