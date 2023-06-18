@@ -18,10 +18,11 @@ formatters.setup {
     {
         name = "prettier",
         extra_args = { "--print-width", "100" },
-        filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" }
+        filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "astro" }
     },
     -- { command = "stylua" },
 }
+
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     -- { command = "flake8", filetypes = { "python" } },
