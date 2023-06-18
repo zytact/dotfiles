@@ -17,3 +17,6 @@ lvim.builtin.which_key.mappings["gf"] = { "<cmd>Telescope git_files<CR>", "Find 
 lvim.builtin.which_key.mappings["U"] = { "<cmd>UndotreeToggle<CR>", "Toggle UndoTree" }
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+
+-- Hover
+lvim.keys.normal_mode["K"] = ":lua vim.lsp.buf.hover()<CR>"
