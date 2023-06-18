@@ -7,6 +7,7 @@ require('plugins')
 require('nvim-dap')
 require('lsp')
 require('commands')
+require('flutter')
 
 -- ---configure a server manually. IMPORTANT: Requires `:LvimCacheReset` to take effect
 -- ---see the full default list `:lua =lvim.lsp.automatic_configuration.skipped_servers`
