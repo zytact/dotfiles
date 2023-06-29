@@ -108,7 +108,7 @@ fastfetch
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias v="lvim"
+alias v='lvim "$(find . -type f | fzf)"'
 alias caps-to-shift='xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"'
 alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
 alias ls='exa -l --color=always --group-directories-first --icons'
