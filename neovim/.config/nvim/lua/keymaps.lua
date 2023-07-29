@@ -31,3 +31,6 @@ vim.keymap.set('n', 'L', '<cmd>BufferLineCycleNext<cr>', {})
 
 -- Floaterm
 vim.keymap.set('n', '<M-3>', '<cmd>FloatermToggle<cr>', {})
+
+-- Netrw
+vim.keymap.set('n', '<leader>e', '<cmd>Lexplore<cr>', {})
