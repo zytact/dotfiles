@@ -1,11 +1,2 @@
-require('plugins')
-require('appearance')
-require('nvim-options')
-require('keymaps')
-require('gitsigns-conf')
-require('lsp')
-require('comment')
-require('autotag')
-require('nvim-colorizer')
-require('bufferline-conf')
-require('flutter')
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

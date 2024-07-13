@@ -1,0 +1,22 @@
+// Static tasks configuration.
+//
+[
+  {
+    "label": "Compile and Run C File",
+    "command": "gcc $ZED_FILE -o $ZED_STEM && ./$ZED_STEM",
+    "env": {},
+    "cwd": "$ZED_DIRNAME",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Run Current Python File",
+    "command": "python3 $ZED_FILE",
+    "env": {},
+    "cwd": "$ZED_DIRNAME",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  }
+]
