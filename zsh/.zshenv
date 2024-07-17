@@ -7,3 +7,4 @@ export PATH="$ANDROID_HOME/platform-tools:$PATH"
 
 export EDITOR="nvim"
 export NVIM_APPNAME="lazyvim"
+. "$HOME/.cargo/env"
