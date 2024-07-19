@@ -9,10 +9,10 @@
     "use_new_terminal": false,
     "allow_concurrent_runs": false,
     "reveal": "always"
-  },
+  }
   {
-    "label": "Run Current Python File",
-    "command": "python3 $ZED_FILE",
+    "label": "Serve HTML",
+    "command": "python3 -m http.server 8080",
     "env": {},
     "cwd": "$ZED_DIRNAME",
     "use_new_terminal": false,

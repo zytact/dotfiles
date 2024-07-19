@@ -7,13 +7,52 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "base_keymap": "VSCode",
   "vim_mode": true,
   "relative_line_numbers": true,
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 14.5,
   "buffer_font_features": {
     "calt": true
   },
   "theme": "Tokyo Night",
-  "autosave": "on_focus_change"
+  "autosave": "on_focus_change",
+  "experimental.theme_overrides": {
+    "background.appearance": "transparent",
+    "background": "#1a1a2799",
+    "editor.background": "#00000099",
+    "toolbar.background": "#00000099",
+    "panel.background": "#00000099",
+    "tab.inactive_background": "#00000000",
+    "editor.gutter.background": "#00000099",
+    "title_bar.background": "#00000099",
+    "terminal.background": "#00000099",
+    "status_bar.background": "#00000099"
+  },
+
+  "features": {
+    "inline_completion_provider": "copilot"
+  },
+
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": ".venv/bin/python"
+        }
+      }
+    }
+  },
+
+  "languages": {
+    "Python": {
+      "formatter": {
+        "external": {
+          "command": "black",
+          "arguments": ["-"]
+        }
+      },
+      "format_on_save": "on"
+    }
+  }
 }
