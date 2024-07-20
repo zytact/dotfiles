@@ -1,12 +1,10 @@
 return {
   {
-    "marko-cerovac/material.nvim",
+    "catppuccin/nvim",
     config = function()
-      vim.g.material_style = "deep ocean"
-      require("material").setup({
-        disable = {
-          background = true,
-        },
+      require("catppuccin").setup({
+        flavour = "mocha",
+        transparent_background = true,
       })
     end,
   },
@@ -14,7 +12,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "material",
+      colorscheme = "catppuccin",
     },
   },
 }
