@@ -4,8 +4,10 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 12
+config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Medium" })
+
+config.font_size = 12.2
+config.freetype_load_flags = "NO_HINTING"
 
 -- Maximize window
 local mux = wezterm.mux
@@ -63,6 +65,22 @@ config.colors = {
 		new_tab = {
 			bg_color = "#7a8f12",
 			fg_color = "#9eabac",
+		},
+	},
+}
+
+-- Background image
+config.background = {
+	{
+		source = {
+			File = "/home/arnab/Pictures/termwalls/sao.png",
+		},
+		repeat_x = "NoRepeat",
+		repeat_y = "NoRepeat",
+		vertical_align = "Middle",
+		horizontal_align = "Center",
+		hsb = {
+			brightness = 0.05,
 		},
 	},
 }
