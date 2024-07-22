@@ -116,6 +116,8 @@ alias ls='exa -l --color=always --group-directories-first --icons'
 alias uploadDatabase="rclone sync -v ~/Documents/KeePassXC GDrive:KeePassXC"
 alias downloadDatabase="rclone sync -v GDrive:KeePassXC ~/Documents/KeePassXC"
 alias fd="fdfind"
+alias cd="z"
 
+eval "$(zoxide init zsh)"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
