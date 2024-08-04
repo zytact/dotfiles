@@ -6,7 +6,8 @@ local config = wezterm.config_builder()
 
 config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Medium" })
 
-config.font_size = 12.2
+config.font_size = 11.5
+config.line_height = 1.4
 config.freetype_load_flags = "NO_HINTING"
 
 -- Maximize window
@@ -47,24 +48,25 @@ config.tab_bar_at_bottom = true
 -- Do not use fancy tab bar
 config.use_fancy_tab_bar = false
 config.window_decorations = "RESIZE"
+config.window_background_opacity = 1
 
 -- Set colorscheme
 config.color_scheme = "Solarized Dark - Patched"
 
 config.colors = {
 	tab_bar = {
-		background = "#00151a",
+		background = "#1e1e2e",
 		active_tab = {
-			bg_color = "#00151a",
-			fg_color = "#ff9a99",
+			bg_color = "#525677",
+			fg_color = "#89b4fa",
 		},
 		inactive_tab = {
-			bg_color = "#002b37",
-			fg_color = "#268bd3",
+			bg_color = "#1e1e2e",
+			fg_color = "#80ac81",
 		},
 		new_tab = {
-			bg_color = "#7a8f12",
-			fg_color = "#9eabac",
+			bg_color = "#1e1e2e",
+			fg_color = "#dc9f7b",
 		},
 	},
 }
@@ -73,7 +75,7 @@ config.colors = {
 config.background = {
 	{
 		source = {
-			File = "/home/arnab/Pictures/termwalls/sao.png",
+			File = "/home/arnab/Pictures/termwalls/lake.png",
 		},
 		repeat_x = "NoRepeat",
 		repeat_y = "NoRepeat",
