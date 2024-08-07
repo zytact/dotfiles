@@ -1,15 +1,15 @@
 return {
-  {
-    "supermaven-inc/supermaven-nvim",
-    config = function()
-      require("supermaven-nvim").setup({
-        keymaps = {
-          accept_suggestion = "<C-a>",
-        },
-      })
-      require("supermaven-nvim.api").use_free_version()
-    end,
-  },
+  -- {
+  --   "supermaven-inc/supermaven-nvim",
+  --   config = function()
+  --     require("supermaven-nvim").setup({
+  --       keymaps = {
+  --         accept_suggestion = "<C-a>",
+  --       },
+  --     })
+  --     require("supermaven-nvim.api").use_free_version()
+  --   end,
+  -- },
   {
     "mbbill/undotree",
     config = function()
@@ -106,5 +106,41 @@ return {
       logo = string.rep("\n", 8) .. logo .. "\n\n"
       opts.config.header = vim.split(logo, "\n")
     end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "bash",
+        "c",
+        "cpp",
+        "java",
+        "html",
+        "css",
+        "typescript",
+        "javascript",
+        "lua",
+        "luadoc",
+        "jsdoc",
+        "json",
+        "python",
+        "regex",
+        "rust",
+        "markdown",
+        "markdown_inline",
+        "toml",
+        "yaml",
+        "tsx",
+        "vim",
+        "vimdoc",
+        "xml",
+        "diff",
+        "printf",
+        "query",
+        "luap",
+        "jsonc",
+        "kotlin",
+      },
+    },
   },
 }

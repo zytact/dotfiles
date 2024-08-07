@@ -9,19 +9,23 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   "craftzdog/solarized-osaka.nvim",
+  --   config = function()
+  --     require("solarized-osaka").setup({
+  --       transparent = true,
+  --     })
+  --   end,
+  -- },
+
   {
-    "craftzdog/solarized-osaka.nvim",
-    config = function()
-      require("solarized-osaka").setup({
-        transparent = true,
-      })
-    end,
+    "Shatur/neovim-ayu",
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "solarized-osaka",
+      colorscheme = "ayu-dark",
     },
   },
 }
