@@ -72,19 +72,19 @@ config.colors = {
 }
 
 -- Background image
--- config.background = {
--- 	{
--- 		source = {
--- 			File = "/home/arnab/Pictures/termwalls/luffy (1).png",
--- 		},
--- 		repeat_x = "NoRepeat",
--- 		repeat_y = "NoRepeat",
--- 		vertical_align = "Middle",
--- 		horizontal_align = "Center",
--- 		hsb = {
--- 			brightness = 0.05,
--- 		},
--- 	},
--- }
+config.background = {
+	{
+		source = {
+			File = "/home/arnab/Pictures/termwalls/lake.png",
+		},
+		repeat_x = "NoRepeat",
+		repeat_y = "NoRepeat",
+		vertical_align = "Middle",
+		horizontal_align = "Center",
+		hsb = {
+			brightness = 0.02,
+		},
+	},
+}
 
 return config
