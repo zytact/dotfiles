@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Medium" })
 
 config.font_size = 11.5
-config.line_height = 1.4
+config.line_height = 1.2
 config.freetype_load_flags = "NO_HINTING"
 
 -- Maximize window
