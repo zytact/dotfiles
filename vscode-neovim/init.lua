@@ -41,3 +41,10 @@ vim.api.nvim_set_keymap(
 	'<Cmd>lua require("vscode").call("workbench.action.gotoSymbol")<CR>',
 	{ noremap = true }
 )
+
+vim.api.nvim_set_keymap(
+	"n",
+	"gr",
+	'<Cmd>lua require("vscode").call("editor.action.goToReferences")<CR>',
+	{ noremap = true }
+)
