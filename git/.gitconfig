@@ -20,3 +20,6 @@
     colorMoved = default
 [init]
 	defaultBranch = main
+[user]
+	name = Arnab Chakraborty
+	email = iam-arnab@outlook.com
