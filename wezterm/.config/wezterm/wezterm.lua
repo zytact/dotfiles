@@ -75,14 +75,14 @@ config.colors = {
 config.background = {
 	{
 		source = {
-			File = "/home/arnab/Pictures/termwalls/lake.png",
+			File = "/home/arnab/Pictures/termwalls/japan.png",
 		},
 		repeat_x = "NoRepeat",
 		repeat_y = "NoRepeat",
 		vertical_align = "Middle",
 		horizontal_align = "Center",
 		hsb = {
-			brightness = 0.02,
+			brightness = 0.1,
 		},
 	},
 }
