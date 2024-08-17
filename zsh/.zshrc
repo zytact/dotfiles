@@ -109,6 +109,7 @@ fastfetch
 # For a full list of active aliases, run `alias`.
 
 alias v='nvim "$(find . -type f | fzf)"'
+alias lg='lazygit'
 alias vim='nvim'
 alias caps-to-shift='xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"'
 alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
