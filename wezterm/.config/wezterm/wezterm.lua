@@ -73,19 +73,19 @@ config.colors = {
 }
 
 -- Background image
-config.background = {
-	{
-		source = {
-			File = "/home/arnab/Pictures/termwalls/japan.png",
-		},
-		repeat_x = "NoRepeat",
-		repeat_y = "NoRepeat",
-		vertical_align = "Middle",
-		horizontal_align = "Center",
-		hsb = {
-			brightness = 0.1,
-		},
-	},
-}
+-- config.background = {
+-- 	{
+-- 		source = {
+-- 			File = "/home/arnab/Pictures/termwalls/alex-knight-japan.png",
+-- 		},
+-- 		repeat_x = "NoRepeat",
+-- 		repeat_y = "NoRepeat",
+-- 		vertical_align = "Middle",
+-- 		horizontal_align = "Center",
+-- 		hsb = {
+-- 			brightness = 0.05,
+-- 		},
+-- 	},
+-- }
 
 return config
