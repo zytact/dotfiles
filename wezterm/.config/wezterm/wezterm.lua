@@ -47,6 +47,7 @@ end)
 config.tab_bar_at_bottom = true
 -- Do not use fancy tab bar
 config.use_fancy_tab_bar = false
+config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 1
 
