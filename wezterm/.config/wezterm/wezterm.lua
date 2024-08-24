@@ -52,7 +52,7 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 1
 
 -- Set colorscheme
-config.color_scheme = "Ayu Dark (Gogh)"
+config.color_scheme = "VibrantInk"
 
 config.colors = {
 	tab_bar = {
