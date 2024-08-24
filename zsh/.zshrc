@@ -1,27 +1,17 @@
+# Autoload zsh-hook
+autoload -Uz add-zsh-hook
+
 # Enable Zellij
 eval "$(zellij setup --generate-auto-start zsh)"
 
-zellij_tab_name_update() {
-  if [[ -n $ZELLIJ ]]; then
-    tab_name=''
-    if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-        tab_name+=$(basename "$(git rev-parse --show-toplevel)")/
-        tab_name+=$(git rev-parse --show-prefix)
-        tab_name=${tab_name%/}
-    else
-        tab_name=$PWD
-            if [[ $tab_name == $HOME ]]; then
-         	tab_name="~"
-             else
-         	tab_name=${tab_name##*/}
-             fi
+
+zellij_preexec() {
+    if [[ -n $ZELLIJ ]]; then
+        zellij action rename-tab "$1"
     fi
-    command nohup zellij action rename-tab $tab_name >/dev/null 2>&1
-  fi
 }
 
-zellij_tab_name_update
-chpwd_functions+=(zellij_tab_name_update)
+add-zsh-hook preexec zellij_preexec
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -105,6 +95,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
 	git
 	zsh-autosuggestions
+    fzf-tab
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -126,7 +117,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-fastfetch
+neofetch
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -146,6 +137,8 @@ alias cd="z"
 
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
+bindkey -r '^T'
+bindkey '^A' fzf-file-widget
 
 eval "$(zoxide init zsh)"
 
