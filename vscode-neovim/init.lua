@@ -23,7 +23,14 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap(
 	"n",
-	"<leader>c",
+	"<leader>ce",
+	'<Cmd>lua require("vscode").call("inlineChat.start")<CR>',
+	{ noremap = true }
+)
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>cs",
 	'<Cmd>lua require("vscode").call("workbench.panel.chat.view.copilot.focus")<CR>',
 	{ noremap = true }
 )
@@ -46,5 +53,12 @@ vim.api.nvim_set_keymap(
 	"n",
 	"gr",
 	'<Cmd>lua require("vscode").call("editor.action.goToReferences")<CR>',
+	{ noremap = true }
+)
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>p",
+	'<Cmd>lua require("vscode").call("piecesCopilot.focus")<CR>',
 	{ noremap = true }
 )
