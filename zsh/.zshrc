@@ -1,17 +1,17 @@
-# Autoload zsh-hook
-autoload -Uz add-zsh-hook
-
-# Enable Zellij
-eval "$(zellij setup --generate-auto-start zsh)"
-
-
-zellij_preexec() {
-    if [[ -n $ZELLIJ ]]; then
-        zellij action rename-tab "$1"
-    fi
-}
-
-add-zsh-hook preexec zellij_preexec
+# # Autoload zsh-hook
+# autoload -Uz add-zsh-hook
+#
+# # Enable Zellij
+# eval "$(zellij setup --generate-auto-start zsh)"
+#
+#
+# zellij_preexec() {
+#     if [[ -n $ZELLIJ ]]; then
+#         zellij action rename-tab "$1"
+#     fi
+# }
+#
+# add-zsh-hook preexec zellij_preexec
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]

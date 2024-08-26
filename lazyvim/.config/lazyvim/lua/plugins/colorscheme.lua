@@ -4,7 +4,7 @@ return {
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
-        transparent_background = false,
+        transparent_background = true,
       })
     end,
   },
@@ -44,6 +44,21 @@ return {
         options = {
           transparent = true,
         },
+      })
+    end,
+  },
+
+  {
+    "olivercederborg/poimandres.nvim",
+  },
+
+  {
+    "Mofiqul/vscode.nvim",
+    config = function()
+      vim.o.background = "dark"
+      local c = require("vscode.colors").get_colors()
+      require("vscode").setup({
+        transparent = true,
       })
     end,
   },

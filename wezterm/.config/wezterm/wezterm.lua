@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Medium" })
 
 config.font_size = 12
-config.line_height = 1.2
+config.line_height = 1.3
 config.freetype_load_flags = "NO_HINTING"
 
 -- Maximize window
@@ -52,7 +52,7 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 1
 
 -- Set colorscheme
-config.color_scheme = "VibrantInk"
+config.color_scheme = "Poimandres"
 
 config.colors = {
 	tab_bar = {
