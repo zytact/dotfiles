@@ -30,6 +30,13 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap(
 	"n",
+	"<leader>ce",
+	'<Cmd>lua require("vscode").call("inlineChat.start")<CR>',
+	{ noremap = true }
+)
+
+vim.api.nvim_set_keymap(
+	"n",
 	"<leader>cs",
 	'<Cmd>lua require("vscode").call("workbench.panel.chat.view.copilot.focus")<CR>',
 	{ noremap = true }

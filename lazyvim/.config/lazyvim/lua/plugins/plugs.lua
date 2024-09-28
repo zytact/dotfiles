@@ -1,15 +1,15 @@
 return {
-  {
-    "supermaven-inc/supermaven-nvim",
-    config = function()
-      require("supermaven-nvim").setup({
-        keymaps = {
-          accept_suggestion = "<C-a>",
-        },
-      })
-      require("supermaven-nvim.api").use_free_version()
-    end,
-  },
+  -- {
+  --   "supermaven-inc/supermaven-nvim",
+  --   config = function()
+  --     require("supermaven-nvim").setup({
+  --       keymaps = {
+  --         accept_suggestion = "<C-a>",
+  --       },
+  --     })
+  --     require("supermaven-nvim.api").use_free_version()
+  --   end,
+  -- },
   {
     "mbbill/undotree",
     config = function()
@@ -53,34 +53,6 @@ return {
     },
   },
 
-  {
-    -- Add a Treesitter parser for Laravel Blade to provide Blade syntax highlighting.
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
-        "blade",
-        "php_only",
-      })
-    end,
-    config = function(_, opts)
-      vim.filetype.add({
-        pattern = {
-          [".*%.blade%.php"] = "blade",
-        },
-      })
-
-      require("nvim-treesitter.configs").setup(opts)
-      local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-      parser_config.blade = {
-        install_info = {
-          url = "https://github.com/EmranMR/tree-sitter-blade",
-          files = { "src/parser.c" },
-          branch = "main",
-        },
-        filetype = "blade",
-      }
-    end,
-  },
   {
     "adalessa/laravel.nvim",
     dependencies = {
@@ -157,6 +129,12 @@ return {
         "kotlin",
       },
     },
+  },
+  {
+    "pieces-app/plugin_neo_vim",
+    config = function()
+      require("pieces.config").host = "http://localhost:1000"
+    end,
   },
   {
     "akinsho/bufferline.nvim",

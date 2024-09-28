@@ -1,3 +1,4 @@
+eval "$(starship init zsh)"
 # # Autoload zsh-hook
 # autoload -Uz add-zsh-hook
 #
@@ -16,9 +17,6 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -30,7 +28,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -95,7 +93,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
 	git
 	zsh-autosuggestions
-    fzf-tab
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-neofetch
+fastfetch
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -127,6 +124,7 @@ neofetch
 alias v='nvim "$(find . -type f | fzf)"'
 alias lg='lazygit'
 alias vim='nvim'
+alias cat='bat'
 alias caps-to-shift='xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"'
 alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
 alias ls='eza -l --color=always --group-directories-first --icons'
@@ -134,20 +132,19 @@ alias uploadDatabase="rclone sync -v ~/Documents/KeePassXC GDrive:KeePassXC"
 alias downloadDatabase="rclone sync -v GDrive:KeePassXC ~/Documents/KeePassXC"
 alias fd="fdfind"
 alias cd="z"
+alias ncspot="flatpak run io.github.hrkfdn.ncspot"
+alias spot="spotify_player"
+eval "$(gh copilot alias -- zsh)"
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+# source /usr/share/doc/fzf/examples/key-bindings.zsh
+# source /usr/share/doc/fzf/examples/completion.zsh
 bindkey -r '^T'
 bindkey '^A' fzf-file-widget
 
 eval "$(zoxide init zsh)"
 
 eval $(thefuck --alias)
-# You can use whatever you want as an alias, like for Mondays:
-eval $(thefuck --alias FUCK)
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # pnpm
 export PNPM_HOME="/home/arnab/.local/share/pnpm"
