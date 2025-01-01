@@ -1,0 +1,5 @@
+theme = vesper
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12
+window-theme = ghostty
+adw-toolbar-style = flat
