@@ -43,6 +43,11 @@ return {
       require("nightfox").setup({
         options = {
           transparent = true,
+          styles = {
+            comments = "italic",
+            keywords = "bold",
+            types = "italic,bold",
+          },
         },
       })
     end,
@@ -59,6 +64,18 @@ return {
       local c = require("vscode.colors").get_colors()
       require("vscode").setup({
         transparent = true,
+      })
+    end,
+  },
+
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+      require("rose-pine").setup({
+        styles = {
+          transparency = true,
+        },
       })
     end,
   },

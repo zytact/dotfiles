@@ -54,18 +54,6 @@ return {
   },
 
   {
-    "adalessa/laravel.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-      "tpope/vim-dotenv",
-      "MunifTanjim/nui.nvim",
-      "nvimtools/none-ls.nvim",
-    },
-    cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
-    event = { "VeryLazy" },
-    config = true,
-  },
-  {
     -- Add the blade-nav.nvim plugin which provides Goto File capabilities
     -- for Blade files.
     "ricardoramirezr/blade-nav.nvim",
@@ -75,25 +63,6 @@ return {
     ft = { "blade", "php" },
   },
 
-  {
-    "nvimdev/dashboard-nvim",
-    opts = function(_, opts)
-      local logo = [[
-
-
-███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
-████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
-██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
-██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
-██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
-╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
-                                                  
-        ]]
-
-      logo = string.rep("\n", 8) .. logo .. "\n\n"
-      opts.config.header = vim.split(logo, "\n")
-    end,
-  },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -131,10 +100,34 @@ return {
     },
   },
   {
-    "pieces-app/plugin_neo_vim",
+    "pieces-app/plugin_neovim",
+    lazy = false,
+    priority = 1000,
     config = function()
       require("pieces.config").host = "http://localhost:1000"
     end,
+  },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    opts = {
+      model = "claude-3.5-sonnet",
+    },
+  },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      dashboard = {
+        preset = {
+          header = [[
+███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
+        },
+      },
+    },
   },
   {
     "akinsho/bufferline.nvim",
