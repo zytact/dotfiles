@@ -93,6 +93,7 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=(
 	git
 	zsh-autosuggestions
+    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -138,8 +139,6 @@ eval "$(gh copilot alias -- zsh)"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh
-bindkey -r '^T'
-bindkey '^A' fzf-file-widget
 
 eval "$(zoxide init zsh)"
 
