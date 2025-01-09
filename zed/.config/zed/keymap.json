@@ -18,5 +18,16 @@
       // "j k": ["workspace::SendKeystrokes", "escape"]
       "space e": "workspace::ToggleLeftDock"
     }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "shift-s": [
+        "vim::PushOperator",
+        {
+          "AddSurrounds": {}
+        }
+      ]
+    }
   }
 ]
