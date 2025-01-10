@@ -41,6 +41,23 @@ return {
     end,
   },
   {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "vtsls",
+        "clangd",
+        "emmet-language-server",
+        "html-lsp",
+        "json-lsp",
+        "eslint-lsp",
+        "css-lsp",
+        "prettier",
+        "tailwindcss-language-server",
+        "pyright",
+      },
+    },
+  },
+  {
     "neovim/nvim-lspconfig",
     opts = {
       inlay_hints = { enabled = false },
