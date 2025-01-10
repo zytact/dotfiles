@@ -95,11 +95,21 @@ return {
       })
     end,
   },
+  {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    opts = ...,
+    config = function()
+      require("gruvbox").setup({
+        transparent_mode = true,
+      })
+    end,
+  },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "carbonfox",
+      colorscheme = "gruvbox",
     },
   },
 }
