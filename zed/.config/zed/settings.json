@@ -92,6 +92,10 @@
       ]
     }
   },
+  "inlay_hints": {
+    "enabled": true,
+    "show_background": true
+  },
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
