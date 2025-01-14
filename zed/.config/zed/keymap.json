@@ -10,7 +10,8 @@
     "context": "Editor && vim_mode == normal && !VimWaiting && !VimObject",
     "bindings": {
       "space e": "workspace::ToggleLeftDock",
-      "space r": "editor::Rename"
+      "space r": "editor::Rename",
+      "ctrl-^": "pane::AlternateFile"
     }
   },
   {
@@ -22,6 +23,12 @@
           "AddSurrounds": {}
         }
       ]
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
     }
   },
   {

@@ -16,6 +16,9 @@
     "version": "2"
   },
   "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "never"
+  },
   "telemetry": {
     "metrics": false
   },
@@ -23,7 +26,10 @@
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_weight": 400,
-  "buffer_font_size": 14,
+  "buffer_font_size": 15,
+  "tab_bar": {
+    "show": false
+  },
   "buffer_line_height": {
     "custom": 1.5
   },
@@ -31,7 +37,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Andromeda"
+    "dark": "Rosé Pine"
   },
   "languages": {
     "JavaScript": {
@@ -94,14 +100,19 @@
   },
   "inlay_hints": {
     "enabled": true,
-    "show_background": true
+    "show_background": false,
+    "show_type_hints": false
   },
+  "auto_signature_help": true,
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
         "font_style": "italic"
       },
       "comment.doc": {
+        "font_style": "italic"
+      },
+      "keyword": {
         "font_style": "italic"
       }
     }
