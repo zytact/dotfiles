@@ -49,18 +49,31 @@ return {
         "emmet-language-server",
         "html-lsp",
         "json-lsp",
-        "eslint-lsp",
+        "eslint_d",
         "css-lsp",
         "prettier",
         "tailwindcss-language-server",
         "pyright",
+        "black",
+        "ruff",
       },
     },
   },
   {
     "neovim/nvim-lspconfig",
     opts = {
-      inlay_hints = { enabled = false },
+      inlay_hints = { enabled = true },
+      servers = {
+        vtsls = {
+          settings = {
+            typescript = {
+              inlayHints = {
+                parameterNames = { enabled = "all" },
+              },
+            },
+          },
+        },
+      },
     },
   },
 }
