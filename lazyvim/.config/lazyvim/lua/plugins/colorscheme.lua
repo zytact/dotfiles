@@ -4,7 +4,7 @@ return {
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
-        transparent_background = true,
+        transparent_background = false,
       })
     end,
   },
@@ -42,7 +42,7 @@ return {
     config = function()
       require("nightfox").setup({
         options = {
-          transparent = true,
+          transparent = false,
           styles = {
             comments = "italic",
             keywords = "bold",
@@ -63,7 +63,7 @@ return {
       vim.o.background = "dark"
       local c = require("vscode.colors").get_colors()
       require("vscode").setup({
-        transparent = true,
+        transparent = false,
       })
     end,
   },
@@ -74,7 +74,7 @@ return {
     config = function()
       require("rose-pine").setup({
         styles = {
-          transparency = true,
+          transparency = false,
         },
       })
     end,
@@ -101,8 +101,14 @@ return {
     opts = ...,
     config = function()
       require("gruvbox").setup({
-        transparent_mode = true,
+        transparent_mode = false,
       })
+    end,
+  },
+  {
+    "marko-cerovac/material.nvim",
+    config = function()
+      vim.g.material_style = "deep ocean"
     end,
   },
   {
