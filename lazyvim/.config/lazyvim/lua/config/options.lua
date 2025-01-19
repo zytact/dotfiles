@@ -10,3 +10,7 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.g.autoformat = true
 vim.o.exrc = true
+
+if vim.g.neovide then
+  vim.o.guifont = "JetBrainsMono Nerd Font:h11"
+end
