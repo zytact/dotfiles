@@ -136,6 +136,7 @@ alias fd="fdfind"
 alias cd="z"
 alias ncspot="flatpak run io.github.hrkfdn.ncspot"
 alias spot="spotify_player"
+alias vide="neovide --fork --maximized"
 eval "$(gh copilot alias -- zsh)"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
