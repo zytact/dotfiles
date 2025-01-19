@@ -38,6 +38,11 @@ return {
           end
         end, { "i", "s" }),
       })
+      opts.sources = opts.sources or {}
+      local new_sources = { "otter" }
+      for _, source in ipairs(new_sources) do
+        table.insert(opts.sources, { name = source })
+      end
     end,
   },
   {
