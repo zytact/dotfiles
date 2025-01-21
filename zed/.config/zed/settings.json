@@ -7,7 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "show_inline_completions": true,
+  "show_inline_completions": false,
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
@@ -37,7 +37,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Rosé Pine"
+    "dark": "Carbonfox"
   },
   "languages": {
     "JavaScript": {
@@ -103,7 +103,7 @@
     "show_background": false,
     "show_type_hints": false
   },
-  "auto_signature_help": true,
+  "auto_signature_help": false,
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
