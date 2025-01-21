@@ -125,7 +125,7 @@ fastfetch
 
 alias v='nvim "$(find . -type f | fzf)"'
 alias lg='lazygit'
-alias vim='nvim'
+alias vim='/usr/bin/nvim'
 alias cat='bat'
 alias caps-to-shift='xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"'
 alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
