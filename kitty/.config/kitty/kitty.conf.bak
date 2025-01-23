@@ -2321,6 +2321,5 @@ background_tint 1.0
 
 
 # BEGIN_KITTY_THEME
-# Rosé Pine
 include current-theme.conf
 # END_KITTY_THEME
