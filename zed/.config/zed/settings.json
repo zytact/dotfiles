@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Material Icon Theme",
   "show_inline_completions": false,
   "assistant": {
     "default_model": {
@@ -26,7 +27,7 @@
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_weight": 400,
-  "buffer_font_size": 15,
+  "buffer_font_size": 16.0,
   "tab_bar": {
     "show": false
   },
@@ -37,7 +38,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Carbonfox"
+    "dark": "Kanagawa"
   },
   "languages": {
     "JavaScript": {
@@ -100,7 +101,7 @@
   },
   "inlay_hints": {
     "enabled": true,
-    "show_background": false,
+    "show_background": true,
     "show_type_hints": false
   },
   "auto_signature_help": false,
@@ -114,6 +115,22 @@
       },
       "keyword": {
         "font_style": "italic"
+      }
+    }
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        // get more cargo-less diagnostics from rust-analyzer,
+        // which might include false-positives (those can be turned off by their names)
+        "diagnostics": {
+          "experimental": {
+            "enable": true
+          }
+        },
+        // To disable the checking entirely
+        // (ignores all cargo and check settings below)
+        "checkOnSave": false
       }
     }
   }

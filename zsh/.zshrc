@@ -170,3 +170,10 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/arnab/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/arnab/.lmstudio/bin"

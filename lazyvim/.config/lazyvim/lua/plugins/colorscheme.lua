@@ -109,13 +109,18 @@ return {
     "marko-cerovac/material.nvim",
     config = function()
       vim.g.material_style = "deep ocean"
+      require("material").setup({
+        disable = {
+          background = true,
+        },
+      })
     end,
   },
   {
     "rebelot/kanagawa.nvim",
     config = function()
       require("kanagawa").setup({
-        transparent = false,
+        transparent = true,
       })
     end,
   },

@@ -43,5 +43,17 @@
       "ctrl-t": "workspace::ToggleBottomDock",
       "ctrl-n": "workspace::NewTerminal"
     }
+  },
+  {
+    "bindings": {
+      "ctrl-p": [
+        "task::Spawn",
+        { "task_name": "File Finder", "reveal_target": "center" }
+      ],
+      "ctrl-f": [
+        "task::Spawn",
+        { "task_name": "Find in Files", "reveal_target": "center" }
+      ]
+    }
   }
 ]
