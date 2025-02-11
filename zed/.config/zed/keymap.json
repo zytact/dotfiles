@@ -17,12 +17,7 @@
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
     "bindings": {
-      "shift-s": [
-        "vim::PushOperator",
-        {
-          "AddSurrounds": {}
-        }
-      ]
+      "shift-s": ["vim::PushAddSurrounds", {}]
     }
   },
   {
@@ -45,15 +40,9 @@
     }
   },
   {
+    "context": "Workspace",
     "bindings": {
-      "ctrl-p": [
-        "task::Spawn",
-        { "task_name": "File Finder", "reveal_target": "center" }
-      ],
-      "ctrl-f": [
-        "task::Spawn",
-        { "task_name": "Find in Files", "reveal_target": "center" }
-      ]
+      "alt-f": ["task::Spawn", { "task_name": "find_in_files" }]
     }
   }
 ]

@@ -8,8 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "icon_theme": "Material Icon Theme",
-  "show_inline_completions": false,
+  "show_edit_predictions": false,
   "assistant": {
+    "enable_experimental_live_diffs": true,
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-3-5-sonnet"
