@@ -100,14 +100,6 @@ return {
     },
   },
   {
-    "pieces-app/plugin_neovim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("pieces.config").host = "http://localhost:1000"
-    end,
-  },
-  {
     "folke/snacks.nvim",
     opts = {
       dashboard = {
