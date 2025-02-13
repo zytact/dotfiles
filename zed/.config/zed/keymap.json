@@ -29,7 +29,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-t": "terminal_panel::ToggleFocus"
+      "ctrl-t": "terminal_panel::ToggleFocus",
+      "alt-f": ["task::Spawn", { "task_name": "find_in_files" }]
     }
   },
   {
@@ -40,9 +41,12 @@
     }
   },
   {
-    "context": "Workspace",
+    "context": "Dock",
     "bindings": {
-      "alt-f": ["task::Spawn", { "task_name": "find_in_files" }]
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown"
     }
   }
 ]
