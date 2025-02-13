@@ -94,7 +94,6 @@ plugins=(
 	git
 	zsh-autosuggestions
     fzf
-    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh

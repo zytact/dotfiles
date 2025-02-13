@@ -29,8 +29,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-t": "terminal_panel::ToggleFocus",
-      "alt-f": ["task::Spawn", { "task_name": "find_in_files" }]
+      "ctrl-t": "workspace::ToggleBottomDock"
     }
   },
   {
