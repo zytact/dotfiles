@@ -27,12 +27,6 @@
     }
   },
   {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-t": "workspace::ToggleBottomDock"
-    }
-  },
-  {
     "context": "Terminal",
     "bindings": {
       "ctrl-t": "workspace::ToggleBottomDock",

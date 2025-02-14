@@ -117,12 +117,38 @@ source $ZSH/oh-my-zsh.sh
 
 fastfetch
 
+function open_proj() {
+	# Select project directory using fzf
+	local selected_dir
+	selected_dir=$(find "$HOME/Projects" -mindepth 1 -maxdepth 1 -type d | tv)
+
+	# Exit if no directory was selected
+	if [ -z "$selected_dir" ]; then
+		return 0
+	fi
+
+	# Change to the selected directory
+	cd "$selected_dir" || return 1
+
+	# Select file using fzf with preview
+	local selected_file
+	selected_file=$(tv)
+
+	# Open the selected file in neovim if a file was selected
+	if [ -n "$selected_file" ]; then
+		nvim "$selected_file"
+	fi
+}
+
+zle -N open_proj_widget open_proj
+
+bindkey '^o' open_proj_widget
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias v='nvim "$(find . -type f | fzf)"'
 alias lg='lazygit'
 alias vim='/usr/bin/nvim'
 alias cat='bat'
@@ -137,13 +163,13 @@ alias ncspot="flatpak run io.github.hrkfdn.ncspot"
 alias syncObsidianToDrive="rclone sync -v ~/Documents/Obsidian GDrive:Obsidian"
 alias syncDriveToObsidian="rclone sync -v GDrive:Obsidian ~/Documents/Obsidian"
 alias spot="spotify_player"
-alias nvim="neovide --fork --maximized"
 eval "$(gh copilot alias -- zsh)"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh
 
 eval "$(zoxide init zsh)"
+eval "$(tv init zsh)"
 
 eval $(thefuck --alias)
 
