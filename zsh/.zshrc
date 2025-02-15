@@ -133,6 +133,11 @@ function open_proj() {
 	# Select file using fzf with preview
 	local selected_file
 	selected_file=$(tv)
+ 
+	# Exit if no file was selected
+	if [ -z "$selected_file" ]; then
+		return 0
+	fi
 
 	# Open the selected file in neovim if a file was selected
 	if [ -n "$selected_file" ]; then
@@ -151,7 +156,6 @@ bindkey '^o' open_proj_widget
 
 alias lg='lazygit'
 alias vim='/usr/bin/nvim'
-alias cat='bat'
 alias caps-to-shift='xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"'
 alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
 alias ls='eza -l --color=always --group-directories-first --icons'
