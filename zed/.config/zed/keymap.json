@@ -12,6 +12,7 @@
       "space e": "workspace::ToggleLeftDock",
       "space c r": "editor::Rename",
       "ctrl-^": "pane::AlternateFile",
+      "g r": "editor::FindAllReferences",
       "space t t": ["task::Spawn", { "task_name": "Test" }],
       "space t f": ["task::Spawn", { "task_name": "Test File" }],
       "space r": ["task::Spawn", { "task_name": "Run" }],
