@@ -34,6 +34,16 @@
     }
   },
   {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-t": "terminal_panel::ToggleFocus",
+      "space t": ["task::Spawn", { "task_name": "Test" }],
+      "space t r": ["task::Spawn", { "task_name": "Test File" }],
+      "space r": ["task::Spawn", { "task_name": "Run" }],
+      "space /": ["task::Spawn", { "task_name": "Find in Files" }]
+    }
+  },
+  {
     "context": "Dock",
     "bindings": {
       "ctrl-w h": "workspace::ActivatePaneLeft",

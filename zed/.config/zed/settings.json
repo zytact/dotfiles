@@ -10,6 +10,7 @@
   "features": {
     "edit_prediction_provider": "copilot"
   },
+  "format_on_save": "on",
   "icon_theme": "Material Icon Theme",
   "show_edit_predictions": false,
   "assistant": {
