@@ -17,7 +17,11 @@
       "space t f": ["task::Spawn", { "task_name": "Test File" }],
       "space r": ["task::Spawn", { "task_name": "Run" }],
       "space /": ["task::Spawn", { "task_name": "Find in Files" }],
-      "space g g": ["task::Spawn", { "task_name": "LazyGit" }]
+      "space g g": ["task::Spawn", { "task_name": "LazyGit" }],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   },
   {
@@ -43,15 +47,6 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-t": "terminal_panel::ToggleFocus"
-    }
-  },
-  {
-    "context": "Dock",
-    "bindings": {
-      "ctrl-w h": "workspace::ActivatePaneLeft",
-      "ctrl-w l": "workspace::ActivatePaneRight",
-      "ctrl-w k": "workspace::ActivatePaneUp",
-      "ctrl-w j": "workspace::ActivatePaneDown"
     }
   }
 ]
