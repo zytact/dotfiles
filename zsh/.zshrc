@@ -141,7 +141,7 @@ function open_proj() {
 
 	# Open the selected file in neovim if a file was selected
 	if [ -n "$selected_file" ]; then
-		zed "$selected_dir" "$selected_file"
+		nvim "$selected_file"
 	fi
 }
 
