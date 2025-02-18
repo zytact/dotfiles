@@ -32,7 +32,7 @@
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_weight": 400,
-  "buffer_font_size": 16.0,
+  "buffer_font_size": 15.0,
   "tab_bar": {
     "show": false
   },
@@ -43,7 +43,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Kanagawa Dragon"
+    "dark": "Carbonfox"
   },
   "languages": {
     "JavaScript": {
