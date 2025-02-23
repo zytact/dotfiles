@@ -141,7 +141,7 @@ function open_proj() {
 
 	# Open the selected file in neovim if a file was selected
 	if [ -n "$selected_file" ]; then
-		nvim "$selected_file"
+		zed "$selected_dir" "$selected_file"
 	fi
 }
 
@@ -156,6 +156,7 @@ bindkey '^o' open_proj_widget
 
 alias lg='lazygit'
 alias vim='/usr/bin/nvim'
+alias v='neovide --fork --maximized'
 alias caps-to-shift='xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"'
 alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
 alias ls='eza -l --color=always --group-directories-first --icons'

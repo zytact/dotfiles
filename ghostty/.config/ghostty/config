@@ -1,7 +1,7 @@
-theme = "carbonfox"
+theme = "catppuccin-mocha"
 font-family = "JetBrainsMono Nerd Font"
 font-size = 12
 window-theme = ghostty
-background-opacity = 1.0
+background-opacity = 0.8
 background-blur-radius = 20
 unfocused-split-opacity = 1

@@ -12,5 +12,5 @@ vim.g.autoformat = true
 vim.o.exrc = true
 
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font:h11"
+  vim.o.guifont = "JetBrainsMono Nerd Font:h12"
 end
