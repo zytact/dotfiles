@@ -55,6 +55,11 @@ return {
 
   {
     "olivercederborg/poimandres.nvim",
+    config = function()
+      require("poimandres").setup({
+        disable_background = true,
+      })
+    end,
   },
 
   {
@@ -132,7 +137,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "poimandres",
     },
   },
 }
