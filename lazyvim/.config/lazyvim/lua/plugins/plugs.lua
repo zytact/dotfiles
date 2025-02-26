@@ -130,7 +130,7 @@ return {
     opts = {
       provider = "copilot",
       copilot = {
-        model = "claude-3.5-sonnet",
+        model = "claude-3.7-sonnet",
         temperature = 0,
         max_tokens = 8192,
       },
@@ -178,5 +178,17 @@ return {
         ["neotest-vitest"] = {},
       },
     },
+  },
+  {
+    "cordx56/rustowl",
+    dependencies = { "neovim/nvim-lspconfig" },
+    config = function()
+      local lspconfig = require("lspconfig")
+      lspconfig.rustowl.setup({
+        trigger = {
+          hover = true,
+        },
+      })
+    end,
   },
 }
