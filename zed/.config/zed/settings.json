@@ -37,13 +37,13 @@
     "show": false
   },
   "buffer_line_height": {
-    "custom": 1.5
+    "custom": 1.8
   },
   "relative_line_numbers": true,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Mocha"
+    "dark": "poimandres"
   },
   "languages": {
     "JavaScript": {
