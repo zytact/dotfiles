@@ -17,7 +17,7 @@
     "enable_experimental_live_diffs": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-3-5-sonnet"
+      "model": "claude-3-7-sonnet"
     },
     "version": "2"
   },
@@ -28,22 +28,22 @@
   "telemetry": {
     "metrics": false
   },
-  "ui_font_size": 14,
+  "ui_font_size": 12.5,
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_weight": 400,
-  "buffer_font_size": 15.0,
+  "buffer_font_size": 14,
   "tab_bar": {
     "show": false
   },
   "buffer_line_height": {
-    "custom": 1.8
+    "custom": 1.5
   },
   "relative_line_numbers": true,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "poimandres"
+    "dark": "VSCode Dark Modern"
   },
   "languages": {
     "JavaScript": {
@@ -105,7 +105,7 @@
     }
   },
   "inlay_hints": {
-    "enabled": true,
+    "enabled": false,
     "show_background": true,
     "show_type_hints": false
   },

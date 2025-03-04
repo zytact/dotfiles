@@ -47,7 +47,6 @@ return {
         "emmet-language-server",
         "html-lsp",
         "json-lsp",
-        "eslint_d",
         "css-lsp",
         "prettier",
         "tailwindcss-language-server",
@@ -69,7 +68,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      inlay_hints = { enabled = true },
+      inlay_hints = { enabled = false },
       servers = {
         vtsls = {
           settings = {

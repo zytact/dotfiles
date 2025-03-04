@@ -4,7 +4,7 @@ return {
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
-        transparent_background = true,
+        transparent_background = false,
       })
     end,
   },
@@ -57,7 +57,7 @@ return {
     "olivercederborg/poimandres.nvim",
     config = function()
       require("poimandres").setup({
-        disable_background = true,
+        disable_background = false,
       })
     end,
   },
@@ -137,7 +137,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "poimandres",
+      colorscheme = "catppuccin",
     },
   },
 }
