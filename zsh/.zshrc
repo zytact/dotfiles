@@ -168,6 +168,7 @@ alias ncspot="flatpak run io.github.hrkfdn.ncspot"
 alias syncObsidianToDrive="rclone sync -v ~/Documents/Obsidian GDrive:Obsidian"
 alias syncDriveToObsidian="rclone sync -v GDrive:Obsidian ~/Documents/Obsidian"
 alias spot="spotify_player"
+alias code="code-insiders"
 eval "$(gh copilot alias -- zsh)"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
