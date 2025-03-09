@@ -4,8 +4,9 @@
 
 local wk = require("which-key")
 wk.add({
-  { "<leader>a", group = "ai", icon = "  " },
+  -- { "<leader>a", group = "ai", icon = "  " },
   { "<leader>at", "<cmd>AvanteClear<cr>", desc = "clear chat", mode = "n" },
+  { "<leader>av", "<cmd>AvanteChat<cr>", desc = "avante chat", mode = "n" },
   {
     "<leader>r",
     group = "run",
