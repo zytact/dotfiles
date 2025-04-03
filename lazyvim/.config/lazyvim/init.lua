@@ -79,4 +79,18 @@ if vim.g.vscode then
     '<Cmd>lua require("vscode").call("inlineChat.start")<CR>',
     { noremap = true }
   )
+
+  vim.api.nvim_set_keymap(
+    "n",
+    "<leader>h",
+    '<Cmd>lua require("vscode").call("bookmarks.listFromAllFiles")<CR>',
+    { noremap = true }
+  )
+
+  vim.api.nvim_set_keymap(
+    "n",
+    "<leader>H",
+    '<Cmd>lua require("vscode").call("bookmarks.toggle")<CR>',
+    { noremap = true }
+  )
 end
