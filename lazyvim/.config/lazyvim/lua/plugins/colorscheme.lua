@@ -137,11 +137,17 @@ return {
   {
     "nyoom-engineering/oxocarbon.nvim",
   },
+  {
+    "2nthony/vitesse.nvim",
+    dependencies = {
+      "tjdevries/colorbuddy.nvim",
+    },
+  },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "oxocarbon",
+      colorscheme = "vitesse",
     },
   },
 }

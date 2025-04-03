@@ -132,7 +132,7 @@ return {
       copilot = {
         model = "claude-3.7-sonnet",
         temperature = 0,
-        max_tokens = 8192,
+        max_tokens = 10000,
       },
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
@@ -157,6 +157,14 @@ return {
             use_absolute_path = true,
           },
         },
+      },
+      {
+        -- Make sure to set this up properly if you have lazy=true
+        "MeanderingProgrammer/render-markdown.nvim",
+        opts = {
+          file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
       },
     },
   },
@@ -192,11 +200,20 @@ return {
     end,
   },
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    config = function()
-      require("CopilotChat").setup({
-        model = "claude-3.7-sonnet",
-      })
-    end,
+    "saghen/blink.cmp",
+    dependencies = {
+      "Kaiser-Yang/blink-cmp-avante",
+    },
+    opts = {
+      sources = {
+        default = { "lsp", "path", "snippets", "buffer", "avante" },
+        providers = {
+          avante = {
+            module = "blink-cmp-avante",
+            name = "Avante",
+          },
+        },
+      },
+    },
   },
 }
