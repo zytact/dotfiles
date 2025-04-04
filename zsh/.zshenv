@@ -10,3 +10,4 @@ export PATH=$HOME/.local/bin:$PATH
 export EDITOR="nvim"
 export NVIM_APPNAME="lazyvim"
 . "$HOME/.cargo/env"
+. "$HOME/.api-keys"
