@@ -134,6 +134,20 @@ return {
         temperature = 0,
         max_tokens = 10000,
       },
+      system_prompt = function()
+        local hub = require("mcphub").get_hub_instance()
+        if hub then
+          return hub:get_active_servers_prompt()
+        else
+          return nil -- or return an empty string / table / appropriate fallback
+        end
+      end,
+      -- The custom_tools type supports both a list and a function that returns a list. Using a function here prevents requiring mcphub before it's loaded
+      custom_tools = function()
+        return {
+          require("mcphub.extensions.avante").mcp_tool(),
+        }
+      end,
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
@@ -167,6 +181,23 @@ return {
         ft = { "markdown", "Avante" },
       },
     },
+  },
+  {
+    "ravitemer/mcphub.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- Required for Job and HTTP requests
+    },
+    cmd = "MCPHub", -- lazy load by default
+    build = "npm install -g mcp-hub@latest", -- Installs required mcp-hub npm module
+    config = function()
+      require("mcphub").setup({
+        extensions = {
+          avante = {
+            make_slash_command = true,
+          },
+        },
+      })
+    end,
   },
   {
     "zbirenbaum/copilot.lua",
@@ -216,4 +247,5 @@ return {
       },
     },
   },
+  { "glacambre/firenvim", build = ":call firenvim#install(0)" },
 }
