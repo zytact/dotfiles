@@ -162,6 +162,7 @@ alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
 alias ls='eza -l --color=always --group-directories-first --icons'
 alias uploadDatabase="rclone sync -v ~/Documents/KeePassXC GDrive:KeePassXC"
 alias downloadDatabase="rclone sync -v GDrive:KeePassXC ~/Documents/KeePassXC"
+alias organize-downloads="~/Projects/scripts/organize-downloads"
 alias fd="fdfind"
 alias cd="z"
 alias ncspot="flatpak run io.github.hrkfdn.ncspot"

@@ -132,7 +132,7 @@ return {
       copilot = {
         model = "claude-3.7-sonnet",
         temperature = 0,
-        max_tokens = 10000,
+        max_completion_tokens = 8192,
       },
       system_prompt = function()
         local hub = require("mcphub").get_hub_instance()
@@ -245,6 +245,20 @@ return {
           },
         },
       },
+    },
+  },
+  {
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      -- "ibhagwan/fzf-lua",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    },
+    opts = {
+      ---@type lc.lang
+      lang = "python3",
     },
   },
 }
