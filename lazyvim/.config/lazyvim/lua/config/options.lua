@@ -8,6 +8,7 @@ vim.opt.clipboard = ""
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
+vim.o.cursorline = false
 vim.g.autoformat = true
 vim.o.exrc = true
 vim.g.lazyvim_python_lsp = "basedpyright"
