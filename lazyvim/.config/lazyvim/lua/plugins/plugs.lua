@@ -220,15 +220,10 @@ return {
   },
   {
     "cordx56/rustowl",
-    dependencies = { "neovim/nvim-lspconfig" },
-    config = function()
-      local lspconfig = require("lspconfig")
-      lspconfig.rustowl.setup({
-        trigger = {
-          hover = true,
-        },
-      })
-    end,
+    version = "*", -- Latest stable version
+    build = "cd rustowl && cargo install --path . -F installer --locked",
+    lazy = false, -- This plugin is already lazy
+    opts = {},
   },
   {
     "saghen/blink.cmp",
