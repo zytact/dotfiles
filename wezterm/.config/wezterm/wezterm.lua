@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 
 config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Medium" })
 
-config.font_size = 12
+config.font_size = 10.5
 config.line_height = 1.3
 config.freetype_load_flags = "NO_HINTING"
 
@@ -47,12 +47,11 @@ end)
 config.tab_bar_at_bottom = true
 -- Do not use fancy tab bar
 config.use_fancy_tab_bar = false
-config.enable_tab_bar = false
-config.window_decorations = "RESIZE"
+config.enable_tab_bar = true
 config.window_background_opacity = 1
 
 -- Set colorscheme
-config.color_scheme = "Poimandres"
+config.color_scheme = "Tokyo Night"
 
 config.colors = {
 	tab_bar = {
@@ -69,6 +68,16 @@ config.colors = {
 			bg_color = "#1e1e2e",
 			fg_color = "#dc9f7b",
 		},
+	},
+}
+
+config.keys = {
+	-- Turn off the default CMD-m Hide action, allowing CMD-m to
+	-- be potentially recognized and handled by the tab
+	{
+		key = "Enter",
+		mods = "CTRL",
+		action = wezterm.action.SplitHorizontal,
 	},
 }
 
