@@ -155,7 +155,7 @@ bindkey '^o' open_proj_widget
 # For a full list of active aliases, run `alias`.
 
 alias lg='lazygit'
-alias vim='/usr/bin/nvim'
+alias vim='/usr/local/bin/nvim'
 alias v='neovide --fork --maximized'
 alias caps-to-shift='xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"'
 alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
