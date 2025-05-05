@@ -221,7 +221,7 @@ return {
   {
     "cordx56/rustowl",
     version = "*", -- Latest stable version
-    build = "cd rustowl && cargo install --path . -F installer --locked",
+    build = "cd rustowl && cargo install --path . --locked",
     lazy = false, -- This plugin is already lazy
     opts = {},
   },
@@ -255,5 +255,15 @@ return {
       ---@type lc.lang
       lang = "python3",
     },
+  },
+  {
+    "voltycodes/areyoulockedin.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    event = "VeryLazy",
+    config = function()
+      require("areyoulockedin").setup({
+        session_key = os.getenv("AREYOULOCKED"),
+      })
+    end,
   },
 }
