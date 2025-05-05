@@ -14,6 +14,7 @@
   "icon_theme": "Material Icon Theme",
   "show_edit_predictions": false,
   "assistant": {
+    "default_profile": "ask",
     "enable_experimental_live_diffs": true,
     "default_model": {
       "provider": "copilot_chat",
@@ -31,19 +32,19 @@
   "ui_font_size": 13,
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_weight": 400,
-  "buffer_font_size": 13.2,
+  "buffer_font_weight": 450,
+  "buffer_font_size": 13.5,
   "tab_bar": {
     "show": false
   },
   "buffer_line_height": {
-    "custom": 1.5
+    "custom": 2
   },
   "relative_line_numbers": true,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Vitesse Refined Dark"
+    "dark": "Tokyo Night"
   },
   "languages": {
     "JavaScript": {
