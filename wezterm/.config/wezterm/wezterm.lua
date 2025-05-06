@@ -7,6 +7,7 @@ local config = wezterm.config_builder()
 config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Medium" })
 
 config.font_size = 10.5
+harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.line_height = 1.3
 config.freetype_load_flags = "NO_HINTING"
 
@@ -51,6 +52,20 @@ config.keys = {
 		key = "Enter",
 		mods = "CTRL",
 		action = wezterm.action.SplitHorizontal,
+	},
+	{
+		key = "D",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SpawnCommandInNewTab({
+			args = { "zsh", "-c", "source ~/.zshrc && source ~/.zshenv && file=$(tv dotfiles) && nvim $file" },
+		}),
+	},
+	{
+		key = "O",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SpawnCommandInNewTab({
+			args = { "zsh", "-c", "source ~/.zshrc && source ~/.zshenv && open_proj && exec zsh" },
+		}),
 	},
 }
 

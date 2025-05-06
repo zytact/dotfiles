@@ -115,7 +115,9 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-fastfetch
+if [[ -o interactive ]]; then
+    fastfetch  # Only run in interactive shells
+fi
 
 function open_proj() {
 	# Select project directory using fzf
@@ -129,25 +131,11 @@ function open_proj() {
 
 	# Change to the selected directory
 	cd "$selected_dir" || return 1
-
-	# Select file using fzf with preview
-	local selected_file
-	selected_file=$(tv)
- 
-	# Exit if no file was selected
-	if [ -z "$selected_file" ]; then
-		return 0
-	fi
-
-	# Open the selected file in neovim if a file was selected
-	if [ -n "$selected_file" ]; then
-		zed "$selected_dir" "$selected_file"
-	fi
 }
 
-zle -N open_proj_widget open_proj
-
-bindkey '^o' open_proj_widget
+# zle -N open_proj_widget open_proj
+#
+# bindkey '^o' open_proj_widget
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
