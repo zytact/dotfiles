@@ -69,14 +69,15 @@ if vim.g.vscode then
 
   vim.api.nvim_set_keymap(
     "v",
-    "<leader>aa",
+    "<leader>ca",
     '<Cmd>lua require("vscode").call("inlineChat.start")<CR>',
     { noremap = true }
   )
+
   vim.api.nvim_set_keymap(
     "n",
     "<leader>aa",
-    '<Cmd>lua require("vscode").call("inlineChat.start")<CR>',
+    '<Cmd>lua require("vscode").call("workbench.panel.chat")<CR>',
     { noremap = true }
   )
 
