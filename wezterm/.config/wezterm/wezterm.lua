@@ -22,10 +22,17 @@ config.tab_bar_at_bottom = true
 -- Do not use fancy tab bar
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
-config.window_background_opacity = 1
+config.window_background_opacity = 0.8
+
+-- Disable inactive pane higlighting
+config.inactive_pane_hsb = {
+	hue = 1.0,
+	saturation = 1.0,
+	brightness = 1.0,
+}
 
 -- Set colorscheme
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "Catppuccin Latte"
 
 config.colors = {
 	tab_bar = {
@@ -51,7 +58,10 @@ config.keys = {
 	{
 		key = "Enter",
 		mods = "CTRL",
-		action = wezterm.action.SplitHorizontal,
+		action = wezterm.action.SplitPane({
+			direction = "Right",
+			size = { Percent = 30 },
+		}),
 	},
 	{
 		key = "D",
