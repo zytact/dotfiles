@@ -13,7 +13,7 @@
   "format_on_save": "on",
   "icon_theme": "Material Icon Theme",
   "show_edit_predictions": false,
-  "assistant": {
+  "agent": {
     "default_profile": "ask",
     "enable_experimental_live_diffs": true,
     "default_model": {
@@ -29,11 +29,12 @@
   "telemetry": {
     "metrics": false
   },
-  "ui_font_size": 13,
+  "ui_font_size": 14,
+  "ui_font_weight": 700,
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_weight": 450,
-  "buffer_font_size": 13.5,
+  "buffer_font_weight": 700,
+  "buffer_font_size": 13,
   "tab_bar": {
     "show": false
   },
@@ -43,7 +44,7 @@
   "relative_line_numbers": true,
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Catppuccin Latte (Blue Blur+)",
     "dark": "Tokyo Night"
   },
   "languages": {
