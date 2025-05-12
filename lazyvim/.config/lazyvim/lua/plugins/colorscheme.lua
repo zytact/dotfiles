@@ -3,7 +3,7 @@ return {
     "catppuccin/nvim",
     config = function()
       require("catppuccin").setup({
-        flavour = "mocha",
+        flavour = "latte",
         transparent_background = false,
       })
     end,
@@ -65,7 +65,6 @@ return {
   {
     "Mofiqul/vscode.nvim",
     config = function()
-      vim.o.background = "dark"
       local c = require("vscode.colors").get_colors()
       require("vscode").setup({
         transparent = false,
@@ -79,7 +78,7 @@ return {
     config = function()
       require("rose-pine").setup({
         styles = {
-          transparency = false,
+          transparency = true,
         },
       })
     end,
@@ -147,24 +146,29 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
+  },
+  {
+    "zenbones-theme/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    -- In Vim, compat mode is turned on as Lush only works in Neovim.
+    dependencies = "rktjmp/lush.nvim",
+    lazy = false,
+    priority = 1000,
     config = function()
       require("tokyonight").setup({
         transparent = false,
-        -- on_colors = function(colors)
-        --   colors.bg = "#000006"
-        --   colors.bg = "#000006"
-        --   colors.bg_sidebar = "#000006"
-        --   colors.bg_dark1 = "#000006"
-        --   colors.bg_search = "#000006"
         -- end,
       })
+      vim.g.zenwritten_transparent_background = false
+      vim.g.tokyobones_transparent_background = false
     end,
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin",
     },
   },
 }
