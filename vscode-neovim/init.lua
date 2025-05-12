@@ -49,23 +49,17 @@ vim.api.nvim_set_keymap(
 	{ noremap = true }
 )
 vim.api.nvim_set_keymap(
-	"v",
-	"<leader>aa",
-	'<Cmd>lua require("vscode").call("inlineChat.start")<CR>',
-	{ noremap = true }
-)
-vim.api.nvim_set_keymap(
 	"n",
 	"<leader>aa",
-	'<Cmd>lua require("vscode").call("inlineChat.start")<CR>',
+	'<Cmd>lua require("vscode").call("workbench.panel.chat")<CR>',
 	{ noremap = true }
 )
 
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>h",
-	'<Cmd>lua require("vscode").call("bookmarks.listFromAllFiles")<CR>',
-	{ noremap = true }
-)
+-- vim.api.nvim_set_keymap(
+-- 	"n",
+-- 	"<leader>h",
+-- 	'<Cmd>lua require("vscode").call("bookmarks.listFromAllFiles")<CR>',
+-- 	{ noremap = true }
+-- )
 
-vim.api.nvim_set_keymap("n", "<leader>H", '<Cmd>lua require("vscode").call("bookmarks.toggle")<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap("n", "<leader>H", '<Cmd>lua require("vscode").call("bookmarks.toggle")<CR>', { noremap = true })
