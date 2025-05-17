@@ -32,22 +32,22 @@ config.inactive_pane_hsb = {
 }
 
 -- Set colorscheme
-config.color_scheme = "Catppuccin Latte"
+config.color_scheme = "Vs Code Light+ (Gogh)"
 
 config.colors = {
 	tab_bar = {
-		background = "#1e1e2e",
+		background = "#f3f3f3",
 		active_tab = {
-			bg_color = "#525677",
-			fg_color = "#89b4fa",
+			bg_color = "#ffffff",
+			fg_color = "#0078d4",
 		},
 		inactive_tab = {
-			bg_color = "#1e1e2e",
-			fg_color = "#80ac81",
+			bg_color = "#f3f3f3",
+			fg_color = "#616161",
 		},
 		new_tab = {
-			bg_color = "#1e1e2e",
-			fg_color = "#dc9f7b",
+			bg_color = "#f3f3f3",
+			fg_color = "#0078d4",
 		},
 	},
 }
