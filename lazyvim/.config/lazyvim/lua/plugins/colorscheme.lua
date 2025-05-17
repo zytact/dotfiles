@@ -67,7 +67,7 @@ return {
     config = function()
       local c = require("vscode.colors").get_colors()
       require("vscode").setup({
-        transparent = false,
+        transparent = true,
       })
     end,
   },
@@ -168,7 +168,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "vscode",
     },
   },
 }
