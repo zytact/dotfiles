@@ -143,7 +143,7 @@ function open_proj() {
 # For a full list of active aliases, run `alias`.
 
 alias lg='lazygit'
-alias vim='/usr/local/bin/nvim'
+alias vim='/usr/bin/nvim'
 alias v='neovide --fork --maximized'
 alias caps-to-shift='xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"'
 alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
@@ -157,7 +157,6 @@ alias ncspot="flatpak run io.github.hrkfdn.ncspot"
 alias syncObsidianToDrive="rclone sync -v ~/Documents/Obsidian GDrive:Obsidian"
 alias syncDriveToObsidian="rclone sync -v GDrive:Obsidian ~/Documents/Obsidian"
 alias spot="spotify_player"
-alias code="code-insiders"
 alias zed-repl="source ~/.zed-repl/bin/activate"
 eval "$(gh copilot alias -- zsh)"
 
