@@ -32,22 +32,22 @@ config.inactive_pane_hsb = {
 }
 
 -- Set colorscheme
-config.color_scheme = "Vs Code Light+ (Gogh)"
+config.color_scheme = "Tokyo Night"
 
 config.colors = {
 	tab_bar = {
-		background = "#f3f3f3",
+		background = "#1a1b26",
 		active_tab = {
-			bg_color = "#ffffff",
-			fg_color = "#0078d4",
+			bg_color = "#24283b",
+			fg_color = "#7aa2f7",
 		},
 		inactive_tab = {
-			bg_color = "#f3f3f3",
-			fg_color = "#616161",
+			bg_color = "#1a1b26",
+			fg_color = "#a9b1d6",
 		},
 		new_tab = {
-			bg_color = "#f3f3f3",
-			fg_color = "#0078d4",
+			bg_color = "#1a1b26",
+			fg_color = "#7aa2f7",
 		},
 	},
 }
