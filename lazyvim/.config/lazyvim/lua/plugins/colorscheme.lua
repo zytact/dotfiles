@@ -146,6 +146,9 @@ return {
     "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
+    opts = {
+      transparent = true,
+    },
   },
   {
     "zenbones-theme/zenbones.nvim",
@@ -168,7 +171,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vscode",
+      colorscheme = "tokyonight",
     },
   },
 }
