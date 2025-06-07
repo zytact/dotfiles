@@ -15,10 +15,10 @@ vim.o.termguicolors = true
 vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_python_ruff = "ruff"
 vim.opt.fillchars = { eob = "~" }
-vim.o.background = "dark"
+vim.o.background = "light"
 
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font:b:h11"
+  vim.o.guifont = "JetBrainsMono Nerd Font:h11"
   vim.g.neovide_opacity = 0.8
   vim.g.neovide_normal_opacity = 0.8
 end

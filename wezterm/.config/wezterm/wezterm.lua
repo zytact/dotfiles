@@ -32,24 +32,24 @@ config.inactive_pane_hsb = {
 }
 
 -- Set colorscheme
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "Tokyo Night Day"
 
 config.colors = {
 	tab_bar = {
-		background = "#1a1b26",
-		active_tab = {
-			bg_color = "#24283b",
-			fg_color = "#7aa2f7",
-		},
-		inactive_tab = {
-			bg_color = "#1a1b26",
-			fg_color = "#a9b1d6",
-		},
-		new_tab = {
-			bg_color = "#1a1b26",
-			fg_color = "#7aa2f7",
-		},
-	},
+        background = "#e1e2e7",
+        active_tab = {
+            bg_color = "#c4c8da",
+            fg_color = "#3760bf",
+        },
+        inactive_tab = {
+            bg_color = "#e1e2e7",
+            fg_color = "#6172b0",
+        },
+        new_tab = {
+            bg_color = "#e1e2e7",
+            fg_color = "#3760bf",
+        },
+    },
 }
 
 config.keys = {

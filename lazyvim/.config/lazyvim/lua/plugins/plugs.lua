@@ -32,7 +32,7 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
-        position = "left",
+        position = "right",
       },
       filesystem = {
         filtered_items = {
@@ -119,10 +119,15 @@ return {
     version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
     opts = {
       provider = "copilot",
-      copilot = {
-        model = "claude-3.7-sonnet",
-        temperature = 0,
-        max_completion_tokens = 8192,
+      providers = {
+        copilot = {
+          model = "claude-3.7-sonnet",
+          extra_request_body = {
+            timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
+            temperature = 0.75,
+            max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+          },
+        },
       },
       system_prompt = function()
         local hub = require("mcphub").get_hub_instance()
