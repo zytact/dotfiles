@@ -7,7 +7,7 @@ local config = wezterm.config_builder()
 config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Medium" })
 
 config.font_size = 10.5
-harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+local harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.line_height = 1.3
 config.freetype_load_flags = "NO_HINTING"
 
@@ -22,7 +22,7 @@ config.tab_bar_at_bottom = true
 -- Do not use fancy tab bar
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.7
 
 -- Disable inactive pane higlighting
 config.inactive_pane_hsb = {
@@ -32,24 +32,24 @@ config.inactive_pane_hsb = {
 }
 
 -- Set colorscheme
-config.color_scheme = "Tokyo Night Day"
+config.color_scheme = "Tokyo Night"
 
 config.colors = {
 	tab_bar = {
-        background = "#e1e2e7",
-        active_tab = {
-            bg_color = "#c4c8da",
-            fg_color = "#3760bf",
-        },
-        inactive_tab = {
-            bg_color = "#e1e2e7",
-            fg_color = "#6172b0",
-        },
-        new_tab = {
-            bg_color = "#e1e2e7",
-            fg_color = "#3760bf",
-        },
-    },
+		background = "#1a1b26",
+		active_tab = {
+			bg_color = "#7aa2f7",
+			fg_color = "#1a1b26",
+		},
+		inactive_tab = {
+			bg_color = "#292e42",
+			fg_color = "#9ece6a",
+		},
+		new_tab = {
+			bg_color = "#292e42",
+			fg_color = "#7aa2f7",
+		},
+	},
 }
 
 config.keys = {
