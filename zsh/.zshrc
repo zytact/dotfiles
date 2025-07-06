@@ -195,3 +195,6 @@ fi
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/arnab/.lmstudio/bin"
+
+# opencode
+export PATH=/home/arnab/.opencode/bin:$PATH
