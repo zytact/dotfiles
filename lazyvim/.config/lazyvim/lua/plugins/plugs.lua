@@ -32,7 +32,7 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
-        position = "right",
+        position = "left",
       },
       filesystem = {
         filtered_items = {
@@ -121,7 +121,7 @@ return {
       provider = "copilot",
       providers = {
         copilot = {
-          model = "claude-4-sonnet",
+          model = "gpt-4.1",
           extra_request_body = {
             timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
             temperature = 0.75,
