@@ -22,7 +22,7 @@ config.tab_bar_at_bottom = true
 -- Do not use fancy tab bar
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
-config.window_background_opacity = 0.7
+config.window_background_opacity = 1.0
 
 -- Disable inactive pane higlighting
 config.inactive_pane_hsb = {

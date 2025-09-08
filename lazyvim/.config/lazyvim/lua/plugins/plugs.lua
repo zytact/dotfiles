@@ -32,7 +32,7 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       window = {
-        position = "left",
+        position = "right",
       },
       filesystem = {
         filtered_items = {
@@ -261,11 +261,31 @@ return {
       })
     end,
   },
-  -- -- mason and mason-lspconfig released version 2.0.
-  -- -- with some breaking changes, multiple methods have been changed
-  -- -- therefore (for now) a workaround is needed for Mason to still work in LazyVim
-  -- -- THIS WILL PIN the VERSION number, remove this file later, when it's no longer needed
-  -- { "mason-org/mason.nvim", version = "1.11.0" },
-  -- { "mason-org/mason-lspconfig.nvim", version = "1.32.0" },
-  -- -- after adding/saving this file run :Lazy to potentially 're-install' the versions above
+  {
+    "mikesmithgh/kitty-scrollback.nvim",
+    enabled = true,
+    lazy = true,
+    cmd = {
+      "KittyScrollbackGenerateKittens",
+      "KittyScrollbackCheckHealth",
+      "KittyScrollbackGenerateCommandLineEditing",
+    },
+    event = { "User KittyScrollbackLaunch" },
+    -- version = '*', -- latest stable version, may have breaking changes if major version changed
+    -- version = '^6.0.0', -- pin major version, include fixes and features that do not have breaking changes
+    config = function()
+      require("kitty-scrollback").setup()
+    end,
+  },
+  -- {
+  --   "developedbyed/marko.nvim",
+  --   config = function()
+  --     require("marko").setup({
+  --       width = 100,
+  --       height = 100,
+  --       border = "rounded",
+  --       title = " Marks ",
+  --     })
+  --   end,
+  -- },
 }
