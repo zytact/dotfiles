@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "redact_private_values": false,
   "features": {
     "edit_prediction_provider": "copilot"
   },
@@ -15,12 +16,10 @@
   "show_edit_predictions": false,
   "agent": {
     "default_profile": "write",
-    "enable_experimental_live_diffs": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-3.7-sonnet"
-    },
-    "version": "2"
+      "model": "gpt-5-mini"
+    }
   },
   "vim_mode": true,
   "vim": {
@@ -33,77 +32,25 @@
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_weight": 450,
-  "buffer_font_size": 14,
+  "buffer_font_size": 13.0,
   "tab_bar": {
-    "show": false
+    "show": true
   },
   "buffer_line_height": {
     "custom": 1.5
   },
-  "relative_line_numbers": true,
-  "theme": {
-    "mode": "system",
-    "light": "Tokyo Night Light",
-    "dark": "Tokyo Night"
-  },
+  "relative_line_numbers": "enabled",
+  "theme": "poimandres",
   "languages": {
-    "JavaScript": {
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    },
-    "TypeScript": {
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    },
-    "Astro": {
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    },
-    "JSON": {
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    },
-    "HTML": {
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    },
-    "CSS": {
-      "formatter": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    },
     "Python": {
       "language_servers": ["pyright", "ruff"],
       "format_on_save": "off",
       "formatter": [
         {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
+          "code_action": "source.organizeImports.ruff"
+        },
+        {
+          "code_action": "source.fixAll.ruff"
         },
         {
           "language_server": {
