@@ -1,7 +1,7 @@
-theme= "poimandres"
+theme= "Cursor Dark"
 font-family = "JetBrainsMono Nerd Font"
 font-style = "SemiBold"
-font-size = 10.5
+font-size = 9.5
 adjust-cell-height = "20%"
 window-theme = ghostty
 background-opacity = 1.0
