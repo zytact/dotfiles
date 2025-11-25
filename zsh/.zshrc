@@ -199,3 +199,11 @@ export PATH="$PATH:/home/arnab/.lmstudio/bin"
 
 # opencode
 export PATH=/home/arnab/.opencode/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/arnab/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
