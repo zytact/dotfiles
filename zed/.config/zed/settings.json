@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
   "redact_private_values": false,
   "features": {
     "edit_prediction_provider": "copilot"
@@ -40,7 +41,7 @@
     "custom": 1.5
   },
   "relative_line_numbers": "enabled",
-  "theme": "poimandres",
+  "theme": "Cursor Dark",
   "languages": {
     "Python": {
       "language_servers": ["pyright", "ruff"],
