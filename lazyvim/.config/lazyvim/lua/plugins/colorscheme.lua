@@ -17,6 +17,21 @@ return {
       })
     end,
   },
+  {
+    "ydkulks/cursor-dark.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("cursor-dark").setup({
+        -- For theme
+        style = "dark",
+        -- For a transparent background
+        transparent = false,
+        -- If you have dashboard-nvim plugin installed
+        dashboard = true,
+      })
+    end,
+  },
 
   {
     "Shatur/neovim-ayu",
@@ -171,7 +186,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "cursor-dark",
     },
   },
 }
