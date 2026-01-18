@@ -16,6 +16,7 @@ vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_python_ruff = "ruff"
 vim.opt.fillchars = { eob = "~" }
 vim.o.background = "dark"
+vim.o.wrap = true
 
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font:h11"

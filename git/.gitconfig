@@ -8,3 +8,5 @@
 	email = that.zytact@gmail.com
 [push]
 	default = current
+[coderabbit]
+	machineId = cli/9c471f4800f44d17a302b2909f68ea7f

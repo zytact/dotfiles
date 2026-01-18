@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "window_decorations": "client",
+  "terminal": {
+    "default_height": 521.0
+  },
   "disable_ai": true,
   "redact_private_values": false,
   "features": {
