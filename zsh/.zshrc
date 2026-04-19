@@ -143,7 +143,7 @@ function open_proj() {
 # For a full list of active aliases, run `alias`.
 
 alias lg='lazygit'
-alias vim='/usr/bin/nvim'
+alias vim='nvim'
 alias v='neovide --fork --maximized'
 alias caps-to-shift='xmodmap -e "keycode 66 = Shift_L NoSymbol Shift_L"'
 alias caps-to-caps='xmodmap -e "keycode 66 = Caps_Lock"'
@@ -160,8 +160,7 @@ alias spot="spotify_player"
 alias zed-repl="source ~/.zed-repl/bin/activate"
 alias battery_info="upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 alias cat="bat"
-alias oc="opencode"
-eval "$(gh copilot alias -- zsh)"
+alias oc="nohup OpenCode >/dev/null 2>&1 &"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh

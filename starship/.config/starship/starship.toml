@@ -1,2 +1,3 @@
 [username]
 show_always = true
+command_timeout = 2000
