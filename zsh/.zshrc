@@ -160,7 +160,8 @@ alias spot="spotify_player"
 alias zed-repl="source ~/.zed-repl/bin/activate"
 alias battery_info="upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 alias cat="bat"
-alias oc="nohup OpenCode >/dev/null 2>&1 &"
+alias cc="claude --dangerously-skip-permissions"
+alias ccr="claude --dangerously-skip-permissions -r"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh

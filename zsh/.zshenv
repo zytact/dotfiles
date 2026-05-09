@@ -7,6 +7,7 @@ export PATH="$HOME/.config/composer/vendor/laravel/installer/bin:$PATH"
 export PATH="$HOME/.local/share/quickemu:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export NODE_COMPILE_CACHE="$HOME/.cache/nodejs-compile-cache"
+export ENABLE_CLAUDEAI_MCP_SERVERS=false
 
 export EDITOR="nvim"
 export NVIM_APPNAME="lazyvim"
