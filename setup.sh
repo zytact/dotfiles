@@ -12,3 +12,4 @@ stow starship
 stow television
 stow zed
 stow zsh
+stow claude
