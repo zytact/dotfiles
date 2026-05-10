@@ -28,3 +28,4 @@
 .claude/mcp-needs-auth-cache.json
 .claude/stats-cache.json
 .claude/plugins
+.claude/image-cache
