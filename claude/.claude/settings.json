@@ -1,5 +1,6 @@
 {
   "effortLevel": "low",
+  "skipDangerousModePermissionPrompt": true,
   "theme": "auto",
-  "skipDangerousModePermissionPrompt": true
+  "tui": "fullscreen"
 }
