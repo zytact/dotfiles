@@ -18,22 +18,6 @@ return {
     end,
   },
   {
-    "ydkulks/cursor-dark.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("cursor-dark").setup({
-        -- For theme
-        style = "dark",
-        -- For a transparent background
-        transparent = false,
-        -- If you have dashboard-nvim plugin installed
-        dashboard = true,
-      })
-    end,
-  },
-
-  {
     "Shatur/neovim-ayu",
     --   config = function()
     --     require("ayu").setup({
@@ -163,30 +147,14 @@ return {
     priority = 1000,
     opts = {
       transparent = true,
+      style = "day",
     },
-  },
-  {
-    "zenbones-theme/zenbones.nvim",
-    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-    -- In Vim, compat mode is turned on as Lush only works in Neovim.
-    dependencies = "rktjmp/lush.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("tokyonight").setup({
-        transparent = false,
-        -- end,
-      })
-      vim.g.zenwritten_transparent_background = false
-      vim.g.tokyobones_transparent_background = false
-    end,
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "cursor-dark",
+      colorscheme = "tokyonight",
     },
   },
 }
