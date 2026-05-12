@@ -56,7 +56,7 @@ return {
     "olivercederborg/poimandres.nvim",
     config = function()
       require("poimandres").setup({
-        disable_background = false,
+        disable_background = true,
       })
     end,
   },
@@ -147,14 +147,14 @@ return {
     priority = 1000,
     opts = {
       transparent = true,
-      style = "day",
+      style = "night",
     },
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "poimandres",
     },
   },
 }
