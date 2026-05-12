@@ -1,6 +1,7 @@
 {
+  "model": "sonnet",
   "effortLevel": "low",
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "theme": "auto",
-  "tui": "fullscreen"
+  "theme": "auto"
 }

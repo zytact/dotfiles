@@ -29,3 +29,4 @@
 .claude/stats-cache.json
 .claude/plugins
 .claude/image-cache
+.claude/tasks
