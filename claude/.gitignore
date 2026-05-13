@@ -30,3 +30,6 @@
 .claude/plugins
 .claude/image-cache
 .claude/tasks
+.claude/jobs
+.claude/daemon
+daemon.log

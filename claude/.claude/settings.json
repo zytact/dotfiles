@@ -1,5 +1,5 @@
 {
-  "model": "sonnet",
+  "model": "opus",
   "effortLevel": "low",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
