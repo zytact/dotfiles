@@ -162,7 +162,7 @@ alias battery_info="upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 alias cat="bat"
 alias cc="claude --dangerously-skip-permissions"
 alias ccr="claude --dangerously-skip-permissions -r"
-alias gitops="~/Projects/scripts/gitops"
+alias gitops="~/Projects/scripts/gitops --no-ai"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh
