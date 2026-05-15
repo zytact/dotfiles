@@ -7,82 +7,92 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
   "window_decorations": "client",
   "terminal": {
-    "default_height": 521.0
+    "default_height": 521.0,
   },
   "disable_ai": true,
   "redact_private_values": false,
-  "features": {
-    "edit_prediction_provider": "copilot"
-  },
   "format_on_save": "on",
   "icon_theme": "Material Icon Theme",
   "show_edit_predictions": false,
   "agent": {
+    "dock": "right",
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
-    }
+      "model": "gpt-5-mini",
+    },
   },
   "vim_mode": true,
   "vim": {
-    "use_system_clipboard": "never"
+    "use_system_clipboard": "never",
   },
   "telemetry": {
-    "metrics": false
+    "metrics": false,
   },
-  "ui_font_size": 14,
+  "ui_font_size": 11.0,
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_weight": 450,
   "buffer_font_size": 13.0,
   "tab_bar": {
-    "show": true
+    "show": true,
   },
   "buffer_line_height": {
-    "custom": 1.5
+    "custom": 1.5,
   },
   "relative_line_numbers": "enabled",
-  "theme": "Cursor Dark",
+  "theme": "Tokyo Night Light",
   "languages": {
     "Python": {
       "language_servers": ["pyright", "ruff"],
       "format_on_save": "off",
       "formatter": [
         {
-          "code_action": "source.organizeImports.ruff"
+          "code_action": "source.organizeImports.ruff",
         },
         {
-          "code_action": "source.fixAll.ruff"
+          "code_action": "source.fixAll.ruff",
         },
         {
           "language_server": {
-            "name": "ruff"
-          }
-        }
-      ]
-    }
+            "name": "ruff",
+          },
+        },
+      ],
+    },
   },
   "inlay_hints": {
     "enabled": false,
     "show_background": true,
-    "show_type_hints": false
+    "show_type_hints": false,
   },
   "auto_signature_help": false,
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
-        "font_style": "italic"
+        "font_style": "italic",
       },
       "comment.doc": {
-        "font_style": "italic"
+        "font_style": "italic",
       },
       "keyword": {
-        "font_style": "italic"
-      }
-    }
+        "font_style": "italic",
+      },
+    },
   },
   "lsp": {
     "rust-analyzer": {
@@ -91,13 +101,13 @@
         // which might include false-positives (those can be turned off by their names)
         "diagnostics": {
           "experimental": {
-            "enable": true
-          }
+            "enable": true,
+          },
         },
         // To disable the checking entirely
         // (ignores all cargo and check settings below)
-        "checkOnSave": false
-      }
-    }
-  }
+        "checkOnSave": false,
+      },
+    },
+  },
 }
