@@ -1,0 +1,7 @@
+{
+  "model": "opusplan",
+  "effortLevel": "low",
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "auto"
+}
