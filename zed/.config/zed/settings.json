@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "new_window",
   "project_panel": {
     "dock": "left",
   },
@@ -26,7 +27,11 @@
   "disable_ai": true,
   "redact_private_values": false,
   "format_on_save": "on",
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme"
+  },
   "show_edit_predictions": false,
   "agent": {
     "dock": "right",
@@ -47,7 +52,7 @@
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_weight": 450,
-  "buffer_font_size": 13.0,
+  "buffer_font_size": 10.0,
   "tab_bar": {
     "show": true,
   },
@@ -55,7 +60,11 @@
     "custom": 1.5,
   },
   "relative_line_numbers": "enabled",
-  "theme": "Tokyo Night Light",
+  "theme": {
+    "mode": "light",
+    "light": "Tokyo Night Light",
+    "dark": "One Dark"
+  },
   "languages": {
     "Python": {
       "language_servers": ["pyright", "ruff"],
