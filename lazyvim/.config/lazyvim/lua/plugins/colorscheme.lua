@@ -147,7 +147,7 @@ return {
     priority = 1000,
     opts = {
       transparent = true,
-      style = "night",
+      style = "day",
     },
   },
 

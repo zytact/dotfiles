@@ -1,4 +1,4 @@
-theme= "poimandres"
+theme= "TokyoNight Day"
 font-family = "CaskaydiaCove Nerd Font"
 font-style = "SemiBold"
 font-size = 9.5
@@ -7,3 +7,4 @@ window-theme = ghostty
 background-opacity = 1.0
 background-blur-radius = 20
 unfocused-split-opacity = 1
+window-show-tab-bar = never
