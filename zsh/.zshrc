@@ -207,3 +207,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# Auto-start herdr only once and only on interactive sessions
+if command -v herdr >/dev/null 2>&1 \
+  && [[ $- == *i* ]] \
+  && [ -z "$HERDR" ] \
+  && [ -z "$HERDR_SESSION" ] \
+  && [ -z "$AUTO_STARTED_HERDR" ]; then
+  export AUTO_STARTED_HERDR=1
+  exec herdr --session main
+fi
