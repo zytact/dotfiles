@@ -13,7 +13,8 @@
   "hideThinkingBlock": false,
   "theme": "blue-matrix",
   "packages": [
-    "npm:pi-web-access"
+    "npm:pi-web-access",
+    "npm:@narumitw/pi-codex-usage"
   ],
   "enableInstallTelemetry": false
 }
