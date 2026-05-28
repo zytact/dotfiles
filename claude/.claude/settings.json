@@ -1,5 +1,5 @@
 {
-  "model": "opusplan",
+  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "npx -y ccstatusline@latest",
@@ -9,5 +9,11 @@
   "effortLevel": "low",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "theme": "auto"
+  "theme": "dark",
+  "agentPushNotifEnabled": true,
+  "voiceEnabled": true,
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  }
 }
