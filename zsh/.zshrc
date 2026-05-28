@@ -163,6 +163,7 @@ alias cat="bat"
 alias cc="claude --dangerously-skip-permissions"
 alias ccr="claude --dangerously-skip-permissions -r"
 alias gitops="~/Projects/scripts/gitops --no-ai"
+alias oc="opencode"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh
@@ -209,11 +210,14 @@ esac
 # pnpm end
 
 # Auto-start herdr only once and only on interactive sessions
-if command -v herdr >/dev/null 2>&1 \
-  && [[ $- == *i* ]] \
-  && [ -z "$HERDR" ] \
-  && [ -z "$HERDR_SESSION" ] \
-  && [ -z "$AUTO_STARTED_HERDR" ]; then
-  export AUTO_STARTED_HERDR=1
-  exec herdr --session main
-fi
+#if command -v herdr >/dev/null 2>&1 \
+#  && [[ $- == *i* ]] \
+#  && [ -z "$HERDR" ] \
+#  && [ -z "$HERDR_SESSION" ] \
+#  && [ -z "$AUTO_STARTED_HERDR" ]; then
+#  export AUTO_STARTED_HERDR=1
+#  exec herdr --session main
+#fi
+
+# Pi
+export PATH="/home/arnab/.local/share/fnm/node-versions/v22.19.0/installation/bin:$PATH"
