@@ -146,15 +146,21 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      transparent = true,
-      style = "day",
+      transparent = false,
+      style = "night",
     },
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "blue-matrix",
     },
+  },
+
+  {
+    "blue-matrix",
+    dir = vim.fn.stdpath("config") .. "/colors",
+    priority = 1000,
   },
 }
