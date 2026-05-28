@@ -61,9 +61,9 @@
   },
   "relative_line_numbers": "enabled",
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Tokyo Night Light",
-    "dark": "One Dark"
+    "dark": "Tokyo Night"
   },
   "languages": {
     "Python": {
