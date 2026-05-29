@@ -2,7 +2,7 @@
 -- Derived from the ghostty blue-matrix theme palette.
 -- Supports tree-sitter, LSP diagnostics, and common plugins.
 
-local bg = "#000000"
+local bg = "#111010"
 local fg = "#cfe7ff"
 local cursor = "#39ff88"
 
