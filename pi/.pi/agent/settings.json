@@ -1,7 +1,7 @@
 {
   "lastChangelogVersion": "0.77.0",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.3-codex",
+  "defaultModel": "gpt-5.4",
   "defaultThinkingLevel": "medium",
   "enabledModels": [
     "openai-codex/gpt-5.4",
@@ -14,7 +14,8 @@
   "theme": "blue-matrix",
   "packages": [
     "npm:pi-web-access",
-    "npm:@narumitw/pi-codex-usage"
+    "npm:@narumitw/pi-codex-usage",
+    "npm:pi-footer"
   ],
   "enableInstallTelemetry": false
 }
