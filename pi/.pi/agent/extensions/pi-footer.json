@@ -74,7 +74,7 @@
       {
         "id": "cache-write-mpra3zeh-70odr2",
         "type": "cache-write",
-        "enabled": true,
+        "enabled": false,
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
@@ -131,7 +131,7 @@
       {
         "id": "git-branch-mpra2xig-h2w9bu",
         "type": "git-branch",
-        "enabled": true,
+        "enabled": false,
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
@@ -147,7 +147,7 @@
       {
         "id": "git-diff-mpra2xig-y47vpt",
         "type": "git-diff",
-        "enabled": true,
+        "enabled": false,
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
@@ -161,7 +161,7 @@
       {
         "id": "cost-mpra2xig-1umqwi",
         "type": "cost",
-        "enabled": true,
+        "enabled": false,
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
@@ -174,9 +174,87 @@
         }
       },
       {
+        "id": "external-status-codex-usage",
+        "type": "external-status",
+        "enabled": true,
+        "options": {
+          "raw": false,
+          "hideWhenEmpty": true,
+          "hideWhenZero": false,
+          "bold": false,
+          "text": "-",
+          "externalStatusKey": "codex-reset-countdown",
+          "preserveTrimStyles": true,
+          "fg": "red",
+          "bg": "default",
+          "trimValue": 0
+        }
+      },
+      {
         "id": "session-total-time-mpra2xig-uun8w3",
         "type": "session-total-time",
         "enabled": true,
+        "options": {
+          "raw": false,
+          "hideWhenEmpty": false,
+          "hideWhenZero": false,
+          "bold": false,
+          "fg": "yellow",
+          "bg": "default"
+        }
+      }
+    ],
+    [
+      {
+        "id": "git-branch-mprb6zo9-r7uo49",
+        "type": "git-branch",
+        "enabled": true,
+        "options": {
+          "raw": false,
+          "hideWhenEmpty": false,
+          "hideWhenZero": false,
+          "bold": false,
+          "surroundLeft": "",
+          "surroundRight": "",
+          "gitBranchDisplayStyle": "default",
+          "fg": "magenta",
+          "bg": "default"
+        }
+      },
+      {
+        "id": "git-diff-mprb780u-pz52j4",
+        "type": "git-diff",
+        "enabled": true,
+        "options": {
+          "raw": false,
+          "hideWhenEmpty": false,
+          "hideWhenZero": false,
+          "bold": false,
+          "fg": "yellow",
+          "bg": "default"
+        }
+      },
+      {
+        "id": "external-status-mprb8ywi-5pucp5",
+        "type": "external-status",
+        "enabled": false,
+        "options": {
+          "raw": false,
+          "hideWhenEmpty": true,
+          "hideWhenZero": false,
+          "bold": false,
+          "text": "-",
+          "externalStatusKey": "codex-usage",
+          "preserveTrimStyles": true,
+          "fg": "default",
+          "bg": "default",
+          "trimValue": 0
+        }
+      },
+      {
+        "id": "session-total-time-mprbb5uo-zseowm",
+        "type": "session-total-time",
+        "enabled": false,
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
@@ -198,7 +276,12 @@
     "colorLevel": "ansi256"
   },
   "extensionStatusRow": {
-    "hiddenKeys": [],
-    "knownKeys": []
+    "hiddenKeys": [
+      "codex-reset-countdown"
+    ],
+    "knownKeys": [
+      "codex-reset-countdown",
+      "codex-usage"
+    ]
   }
 }
