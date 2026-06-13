@@ -1,5 +1,5 @@
-theme= "blue-matrix"
-font-family = "CaskaydiaCove Nerd Font"
+theme= "blue-matrix-light"
+font-family = "CaskaydiaCove Nerd Font SemiBold"
 font-style = "SemiBold"
 font-size = 9.5
 adjust-cell-height = "20%"
