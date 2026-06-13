@@ -190,11 +190,11 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # fnm
-FNM_PATH="/home/arnab/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/arnab/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
+# FNM_PATH="/home/arnab/.local/share/fnm"
+# if [ -d "$FNM_PATH" ]; then
+#   export PATH="/home/arnab/.local/share/fnm:$PATH"
+#   eval "`fnm env`"
+# fi
 
 
 # Added by LM Studio CLI (lms)
@@ -210,14 +210,18 @@ esac
 # pnpm end
 
 # Auto-start herdr only once and only on interactive sessions
-#if command -v herdr >/dev/null 2>&1 \
+# if command -v herdr >/dev/null 2>&1 \
 #  && [[ $- == *i* ]] \
 #  && [ -z "$HERDR" ] \
 #  && [ -z "$HERDR_SESSION" ] \
 #  && [ -z "$AUTO_STARTED_HERDR" ]; then
 #  export AUTO_STARTED_HERDR=1
 #  exec herdr --session main
-#fi
+# fi
 
-# Pi
-export PATH="/home/arnab/.local/share/fnm/node-versions/v22.19.0/installation/bin:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
+
+# opencode
+export PATH=/home/arnab/.opencode/bin:$PATH
