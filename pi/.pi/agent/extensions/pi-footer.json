@@ -206,6 +206,21 @@
     ],
     [
       {
+        "id": "cost-mpslale2-bccoew",
+        "type": "cost",
+        "enabled": true,
+        "options": {
+          "raw": false,
+          "hideWhenEmpty": false,
+          "hideWhenZero": false,
+          "bold": false,
+          "showSubscription": false,
+          "costFormatStyle": "default",
+          "fg": "green",
+          "bg": "default"
+        }
+      },
+      {
         "id": "git-branch-mprb6zo9-r7uo49",
         "type": "git-branch",
         "enabled": true,

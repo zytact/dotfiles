@@ -1,0 +1,95 @@
+{
+  "$schema": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "blue-matrix-light",
+  "vars": {
+    "bg": "#e3ebf0",
+    "bgPanel": "#cedde6",
+    "bgPanelAlt": "#c4d7e2",
+    "bgSelect": "#d8eaff",
+
+    "txtMain": "#071a1f",
+    "txtSoft": "#123047",
+    "txtMuted": "#376078",
+    "txtDim": "#6b8fa1",
+
+    "cyan": "#008aa6",
+    "cyanBright": "#007f98",
+    "sky": "#0969da",
+    "skyBright": "#005fb8",
+    "teal": "#008f5a",
+    "pink": "#c0266f",
+    "pinkBright": "#a3195b",
+    "gold": "#9a6a00",
+    "goldBright": "#7c5600",
+    "violet": "#6d5bd0",
+    "violetBright": "#5848b8",
+
+    "toolPendingBg": "#d3e0e9",
+    "toolSuccessBg": "#dff8eb",
+    "toolErrorBg": "#ffe6ef"
+  },
+  "colors": {
+    "accent": "cyanBright",
+    "border": "#7aa7bd",
+    "borderAccent": "pinkBright",
+    "borderMuted": "#b7d1df",
+    "success": "teal",
+    "error": "pinkBright",
+    "warning": "gold",
+    "muted": "skyBright",
+    "dim": "violetBright",
+    "text": "txtMain",
+    "thinkingText": "pinkBright",
+
+    "selectedBg": "bgSelect",
+    "userMessageBg": "#c8d9e7",
+    "userMessageText": "txtMain",
+    "customMessageBg": "bgPanelAlt",
+    "customMessageText": "txtMain",
+    "customMessageLabel": "goldBright",
+    "toolPendingBg": "toolPendingBg",
+    "toolSuccessBg": "toolSuccessBg",
+    "toolErrorBg": "toolErrorBg",
+    "toolTitle": "skyBright",
+    "toolOutput": "#123047",
+
+    "mdHeading": "skyBright",
+    "mdLink": "pink",
+    "mdLinkUrl": "#315f7a",
+    "mdCode": "cyanBright",
+    "mdCodeBlock": "#00784c",
+    "mdCodeBlockBorder": "#b7d1df",
+    "mdQuote": "txtSoft",
+    "mdQuoteBorder": "#9db8c7",
+    "mdHr": "#b7d1df",
+    "mdListBullet": "gold",
+
+    "toolDiffAdded": "#008f5a",
+    "toolDiffRemoved": "#a3195b",
+    "toolDiffContext": "txtMuted",
+
+    "syntaxComment": "#6b8fa1",
+    "syntaxKeyword": "skyBright",
+    "syntaxFunction": "cyanBright",
+    "syntaxVariable": "#315f7a",
+    "syntaxString": "teal",
+    "syntaxNumber": "violetBright",
+    "syntaxType": "gold",
+    "syntaxOperator": "pinkBright",
+    "syntaxPunctuation": "#376078",
+
+    "thinkingOff": "#d5e7f2",
+    "thinkingMinimal": "#c7dce8",
+    "thinkingLow": "#9db8c7",
+    "thinkingMedium": "#7aa7bd",
+    "thinkingHigh": "sky",
+    "thinkingXhigh": "skyBright",
+
+    "bashMode": "teal"
+  },
+  "export": {
+    "pageBg": "#e3ebf0",
+    "cardBg": "#cedde6",
+    "infoBg": "#c4d7e2"
+  }
+}
