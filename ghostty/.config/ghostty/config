@@ -8,3 +8,5 @@ background-opacity = 1.0
 background-blur-radius = 20
 unfocused-split-opacity = 1
 window-show-tab-bar = never
+custom-shader = shaders/grain.glsl
+custom-shader-animation = false
