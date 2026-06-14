@@ -1,5 +1,4 @@
-// Subtle grain for both light and dark themes.
-// Biases toward mid/background tones and avoids pushing high-contrast text too hard.
+// Subtle background grain. Strongest on dark pixels; keeps bright text mostly intact.
 float hash12(vec2 p) {
     vec3 p3 = fract(vec3(p.xyx) * 0.1031);
     p3 += dot(p3, p3.yzx + 33.33);
@@ -11,16 +10,14 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec4 src = texture(iChannel0, uv);
 
     float luma = dot(src.rgb, vec3(0.299, 0.587, 0.114));
-    float dark_mix = 1.0 - smoothstep(0.08, 0.45, luma);
-    float light_mix = smoothstep(0.65, 0.97, luma);
-    float amount = mix(0.018, 0.036, dark_mix) + light_mix * 0.016;
+    float dark_mix = 0.55 * (1.0 - smoothstep(0.05, 0.32, luma));
 
     float base = hash12(fragCoord);
     float fine = hash12(fragCoord * 1.73 + 19.4);
-    float grain = ((base - 0.5) * amount) + ((fine - 0.5) * amount * 0.55);
+    float grain = ((base - 0.5) * 0.010 + (fine - 0.5) * 0.005) * dark_mix;
 
     float speck = smoothstep(0.992, 1.0, hash12(floor(fragCoord * 0.5) + 73.1));
-    grain += speck * (dark_mix * 0.014 + light_mix * 0.008);
+    grain += speck * 0.003 * dark_mix;
 
     fragColor = vec4(clamp(src.rgb + grain, 0.0, 1.0), src.a);
 }
