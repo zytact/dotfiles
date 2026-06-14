@@ -1,0 +1,155 @@
+{
+  "version": 3,
+  "skills": {
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "pluginName": "example-skills",
+      "installedAt": "2026-02-06T12:07:48.738Z",
+      "updatedAt": "2026-05-10T09:04:06.127Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-02-06T12:07:58.560Z",
+      "updatedAt": "2026-02-06T12:07:58.560Z"
+    },
+    "tdd": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/tdd/SKILL.md",
+      "skillFolderHash": "75beb3030b4c979205dd771ff85ac600baeb68f4",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-04-28T12:43:17.836Z",
+      "updatedAt": "2026-05-10T09:06:36.235Z"
+    },
+    "to-issues": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/to-issues/SKILL.md",
+      "skillFolderHash": "b38c5aa6ae5d6903e60d3f74a7aafd32d02f2c06",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-04-28T12:43:17.842Z",
+      "updatedAt": "2026-05-10T09:06:36.240Z"
+    },
+    "to-prd": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/to-prd/SKILL.md",
+      "skillFolderHash": "d6eff3e99a325d2d9c2acbe31b4d76fa5340a154",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-04-28T12:43:17.844Z",
+      "updatedAt": "2026-05-10T09:06:36.251Z"
+    },
+    "grill-me": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "grill-me/SKILL.md",
+      "skillFolderHash": "3a1df635e2b404a9663d3a22544223599a21cbf5",
+      "installedAt": "2026-04-28T12:43:17.847Z",
+      "updatedAt": "2026-05-25T18:28:35.647Z"
+    },
+    "living-architecture-docs": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "living-architecture-docs/SKILL.md",
+      "skillFolderHash": "ddbff65e88cd0378cfc915f660d43b0fb06753a3",
+      "installedAt": "2026-05-02T13:46:49.779Z",
+      "updatedAt": "2026-05-12T17:27:48.536Z"
+    },
+    "design-auditor": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "design-auditor/SKILL.md",
+      "skillFolderHash": "92e5a3395b7156ba3ac8b1f803e8f2ed8785f736",
+      "installedAt": "2026-05-07T10:47:28.853Z",
+      "updatedAt": "2026-05-10T09:06:56.531Z"
+    },
+    "icon-forge": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "icon-forge/SKILL.md",
+      "skillFolderHash": "aafdad8390bbf6376db44efd32c90a54ce4a6c47",
+      "installedAt": "2026-05-07T17:57:54.370Z",
+      "updatedAt": "2026-05-10T09:06:56.537Z"
+    },
+    "caveman": {
+      "source": "juliusbrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/juliusbrussee/caveman.git",
+      "skillPath": "caveman/SKILL.md",
+      "skillFolderHash": "f524c391d466fe35e0bdbe9707854fcb2be52b26",
+      "installedAt": "2026-05-08T18:23:15.386Z",
+      "updatedAt": "2026-05-09T15:55:50.224Z"
+    },
+    "yeet": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "yeet/SKILL.md",
+      "skillFolderHash": "0ae12485094cbd97b8444d3da46d1067f5679d90",
+      "installedAt": "2026-05-15T18:45:55.417Z",
+      "updatedAt": "2026-05-16T17:02:45.971Z"
+    },
+    "vendor-repo": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "vendor-repo/SKILL.md",
+      "skillFolderHash": "e7e969a73e7542dcb8e753168a92b5e8553db29b",
+      "installedAt": "2026-05-25T19:54:26.796Z",
+      "updatedAt": "2026-06-06T06:47:23.315Z"
+    },
+    "ubiquitous-language": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "ubiquitous-language/SKILL.md",
+      "skillFolderHash": "df4042b1136ceb7759f981f53722936968564e57",
+      "installedAt": "2026-05-25T20:11:17.918Z",
+      "updatedAt": "2026-05-25T20:11:17.918Z"
+    },
+    "handoff": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/handoff/SKILL.md",
+      "skillFolderHash": "7bbb60d64c911617cee7f71b2ba9e24364faa14e",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-06-14T06:17:10.543Z",
+      "updatedAt": "2026-06-14T06:17:10.543Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code"
+  ]
+}
