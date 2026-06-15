@@ -6,6 +6,10 @@ import { Key, matchesKey, truncateToWidth, wrapTextWithAnsi } from "@earendil-wo
 const PROTECTED_BRANCHES = new Set(["main", "master", "develop"]);
 const COMMIT_TYPES = "feat, fix, docs, style, refactor, test, chore, ci, perf, build";
 const TITLE_FRAMES = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"];
+const TEXT_FRAMES = ["·  ", "•• ", "•••", " ••", "  •"];
+
+let yeetStatusTimer: ReturnType<typeof setInterval> | null = null;
+let yeetStatusToken = 0;
 
 interface ExecResult {
 	stdout: string;
@@ -96,9 +100,36 @@ function baseTitle(): string {
 	return `π - ${path.basename(process.cwd())}`;
 }
 
+function stopYeetStatus(ctx: ExtensionContext): void {
+	if (yeetStatusTimer) {
+		clearInterval(yeetStatusTimer);
+		yeetStatusTimer = null;
+	}
+	ctx.ui.setStatus("yeet", undefined);
+	ctx.ui.setTitle(baseTitle());
+}
+
 function setYeetStatus(ctx: ExtensionContext, text?: string): void {
-	ctx.ui.setStatus("yeet", text ? ctx.ui.theme.fg("accent", `yeet: ${text}`) : undefined);
-	ctx.ui.setTitle(text ? yeetTitle(`yeet: ${text}`) : baseTitle());
+	if (!text) {
+		stopYeetStatus(ctx);
+		return;
+	}
+
+	const token = ++yeetStatusToken;
+	if (yeetStatusTimer) clearInterval(yeetStatusTimer);
+
+	let frame = 0;
+	const paint = () => {
+		if (token !== yeetStatusToken) return;
+		const spinner = TITLE_FRAMES[frame % TITLE_FRAMES.length];
+		const pulse = TEXT_FRAMES[frame % TEXT_FRAMES.length];
+		ctx.ui.setStatus("yeet", ctx.ui.theme.fg("accent", `${spinner} yeet: ${text} ${pulse}`));
+		ctx.ui.setTitle(yeetTitle(`yeet: ${text} ${pulse}`, frame));
+		frame++;
+	};
+
+	paint();
+	yeetStatusTimer = setInterval(paint, 100);
 }
 
 async function withYeetStatus<T>(ctx: ExtensionContext, text: string, fn: () => Promise<T>): Promise<T> {
@@ -106,7 +137,7 @@ async function withYeetStatus<T>(ctx: ExtensionContext, text: string, fn: () => 
 	try {
 		return await fn();
 	} finally {
-		setYeetStatus(ctx);
+		stopYeetStatus(ctx);
 	}
 }
 
