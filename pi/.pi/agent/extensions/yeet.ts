@@ -1,9 +1,11 @@
+import path from "node:path";
 import { complete, type Message } from "@earendil-works/pi-ai";
-import { BorderedLoader, type ExtensionAPI } from "@earendil-works/pi-coding-agent";
+import { BorderedLoader, type ExtensionAPI, type ExtensionContext } from "@earendil-works/pi-coding-agent";
 import { Key, matchesKey, truncateToWidth, wrapTextWithAnsi } from "@earendil-works/pi-tui";
 
 const PROTECTED_BRANCHES = new Set(["main", "master", "develop"]);
 const COMMIT_TYPES = "feat, fix, docs, style, refactor, test, chore, ci, perf, build";
+const TITLE_FRAMES = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"];
 
 interface ExecResult {
 	stdout: string;
@@ -83,6 +85,28 @@ function addWrapped(lines: string[], text: string, width: number, indent = ""): 
 	const contentWidth = Math.max(1, width - indent.length);
 	for (const line of wrapTextWithAnsi(text, contentWidth)) {
 		lines.push(truncateToWidth(`${indent}${line}`, width));
+	}
+}
+
+function yeetTitle(text: string, frame = 0): string {
+	return `${TITLE_FRAMES[frame % TITLE_FRAMES.length]} ${text}`;
+}
+
+function baseTitle(): string {
+	return `π - ${path.basename(process.cwd())}`;
+}
+
+function setYeetStatus(ctx: ExtensionContext, text?: string): void {
+	ctx.ui.setStatus("yeet", text ? ctx.ui.theme.fg("accent", `yeet: ${text}`) : undefined);
+	ctx.ui.setTitle(text ? yeetTitle(`yeet: ${text}`) : baseTitle());
+}
+
+async function withYeetStatus<T>(ctx: ExtensionContext, text: string, fn: () => Promise<T>): Promise<T> {
+	setYeetStatus(ctx, text);
+	try {
+		return await fn();
+	} finally {
+		setYeetStatus(ctx);
 	}
 }
 
@@ -245,7 +269,7 @@ async function chooseFilesToStage(ctx: any, items: GitStatusItem[]): Promise<Git
 
 async function stageForCommit(pi: ExtensionAPI, ctx: any): Promise<boolean> {
 	const cwd = ctx.cwd;
-	const status = await getStatus(pi, cwd);
+	const status = await withYeetStatus(ctx, "checking git status", () => getStatus(pi, cwd));
 	const pending = unstagedOrUntracked(status);
 	if (pending.length === 0) return true;
 
@@ -256,10 +280,12 @@ async function stageForCommit(pi: ExtensionAPI, ctx: any): Promise<boolean> {
 	const untracked = chosen.filter((item) => item.kind === "untracked").map((item) => item.path);
 
 	if (tracked.length > 0) {
-		const addTracked = await pi.exec(
-			"bash",
-			["-lc", `git add -- ${tracked.map(shellQuote).join(" ")}`],
-			{ cwd, timeout: 30_000 },
+		const addTracked = await withYeetStatus(ctx, "staging files", () =>
+			pi.exec(
+				"bash",
+				["-lc", `git add -- ${tracked.map(shellQuote).join(" ")}`],
+				{ cwd, timeout: 30_000 },
+			),
 		);
 		if (addTracked.code !== 0) {
 			ctx.ui.notify(addTracked.stderr.trim() || "git add failed", "error");
@@ -268,10 +294,12 @@ async function stageForCommit(pi: ExtensionAPI, ctx: any): Promise<boolean> {
 	}
 
 	if (untracked.length > 0) {
-		const addUntracked = await pi.exec(
-			"bash",
-			["-lc", `git add -- ${untracked.map(shellQuote).join(" ")}`],
-			{ cwd, timeout: 30_000 },
+		const addUntracked = await withYeetStatus(ctx, "staging files", () =>
+			pi.exec(
+				"bash",
+				["-lc", `git add -- ${untracked.map(shellQuote).join(" ")}`],
+				{ cwd, timeout: 30_000 },
+			),
 		);
 		if (addUntracked.code !== 0) {
 			ctx.ui.notify(addUntracked.stderr.trim() || "git add failed", "error");
@@ -284,8 +312,12 @@ async function stageForCommit(pi: ExtensionAPI, ctx: any): Promise<boolean> {
 
 async function genCommitMessage(pi: ExtensionAPI, ctx: any): Promise<string | null> {
 	const cwd = ctx.cwd;
-	const stat = await run(pi, ["diff", "--cached", "--stat", "--diff-filter=ACMRD"], cwd);
-	const diff = await run(pi, ["diff", "--cached", "--diff-filter=ACMRD"], cwd);
+	const [stat, diff] = await withYeetStatus(ctx, "reading staged diff", () =>
+		Promise.all([
+			run(pi, ["diff", "--cached", "--stat", "--diff-filter=ACMRD"], cwd),
+			run(pi, ["diff", "--cached", "--diff-filter=ACMRD"], cwd),
+		]),
+	);
 	if (stat.code !== 0 || diff.code !== 0) return null;
 
 	const prompt = [
@@ -301,18 +333,20 @@ async function genCommitMessage(pi: ExtensionAPI, ctx: any): Promise<string | nu
 		diff.stdout.trim() || "(empty)",
 	].join("\n");
 
-	return llm(ctx, prompt, "You write precise conventional commit messages.", "Generating commit msg...");
+	return withYeetStatus(ctx, "generating commit msg", () =>
+		llm(ctx, prompt, "You write precise conventional commit messages.", "Generating commit msg..."),
+	);
 }
 
 async function doPush(pi: ExtensionAPI, ctx: any, branch?: string | null): Promise<{ ok: boolean }> {
 	const cwd = ctx.cwd;
-	const target = branch || (await currentBranch(pi, cwd));
+	const target = branch || (await withYeetStatus(ctx, "detecting branch", () => currentBranch(pi, cwd)));
 	if (!target) {
 		ctx.ui.notify("Could not detect branch for push", "warning");
 		return { ok: false };
 	}
 
-	const push = await run(pi, ["push", "-u", "origin", target], cwd);
+	const push = await withYeetStatus(ctx, `pushing ${target}`, () => run(pi, ["push", "-u", "origin", target], cwd));
 	if (push.stdout.trim()) ctx.ui.notify(push.stdout.trim(), push.code === 0 ? "info" : "warning");
 	if (push.stderr.trim()) ctx.ui.notify(push.stderr.trim(), push.code === 0 ? "info" : "warning");
 	if (push.code !== 0) {
@@ -326,7 +360,7 @@ async function doCommit(pi: ExtensionAPI, ctx: any, opts?: { push?: boolean }): 
 	const cwd = ctx.cwd;
 	if (!(await stageForCommit(pi, ctx))) return { ok: false };
 
-	const status = await getStatus(pi, cwd);
+	const status = await withYeetStatus(ctx, "checking staged files", () => getStatus(pi, cwd));
 	if (!hasStaged(status)) {
 		ctx.ui.notify("Nothing staged", "warning");
 		return { ok: false };
@@ -355,7 +389,7 @@ async function doCommit(pi: ExtensionAPI, ctx: any, opts?: { push?: boolean }): 
 		break;
 	}
 
-	const result = await run(pi, ["commit", "-m", message], cwd);
+	const result = await withYeetStatus(ctx, "committing", () => run(pi, ["commit", "-m", message], cwd));
 	if (result.stdout.trim()) ctx.ui.notify(result.stdout.trim(), result.code === 0 ? "info" : "warning");
 	if (result.stderr.trim()) ctx.ui.notify(result.stderr.trim(), result.code === 0 ? "info" : "warning");
 	if (result.code !== 0) {
@@ -369,8 +403,8 @@ async function doCommit(pi: ExtensionAPI, ctx: any, opts?: { push?: boolean }): 
 
 async function genBranchName(pi: ExtensionAPI, ctx: any): Promise<string | null> {
 	const cwd = ctx.cwd;
-	let stat = await run(pi, ["diff", "--cached", "--stat"], cwd);
-	if (!stat.stdout.trim()) stat = await run(pi, ["diff", "--stat", "HEAD"], cwd);
+	let stat = await withYeetStatus(ctx, "reading branch context", () => run(pi, ["diff", "--cached", "--stat"], cwd));
+	if (!stat.stdout.trim()) stat = await withYeetStatus(ctx, "reading branch context", () => run(pi, ["diff", "--stat", "HEAD"], cwd));
 
 	const prompt = [
 		"Generate one git branch name.",
@@ -381,7 +415,9 @@ async function genBranchName(pi: ExtensionAPI, ctx: any): Promise<string | null>
 		stat.stdout.trim() || "(empty)",
 	].join("\n");
 
-	return llm(ctx, prompt, "You write terse git branch names.", "Generating branch name...");
+	return withYeetStatus(ctx, "generating branch name", () =>
+		llm(ctx, prompt, "You write terse git branch names.", "Generating branch name..."),
+	);
 }
 
 async function doBranch(pi: ExtensionAPI, ctx: any): Promise<{ ok: boolean; name?: string }> {
@@ -405,7 +441,7 @@ async function doBranch(pi: ExtensionAPI, ctx: any): Promise<{ ok: boolean; name
 		break;
 	}
 
-	const result = await run(pi, ["checkout", "-b", name], cwd);
+	const result = await withYeetStatus(ctx, `creating branch ${name}`, () => run(pi, ["checkout", "-b", name], cwd));
 	if (result.stdout.trim()) ctx.ui.notify(result.stdout.trim(), result.code === 0 ? "info" : "warning");
 	if (result.stderr.trim()) ctx.ui.notify(result.stderr.trim(), result.code === 0 ? "info" : "warning");
 	if (result.code !== 0) {
@@ -417,11 +453,15 @@ async function doBranch(pi: ExtensionAPI, ctx: any): Promise<{ ok: boolean; name
 
 async function genPrDraft(pi: ExtensionAPI, ctx: any, base: string, branch: string): Promise<PrDraft | null> {
 	const cwd = ctx.cwd;
-	const log = await run(pi, ["log", `${base}..${branch}`, "--oneline"], cwd);
-	const stat = await run(pi, ["diff", `${base}...${branch}`, "--stat"], cwd);
-	const names = await run(pi, ["diff", `${base}...${branch}`, "--name-only"], cwd);
-	const diff = await run(pi, ["diff", `${base}...${branch}`, "--diff-filter=ACMRD"], cwd);
-	const oldest = await run(pi, ["log", `${base}..${branch}`, "--reverse", "--format=%s"], cwd);
+	const [log, stat, names, diff, oldest] = await withYeetStatus(ctx, "reading PR context", () =>
+		Promise.all([
+			run(pi, ["log", `${base}..${branch}`, "--oneline"], cwd),
+			run(pi, ["diff", `${base}...${branch}`, "--stat"], cwd),
+			run(pi, ["diff", `${base}...${branch}`, "--name-only"], cwd),
+			run(pi, ["diff", `${base}...${branch}`, "--diff-filter=ACMRD"], cwd),
+			run(pi, ["log", `${base}..${branch}`, "--reverse", "--format=%s"], cwd),
+		]),
+	);
 	const fallbackTitle = oldest.stdout.trim().split("\n")[0]?.trim() || `chore: update ${branch}`;
 
 	const titlePrompt = [
@@ -436,7 +476,9 @@ async function genPrDraft(pi: ExtensionAPI, ctx: any, base: string, branch: stri
 		"## commits",
 		log.stdout.trim() || "(empty)",
 	].join("\n");
-	const title = (await llm(ctx, titlePrompt, "You write crisp GitHub PR titles.", "Generating PR title..."))
+	const title = (await withYeetStatus(ctx, "generating PR title", () =>
+		llm(ctx, titlePrompt, "You write crisp GitHub PR titles.", "Generating PR title..."),
+	))
 		?.split("\n")[0]
 		.trim() || fallbackTitle;
 
@@ -466,7 +508,9 @@ async function genPrDraft(pi: ExtensionAPI, ctx: any, base: string, branch: stri
 		"## diff",
 		truncate(diff.stdout.trim() || "(empty)", 12000),
 	].join("\n");
-	let body = await llm(ctx, bodyPrompt, "You write precise GitHub PR bodies.", "Generating PR body...");
+	let body = await withYeetStatus(ctx, "generating PR body", () =>
+		llm(ctx, bodyPrompt, "You write precise GitHub PR bodies.", "Generating PR body..."),
+	);
 	body = stripFences(body || "").trim();
 	if (!body || !body.includes("## Test plan")) {
 		body = "- Summary unavailable\n\n## Test plan\n- Not run (not provided)";
@@ -517,10 +561,12 @@ async function doPr(pi: ExtensionAPI, ctx: any): Promise<{ ok: boolean }> {
 		break;
 	}
 
-	const result = await pi.exec("gh", ["pr", "create", "--base", base, "--title", draft.title, "--body", draft.body], {
-		cwd,
-		timeout: 60_000,
-	});
+	const result = await withYeetStatus(ctx, "creating PR", () =>
+		pi.exec("gh", ["pr", "create", "--base", base, "--title", draft.title, "--body", draft.body], {
+			cwd,
+			timeout: 60_000,
+		}),
+	);
 	if (result.stdout.trim()) ctx.ui.notify(result.stdout.trim(), result.code === 0 ? "info" : "warning");
 	if (result.stderr.trim()) ctx.ui.notify(result.stderr.trim(), result.code === 0 ? "info" : "warning");
 	if (result.code !== 0) {
@@ -549,6 +595,10 @@ async function doAuto(pi: ExtensionAPI, ctx: any): Promise<void> {
 }
 
 export default function yeet(pi: ExtensionAPI) {
+	pi.on("session_shutdown", async (_event, ctx) => {
+		setYeetStatus(ctx);
+	});
+
 	pi.registerCommand("yeet", {
 		description: "AI git workflow: /yeet [commit|branch|pr|auto]",
 		getArgumentCompletions: (prefix) => {
