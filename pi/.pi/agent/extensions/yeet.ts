@@ -304,7 +304,25 @@ async function genCommitMessage(pi: ExtensionAPI, ctx: any): Promise<string | nu
 	return llm(ctx, prompt, "You write precise conventional commit messages.", "Generating commit msg...");
 }
 
-async function doCommit(pi: ExtensionAPI, ctx: any): Promise<{ ok: boolean; message?: string }> {
+async function doPush(pi: ExtensionAPI, ctx: any, branch?: string | null): Promise<{ ok: boolean }> {
+	const cwd = ctx.cwd;
+	const target = branch || (await currentBranch(pi, cwd));
+	if (!target) {
+		ctx.ui.notify("Could not detect branch for push", "warning");
+		return { ok: false };
+	}
+
+	const push = await run(pi, ["push", "-u", "origin", target], cwd);
+	if (push.stdout.trim()) ctx.ui.notify(push.stdout.trim(), push.code === 0 ? "info" : "warning");
+	if (push.stderr.trim()) ctx.ui.notify(push.stderr.trim(), push.code === 0 ? "info" : "warning");
+	if (push.code !== 0) {
+		ctx.ui.notify("git push failed", "warning");
+		return { ok: false };
+	}
+	return { ok: true };
+}
+
+async function doCommit(pi: ExtensionAPI, ctx: any, opts?: { push?: boolean }): Promise<{ ok: boolean; message?: string }> {
 	const cwd = ctx.cwd;
 	if (!(await stageForCommit(pi, ctx))) return { ok: false };
 
@@ -344,6 +362,8 @@ async function doCommit(pi: ExtensionAPI, ctx: any): Promise<{ ok: boolean; mess
 		ctx.ui.notify("git commit failed", "error");
 		return { ok: false };
 	}
+
+	if (opts?.push) await doPush(pi, ctx);
 	return { ok: true, message };
 }
 
@@ -518,16 +538,8 @@ async function doAuto(pi: ExtensionAPI, ctx: any): Promise<void> {
 		if (!branched.ok) return;
 	}
 
-	const committed = await doCommit(pi, ctx);
+	const committed = await doCommit(pi, ctx, { push: true });
 	if (!committed.ok) return;
-
-	const nextBranch = await currentBranch(pi, cwd);
-	if (nextBranch) {
-		const push = await run(pi, ["push", "-u", "origin", nextBranch], cwd);
-		if (push.stdout.trim()) ctx.ui.notify(push.stdout.trim(), push.code === 0 ? "info" : "warning");
-		if (push.stderr.trim()) ctx.ui.notify(push.stderr.trim(), push.code === 0 ? "info" : "warning");
-		if (push.code !== 0) ctx.ui.notify("git push failed; continuing", "warning");
-	}
 
 	if (await hasGh(pi, cwd)) {
 		await doPr(pi, ctx);
@@ -561,7 +573,7 @@ export default function yeet(pi: ExtensionAPI) {
 
 			switch (sub) {
 				case "commit":
-					await doCommit(pi, ctx);
+					await doCommit(pi, ctx, { push: true });
 					return;
 				case "branch":
 					await doBranch(pi, ctx);
