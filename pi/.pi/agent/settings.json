@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.79.2",
+  "lastChangelogVersion": "0.79.4",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
+  "defaultModel": "gpt-5.4",
   "defaultThinkingLevel": "medium",
   "enabledModels": [
     "openai-codex/gpt-5.4",
@@ -10,7 +10,7 @@
     "opencode/deepseek-v4-flash-free"
   ],
   "hideThinkingBlock": false,
-  "theme": "blue-matrix-light",
+  "theme": "blue-matrix",
   "packages": [
     "npm:pi-web-access",
     "npm:pi-footer",

@@ -154,7 +154,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "blue-matrix-light",
+      colorscheme = "blue-matrix",
     },
   },
 
