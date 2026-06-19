@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.79.4",
-  "defaultProvider": "opencode",
-  "defaultModel": "deepseek-v4-flash-free",
+  "lastChangelogVersion": "0.79.7",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.4",
   "defaultThinkingLevel": "high",
   "enabledModels": [
     "openai-codex/gpt-5.4",
@@ -15,12 +15,60 @@
     "npm:pi-web-access",
     "npm:pi-footer",
     "npm:pi-better-openai",
-    "npm:pi-claude-style-tools"
+    "npm:pi-claude-style-tools",
+    "npm:pi-subagents"
   ],
   "enableInstallTelemetry": false,
   "showHardwareCursor": false,
   "terminal": {
     "showTerminalProgress": true
   },
-  "followUpMode": "one-at-a-time"
+  "followUpMode": "one-at-a-time",
+  "subagents": {
+    "agentOverrides": {
+      "scout": {
+        "model": "openai-codex/gpt-5.4-mini",
+        "thinking": "low",
+        "fallbackModels": [
+          "openai-codex/gpt-5.4"
+        ]
+      },
+      "researcher": {
+        "model": "openai-codex/gpt-5.4",
+        "thinking": "medium",
+        "fallbackModels": [
+          "openai-codex/gpt-5.4-mini"
+        ]
+      },
+      "worker": {
+        "model": "openai-codex/gpt-5.4",
+        "thinking": "medium",
+        "fallbackModels": [
+          "openai-codex/gpt-5.4-mini"
+        ]
+      },
+
+      "reviewer": {
+        "model": "openai-codex/gpt-5.4",
+        "thinking": "xhigh",
+        "fallbackModels": [
+          "openai-codex/gpt-5.4-mini"
+        ]
+      },
+      "orcale": {
+        "model": "openai-codex/gpt-5.4",
+        "thinking": "xhigh",
+        "fallbackModels": [
+          "openai-codex/gpt-5.4-mini"
+        ]
+      },
+      "delegate": {
+        "model": "openai-codex/gpt-5.4",
+        "thinking": "medium",
+        "fallbackModels": [
+          "openai-codex/gpt-5.4-mini"
+        ]
+      }
+    }
+  }
 }
