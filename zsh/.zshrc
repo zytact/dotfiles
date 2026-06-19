@@ -164,6 +164,7 @@ alias cc="claude --dangerously-skip-permissions"
 alias ccr="claude --dangerously-skip-permissions -r"
 alias gitops="~/Projects/scripts/gitops --no-ai"
 alias oc="opencode"
+alias roll-codex="pi -p --model openai-codex/gpt-5.4-mini:off 'Hi'"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh
