@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.79.7",
+  "lastChangelogVersion": "0.79.8",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.4",
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "medium",
   "enabledModels": [
     "openai-codex/gpt-5.4",
     "openai-codex/gpt-5.4-mini",
@@ -47,17 +47,16 @@
           "openai-codex/gpt-5.4-mini"
         ]
       },
-
       "reviewer": {
         "model": "openai-codex/gpt-5.4",
-        "thinking": "xhigh",
+        "thinking": "high",
         "fallbackModels": [
           "openai-codex/gpt-5.4-mini"
         ]
       },
       "orcale": {
         "model": "openai-codex/gpt-5.4",
-        "thinking": "xhigh",
+        "thinking": "high",
         "fallbackModels": [
           "openai-codex/gpt-5.4-mini"
         ]
@@ -68,7 +67,15 @@
         "fallbackModels": [
           "openai-codex/gpt-5.4-mini"
         ]
+      },
+      "context-builder": {
+        "model": "openai-codex/gpt-5.4-mini",
+        "thinking": "low",
+        "fallbackModels": [
+          "openai-codex/gpt-5.4"
+        ]
       }
     }
-  }
+  },
+  "quietStartup": false
 }
