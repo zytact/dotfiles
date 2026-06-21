@@ -1,3 +1,134 @@
-[username]
-show_always = true
+palette = "blue_matrix"
+add_newline = false
 command_timeout = 2000
+scan_timeout = 50
+
+format = """
+[╭─](fg:line)${custom.start}$os$directory$git_branch$git_status$python$nodejs$rust$golang$lua$fill$cmd_duration$time$status${custom.end_right}
+[╰─](fg:line)$character
+"""
+
+[palettes.blue_matrix]
+bg = "#111010"
+surface = "#0a0f1a"
+line = "#1e3a5f"
+fg = "#cfe7ff"
+blue = "#4aa3ff"
+blue2 = "#7cc4ff"
+cyan = "#22d3ee"
+cyan2 = "#67e8f9"
+green = "#39ff88"
+green2 = "#7dffb3"
+yellow = "#ffd166"
+purple = "#a78bfa"
+purple2 = "#c4b5fd"
+red = "#ff5faf"
+white = "#eff6ff"
+select = "#4c1d95"
+
+[fill]
+symbol = " "
+style = "fg:line"
+
+[custom.start]
+when = true
+format = "[](fg:surface)"
+
+[custom.end_right]
+when = true
+format = "[](fg:surface)"
+
+[os]
+disabled = false
+style = "fg:blue bg:surface bold"
+format = "[$symbol ]($style)"
+
+[os.symbols]
+Fedora = ""
+Macos = ""
+Ubuntu = ""
+Arch = ""
+Debian = ""
+NixOS = ""
+Linux = "󰌽"
+Unknown = "󰘔"
+Windows = "󰍲"
+
+[directory]
+style = "fg:cyan bg:surface bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " 󰌾"
+home_symbol = "~"
+
+[git_branch]
+symbol = " "
+style = "fg:green bg:surface bold"
+format = "[on $symbol$branch ]($style)"
+
+[git_status]
+style = "fg:yellow bg:surface bold"
+format = "([$all_status$ahead_behind ]($style))"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+conflicted = "=${count}"
+deleted = "✘${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+untracked = "?${count}"
+stashed = "*${count}"
+
+[python]
+symbol = " "
+style = "fg:blue2 bg:surface bold"
+format = "[via $symbol$version ]($style)"
+
+[nodejs]
+symbol = "󰎙 "
+style = "fg:green2 bg:surface bold"
+format = "[via $symbol$version ]($style)"
+
+[rust]
+symbol = "󱘗 "
+style = "fg:red bg:surface bold"
+format = "[via $symbol$version ]($style)"
+
+[golang]
+symbol = " "
+style = "fg:cyan2 bg:surface bold"
+format = "[via $symbol$version ]($style)"
+
+[lua]
+symbol = " "
+style = "fg:purple2 bg:surface bold"
+format = "[via $symbol$version ]($style)"
+
+[cmd_duration]
+min_time = 500
+style = "fg:yellow bg:surface"
+format = "[ $duration ]($style)"
+
+[time]
+disabled = false
+time_format = "%H:%M:%S"
+style = "fg:blue2 bg:surface"
+format = "[󰥔 $time ]($style)"
+
+[status]
+disabled = false
+symbol = "✘"
+success_symbol = ""
+not_executable_symbol = ""
+not_found_symbol = "󰅙"
+sigint_symbol = ""
+style = "fg:red bg:surface bold"
+format = "([$symbol $status ]($style))"
+map_symbol = true
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold cyan)"

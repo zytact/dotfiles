@@ -31,6 +31,10 @@ local c = {
   selection_fg   = "#071a1f",
 }
 
+local transparent = vim.g.blue_matrix_transparent == true
+local main_bg = transparent and "NONE" or bg
+local panel_bg = transparent and "NONE" or c.black
+
 local function h(group, opts)
   opts = opts or {}
   local gui = opts.gui and "gui=" .. opts.gui or "gui=NONE"
@@ -60,16 +64,16 @@ local function setup()
   -- ==========================================================================
   -- Base editor groups
   -- ==========================================================================
-  h("Normal",       { fg = fg, bg = bg })
-  h("NormalFloat",  { fg = fg, bg = c.black })
-  h("NormalSB",     { fg = fg, bg = bg })
+  h("Normal",       { fg = fg, bg = main_bg })
+  h("NormalFloat",  { fg = fg, bg = panel_bg })
+  h("NormalSB",     { fg = fg, bg = main_bg })
   h("EndOfBuffer",  { fg = c.dark_blue })
   h("Cursor",       { fg = bg, bg = cursor })
   h("CursorColumn", { bg = c.black })
   h("CursorLine",   { bg = "#d3e0e9" })
   h("CursorLineNr", { fg = c.light_bright, gui = "bold" })
   h("LineNr",       { fg = c.dark_blue })
-  h("SignColumn",   { bg = bg })
+  h("SignColumn",   { bg = main_bg })
   h("ColorColumn",  { bg = "#d0dde6" })
 
   h("Visual",        { bg = c.selection_bg, fg = c.selection_fg })
@@ -86,7 +90,7 @@ local function setup()
   h("Whitespace",    { fg = c.dark_blue })
   h("Conceal",       { fg = c.dark_blue })
 
-  h("Pmenu",         { fg = fg, bg = c.black })
+  h("Pmenu",         { fg = fg, bg = panel_bg })
   h("PmenuSel",      { fg = bg, bg = c.med_blue })
   h("PmenuSbar",     { bg = c.dark_blue })
   h("PmenuThumb",    { bg = c.med_blue })
@@ -96,20 +100,20 @@ local function setup()
   h("MoreMsg",       { fg = c.light_green })
   h("ModeMsg",       { fg = fg })
 
-  h("TabLine",       { fg = c.dark_blue, bg = bg })
-  h("TabLineFill",   { bg = bg })
-  h("TabLineSel",    { fg = c.bright_blue, bg = bg, gui = "bold" })
+  h("TabLine",       { fg = c.dark_blue, bg = main_bg })
+  h("TabLineFill",   { bg = main_bg })
+  h("TabLineSel",    { fg = c.bright_blue, bg = main_bg, gui = "bold" })
 
   h("Title",         { fg = c.bright_blue, gui = "bold" })
 
-  h("StatusLine",    { fg = fg, bg = c.black })
-  h("StatusLineNC",  { fg = c.dark_blue, bg = bg })
+  h("StatusLine",    { fg = fg, bg = panel_bg })
+  h("StatusLineNC",  { fg = c.dark_blue, bg = main_bg })
   h("StatusLineTerm",    { link = "StatusLine" })
   h("StatusLineTermNC",  { link = "StatusLineNC" })
 
-  h("VertSplit",     { fg = c.dark_blue, bg = bg })
+  h("VertSplit",     { fg = c.dark_blue, bg = main_bg })
 
-  h("FoldColumn",    { fg = c.dark_blue, bg = bg })
+  h("FoldColumn",    { fg = c.dark_blue, bg = main_bg })
   h("Folded",        { fg = c.med_blue, bg = "#d3e0e9" })
 
   h("SpellBad",      { guisp = c.bright_blue, gui = "undercurl" })

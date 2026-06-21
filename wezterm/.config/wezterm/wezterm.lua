@@ -4,9 +4,9 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Medium" })
+config.font = wezterm.font({ family = "CaskaydiaCove Nerd Font", weight = "DemiBold" })
 
-config.font_size = 10.5
+config.font_size = 8.5
 local harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 config.line_height = 1.3
 config.freetype_load_flags = "NO_HINTING"
@@ -22,7 +22,9 @@ config.tab_bar_at_bottom = true
 -- Do not use fancy tab bar
 config.use_fancy_tab_bar = false
 config.enable_tab_bar = true
+config.enable_wayland = true
 config.window_background_opacity = 1.0
+config.window_decorations = "TITLE|RESIZE"
 
 -- Disable inactive pane higlighting
 config.inactive_pane_hsb = {
@@ -31,23 +33,47 @@ config.inactive_pane_hsb = {
 	brightness = 1.0,
 }
 
--- Set colorscheme
-config.color_scheme = "Tokyo Night"
-
 config.colors = {
+	foreground = "#cfe7ff",
+	background = "#111010",
+	cursor_bg = "#39ff88",
+	cursor_border = "#39ff88",
+	cursor_fg = "#111010",
+	selection_bg = "#4c1d95",
+	selection_fg = "#fdf4ff",
+	ansi = {
+		"#0a0f1a",
+		"#ff5faf",
+		"#39ff88",
+		"#ffd166",
+		"#4aa3ff",
+		"#a78bfa",
+		"#22d3ee",
+		"#dbeafe",
+	},
+	brights = {
+		"#1e3a5f",
+		"#ff8cc6",
+		"#7dffb3",
+		"#ffe08a",
+		"#7cc4ff",
+		"#c4b5fd",
+		"#67e8f9",
+		"#eff6ff",
+	},
 	tab_bar = {
-		background = "#1a1b26",
+		background = "#111010",
 		active_tab = {
-			bg_color = "#7aa2f7",
-			fg_color = "#1a1b26",
+			bg_color = "#4aa3ff",
+			fg_color = "#111010",
 		},
 		inactive_tab = {
-			bg_color = "#292e42",
-			fg_color = "#9ece6a",
+			bg_color = "#0a0f1a",
+			fg_color = "#cfe7ff",
 		},
 		new_tab = {
-			bg_color = "#292e42",
-			fg_color = "#7aa2f7",
+			bg_color = "#0a0f1a",
+			fg_color = "#4aa3ff",
 		},
 	},
 }
@@ -80,19 +106,24 @@ config.keys = {
 }
 
 -- Background image
--- config.background = {
--- 	{
--- 		source = {
--- 			File = "/home/arnab/Pictures/termwalls/alex-knight-japan.png",
--- 		},
--- 		repeat_x = "NoRepeat",
--- 		repeat_y = "NoRepeat",
--- 		vertical_align = "Middle",
--- 		horizontal_align = "Center",
--- 		hsb = {
--- 			brightness = 0.05,
--- 		},
--- 	},
--- }
+config.background = {
+	{
+		source = {
+			File = "/home/arnab/Pictures/1398568-blur-20.png",
+		},
+		repeat_x = "NoRepeat",
+		repeat_y = "NoRepeat",
+		vertical_align = "Middle",
+		horizontal_align = "Center",
+		hsb = {
+			brightness = 0.1,
+		},
+	},
+}
+
+wezterm.on("gui-startup", function(cmd)
+  local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+  window:gui_window():maximize()
+end)
 
 return config

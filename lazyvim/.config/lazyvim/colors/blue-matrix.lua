@@ -31,6 +31,10 @@ local c = {
   selection_fg   = "#fdf4ff",
 }
 
+local transparent = vim.g.blue_matrix_transparent == true
+local main_bg = transparent and "NONE" or bg
+local panel_bg = transparent and "NONE" or c.black
+
 local function h(group, opts)
   opts = opts or {}
   local gui = opts.gui and "gui=" .. opts.gui or "gui=NONE"
@@ -60,16 +64,16 @@ local function setup()
   -- ==========================================================================
   -- Base editor groups
   -- ==========================================================================
-  h("Normal",       { fg = fg, bg = bg })
-  h("NormalFloat",  { fg = fg, bg = c.black })
-  h("NormalSB",     { fg = fg, bg = bg })
+  h("Normal",       { fg = fg, bg = main_bg })
+  h("NormalFloat",  { fg = fg, bg = panel_bg })
+  h("NormalSB",     { fg = fg, bg = main_bg })
   h("EndOfBuffer",  { fg = c.dark_blue })
   h("Cursor",       { fg = bg, bg = cursor })
   h("CursorColumn", { bg = c.black })
   h("CursorLine",   { bg = "#0d1225" })
   h("CursorLineNr", { fg = c.light_bright, gui = "bold" })
   h("LineNr",       { fg = c.dark_blue })
-  h("SignColumn",   { bg = bg })
+  h("SignColumn",   { bg = main_bg })
   h("ColorColumn",  { bg = "#0d1520" })
 
   h("Visual",        { bg = c.selection_bg, fg = c.selection_fg })
@@ -86,7 +90,7 @@ local function setup()
   h("Whitespace",    { fg = c.dark_blue })
   h("Conceal",       { fg = c.dark_blue })
 
-  h("Pmenu",         { fg = fg, bg = c.black })
+  h("Pmenu",         { fg = fg, bg = panel_bg })
   h("PmenuSel",      { fg = bg, bg = c.med_blue })
   h("PmenuSbar",     { bg = c.dark_blue })
   h("PmenuThumb",    { bg = c.med_blue })
@@ -96,20 +100,20 @@ local function setup()
   h("MoreMsg",       { fg = c.light_green })
   h("ModeMsg",       { fg = fg })
 
-  h("TabLine",       { fg = c.dark_blue, bg = bg })
-  h("TabLineFill",   { bg = bg })
-  h("TabLineSel",    { fg = c.bright_blue, bg = bg, gui = "bold" })
+  h("TabLine",       { fg = c.dark_blue, bg = main_bg })
+  h("TabLineFill",   { bg = main_bg })
+  h("TabLineSel",    { fg = c.bright_blue, bg = main_bg, gui = "bold" })
 
   h("Title",         { fg = c.bright_blue, gui = "bold" })
 
-  h("StatusLine",    { fg = fg, bg = c.black })
-  h("StatusLineNC",  { fg = c.dark_blue, bg = bg })
+  h("StatusLine",    { fg = fg, bg = panel_bg })
+  h("StatusLineNC",  { fg = c.dark_blue, bg = main_bg })
   h("StatusLineTerm",    { link = "StatusLine" })
   h("StatusLineTermNC",  { link = "StatusLineNC" })
 
-  h("VertSplit",     { fg = c.dark_blue, bg = bg })
+  h("VertSplit",     { fg = c.dark_blue, bg = main_bg })
 
-  h("FoldColumn",    { fg = c.dark_blue, bg = bg })
+  h("FoldColumn",    { fg = c.dark_blue, bg = main_bg })
   h("Folded",        { fg = c.med_blue, bg = "#0d1225" })
 
   h("SpellBad",      { guisp = c.bright_blue, gui = "undercurl" })
@@ -136,7 +140,7 @@ local function setup()
   h("LspReferenceText",  { bg = c.selection_bg })
   h("LspReferenceRead",  { bg = c.selection_bg })
   h("LspReferenceWrite", { bg = c.selection_bg })
-  h("LspInlayHint",      { fg = c.dark_blue, bg = bg })
+  h("LspInlayHint",      { fg = c.dark_blue, bg = main_bg })
 
   -- ==========================================================================
   -- Syntax groups
@@ -181,7 +185,7 @@ local function setup()
 
   h("Underlined",     { fg = fg, gui = "underline" })
   h("Ignore",         { fg = c.dark_blue })
-  h("Error",          { fg = "#f87171", bg = bg })
+  h("Error",          { fg = "#f87171", bg = main_bg })
   h("Todo",           { fg = bg, bg = c.gold })
 
   -- ==========================================================================
@@ -333,18 +337,18 @@ local function setup()
   -- ==========================================================================
 
   -- Telescope
-  h("TelescopeNormal",    { fg = fg, bg = bg })
-  h("TelescopeBorder",    { fg = c.dark_blue, bg = bg })
-  h("TelescopePromptBorder", { fg = c.med_blue, bg = bg })
-  h("TelescopePromptTitle",  { fg = c.bright_blue, bg = bg })
-  h("TelescopeResultsTitle", { fg = c.dark_blue, bg = bg })
-  h("TelescopePreviewTitle", { fg = c.dark_blue, bg = bg })
+  h("TelescopeNormal",    { fg = fg, bg = main_bg })
+  h("TelescopeBorder",    { fg = c.dark_blue, bg = main_bg })
+  h("TelescopePromptBorder", { fg = c.med_blue, bg = main_bg })
+  h("TelescopePromptTitle",  { fg = c.bright_blue, bg = main_bg })
+  h("TelescopeResultsTitle", { fg = c.dark_blue, bg = main_bg })
+  h("TelescopePreviewTitle", { fg = c.dark_blue, bg = main_bg })
   h("TelescopeSelection",    { fg = fg, bg = c.selection_bg })
   h("TelescopeSelectionCaret", { fg = c.cyan })
   h("TelescopeMatching",     { fg = c.cyan, gui = "bold" })
 
   -- NvimTree / Oil
-  h("NvimTreeNormal",      { fg = fg, bg = bg })
+  h("NvimTreeNormal",      { fg = fg, bg = main_bg })
   h("NvimTreeFolderName",  { fg = c.med_blue })
   h("NvimTreeOpenedFolderName", { fg = c.bright_blue })
   h("NvimTreeGitDirty",    { fg = "#fbbf24" })
@@ -356,7 +360,7 @@ local function setup()
   h("WhichKeyGroup",      { fg = c.med_blue })
   h("WhichKeyDesc",       { fg = fg })
   h("WhichKeySeparator",  { fg = c.dark_blue })
-  h("WhichKeyFloat",      { bg = bg })
+  h("WhichKeyFloat",      { bg = main_bg })
 
   -- Lazy
   h("LazyReasonStart",    { fg = c.neon_green })
@@ -384,7 +388,7 @@ local function setup()
   h("FlashLabel",        { fg = bg, bg = c.cyan, gui = "bold" })
 
   -- Neo-tree
-  h("NeoTreeNormal",     { fg = fg, bg = bg })
+  h("NeoTreeNormal",     { fg = fg, bg = main_bg })
   h("NeoTreeDirectoryName", { fg = c.med_blue })
   h("NeoTreeGitAdded",   { fg = c.neon_green })
   h("NeoTreeGitModified", { fg = "#fbbf24" })
@@ -410,11 +414,11 @@ local function setup()
   h("MiniIndentscopeSymbol",     { fg = c.dark_blue })
 
   -- Bufferline
-  h("BufferLineTab",         { fg = c.dark_blue, bg = bg })
-  h("BufferLineTabSelected", { fg = c.bright_blue, bg = bg })
-  h("BufferLineBuffer",      { fg = c.dark_blue, bg = bg })
-  h("BufferLineBufferSelected", { fg = fg, bg = bg, gui = "bold" })
-  h("BufferLineBufferVisible",  { fg = c.med_blue, bg = bg })
+  h("BufferLineTab",         { fg = c.dark_blue, bg = main_bg })
+  h("BufferLineTabSelected", { fg = c.bright_blue, bg = main_bg })
+  h("BufferLineBuffer",      { fg = c.dark_blue, bg = main_bg })
+  h("BufferLineBufferSelected", { fg = fg, bg = main_bg, gui = "bold" })
+  h("BufferLineBufferVisible",  { fg = c.med_blue, bg = main_bg })
   h("BufferLineIndicatorSelected", { fg = c.cyan })
   h("BufferLinePick",        { fg = c.cyan })
   h("BufferLineDuplicate",   { fg = c.dark_blue })

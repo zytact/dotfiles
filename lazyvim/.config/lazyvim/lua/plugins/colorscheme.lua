@@ -154,7 +154,10 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "blue-matrix",
+      colorscheme = function()
+        vim.g.blue_matrix_transparent = true
+        vim.cmd.colorscheme("blue-matrix")
+      end,
     },
   },
 
