@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.79.9",
-  "defaultProvider": "opencode",
-  "defaultModel": "deepseek-v4-flash-free",
+  "lastChangelogVersion": "0.79.10",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.5",
   "defaultThinkingLevel": "high",
   "enabledModels": [
     "openai-codex/gpt-5.4",
