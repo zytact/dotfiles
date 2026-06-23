@@ -3,8 +3,8 @@ return {
     "catppuccin/nvim",
     config = function()
       require("catppuccin").setup({
-        flavour = "latte",
-        transparent_background = false,
+        flavour = "mocha",
+        transparent_background = true,
       })
     end,
   },
@@ -154,10 +154,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = function()
-        vim.g.blue_matrix_transparent = true
-        vim.cmd.colorscheme("blue-matrix")
-      end,
+            colorscheme = "catppuccin"
     },
   },
 

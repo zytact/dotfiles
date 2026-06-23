@@ -1,8 +1,8 @@
 {
   "lastChangelogVersion": "0.79.10",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "high",
+  "defaultModel": "gpt-5.4",
+  "defaultThinkingLevel": "medium",
   "enabledModels": [
     "openai-codex/gpt-5.4",
     "openai-codex/gpt-5.4-mini",
@@ -10,13 +10,14 @@
     "opencode/deepseek-v4-flash-free"
   ],
   "hideThinkingBlock": false,
-  "theme": "blue-matrix",
+  "theme": "catppuccin-mocha",
   "packages": [
     "npm:pi-web-access",
     "npm:pi-footer",
     "npm:pi-better-openai",
     "npm:pi-claude-style-tools",
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    "npm:pi-emote"
   ],
   "enableInstallTelemetry": false,
   "showHardwareCursor": false,
