@@ -7,11 +7,15 @@ import type {
 const RESET = "\x1b[0m";
 const BOLD = "\x1b[1m";
 
-const DEEP_BLUE: Rgb = [22, 83, 189];
-const BLUE: Rgb = [48, 129, 247];
-const SKY: Rgb = [93, 171, 255];
-const ICE: Rgb = [151, 205, 255];
-const PALETTE: Rgb[] = [DEEP_BLUE, BLUE, SKY, ICE, SKY, BLUE];
+const MAUVE: Rgb = [203, 166, 247];
+const LAVENDER: Rgb = [180, 190, 254];
+const BLUE: Rgb = [137, 180, 250];
+const SAPPHIRE: Rgb = [116, 199, 236];
+const TEAL: Rgb = [148, 226, 213];
+const GREEN: Rgb = [166, 227, 161];
+const TEXT: Rgb = [205, 214, 244];
+const SUBTEXT0: Rgb = [166, 173, 200];
+const PALETTE: Rgb[] = [MAUVE, LAVENDER, BLUE, SAPPHIRE, TEAL, GREEN, TEAL, SAPPHIRE, BLUE, LAVENDER];
 
 type Rgb = [number, number, number];
 type Renderable = {
@@ -67,6 +71,10 @@ function gradientText(text: string, phase: number) {
       return fg(sampleGradient(index / span + phase), char);
     })
     .join("");
+}
+
+function solidText(text: string, color: Rgb) {
+  return fg(color, text);
 }
 
 function center(text: string, width: number) {
@@ -128,14 +136,14 @@ function renderHeader(width: number, phase: number, subtitleText: string) {
     gradientText(center(line, width), phase + row * 0.045),
   );
   const subtitle = center(subtitleText, width);
-  const zytact = ZYTACT_LINES.map((line, row) =>
-    gradientText(center(line, width), phase + 0.24 + row * 0.025),
+  const zytact = ZYTACT_LINES.map((line) =>
+    solidText(center(line, width), SUBTEXT0),
   );
 
   return [
     "",
     ...lines,
-    `${BOLD}${gradientText(subtitle, phase + 0.18)}${RESET}`,
+    `${BOLD}${solidText(subtitle, TEXT)}${RESET}`,
     ...zytact,
     "",
   ];
@@ -175,7 +183,7 @@ export default function (pi: ExtensionAPI) {
   });
 
   pi.registerCommand("flow-title", {
-    description: "Enable the blue flowing gradient session header",
+    description: "Enable the Catppuccin Mocha flowing session header",
     handler: async (_args, ctx) => {
       installHeader(ctx);
       ctx.ui.notify("Flow title enabled", "info");

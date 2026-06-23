@@ -1,47 +1,50 @@
-palette = "blue_matrix"
+palette = "catppuccin_mocha"
 add_newline = false
 command_timeout = 2000
 scan_timeout = 50
 
 format = """
-[╭─](fg:line)${custom.start}$os$directory$git_branch$git_status$python$nodejs$rust$golang$lua$fill$cmd_duration$time$status${custom.end_right}
-[╰─](fg:line)$character
+[](fg:mauve)$os$directory[](fg:lavender bg:surface0)$git_branch$git_status[](fg:surface0 bg:surface1)$python$nodejs$rust$golang$lua$fill[](fg:surface1 bg:surface2)$cmd_duration$time$status[](fg:surface2)
+$character
 """
 
-[palettes.blue_matrix]
-bg = "#111010"
-surface = "#0a0f1a"
-line = "#1e3a5f"
-fg = "#cfe7ff"
-blue = "#4aa3ff"
-blue2 = "#7cc4ff"
-cyan = "#22d3ee"
-cyan2 = "#67e8f9"
-green = "#39ff88"
-green2 = "#7dffb3"
-yellow = "#ffd166"
-purple = "#a78bfa"
-purple2 = "#c4b5fd"
-red = "#ff5faf"
-white = "#eff6ff"
-select = "#4c1d95"
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext0 = "#a6adc8"
+subtext1 = "#bac2de"
+overlay0 = "#6c7086"
+surface0 = "#313244"
+surface1 = "#45475a"
+surface2 = "#585b70"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+line = "#6c7086"
+fg = "#cdd6f4"
+select = "#313244"
 
 [fill]
 symbol = " "
-style = "fg:line"
-
-[custom.start]
-when = true
-format = "[](fg:surface)"
-
-[custom.end_right]
-when = true
-format = "[](fg:surface)"
+style = "bg:surface1"
 
 [os]
 disabled = false
-style = "fg:blue bg:surface bold"
-format = "[$symbol ]($style)"
+style = "fg:crust bg:mauve bold"
+format = "[ $symbol ]($style)"
 
 [os.symbols]
 Fedora = ""
@@ -55,7 +58,7 @@ Unknown = "󰘔"
 Windows = "󰍲"
 
 [directory]
-style = "fg:cyan bg:surface bold"
+style = "fg:crust bg:lavender bold"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -64,11 +67,11 @@ home_symbol = "~"
 
 [git_branch]
 symbol = " "
-style = "fg:green bg:surface bold"
-format = "[on $symbol$branch ]($style)"
+style = "fg:text bg:surface0 bold"
+format = "[ $symbol$branch ]($style)"
 
 [git_status]
-style = "fg:yellow bg:surface bold"
+style = "fg:yellow bg:surface0 bold"
 format = "([$all_status$ahead_behind ]($style))"
 ahead = "⇡${count}"
 behind = "⇣${count}"
@@ -83,39 +86,39 @@ stashed = "*${count}"
 
 [python]
 symbol = " "
-style = "fg:blue2 bg:surface bold"
-format = "[via $symbol$version ]($style)"
+style = "fg:yellow bg:surface1 bold"
+format = "[ $symbol$version ]($style)"
 
 [nodejs]
 symbol = "󰎙 "
-style = "fg:green2 bg:surface bold"
-format = "[via $symbol$version ]($style)"
+style = "fg:green bg:surface1 bold"
+format = "[ $symbol$version ]($style)"
 
 [rust]
 symbol = "󱘗 "
-style = "fg:red bg:surface bold"
-format = "[via $symbol$version ]($style)"
+style = "fg:peach bg:surface1 bold"
+format = "[ $symbol$version ]($style)"
 
 [golang]
 symbol = " "
-style = "fg:cyan2 bg:surface bold"
-format = "[via $symbol$version ]($style)"
+style = "fg:sapphire bg:surface1 bold"
+format = "[ $symbol$version ]($style)"
 
 [lua]
 symbol = " "
-style = "fg:purple2 bg:surface bold"
-format = "[via $symbol$version ]($style)"
+style = "fg:mauve bg:surface1 bold"
+format = "[ $symbol$version ]($style)"
 
 [cmd_duration]
 min_time = 500
-style = "fg:yellow bg:surface"
-format = "[ $duration ]($style)"
+style = "fg:peach bg:surface2"
+format = "[  $duration ]($style)"
 
 [time]
 disabled = false
 time_format = "%H:%M:%S"
-style = "fg:blue2 bg:surface"
-format = "[󰥔 $time ]($style)"
+style = "fg:text bg:surface2"
+format = "[ 󰥔 $time ]($style)"
 
 [status]
 disabled = false
@@ -124,11 +127,11 @@ success_symbol = ""
 not_executable_symbol = ""
 not_found_symbol = "󰅙"
 sigint_symbol = ""
-style = "fg:red bg:surface bold"
+style = "fg:red bg:surface2 bold"
 format = "([$symbol $status ]($style))"
 map_symbol = true
 
 [character]
-success_symbol = "[❯](bold green)"
-error_symbol = "[❯](bold red)"
-vimcmd_symbol = "[❮](bold cyan)"
+success_symbol = "[❯](bold fg:mauve)"
+error_symbol = "[❯](bold fg:red)"
+vimcmd_symbol = "[❮](bold fg:green)"
