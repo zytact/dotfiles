@@ -141,6 +141,15 @@
       "pluginName": "mattpocock-skills",
       "installedAt": "2026-06-20T07:59:23.697Z",
       "updatedAt": "2026-06-20T07:59:23.697Z"
+    },
+    "lavish": {
+      "source": "kunchenguid/lavish-axi",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kunchenguid/lavish-axi.git",
+      "skillPath": "skills/lavish/SKILL.md",
+      "skillFolderHash": "a941a09d44e77022a7e6f3842f7d2d95ccf71fbc",
+      "installedAt": "2026-06-25T14:39:43.977Z",
+      "updatedAt": "2026-06-25T14:39:43.977Z"
     }
   },
   "dismissed": {
