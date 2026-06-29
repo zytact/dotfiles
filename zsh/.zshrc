@@ -166,6 +166,7 @@ alias ccr="claude --dangerously-skip-permissions -r"
 alias gitops="~/Projects/scripts/gitops --no-ai"
 alias oc="opencode"
 alias roll-codex="pi -p --model openai-codex/gpt-5.4-mini:off 'Hi'"
+alias serve-t3code="cd /tmp && vpx t3@nightly serve --host \"$(hostname -I | awk '{print $1}')\""
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh

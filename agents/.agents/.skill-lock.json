@@ -150,6 +150,15 @@
       "skillFolderHash": "a941a09d44e77022a7e6f3842f7d2d95ccf71fbc",
       "installedAt": "2026-06-25T14:39:43.977Z",
       "updatedAt": "2026-06-25T14:39:43.977Z"
+    },
+    "single-review": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "single-review/SKILL.md",
+      "skillFolderHash": "90d4d26640ae24d4135047a43cccc8d26044ace9",
+      "installedAt": "2026-06-29T04:00:55.347Z",
+      "updatedAt": "2026-06-29T04:05:37.926Z"
     }
   },
   "dismissed": {
