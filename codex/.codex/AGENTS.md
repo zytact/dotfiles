@@ -25,3 +25,16 @@ docs: update installation instructions
 chore: upgrade dependencies
 ```
 Use lowercase, write in the imperative mood, do not end with a period, and keep each commit focused on one logical change.
+
+### Pull Requests
+Use the same format as commit messages:
+```
+<type>(optional-scope): <clear summary>
+
+Examples:
+
+feat(auth): add Google sign-in
+fix(api): prevent duplicate requests
+refactor(ui): simplify modal handling
+```
+PR titles should summarize the complete change, not individual implementation steps. Keep them concise, use lowercase, and do not end with a period.
