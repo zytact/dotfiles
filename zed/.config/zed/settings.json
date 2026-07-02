@@ -30,7 +30,7 @@
   "icon_theme": {
     "mode": "dark",
     "light": "Material Icon Theme",
-    "dark": "Material Icon Theme"
+    "dark": "Catppuccin Mocha"
   },
   "show_edit_predictions": false,
   "agent": {
@@ -41,7 +41,7 @@
       "model": "gpt-5-mini",
     },
   },
-  "vim_mode": true,
+  "vim_mode": false,
   "vim": {
     "use_system_clipboard": "never",
   },
@@ -63,7 +63,7 @@
   "theme": {
     "mode": "dark",
     "light": "Tokyo Night Light",
-    "dark": "Cursor Dark"
+    "dark": "Catppuccin Mocha"
   },
   "languages": {
     "Python": {

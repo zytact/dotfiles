@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.80.2",
-  "defaultProvider": "opencode",
-  "defaultModel": "deepseek-v4-flash-free",
-  "defaultThinkingLevel": "high",
+  "lastChangelogVersion": "0.80.3",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.4",
+  "defaultThinkingLevel": "medium",
   "enabledModels": [
     "openai-codex/gpt-5.4",
     "openai-codex/gpt-5.4-mini",
@@ -15,7 +15,9 @@
     "npm:pi-web-access",
     "npm:pi-footer",
     "npm:pi-better-openai",
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    "npm:pi-intercom",
+    "npm:pi-prompt-template-model"
   ],
   "enableInstallTelemetry": false,
   "showHardwareCursor": false,
@@ -33,48 +35,48 @@
         ]
       },
       "researcher": {
-        "model": "openai-codex/gpt-5.4",
-        "thinking": "medium",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
         "fallbackModels": [
-          "openai-codex/gpt-5.4-mini"
+          "openai-codex/gpt-5.4"
         ]
       },
       "worker": {
-        "model": "openai-codex/gpt-5.4",
-        "thinking": "medium",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
         "fallbackModels": [
-          "openai-codex/gpt-5.4-mini"
+          "openai-codex/gpt-5.4"
         ]
       },
       "reviewer": {
-        "model": "openai-codex/gpt-5.4",
-        "thinking": "high",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "medium",
         "fallbackModels": [
-          "openai-codex/gpt-5.4-mini"
+          "openai-codex/gpt-5.4"
         ]
       },
       "orcale": {
-        "model": "openai-codex/gpt-5.4",
-        "thinking": "high",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "medium",
         "fallbackModels": [
-          "openai-codex/gpt-5.4-mini"
+          "openai-codex/gpt-5.4"
         ]
       },
       "delegate": {
-        "model": "openai-codex/gpt-5.4",
-        "thinking": "medium",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
         "fallbackModels": [
-          "openai-codex/gpt-5.4-mini"
+          "openai-codex/gpt-5.4"
         ]
       },
       "context-builder": {
         "model": "openai-codex/gpt-5.4-mini",
-        "thinking": "low",
+        "thinking": "medium",
         "fallbackModels": [
           "openai-codex/gpt-5.4"
         ]
       }
     }
   },
-  "quietStartup": false
+  "quietStartup": true
 }
