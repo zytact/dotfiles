@@ -63,7 +63,7 @@
   "theme": {
     "mode": "dark",
     "light": "Tokyo Night Light",
-    "dark": "Catppuccin Mocha"
+    "dark": "VSCode Dark Modern"
   },
   "languages": {
     "Python": {

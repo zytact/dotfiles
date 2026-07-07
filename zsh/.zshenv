@@ -17,3 +17,8 @@ export NVIM_APPNAME="lazyvim"
 
 # Vite+ bin (https://viteplus.dev)
 . "$HOME/.vite-plus/env"
+
+export PATH=/home/arnab/.opencode/bin:$PATH
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/arnab/.lmstudio/bin"

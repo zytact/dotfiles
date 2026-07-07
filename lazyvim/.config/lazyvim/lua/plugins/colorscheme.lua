@@ -64,9 +64,9 @@ return {
   {
     "Mofiqul/vscode.nvim",
     config = function()
-      local c = require("vscode.colors").get_colors()
       require("vscode").setup({
         transparent = true,
+        style = "dark",
       })
     end,
   },
@@ -154,7 +154,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-            colorscheme = "catppuccin"
+      colorscheme = "vscode",
     },
   },
 

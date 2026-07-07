@@ -163,6 +163,7 @@ alias battery_info="upower -i /org/freedesktop/UPower/devices/battery_BAT1"
 alias cat="bat"
 alias cc="claude --dangerously-skip-permissions"
 alias ccr="claude --dangerously-skip-permissions -r"
+alias cx="codex --yolo"
 alias gitops="~/Projects/scripts/gitops --no-ai"
 alias oc="opencode"
 alias roll-codex="pi -p --model openai-codex/gpt-5.4-mini:off 'Hi'"
@@ -192,18 +193,6 @@ eval $(thefuck --alias)
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# fnm
-# FNM_PATH="/home/arnab/.local/share/fnm"
-# if [ -d "$FNM_PATH" ]; then
-#   export PATH="/home/arnab/.local/share/fnm:$PATH"
-#   eval "`fnm env`"
-# fi
-
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/arnab/.lmstudio/bin"
-
-
 # pnpm
 export PNPM_HOME="/home/arnab/.local/share/pnpm"
 case ":$PATH:" in
@@ -222,9 +211,4 @@ esac
 #  exec herdr --session main
 # fi
 
-
-# Vite+ bin (https://viteplus.dev)
-. "$HOME/.vite-plus/env"
-
 # opencode
-export PATH=/home/arnab/.opencode/bin:$PATH

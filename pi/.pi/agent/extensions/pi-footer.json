@@ -10,11 +10,10 @@
         "enabled": true,
         "options": {
           "raw": false,
-          "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
+          "icon": "",
           "fg": "cyan",
-          "bg": "default"
+          "bg": "default",
+          "bold": false
         }
       },
       {
@@ -24,10 +23,11 @@
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
+          "icon": "",
+          "text": "",
           "fg": "magenta",
-          "bg": "default"
+          "bg": "default",
+          "bold": false
         }
       },
       {
@@ -37,10 +37,11 @@
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
+          "icon": "",
+          "text": "",
           "fg": "cyan",
-          "bg": "default"
+          "bg": "default",
+          "bold": false
         }
       },
       {
@@ -49,12 +50,11 @@
         "enabled": true,
         "options": {
           "raw": false,
-          "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
-          "tokenFormatStyle": "default",
+          "icon": "",
           "fg": "cyan",
-          "bg": "default"
+          "bg": "default",
+          "bold": false,
+          "tokenFormatStyle": "default"
         }
       },
       {
@@ -63,12 +63,12 @@
         "enabled": true,
         "options": {
           "raw": false,
-          "hideWhenEmpty": false,
           "hideWhenZero": false,
-          "bold": false,
-          "tokenFormatStyle": "default",
+          "icon": "",
           "fg": "cyan",
-          "bg": "default"
+          "bg": "default",
+          "bold": false,
+          "tokenFormatStyle": "default"
         }
       },
       {
@@ -77,12 +77,12 @@
         "enabled": false,
         "options": {
           "raw": false,
-          "hideWhenEmpty": false,
           "hideWhenZero": false,
-          "bold": false,
-          "tokenFormatStyle": "default",
+          "icon": "",
           "fg": "cyan",
-          "bg": "default"
+          "bg": "default",
+          "bold": false,
+          "tokenFormatStyle": "default"
         }
       },
       {
@@ -92,19 +92,20 @@
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
-          "contextConditionalColors": false,
-          "tokenFormatStyle": "default",
-          "contextBarMode": "default",
+          "icon": "",
+          "text": "",
           "fg": "blue",
           "bg": "default",
+          "bold": false,
+          "tokenFormatStyle": "default",
+          "contextBarMode": "default",
+          "contextConditionalColors": false,
+          "contextWarningPercent": 70,
+          "contextDangerPercent": 90,
           "warningFg": "yellow",
           "warningBg": "default",
           "dangerFg": "red",
-          "dangerBg": "default",
-          "contextWarningPercent": 70,
-          "contextDangerPercent": 90
+          "dangerBg": "default"
         }
       },
       {
@@ -113,19 +114,19 @@
         "enabled": true,
         "options": {
           "raw": false,
-          "hideWhenEmpty": false,
           "hideWhenZero": false,
-          "bold": false,
-          "contextConditionalColors": false,
-          "tokenFormatStyle": "default",
+          "icon": "",
           "fg": "brightBlack",
           "bg": "default",
+          "bold": false,
+          "tokenFormatStyle": "default",
+          "contextConditionalColors": false,
+          "contextWarningPercent": 70,
+          "contextDangerPercent": 90,
           "warningFg": "yellow",
           "warningBg": "default",
           "dangerFg": "red",
-          "dangerBg": "default",
-          "contextWarningPercent": 70,
-          "contextDangerPercent": 90
+          "dangerBg": "default"
         }
       },
       {
@@ -135,13 +136,14 @@
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
-          "surroundLeft": "",
-          "surroundRight": "",
-          "gitBranchDisplayStyle": "default",
+          "icon": "",
+          "text": "",
           "fg": "magenta",
-          "bg": "default"
+          "bg": "default",
+          "bold": false,
+          "gitBranchDisplayStyle": "default",
+          "surroundLeft": "",
+          "surroundRight": ""
         }
       },
       {
@@ -151,11 +153,12 @@
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
-          "gitDiffMode": "compact",
+          "icon": "",
+          "text": "",
           "fg": "yellow",
-          "bg": "default"
+          "bg": "default",
+          "bold": false,
+          "gitDiffMode": "compact"
         }
       },
       {
@@ -164,13 +167,12 @@
         "enabled": false,
         "options": {
           "raw": false,
-          "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
-          "showSubscription": false,
-          "costFormatStyle": "default",
+          "icon": "",
           "fg": "green",
-          "bg": "default"
+          "bg": "default",
+          "bold": false,
+          "costFormatStyle": "default",
+          "showSubscription": false
         }
       },
       {
@@ -180,27 +182,14 @@
         "options": {
           "raw": false,
           "hideWhenEmpty": true,
-          "hideWhenZero": false,
-          "bold": false,
+          "icon": "",
           "text": "-",
-          "externalStatusKey": "codex-reset-countdown",
-          "preserveTrimStyles": true,
           "fg": "red",
           "bg": "default",
-          "trimValue": 0
-        }
-      },
-      {
-        "id": "session-total-time-mpra2xig-uun8w3",
-        "type": "session-total-time",
-        "enabled": true,
-        "options": {
-          "raw": false,
-          "hideWhenEmpty": false,
-          "hideWhenZero": false,
           "bold": false,
-          "fg": "yellow",
-          "bg": "default"
+          "externalStatusKey": "codex-reset-countdown",
+          "trimValue": 0,
+          "preserveTrimStyles": true
         }
       }
     ],
@@ -211,13 +200,12 @@
         "enabled": true,
         "options": {
           "raw": false,
-          "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
-          "showSubscription": false,
-          "costFormatStyle": "default",
+          "icon": "",
           "fg": "green",
-          "bg": "default"
+          "bg": "default",
+          "bold": false,
+          "costFormatStyle": "default",
+          "showSubscription": false
         }
       },
       {
@@ -227,13 +215,14 @@
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
-          "surroundLeft": "",
-          "surroundRight": "",
-          "gitBranchDisplayStyle": "default",
+          "icon": "",
+          "text": "",
           "fg": "magenta",
-          "bg": "default"
+          "bg": "default",
+          "bold": false,
+          "gitBranchDisplayStyle": "default",
+          "surroundLeft": "",
+          "surroundRight": ""
         }
       },
       {
@@ -243,10 +232,12 @@
         "options": {
           "raw": false,
           "hideWhenEmpty": false,
-          "hideWhenZero": false,
-          "bold": false,
+          "icon": "",
+          "text": "",
           "fg": "yellow",
-          "bg": "default"
+          "bg": "default",
+          "bold": false,
+          "gitDiffMode": "plain"
         }
       },
       {
@@ -256,27 +247,14 @@
         "options": {
           "raw": false,
           "hideWhenEmpty": true,
-          "hideWhenZero": false,
-          "bold": false,
+          "icon": "",
           "text": "-",
-          "externalStatusKey": "codex-usage",
-          "preserveTrimStyles": true,
           "fg": "default",
           "bg": "default",
-          "trimValue": 0
-        }
-      },
-      {
-        "id": "session-total-time-mprbb5uo-zseowm",
-        "type": "session-total-time",
-        "enabled": false,
-        "options": {
-          "raw": false,
-          "hideWhenEmpty": false,
-          "hideWhenZero": false,
           "bold": false,
-          "fg": "yellow",
-          "bg": "default"
+          "externalStatusKey": "codex-usage",
+          "trimValue": 0,
+          "preserveTrimStyles": true
         }
       }
     ]

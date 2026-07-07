@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Maker"
+  short_description: "Use Pi CLI to make a focused PR"
+  default_prompt: "Use $pr-maker and run Pi via `pi -p --model opencode/deepseek-v4-flash-free:high '<prompt here>'` to review scope, propose branch and commit names, and draft the pull request."

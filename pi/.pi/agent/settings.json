@@ -1,8 +1,8 @@
 {
   "lastChangelogVersion": "0.80.3",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.4",
-  "defaultThinkingLevel": "medium",
+  "defaultModel": "gpt-5.5",
+  "defaultThinkingLevel": "high",
   "enabledModels": [
     "openai-codex/gpt-5.4",
     "openai-codex/gpt-5.4-mini",
@@ -10,14 +10,15 @@
     "opencode/deepseek-v4-flash-free"
   ],
   "hideThinkingBlock": false,
-  "theme": "catppuccin-mocha",
+  "theme": "vscode-dark-plus",
   "packages": [
     "npm:pi-web-access",
+    "npm:@viniraioli/pi-claude-style-tools",
     "npm:pi-footer",
-    "npm:pi-better-openai",
     "npm:pi-subagents",
     "npm:pi-intercom",
-    "npm:pi-prompt-template-model"
+    "npm:pi-prompt-template-model",
+    "npm:@juicesharp/rpiv-btw"
   ],
   "enableInstallTelemetry": false,
   "showHardwareCursor": false,
@@ -29,21 +30,21 @@
     "agentOverrides": {
       "scout": {
         "model": "openai-codex/gpt-5.4-mini",
-        "thinking": "low",
+        "thinking": "medium",
         "fallbackModels": [
           "openai-codex/gpt-5.4"
         ]
       },
       "researcher": {
-        "model": "openai-codex/gpt-5.5",
+        "model": "openai-codex/gpt-5.4",
         "thinking": "low",
         "fallbackModels": [
           "openai-codex/gpt-5.4"
         ]
       },
       "worker": {
-        "model": "openai-codex/gpt-5.5",
-        "thinking": "low",
+        "model": "openai-codex/gpt-5.4",
+        "thinking": "medium",
         "fallbackModels": [
           "openai-codex/gpt-5.4"
         ]
@@ -63,10 +64,10 @@
         ]
       },
       "delegate": {
-        "model": "openai-codex/gpt-5.5",
-        "thinking": "low",
+        "model": "openai-codex/gpt-5.4",
+        "thinking": "medium",
         "fallbackModels": [
-          "openai-codex/gpt-5.4"
+          "openai-codex/gpt-5.5"
         ]
       },
       "context-builder": {
@@ -78,5 +79,5 @@
       }
     }
   },
-  "quietStartup": true
+  "quietStartup": false
 }

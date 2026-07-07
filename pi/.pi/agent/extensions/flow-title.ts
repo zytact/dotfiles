@@ -7,15 +7,13 @@ import type {
 const RESET = "\x1b[0m";
 const BOLD = "\x1b[1m";
 
-const MAUVE: Rgb = [203, 166, 247];
-const LAVENDER: Rgb = [180, 190, 254];
-const BLUE: Rgb = [137, 180, 250];
-const SAPPHIRE: Rgb = [116, 199, 236];
-const TEAL: Rgb = [148, 226, 213];
-const GREEN: Rgb = [166, 227, 161];
-const TEXT: Rgb = [205, 214, 244];
-const SUBTEXT0: Rgb = [166, 173, 200];
-const PALETTE: Rgb[] = [MAUVE, LAVENDER, BLUE, SAPPHIRE, TEAL, GREEN, TEAL, SAPPHIRE, BLUE, LAVENDER];
+const PURPLE: Rgb = [197, 134, 192];
+const BLUE: Rgb = [86, 156, 214];
+const BLUE_BRIGHT: Rgb = [79, 193, 255];
+const CYAN: Rgb = [78, 201, 176];
+const TEXT: Rgb = [212, 212, 212];
+const SUBTEXT0: Rgb = [157, 161, 166];
+const PALETTE: Rgb[] = [BLUE, BLUE_BRIGHT, CYAN, BLUE_BRIGHT, BLUE, BLUE_BRIGHT, BLUE, PURPLE];
 
 type Rgb = [number, number, number];
 type Renderable = {
@@ -133,7 +131,7 @@ function isBlankSpacer(component: Renderable) {
 
 function renderHeader(width: number, phase: number, subtitleText: string) {
   const lines = TITLE_LINES.map((line, row) =>
-    gradientText(center(line, width), phase + row * 0.045),
+    gradientText(center(line, width), phase + row * 0.02),
   );
   const subtitle = center(subtitleText, width);
   const zytact = ZYTACT_LINES.map((line) =>
@@ -183,7 +181,7 @@ export default function (pi: ExtensionAPI) {
   });
 
   pi.registerCommand("flow-title", {
-    description: "Enable the Catppuccin Mocha flowing session header",
+    description: "Enable the VS Code Dark+ flowing session header",
     handler: async (_args, ctx) => {
       installHeader(ctx);
       ctx.ui.notify("Flow title enabled", "info");

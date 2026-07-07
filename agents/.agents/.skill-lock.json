@@ -55,9 +55,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "grill-me/SKILL.md",
-      "skillFolderHash": "1aca3a0b473059a5844857257a14aae46854e6b3",
+      "skillFolderHash": "fa5caf76e9d27897d8efef3d348d6b8b4c9915e5",
       "installedAt": "2026-04-28T12:43:17.847Z",
-      "updatedAt": "2026-07-01T18:04:34.589Z"
+      "updatedAt": "2026-07-06T13:43:07.698Z"
     },
     "living-architecture-docs": {
       "source": "zytact/skills",
@@ -159,6 +159,15 @@
       "skillFolderHash": "f4a89c4507811863f13e4339f39baebf79c8f644",
       "installedAt": "2026-06-29T04:00:55.347Z",
       "updatedAt": "2026-07-02T14:10:57.292Z"
+    },
+    "skill-creator": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/openai/skills.git",
+      "skillPath": "skills/.system/skill-creator/SKILL.md",
+      "skillFolderHash": "8bfb6b8774d223eea3e788cfdfa1e4209e5e2ae9",
+      "installedAt": "2026-07-06T13:22:37.068Z",
+      "updatedAt": "2026-07-06T13:23:36.578Z"
     }
   },
   "dismissed": {
@@ -178,6 +187,7 @@
     "opencode",
     "warp",
     "zed",
-    "claude-code"
+    "claude-code",
+    "pi"
   ]
 }

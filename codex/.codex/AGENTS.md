@@ -1,4 +1,9 @@
-Use extremely concise language and sacrifice grammar for the sake of concision.
+# Personal Preferences
+- Never use the em dash and just use the plain dash instead.
+- When writing commit messages, never auto add your agent name as a coauthor.
+- Never manually modify CHANGELOG.md files or any files that are marked as auto-generated.
+- When making technical decisions, do not give much weight to development cost. Instead prefer quality, simplicity, robustness, scalability and long term maintainability.
+
 ## Git Naming Conventions
 ### Branches
 Use lowercase kebab-case with a descriptive prefix:
