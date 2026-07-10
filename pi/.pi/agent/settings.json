@@ -1,13 +1,16 @@
 {
-  "lastChangelogVersion": "0.80.3",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.4",
-  "defaultThinkingLevel": "low",
+  "lastChangelogVersion": "0.80.6",
+  "defaultProvider": "opencode",
+  "defaultModel": "deepseek-v4-flash-free",
+  "defaultThinkingLevel": "high",
   "enabledModels": [
     "openai-codex/gpt-5.4",
     "openai-codex/gpt-5.4-mini",
     "openai-codex/gpt-5.5",
-    "opencode/deepseek-v4-flash-free"
+    "opencode/deepseek-v4-flash-free",
+    "openai-codex/gpt-5.6-luna",
+    "openai-codex/gpt-5.6-sol",
+    "openai-codex/gpt-5.6-terra"
   ],
   "hideThinkingBlock": false,
   "theme": "vscode-dark-plus",
@@ -15,10 +18,10 @@
     "npm:pi-web-access",
     "npm:@viniraioli/pi-claude-style-tools",
     "npm:pi-footer",
-    "npm:pi-subagents",
     "npm:pi-intercom",
     "npm:pi-prompt-template-model",
-    "npm:@juicesharp/rpiv-btw"
+    "npm:@juicesharp/rpiv-btw",
+    "npm:pi-better-openai"
   ],
   "enableInstallTelemetry": false,
   "showHardwareCursor": false,
@@ -36,35 +39,35 @@
         ]
       },
       "researcher": {
-        "model": "openai-codex/gpt-5.4",
+        "model": "openai-codex/gpt-5.6-terra",
         "thinking": "low",
         "fallbackModels": [
-          "openai-codex/gpt-5.4"
+          "openai-codex/gpt-5.5"
         ]
       },
       "worker": {
-        "model": "openai-codex/gpt-5.4",
+        "model": "openai-codex/gpt-5.6-terra",
         "thinking": "medium",
         "fallbackModels": [
           "openai-codex/gpt-5.4"
         ]
       },
       "reviewer": {
-        "model": "openai-codex/gpt-5.5",
+        "model": "openai-codex/gpt-5.6-terra",
         "thinking": "medium",
         "fallbackModels": [
-          "openai-codex/gpt-5.4"
+          "openai-codex/gpt-5.5"
         ]
       },
       "orcale": {
-        "model": "openai-codex/gpt-5.5",
+        "model": "openai-codex/gpt-5.6-terra",
         "thinking": "medium",
         "fallbackModels": [
           "openai-codex/gpt-5.4"
         ]
       },
       "delegate": {
-        "model": "openai-codex/gpt-5.4",
+        "model": "openai-codex/gpt-5.5",
         "thinking": "medium",
         "fallbackModels": [
           "openai-codex/gpt-5.5"
