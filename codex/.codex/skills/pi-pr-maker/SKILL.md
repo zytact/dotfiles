@@ -1,5 +1,5 @@
 ---
-name: pr-maker
+name: pi-pr-maker
 description: Use when asked to use Pi CLI to turn local repo work into a pull request, especially when the user wants model opencode/deepseek-v4-flash-free:high, wants Pi to review scope, draft branch and commit names, or write PR text.
 ---
 
