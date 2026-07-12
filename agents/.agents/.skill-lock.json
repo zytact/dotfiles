@@ -194,9 +194,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "code-review/SKILL.md",
-      "skillFolderHash": "2bed61489198779241297fee4062d09546def0ea",
+      "skillFolderHash": "475947d0e3d8c8127e042d8ca46a3fa2294a370e",
       "installedAt": "2026-07-12T08:07:02.629Z",
-      "updatedAt": "2026-07-12T08:07:02.629Z"
+      "updatedAt": "2026-07-12T14:58:47.850Z"
     }
   },
   "dismissed": {
@@ -216,7 +216,6 @@
     "opencode",
     "warp",
     "zed",
-    "claude-code",
-    "pi"
+    "claude-code"
   ]
 }

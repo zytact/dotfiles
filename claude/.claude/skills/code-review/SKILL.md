@@ -11,7 +11,7 @@ Run one focused `reviewer` subagent, then synthesize its findings. Use a fresh-c
 
 1. Identify the review target from the user request. If none is given, use the current work/current diff. If the request names a URL, issue, file, plan, branch range, or freeform focus, inspect that target before selecting the review angle and pass it to the reviewer.
 2. If the user names an angle for the review, use that. For broad requests, prefer correctness and regressions, with tests and maintainability as secondary concerns inside the same review.
-3. Spawn exactly one `reviewer` subagent. Set `fork_context=false` unless the user explicitly asks for forked context.
+3. Spawn exactly one `reviewer` subagent. Set `fork_context=false` unless the user explicitly asks for forked context. 
 4. In the subagent prompt, name the angle, repository path, target/diff scope, and output contract. Tell it to use read-only analysis and not edit files.
 5. Wait for the reviewer. Rank findings.
 6. Return:
@@ -46,7 +46,7 @@ Each smell reads what it is → how to fix; match it against the diff:
 - Refused Bequest — a subclass or implementer that ignores or overrides most of what it inherits. → drop the inheritance, use composition.
 
 ### Match intention: does the code faithfully implement the originating issue / PRD / spec?
-- Look for the originating spec, github issue, ticket, etc. It will probably be mentioned, but if not, look for it.
+- Look for the originating spec, github issue, ticket, plan, etc. It will probably be mentioned, but if not, look for it.
 - If nothing is found, skip this part saying "No spec available".
 
 ## Autofix
