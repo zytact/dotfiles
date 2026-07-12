@@ -13,3 +13,4 @@ stow television
 stow zed
 stow zsh
 stow claude
+stow codex
