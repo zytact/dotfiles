@@ -1,4 +1,4 @@
-palette = "vscode_dark_plus"
+palette = "vscode_light_plus"
 add_newline = false
 command_timeout = 2000
 scan_timeout = 50
@@ -11,6 +11,37 @@ $character
 right_format = """
 [](fg:surface2)$cmd_duration$time$status[](fg:surface2)
 """
+
+[palettes.vscode_light_plus]
+rosewater = "#334155"
+flamingo = "#475569"
+pink = "#c026d3"
+mauve = "#6d28d9"
+red = "#d92d20"
+maroon = "#b42318"
+peach = "#a15c00"
+yellow = "#8a5a00"
+green = "#16803c"
+teal = "#0f766e"
+sky = "#0b69b7"
+sapphire = "#0f766e"
+blue = "#1d4ed8"
+lavender = "#2563eb"
+text = "#172033"
+subtext1 = "#334155"
+subtext0 = "#64748b"
+overlay2 = "#94a3b8"
+overlay1 = "#b6c2d2"
+overlay0 = "#cbd5e1"
+surface2 = "#e2e8f0"
+surface1 = "#f1f5f9"
+surface0 = "#e0f2fe"
+base = "#ffffff"
+mantle = "#f8fafc"
+crust = "#ffffff"
+line = "#cbd5e1"
+fg = "#172033"
+select = "#bfdbfe"
 
 [palettes.vscode_dark_plus]
 rosewater = "#d4d4d4"

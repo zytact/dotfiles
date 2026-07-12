@@ -1,19 +1,16 @@
 {
   "lastChangelogVersion": "0.80.6",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-terra",
-  "defaultThinkingLevel": "low",
+  "defaultProvider": "opencode",
+  "defaultModel": "deepseek-v4-flash-free",
+  "defaultThinkingLevel": "high",
   "enabledModels": [
-    "openai-codex/gpt-5.4",
-    "openai-codex/gpt-5.4-mini",
-    "openai-codex/gpt-5.5",
     "opencode/deepseek-v4-flash-free",
     "openai-codex/gpt-5.6-luna",
     "openai-codex/gpt-5.6-sol",
     "openai-codex/gpt-5.6-terra"
   ],
   "hideThinkingBlock": false,
-  "theme": "vscode-dark-plus",
+  "theme": "vscode-light-plus",
   "packages": [
     "npm:pi-web-access",
     "npm:@viniraioli/pi-claude-style-tools",
@@ -33,15 +30,15 @@
   "subagents": {
     "agentOverrides": {
       "scout": {
-        "model": "openai-codex/gpt-5.4-mini",
+        "model": "openai-codex/gpt-5.6-luna",
         "thinking": "medium",
         "fallbackModels": [
-          "openai-codex/gpt-5.4"
+          "openai-codex/gpt-5.4-mini"
         ]
       },
       "researcher": {
-        "model": "openai-codex/gpt-5.6-terra",
-        "thinking": "low",
+        "model": "openai-codex/gpt-5.6-luna",
+        "thinking": "medium",
         "fallbackModels": [
           "openai-codex/gpt-5.5"
         ]
@@ -54,7 +51,7 @@
         ]
       },
       "reviewer": {
-        "model": "openai-codex/gpt-5.6-terra",
+        "model": "openai-codex/gpt-5.6-sol",
         "thinking": "medium",
         "fallbackModels": [
           "openai-codex/gpt-5.5"
@@ -68,17 +65,17 @@
         ]
       },
       "delegate": {
-        "model": "openai-codex/gpt-5.5",
+        "model": "openai-codex/gpt-5.6-terra",
         "thinking": "medium",
         "fallbackModels": [
           "openai-codex/gpt-5.5"
         ]
       },
       "context-builder": {
-        "model": "openai-codex/gpt-5.4-mini",
+        "model": "openai-codex/gpt-5.6-luna",
         "thinking": "medium",
         "fallbackModels": [
-          "openai-codex/gpt-5.4"
+          "openai-codex/gpt-5.4-mini"
         ]
       }
     }

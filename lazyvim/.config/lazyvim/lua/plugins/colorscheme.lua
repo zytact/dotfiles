@@ -13,7 +13,7 @@ return {
     "craftzdog/solarized-osaka.nvim",
     config = function()
       require("solarized-osaka").setup({
-        transparent = true,
+        transparent = false,
       })
     end,
   },
@@ -66,7 +66,7 @@ return {
     config = function()
       require("vscode").setup({
         transparent = true,
-        style = "dark",
+        style = "light",
       })
     end,
   },

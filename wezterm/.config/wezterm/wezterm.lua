@@ -79,7 +79,7 @@ config.inactive_pane_hsb = {
 -- 	},
 -- }
 
-config.color_scheme = "Dark+"
+config.color_scheme = "Vs Code Light+ (Gogh)"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to
