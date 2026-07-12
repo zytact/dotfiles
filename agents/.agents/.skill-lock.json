@@ -25,10 +25,10 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/engineering/tdd/SKILL.md",
-      "skillFolderHash": "75beb3030b4c979205dd771ff85ac600baeb68f4",
+      "skillFolderHash": "57e1bee887816ed2af745e5fd388f224f6e61ada",
       "pluginName": "mattpocock-skills",
       "installedAt": "2026-04-28T12:43:17.836Z",
-      "updatedAt": "2026-05-10T09:06:36.235Z"
+      "updatedAt": "2026-07-12T07:39:53.306Z"
     },
     "to-issues": {
       "source": "mattpocock/skills",
@@ -51,13 +51,14 @@
       "updatedAt": "2026-05-10T09:06:36.251Z"
     },
     "grill-me": {
-      "source": "zytact/skills",
+      "source": "mattpocock/skills",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/zytact/skills.git",
-      "skillPath": "grill-me/SKILL.md",
-      "skillFolderHash": "fa5caf76e9d27897d8efef3d348d6b8b4c9915e5",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "skillFolderHash": "8320e7b87f7b208f50ce165b1dd43d1e93c8e801",
+      "pluginName": "mattpocock-skills",
       "installedAt": "2026-04-28T12:43:17.847Z",
-      "updatedAt": "2026-07-06T13:43:07.698Z"
+      "updatedAt": "2026-07-10T17:16:25.965Z"
     },
     "living-architecture-docs": {
       "source": "zytact/skills",
@@ -109,9 +110,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "vendor-repo/SKILL.md",
-      "skillFolderHash": "e7e969a73e7542dcb8e753168a92b5e8553db29b",
+      "skillFolderHash": "98e945fe080ad7f2db1ee887b0f28eef165e623c",
       "installedAt": "2026-05-25T19:54:26.796Z",
-      "updatedAt": "2026-06-06T06:47:23.315Z"
+      "updatedAt": "2026-07-11T17:06:36.245Z"
     },
     "ubiquitous-language": {
       "source": "zytact/skills",
@@ -174,9 +175,28 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "html-plan/SKILL.md",
-      "skillFolderHash": "e4d7116c51a2ae0e261cfe44a2fc51d95e8be26c",
+      "skillFolderHash": "846083146da6a52471719085b63a73fd594ad5d4",
       "installedAt": "2026-07-08T17:10:59.201Z",
-      "updatedAt": "2026-07-08T17:20:21.177Z"
+      "updatedAt": "2026-07-11T15:38:55.109Z"
+    },
+    "grilling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/grilling/SKILL.md",
+      "skillFolderHash": "0ace40ac10f5c0b1534324e4e109ebfa831fb361",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-07-10T17:17:11.372Z",
+      "updatedAt": "2026-07-10T17:17:11.372Z"
+    },
+    "code-review": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "code-review/SKILL.md",
+      "skillFolderHash": "2bed61489198779241297fee4062d09546def0ea",
+      "installedAt": "2026-07-12T08:07:02.629Z",
+      "updatedAt": "2026-07-12T08:07:02.629Z"
     }
   },
   "dismissed": {
