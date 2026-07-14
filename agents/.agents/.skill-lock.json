@@ -175,9 +175,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "html-plan/SKILL.md",
-      "skillFolderHash": "846083146da6a52471719085b63a73fd594ad5d4",
+      "skillFolderHash": "aed2185716eb77d433a28bf8d685c2b451076673",
       "installedAt": "2026-07-08T17:10:59.201Z",
-      "updatedAt": "2026-07-11T15:38:55.109Z"
+      "updatedAt": "2026-07-13T15:38:38.612Z"
     },
     "grilling": {
       "source": "mattpocock/skills",
@@ -197,6 +197,15 @@
       "skillFolderHash": "475947d0e3d8c8127e042d8ca46a3fa2294a370e",
       "installedAt": "2026-07-12T08:07:02.629Z",
       "updatedAt": "2026-07-12T14:58:47.850Z"
+    },
+    "postplan": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "postplan/SKILL.md",
+      "skillFolderHash": "da734e447f08fe76bf2ef56803f688201e766a3d",
+      "installedAt": "2026-07-13T14:05:04.627Z",
+      "updatedAt": "2026-07-13T14:05:04.627Z"
     }
   },
   "dismissed": {
