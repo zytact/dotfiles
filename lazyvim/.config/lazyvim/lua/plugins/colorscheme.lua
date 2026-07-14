@@ -66,7 +66,7 @@ return {
     config = function()
       require("vscode").setup({
         transparent = true,
-        style = "light",
+        style = "dark",
       })
     end,
   },

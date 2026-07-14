@@ -28,7 +28,7 @@
   "redact_private_values": false,
   "format_on_save": "on",
   "icon_theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Material Icon Theme",
     "dark": "Catppuccin Mocha"
   },
@@ -61,7 +61,7 @@
   },
   "relative_line_numbers": "enabled",
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "VSCode Light Modern",
     "dark": "VSCode Dark Modern"
   },
