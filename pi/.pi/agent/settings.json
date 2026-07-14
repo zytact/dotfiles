@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.80.6",
+  "lastChangelogVersion": "0.80.7",
   "defaultProvider": "opencode",
   "defaultModel": "deepseek-v4-flash-free",
   "defaultThinkingLevel": "high",
@@ -10,7 +10,7 @@
     "openai-codex/gpt-5.6-terra"
   ],
   "hideThinkingBlock": false,
-  "theme": "vscode-light-plus",
+  "theme": "vscode-dark-plus",
   "packages": [
     "npm:pi-web-access",
     "npm:@viniraioli/pi-claude-style-tools",
@@ -19,6 +19,7 @@
     "npm:pi-prompt-template-model",
     "npm:@juicesharp/rpiv-btw",
     "npm:pi-better-openai",
+    "npm:@quintinshaw/pi-dynamic-workflows",
     "npm:pi-subagents"
   ],
   "enableInstallTelemetry": false,
