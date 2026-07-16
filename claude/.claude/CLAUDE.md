@@ -9,7 +9,7 @@
 - Don't be scared to propose bold ideas if they can meaningfully benefit our work.
 - Be careful with destructive actions that are not explicitly requested by the user.
 - Tests are good! Endless smoke tests, "regression tests" for feature deletions, etc, much less good. Tests should be focused, not slop.
-- Comments are a great way to clarify functionality and how code is used. Don't commend every line, but feel free to describe (concisely) how functions are used above function definitions, classes, etc.
+- Comments are a great way to clarify functionality and how code is used. Don't comment every line, but feel free to describe (concisely) how functions, classes are used above function definitions, classes, etc. But comments should be minimal, concise and if something is evident from the name, do not comment for that. And add comments only where I told you, nowhere else.
 
 ## Git Naming Conventions
 ### Branches
