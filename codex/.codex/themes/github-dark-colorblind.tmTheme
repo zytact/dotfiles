@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>GitHub Dark Colorblind</string>
+  <key>settings</key>
+  <array>
+    <dict>
+      <key>settings</key>
+      <dict>
+        <key>background</key><string>#0D1117</string>
+        <key>caret</key><string>#58A6FF</string>
+        <key>foreground</key><string>#C9D1D9</string>
+        <key>invisibles</key><string>#30363D</string>
+        <key>lineHighlight</key><string>#161B22</string>
+        <key>selection</key><string>#0C2D6B</string>
+      </dict>
+    </dict>
+    <dict><key>scope</key><string>comment</string><key>settings</key><dict><key>foreground</key><string>#8B949E</string></dict></dict>
+    <dict><key>scope</key><string>string, constant.other.symbol</string><key>settings</key><dict><key>foreground</key><string>#79C0FF</string></dict></dict>
+    <dict><key>scope</key><string>constant.numeric, constant.language</string><key>settings</key><dict><key>foreground</key><string>#79C0FF</string></dict></dict>
+    <dict><key>scope</key><string>keyword, storage</string><key>settings</key><dict><key>foreground</key><string>#EC8E2C</string></dict></dict>
+    <dict><key>scope</key><string>variable, support.variable</string><key>settings</key><dict><key>foreground</key><string>#FDAC54</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.function, support.function</string><key>settings</key><dict><key>foreground</key><string>#BC8CFF</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.type, entity.name.class, support.type</string><key>settings</key><dict><key>foreground</key><string>#79C0FF</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.tag, entity.other.attribute-name</string><key>settings</key><dict><key>foreground</key><string>#58A6FF</string></dict></dict>
+    <dict><key>scope</key><string>invalid, invalid.illegal</string><key>settings</key><dict><key>foreground</key><string>#FDAC54</string></dict></dict>
+    <dict><key>scope</key><string>markup.heading, markup.bold, markup.inserted</string><key>settings</key><dict><key>foreground</key><string>#58A6FF</string></dict></dict>
+    <dict><key>scope</key><string>markup.deleted</string><key>settings</key><dict><key>foreground</key><string>#EC8E2C</string></dict></dict>
+  </array>
+</dict>
+</plist>

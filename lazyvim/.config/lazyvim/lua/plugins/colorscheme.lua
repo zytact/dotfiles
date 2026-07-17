@@ -1,5 +1,12 @@
 return {
   {
+    "projekt0n/github-nvim-theme",
+    name = "github-theme",
+    lazy = false,
+    priority = 1000,
+  },
+
+  {
     "catppuccin/nvim",
     config = function()
       require("catppuccin").setup({
@@ -154,7 +161,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vscode",
+      colorscheme = "github_dark_colorblind",
     },
   },
 

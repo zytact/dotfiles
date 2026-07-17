@@ -63,7 +63,7 @@
   "theme": {
     "mode": "dark",
     "light": "VSCode Light Modern",
-    "dark": "VSCode Dark Modern"
+    "dark": "GitHub Dark Colorblind"
   },
   "languages": {
     "Python": {

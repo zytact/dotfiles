@@ -79,7 +79,63 @@ config.inactive_pane_hsb = {
 -- 	},
 -- }
 
-config.color_scheme = "Vs Code Dark+ (Gogh)"
+config.color_schemes = {
+	["GitHub Dark Colorblind"] = {
+		foreground = "#c9d1d9",
+		background = "#0d1117",
+		cursor_bg = "#58a6ff",
+		cursor_border = "#58a6ff",
+		cursor_fg = "#0d1117",
+		selection_bg = "#0c2d6b",
+		selection_fg = "#c9d1d9",
+		ansi = {
+			"#484f58",
+			"#ec8e2c",
+			"#58a6ff",
+			"#d29922",
+			"#58a6ff",
+			"#bc8cff",
+			"#76e3ea",
+			"#b1bac4",
+		},
+		brights = {
+			"#6e7681",
+			"#fdac54",
+			"#79c0ff",
+			"#e3b341",
+			"#79c0ff",
+			"#d2a8ff",
+			"#a5f3fc",
+			"#f0f6fc",
+		},
+		tab_bar = {
+			background = "#0d1117",
+			active_tab = {
+				bg_color = "#161b22",
+				fg_color = "#f0f6fc",
+				intensity = "Bold",
+			},
+			inactive_tab = {
+				bg_color = "#0d1117",
+				fg_color = "#8b949e",
+			},
+			inactive_tab_hover = {
+				bg_color = "#21262d",
+				fg_color = "#c9d1d9",
+			},
+			new_tab = {
+				bg_color = "#0d1117",
+				fg_color = "#8b949e",
+			},
+			new_tab_hover = {
+				bg_color = "#21262d",
+				fg_color = "#c9d1d9",
+			},
+		},
+	},
+}
+
+config.color_scheme = "GitHub Dark Colorblind"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to
