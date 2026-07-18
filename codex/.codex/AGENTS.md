@@ -10,6 +10,7 @@
 - Be careful with destructive actions that are not explicitly requested by the user.
 - Tests are good! Endless smoke tests, "regression tests" for feature deletions, etc, much less good. Tests should be focused, not slop.
 - Comments are a great way to clarify functionality and how code is used. Don't comment every line, but feel free to describe (concisely) how functions, classes are used above function definitions, classes, etc. But comments should be minimal, concise and if something is evident from the name, do not comment for that. And add comments only where I told you, nowhere else.
+- The code you write should target mergability, scalability, simplicity and readability. This does not mean you compromise with the goal but good code is simple, readable and scalable. 
 
 ## Git Naming Conventions
 ### Branches
