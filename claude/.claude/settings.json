@@ -1,19 +1,43 @@
 {
-  "model": "sonnet",
+  "permissions": {
+    "deny": [
+      "EnterPlanMode",
+      "ExitPlanMode",
+      "RemoteTrigger"
+    ]
+  },
+  "model": "fable",
+  "disableClaudeAiConnectors": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/home/arnab/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
     "type": "command",
-    "command": "npx -y ccstatusline@latest",
+    "command": "input=$(cat); base=$(printf '%s' \"$input\" | npx -y ccstatusline@latest); effort=$(printf '%s' \"$input\" | jq -r '.effort.level // \"unknown\"'); printf '%s | Effort: %s\\n' \"$base\" \"$effort\"",
     "padding": 0,
     "refreshInterval": 10
   },
-  "effortLevel": "low",
+  "effortLevel": "medium",
+  "promptSuggestionEnabled": false,
   "tui": "fullscreen",
-  "skipDangerousModePermissionPrompt": true,
-  "theme": "dark",
-  "agentPushNotifEnabled": true,
-  "voiceEnabled": true,
   "voice": {
     "enabled": true,
     "mode": "hold"
-  }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark-daltonized",
+  "autoCompactEnabled": true,
+  "agentPushNotifEnabled": true,
+  "voiceEnabled": true
 }

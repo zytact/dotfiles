@@ -21,6 +21,7 @@ local window_size_cache_path = cache_dir .. "window_size_cache.txt"
 config.tab_bar_at_bottom = true
 -- Do not use fancy tab bar
 config.use_fancy_tab_bar = false
+config.tab_max_width = 50
 config.enable_tab_bar = true
 config.enable_wayland = true
 config.window_background_opacity = 1.0
@@ -133,6 +134,61 @@ config.color_schemes = {
 			},
 		},
 	},
+    	["GitHub Light Colorblind"] = {
+		foreground = "#24292f",
+		background = "#ffffff",
+		cursor_bg = "#0969da",
+		cursor_border = "#0969da",
+		cursor_fg = "#ffffff",
+		selection_bg = "#b6e3ff",
+		selection_fg = "#24292f",
+		ansi = {
+			"#24292f",
+			"#b35900",
+			"#0550ae",
+			"#4d2d00",
+			"#0969da",
+			"#8250df",
+			"#1b7c83",
+			"#6e7781",
+		},
+		brights = {
+			"#57606a",
+			"#8a4600",
+			"#0969da",
+			"#633c01",
+			"#218bff",
+			"#a475f9",
+			"#3192aa",
+			"#8c959f",
+		},
+		tab_bar = {
+			background = "#f6f8fa",
+			active_tab = {
+				bg_color = "#ffffff",
+				fg_color = "#24292f",
+				intensity = "Bold",
+			},
+			inactive_tab = {
+				bg_color = "#f6f8fa",
+				fg_color = "#57606a",
+			},
+			inactive_tab_hover = {
+				bg_color = "#eaeef2",
+				fg_color = "#24292f",
+			},
+			new_tab = {
+				bg_color = "#f6f8fa",
+				fg_color = "#57606a",
+			},
+			new_tab_hover = {
+				bg_color = "#eaeef2",
+				fg_color = "#24292f",
+			},
+		},
+	},
+
+
 }
 
 config.color_scheme = "GitHub Dark Colorblind"

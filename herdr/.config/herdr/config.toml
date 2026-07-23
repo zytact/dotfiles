@@ -1,13 +1,11 @@
 onboarding = false
 
 [theme]
-name = "terminal"
+name = "tokyo-night"
 
+auto_switch = false
 [ui.toast]
 delivery = "terminal"
 
 [ui]
-agent_panel_scope = "all"
-
-[experimental]
-kitty_graphics = true
+agent_panel_sort = "priority"

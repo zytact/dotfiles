@@ -149,7 +149,7 @@
             }
           ]
         },
-        "contextWindow": 372000,
+        "contextWindow": 272000,
         "maxTokens": 128000,
         "thinkingLevelMap": {
           "xhigh": "xhigh",
@@ -186,7 +186,7 @@
             }
           ]
         },
-        "contextWindow": 372000,
+        "contextWindow": 272000,
         "maxTokens": 128000,
         "thinkingLevelMap": {
           "xhigh": "xhigh",
@@ -223,7 +223,7 @@
             }
           ]
         },
-        "contextWindow": 372000,
+        "contextWindow": 272000,
         "maxTokens": 128000,
         "thinkingLevelMap": {
           "xhigh": "xhigh",
@@ -235,7 +235,7 @@
         }
       }
     ],
-    "checkedAt": 1784307250752
+    "checkedAt": 1784625761824
   },
   "opencode-go": {
     "models": [
@@ -283,9 +283,9 @@
           "text"
         ],
         "cost": {
-          "input": 1.74,
-          "output": 3.48,
-          "cacheRead": 0.0145,
+          "input": 0.435,
+          "output": 0.87,
+          "cacheRead": 0.003625,
           "cacheWrite": 0
         },
         "compat": {
@@ -364,7 +364,7 @@
       {
         "id": "grok-4.5",
         "name": "Grok 4.5",
-        "api": "openai-completions",
+        "api": "openai-responses",
         "provider": "opencode-go",
         "baseUrl": "https://opencode.ai/zen/go/v1",
         "reasoning": true,
@@ -379,9 +379,7 @@
           "cacheWrite": 0
         },
         "compat": {
-          "supportsStore": false,
-          "supportsDeveloperRole": false,
-          "maxTokensField": "max_tokens"
+          "sessionAffinityFormat": "openai-nosession"
         },
         "contextWindow": 500000,
         "maxTokens": 500000
@@ -446,7 +444,7 @@
       },
       {
         "id": "kimi-k3",
-        "name": "Kimi K3",
+        "name": "Kimi K3 (2x usage)",
         "api": "openai-completions",
         "provider": "opencode-go",
         "baseUrl": "https://opencode.ai/zen/go/v1",
@@ -505,9 +503,9 @@
           "text"
         ],
         "cost": {
-          "input": 1.74,
-          "output": 3.48,
-          "cacheRead": 0.0145,
+          "input": 0.435,
+          "output": 0.87,
+          "cacheRead": 0.003625,
           "cacheWrite": 0
         },
         "compat": {
@@ -628,7 +626,7 @@
         "maxTokens": 65536
       }
     ],
-    "checkedAt": 1784307250770
+    "checkedAt": 1784625761837
   },
   "opencode": {
     "models": [
@@ -1676,7 +1674,7 @@
       {
         "id": "grok-4.5",
         "name": "Grok 4.5",
-        "api": "openai-completions",
+        "api": "openai-responses",
         "provider": "opencode",
         "baseUrl": "https://opencode.ai/zen/v1",
         "reasoning": true,
@@ -1691,9 +1689,7 @@
           "cacheWrite": 0
         },
         "compat": {
-          "supportsStore": false,
-          "supportsDeveloperRole": false,
-          "maxTokensField": "max_tokens"
+          "sessionAffinityFormat": "openai-nosession"
         },
         "contextWindow": 500000,
         "maxTokens": 500000
@@ -1729,30 +1725,6 @@
           "low": null,
           "medium": null
         }
-      },
-      {
-        "id": "hy3-free",
-        "name": "Hy3 Free",
-        "api": "openai-completions",
-        "provider": "opencode",
-        "baseUrl": "https://opencode.ai/zen/v1",
-        "reasoning": true,
-        "input": [
-          "text"
-        ],
-        "cost": {
-          "input": 0,
-          "output": 0,
-          "cacheRead": 0,
-          "cacheWrite": 0
-        },
-        "compat": {
-          "supportsStore": false,
-          "supportsDeveloperRole": false,
-          "maxTokensField": "max_tokens"
-        },
-        "contextWindow": 190000,
-        "maxTokens": 64000
       },
       {
         "id": "kimi-k2.5",
@@ -2021,6 +1993,6 @@
         "maxTokens": 65536
       }
     ],
-    "checkedAt": 1784307250745
+    "checkedAt": 1784625761842
   }
 }

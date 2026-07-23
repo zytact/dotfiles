@@ -62,7 +62,7 @@
   "relative_line_numbers": "enabled",
   "theme": {
     "mode": "dark",
-    "light": "VSCode Light Modern",
+    "light": "GitHub Light Colorblind",
     "dark": "GitHub Dark Colorblind"
   },
   "languages": {
