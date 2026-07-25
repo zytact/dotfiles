@@ -81,8 +81,9 @@
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/productivity/teach/SKILL.md",
       "skillFolderHash": "15f8c86d39ef834e643d092733ca899b59049067",
+      "pluginName": "mattpocock-skills",
       "installedAt": "2026-06-20T07:59:23.697Z",
-      "updatedAt": "2026-07-24T18:21:55.121Z"
+      "updatedAt": "2026-07-24T18:44:20.819Z"
     },
     "skill-creator": {
       "source": "openai/skills",
@@ -198,6 +199,16 @@
       "pluginName": "mattpocock-skills",
       "installedAt": "2026-07-24T18:21:03.469Z",
       "updatedAt": "2026-07-24T18:21:03.469Z"
+    },
+    "research": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/research/SKILL.md",
+      "skillFolderHash": "972a34cd8128b7952b7eb279b06715862db906a7",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-07-25T11:00:47.933Z",
+      "updatedAt": "2026-07-25T11:00:47.933Z"
     }
   },
   "dismissed": {
