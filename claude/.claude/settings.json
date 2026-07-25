@@ -6,7 +6,7 @@
       "RemoteTrigger"
     ]
   },
-  "model": "fable",
+  "model": "sonnet",
   "disableClaudeAiConnectors": true,
   "hooks": {
     "SessionStart": [
