@@ -687,7 +687,7 @@
         "maxTokens": 65536
       }
     ],
-    "checkedAt": 1785002109229
+    "checkedAt": 1785137927635
   },
   "opencode": {
     "models": [
@@ -2343,6 +2343,6 @@
         "maxTokens": 65536
       }
     ],
-    "checkedAt": 1785002109031
+    "checkedAt": 1785137927649
   }
 }
