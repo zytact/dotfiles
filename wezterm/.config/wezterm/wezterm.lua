@@ -191,7 +191,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "GitHub Dark Colorblind"
+config.color_scheme = "Vesper"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to

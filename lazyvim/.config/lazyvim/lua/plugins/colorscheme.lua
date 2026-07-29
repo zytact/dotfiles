@@ -161,7 +161,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "github_dark_colorblind",
+      colorscheme = "vesper",
     },
   },
 

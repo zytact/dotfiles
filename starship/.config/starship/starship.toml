@@ -1,4 +1,4 @@
-palette = "github_dark_colorblind"
+palette = "vesper"
 add_newline = false
 command_timeout = 2000
 scan_timeout = 50
@@ -135,6 +135,37 @@ crust = "#111111"
 line = "#3e3e42"
 fg = "#d4d4d4"
 select = "#264f78"
+
+[palettes.vesper]
+rosewater = "#fff0e5"
+flamingo = "#ff8080"
+pink = "#ffcfa8"
+mauve = "#ffc799"
+red = "#ff8080"
+maroon = "#e66e6e"
+peach = "#ffc799"
+yellow = "#ffc799"
+green = "#99ffe4"
+teal = "#99ffe4"
+sky = "#99ffe4"
+sapphire = "#7ddbc4"
+blue = "#a0a0a0"
+lavender = "#ffcfa8"
+text = "#ffffff"
+subtext1 = "#d0d0d0"
+subtext0 = "#a0a0a0"
+overlay2 = "#7e7e7e"
+overlay1 = "#666666"
+overlay0 = "#505050"
+surface2 = "#282828"
+surface1 = "#1c1c1c"
+surface0 = "#161616"
+base = "#101010"
+mantle = "#0d0d0d"
+crust = "#000000"
+line = "#343434"
+fg = "#ffffff"
+select = "#3a3a3a"
 
 [os]
 disabled = false
