@@ -2,6 +2,7 @@
 
 stow ghostty
 stow git
+stow hunk
 stow lazygit
 stow lazyvim
 stow mcphub
