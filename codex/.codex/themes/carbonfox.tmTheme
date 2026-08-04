@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Carbonfox</string>
+  <key>settings</key>
+  <array>
+    <dict>
+      <key>settings</key>
+      <dict>
+        <key>background</key><string>#161616</string>
+        <key>caret</key><string>#F2F4F8</string>
+        <key>foreground</key><string>#F2F4F8</string>
+        <key>invisibles</key><string>#535353</string>
+        <key>lineHighlight</key><string>#252525</string>
+        <key>selection</key><string>#525253</string>
+      </dict>
+    </dict>
+    <dict><key>scope</key><string>comment, punctuation.definition.comment</string><key>settings</key><dict><key>foreground</key><string>#7B7C7E</string><key>fontStyle</key><string>italic</string></dict></dict>
+    <dict><key>scope</key><string>variable, support.other.variable</string><key>settings</key><dict><key>foreground</key><string>#DFDFE0</string></dict></dict>
+    <dict><key>scope</key><string>keyword, storage.type, storage.modifier, variable.language</string><key>settings</key><dict><key>foreground</key><string>#BE95FF</string></dict></dict>
+    <dict><key>scope</key><string>string, constant.other.symbol, constant.other.key</string><key>settings</key><dict><key>foreground</key><string>#25BE6A</string></dict></dict>
+    <dict><key>scope</key><string>constant.numeric, constant.language, constant.character, constant.escape</string><key>settings</key><dict><key>foreground</key><string>#3DDBD9</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.function, variable.function, support.function</string><key>settings</key><dict><key>foreground</key><string>#78A9FF</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.type, entity.name.class, support.type, support.class</string><key>settings</key><dict><key>foreground</key><string>#08BDBA</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.tag, entity.other.attribute-name</string><key>settings</key><dict><key>foreground</key><string>#33B1FF</string></dict></dict>
+    <dict><key>scope</key><string>invalid, invalid.illegal, markup.deleted</string><key>settings</key><dict><key>foreground</key><string>#EE5396</string></dict></dict>
+    <dict><key>scope</key><string>markup.inserted</string><key>settings</key><dict><key>foreground</key><string>#25BE6A</string></dict></dict>
+    <dict><key>scope</key><string>markup.heading, markup.bold, markup.underline</string><key>settings</key><dict><key>foreground</key><string>#78A9FF</string></dict></dict>
+    <dict><key>scope</key><string>markup.italic</string><key>settings</key><dict><key>fontStyle</key><string>italic</string><key>foreground</key><string>#F2F4F8</string></dict></dict>
+  </array>
+</dict>
+</plist>

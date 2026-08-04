@@ -6,7 +6,7 @@
       "RemoteTrigger"
     ]
   },
-  "model": "haiku",
+  "model": "opus",
   "disableClaudeAiConnectors": true,
   "hooks": {
     "SessionStart": [
@@ -28,7 +28,7 @@
     "padding": 0,
     "refreshInterval": 10
   },
-  "effortLevel": "medium",
+  "effortLevel": "low",
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "voice": {
@@ -36,7 +36,7 @@
     "mode": "hold"
   },
   "skipDangerousModePermissionPrompt": true,
-  "theme": "dark-daltonized",
+  "theme": "custom:blue-matrix-light",
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true

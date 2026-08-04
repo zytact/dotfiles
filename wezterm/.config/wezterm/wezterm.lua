@@ -81,6 +81,59 @@ config.inactive_pane_hsb = {
 -- }
 
 config.color_schemes = {
+	["Blue Matrix Light"] = {
+		foreground = "#123047",
+		background = "#e3ebf0",
+		cursor_bg = "#008f5a",
+		cursor_border = "#008f5a",
+		cursor_fg = "#e3ebf0",
+		selection_bg = "#d8eaff",
+		selection_fg = "#071a1f",
+		ansi = {
+			"#cedde6",
+			"#c0266f",
+			"#008f5a",
+			"#9a6a00",
+			"#0969da",
+			"#6d5bd0",
+			"#008aa6",
+			"#123047",
+		},
+		brights = {
+			"#7aa7bd",
+			"#a3195b",
+			"#00784c",
+			"#7c5600",
+			"#005fb8",
+			"#5848b8",
+			"#007f98",
+			"#071a1f",
+		},
+		tab_bar = {
+			background = "#cedde6",
+			active_tab = {
+				bg_color = "#e3ebf0",
+				fg_color = "#071a1f",
+				intensity = "Bold",
+			},
+			inactive_tab = {
+				bg_color = "#cedde6",
+				fg_color = "#376078",
+			},
+			inactive_tab_hover = {
+				bg_color = "#d8eaff",
+				fg_color = "#123047",
+			},
+			new_tab = {
+				bg_color = "#cedde6",
+				fg_color = "#376078",
+			},
+			new_tab_hover = {
+				bg_color = "#d8eaff",
+				fg_color = "#123047",
+			},
+		},
+	},
 	["GitHub Dark Colorblind"] = {
 		foreground = "#c9d1d9",
 		background = "#0d1117",
@@ -191,7 +244,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "Vesper"
+config.color_scheme = "Blue Matrix Light"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to

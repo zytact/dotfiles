@@ -1,9 +1,28 @@
 onboarding = false
 
 [theme]
-name = "vesper"
+name = "terminal"
 
 auto_switch = false
+
+[theme.custom]
+accent = "#78a9ff"
+panel_bg = "#161616"
+surface0 = "#252525"
+surface1 = "#353535"
+surface_dim = "#0c0c0c"
+overlay0 = "#535353"
+overlay1 = "#7b7c7e"
+text = "#f2f4f8"
+subtext0 = "#b6b8bb"
+mauve = "#be95ff"
+green = "#25be6a"
+yellow = "#08bdba"
+red = "#ee5396"
+blue = "#78a9ff"
+teal = "#33b1ff"
+peach = "#3ddbd9"
+
 [ui.toast]
 delivery = "terminal"
 
