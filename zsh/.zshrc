@@ -164,10 +164,12 @@ alias cc="claude --dangerously-skip-permissions"
 alias ccr="claude --dangerously-skip-permissions -r"
 alias ccx="claude-codex --dangerously-skip-permissions"
 alias ccxr="claude-codex --dangerously-skip-permissions -r"
+alias cx="codex --yolo"
 alias cxl="codex --yolo -m gpt-5.6-sol -c 'model_reasoning_effort=\"low\"'"
 alias cxm="codex --yolo -m gpt-5.6-sol -c 'model_reasoning_effort=\"medium\"'"
 alias cxr="codex --yolo -m gpt-5.6-sol resume"
 alias serve-t3code="cd /tmp && vpx t3@latest serve --host \"$(hostname -I | awk '{print $1}')\""
+alias system-mcp="env --chdir=$HOME/Documents/system/ ENABLE_CLAUDEAI_MCP_SERVERS=true ENABLE_CLAUDEAI_MCP_SERVERS=true claude --dangerously-skip-permissions"
 
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh
@@ -212,3 +214,7 @@ esac
 # fi
 
 # opencode
+
+# >>> Codex installer >>>
+export PATH="/home/arnab/.local/bin:$PATH"
+# <<< Codex installer <<<
