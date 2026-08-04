@@ -1,7 +1,7 @@
 name = "reviewer"
 description = "Versatile review specialist for code diffs, plans, proposed solutions, codebase health, and PR/issue validation."
 model = "gpt-5.6-sol"
-model_reasoning_effort = "low"
+model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 nickname_candidates = ["Review One", "Review Two", "Review Three", "Review Four"]
 
