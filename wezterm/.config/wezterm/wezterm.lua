@@ -81,6 +81,25 @@ config.inactive_pane_hsb = {
 -- }
 
 config.color_schemes = {
+	["Carbonfox"] = {
+		foreground = "#f2f4f8",
+		background = "#161616",
+		cursor_bg = "#f2f4f8",
+		cursor_border = "#f2f4f8",
+		cursor_fg = "#161616",
+		selection_bg = "#525253",
+		selection_fg = "#f2f4f8",
+		ansi = { "#282828", "#ee5396", "#25be6a", "#08bdba", "#78a9ff", "#be95ff", "#33b1ff", "#dfdfe0" },
+		brights = { "#484848", "#ff7eb6", "#42be65", "#3ddbd9", "#82cfff", "#be95ff", "#3ddbd9", "#ffffff" },
+		tab_bar = {
+			background = "#161616",
+			active_tab = { bg_color = "#252525", fg_color = "#f2f4f8", intensity = "Bold" },
+			inactive_tab = { bg_color = "#161616", fg_color = "#7b7c7e" },
+			inactive_tab_hover = { bg_color = "#353535", fg_color = "#f2f4f8" },
+			new_tab = { bg_color = "#161616", fg_color = "#78a9ff" },
+			new_tab_hover = { bg_color = "#353535", fg_color = "#f2f4f8" },
+		},
+	},
 	["Blue Matrix Light"] = {
 		foreground = "#123047",
 		background = "#e3ebf0",
@@ -244,7 +263,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "Blue Matrix Light"
+config.color_scheme = "rose-pine"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to

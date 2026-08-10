@@ -1,4 +1,4 @@
-palette = "blue_matrix_light"
+palette = "carbonfox"
 add_newline = false
 command_timeout = 2000
 scan_timeout = 50
@@ -166,6 +166,37 @@ crust = "#f2e9e1"
 line = "#dfdad9"
 fg = "#575279"
 select = "#c9c5c4"
+
+[palettes.rose_pine]
+rosewater = "#ebbcba"
+flamingo = "#eb6f92"
+pink = "#ebbcba"
+mauve = "#c4a7e7"
+red = "#eb6f92"
+maroon = "#eb6f92"
+peach = "#f6c177"
+yellow = "#f6c177"
+green = "#9ccfd8"
+teal = "#9ccfd8"
+sky = "#9ccfd8"
+sapphire = "#31748f"
+blue = "#31748f"
+lavender = "#c4a7e7"
+text = "#e0def4"
+subtext1 = "#908caa"
+subtext0 = "#6e6a86"
+overlay2 = "#6e6a86"
+overlay1 = "#524f67"
+overlay0 = "#403d52"
+surface2 = "#403d52"
+surface1 = "#26233a"
+surface0 = "#1f1d2e"
+base = "#191724"
+mantle = "#21202e"
+crust = "#191724"
+line = "#403d52"
+fg = "#e0def4"
+select = "#524f67"
 
 [palettes.vscode_light_plus]
 rosewater = "#334155"

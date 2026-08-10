@@ -1,4 +1,4 @@
-theme = "custom"
+theme = "rose-pine"
 
 [custom_theme]
 base = "github-dark-default"

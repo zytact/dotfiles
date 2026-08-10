@@ -161,13 +161,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "blue-matrix-light",
+      colorscheme = "rose-pine",
     },
   },
 
-  {
-    "blue-matrix-light",
-    dir = vim.fn.stdpath("config") .. "/colors",
-    priority = 1000,
-  },
 }
