@@ -15,7 +15,7 @@
     "showResetTimes": true
   },
   "footer": {
-    "mode": "off"
+    "mode": "replace"
   },
   "image": {
     "enabled": true,
