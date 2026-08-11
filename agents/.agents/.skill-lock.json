@@ -216,6 +216,15 @@
       "pluginName": "mattpocock-skills",
       "installedAt": "2026-08-09T13:27:25.749Z",
       "updatedAt": "2026-08-09T13:27:25.749Z"
+    },
+    "file-pr": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "file-pr/SKILL.md",
+      "skillFolderHash": "14297769565e77030c7867adaa64d05089a9ea83",
+      "installedAt": "2026-08-11T18:01:24.126Z",
+      "updatedAt": "2026-08-11T18:01:24.126Z"
     }
   },
   "dismissed": {
