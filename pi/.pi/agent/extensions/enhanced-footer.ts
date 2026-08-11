@@ -1,5 +1,5 @@
 import type { AssistantMessage, Usage } from "@earendil-works/pi-ai";
-import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+import type { ExtensionAPI, ExtensionContext } from "@earendil-works/pi-coding-agent";
 import { truncateToWidth, visibleWidth } from "@earendil-works/pi-tui";
 
 function formatTokens(count: number): string {
@@ -8,6 +8,16 @@ function formatTokens(count: number): string {
 	if (count < 1_000_000) return `${Math.round(count / 1_000)}k`;
 	if (count < 10_000_000) return `${(count / 1_000_000).toFixed(1)}M`;
 	return `${Math.round(count / 1_000_000)}M`;
+}
+
+function formatDuration(milliseconds: number): string {
+	const seconds = Math.floor(milliseconds / 1_000);
+	const hours = Math.floor(seconds / 3_600);
+	const minutes = Math.floor((seconds % 3_600) / 60);
+	const remainingSeconds = seconds % 60;
+	return [hours, minutes, remainingSeconds]
+		.map((value, index) => (index === 0 ? value.toString() : value.toString().padStart(2, "0")))
+		.join(":");
 }
 
 function singleLine(text: string): string {
@@ -33,14 +43,38 @@ function joinSides(left: string, right: string, width: number): string {
 }
 
 export default function enhancedFooter(pi: ExtensionAPI) {
+	let activeMs = 0;
+	let activeSince: number | undefined;
+
+	const totalActiveMs = () => activeMs + (activeSince === undefined ? 0 : Date.now() - activeSince);
+
+	const persistActiveTime = (ctx: ExtensionContext) => {
+		if (activeSince === undefined) return;
+		activeMs = totalActiveMs();
+		activeSince = undefined;
+		ctx.sessionManager.appendCustomEntry("enhanced-footer-active-time", { activeMs });
+	};
+
 	pi.on("session_start", (_event, ctx) => {
+		activeMs = 0;
+		activeSince = undefined;
+		for (const entry of ctx.sessionManager.getBranch()) {
+			if (entry.type === "custom" && entry.customType === "enhanced-footer-active-time") {
+				const stored = entry.data as { activeMs?: unknown } | undefined;
+				if (typeof stored?.activeMs === "number") activeMs = stored.activeMs;
+			}
+		}
 		if (ctx.mode !== "tui") return;
 
 		ctx.ui.setFooter((tui, theme, footerData) => {
 			const unsubscribe = footerData.onBranchChange(() => tui.requestRender());
+			const interval = setInterval(() => tui.requestRender(), 1_000);
 
 			return {
-				dispose: unsubscribe,
+				dispose: () => {
+					clearInterval(interval);
+					unsubscribe();
+				},
 				invalidate() {},
 				render(width: number): string[] {
 					let input = 0;
@@ -106,7 +140,12 @@ export default function enhancedFooter(pi: ExtensionAPI) {
 						"…",
 					);
 
-					const lines = [locationLine, usageLine, contextLine];
+					const activityLine = truncateToWidth(
+						theme.fg("muted", "active  ") + theme.fg("accent", formatDuration(totalActiveMs())),
+						width,
+						"…",
+					);
+					const lines = [locationLine, activityLine, usageLine, contextLine];
 					const statuses = [...footerData.getExtensionStatuses().values()].map(singleLine).filter(Boolean);
 					if (statuses.length > 0) {
 						lines.push(truncateToWidth(statuses.join("  "), width, "…"));
@@ -115,5 +154,17 @@ export default function enhancedFooter(pi: ExtensionAPI) {
 				},
 			};
 		});
+	});
+
+	pi.on("agent_start", () => {
+		if (activeSince === undefined) activeSince = Date.now();
+	});
+
+	pi.on("agent_end", (_event, ctx) => {
+		persistActiveTime(ctx);
+	});
+
+	pi.on("session_shutdown", (_event, ctx) => {
+		persistActiveTime(ctx);
 	});
 }
