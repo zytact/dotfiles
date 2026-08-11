@@ -1,21 +1,16 @@
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import type {
   ExtensionAPI,
   ExtensionContext,
+  Theme,
 } from "@earendil-works/pi-coding-agent";
 
-const RESET = "\x1b[0m";
-const BOLD = "\x1b[1m";
-
-const PURPLE: Rgb = [197, 134, 192];
-const BLUE: Rgb = [86, 156, 214];
-const BLUE_BRIGHT: Rgb = [79, 193, 255];
-const CYAN: Rgb = [78, 201, 176];
-const TEXT: Rgb = [212, 212, 212];
-const SUBTEXT0: Rgb = [157, 161, 166];
-const PALETTE: Rgb[] = [BLUE, BLUE_BRIGHT, CYAN, BLUE_BRIGHT, BLUE, BLUE_BRIGHT, BLUE, PURPLE];
-
 type Rgb = [number, number, number];
+type ThemeDefinition = {
+  vars?: Record<string, string | number>;
+  export?: { pageBg?: string | number };
+};
 type Renderable = {
   render(width: number): string[];
   invalidate?: () => void;
@@ -41,38 +36,64 @@ const TITLE_LINES = [
 
 const ZYTACT_LINES = ["zytact"];
 
-function mix(a: number, b: number, t: number) {
-  return Math.round(a + (b - a) * t);
+function parseRgb(value: string): Rgb | undefined {
+  const hex = value.match(/^#([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i);
+  if (hex)
+    return [
+      parseInt(hex[1]!, 16),
+      parseInt(hex[2]!, 16),
+      parseInt(hex[3]!, 16),
+    ];
+
+  const ansi = value.match(/(?:38|48);2;(\d+);(\d+);(\d+)/);
+  if (ansi) return [Number(ansi[1]), Number(ansi[2]), Number(ansi[3])];
 }
 
-function sampleGradient(position: number) {
-  const wrapped = ((position % 1) + 1) % 1;
-  const scaled = wrapped * PALETTE.length;
-  const index = Math.floor(scaled);
-  const nextIndex = (index + 1) % PALETTE.length;
-  const t = scaled - index;
-  const a = PALETTE[index]!;
-  const b = PALETTE[nextIndex]!;
-  return [mix(a[0], b[0], t), mix(a[1], b[1], t), mix(a[2], b[2], t)] as Rgb;
+function configuredBackground(theme: Theme): Rgb | undefined {
+  try {
+    const definition = JSON.parse(
+      readFileSync(theme.sourcePath!, "utf8"),
+    ) as ThemeDefinition;
+    const pageBg = definition.export?.pageBg;
+    const value = pageBg === undefined ? definition.vars?.bg : pageBg;
+    const resolved =
+      typeof value === "string" ? (definition.vars?.[value] ?? value) : value;
+    if (typeof resolved === "string") {
+      const rgb = parseRgb(resolved);
+      if (rgb) return rgb;
+    }
+  } catch {}
+
+  return parseRgb(theme.getBgAnsi("customMessageBg"));
 }
 
-function fg([r, g, b]: Rgb, text: string) {
-  return `\x1b[38;2;${r};${g};${b}m${text}${RESET}`;
+function mix(a: number, b: number, amount: number) {
+  return Math.round(a + (b - a) * amount);
 }
 
-function gradientText(text: string, phase: number) {
+function gradientText(text: string, phase: number, theme: Theme) {
+  const accent = parseRgb(theme.getFgAnsi("accent"));
+  if (!accent) return theme.fg("accent", text);
+
+  const background = configuredBackground(theme);
+  if (!background) return theme.fg("accent", text);
+
   const chars = [...text];
   const span = Math.max(chars.length - 1, 1);
+
   return chars
     .map((char, index) => {
       if (char === " ") return char;
-      return fg(sampleGradient(index / span + phase), char);
+      const position = (index / span + phase) % 1;
+      const intensity = 0.5 + 0.5 * Math.sin(Math.PI * position);
+      const color: Rgb = [
+        mix(background[0], accent[0], intensity),
+        mix(background[1], accent[1], intensity),
+        mix(background[2], accent[2], intensity),
+      ];
+      return `\x1b[38;2;${color[0]};${color[1]};${color[2]}m${char}\x1b[0m`;
     })
     .join("");
-}
-
-function solidText(text: string, color: Rgb) {
-  return fg(color, text);
 }
 
 function center(text: string, width: number) {
@@ -129,22 +150,21 @@ function isBlankSpacer(component: Renderable) {
   return renderedText(component).trim() === "";
 }
 
-function renderHeader(width: number, phase: number, subtitleText: string) {
+function renderHeader(
+  width: number,
+  phase: number,
+  subtitleText: string,
+  theme: Theme,
+) {
   const lines = TITLE_LINES.map((line, row) =>
-    gradientText(center(line, width), phase + row * 0.02),
+    gradientText(center(line, width), phase + row * 0.02, theme),
   );
   const subtitle = center(subtitleText, width);
   const zytact = ZYTACT_LINES.map((line) =>
-    solidText(center(line, width), SUBTEXT0),
+    theme.fg("muted", center(line, width)),
   );
 
-  return [
-    "",
-    ...lines,
-    `${BOLD}${solidText(subtitle, TEXT)}${RESET}`,
-    ...zytact,
-    "",
-  ];
+  return ["", ...lines, theme.bold(theme.fg("text", subtitle)), ...zytact, ""];
 }
 
 export default function (pi: ExtensionAPI) {
@@ -152,11 +172,16 @@ export default function (pi: ExtensionAPI) {
   let currentModelId = "no model selected";
 
   function installHeader(ctx: ExtensionContext) {
-    ctx.ui.setHeader((tui) => {
+    ctx.ui.setHeader((tui, theme) => {
       requestRender = () => tui.requestRender();
       return {
         render(width: number) {
-          return renderHeader(width, 0, `${currentModelId} · ${projectName()}`);
+          return renderHeader(
+            width,
+            0,
+            `${currentModelId} · ${projectName()}`,
+            theme,
+          );
         },
         invalidate() {
           tui.requestRender();
@@ -181,7 +206,7 @@ export default function (pi: ExtensionAPI) {
   });
 
   pi.registerCommand("flow-title", {
-    description: "Enable the VS Code Dark+ flowing session header",
+    description: "Enable the theme-aware flowing session header",
     handler: async (_args, ctx) => {
       installHeader(ctx);
       ctx.ui.notify("Flow title enabled", "info");
