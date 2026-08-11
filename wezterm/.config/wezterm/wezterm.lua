@@ -81,6 +81,25 @@ config.inactive_pane_hsb = {
 -- }
 
 config.color_schemes = {
+	["Targaryen"] = {
+		foreground = "#ebd9d2",
+		background = "#000000",
+		cursor_bg = "#ff7a29",
+		cursor_border = "#ff7a29",
+		cursor_fg = "#000000",
+		selection_bg = "#4a161c",
+		selection_fg = "#fff5f0",
+		ansi = { "#17090b", "#f5384f", "#57b894", "#d9a441", "#7d9bb5", "#a06fbf", "#6fbfb2", "#ebd9d2" },
+		brights = { "#947474", "#ff5a6e", "#7fd6ae", "#f0c98a", "#9fbcd4", "#c49ada", "#93d8cc", "#fff5f0" },
+		tab_bar = {
+			background = "#000000",
+			active_tab = { bg_color = "#33070f", fg_color = "#fff5f0", intensity = "Bold" },
+			inactive_tab = { bg_color = "#000000", fg_color = "#a1837c" },
+			inactive_tab_hover = { bg_color = "#240f12", fg_color = "#ebd9d2" },
+			new_tab = { bg_color = "#000000", fg_color = "#a1837c" },
+			new_tab_hover = { bg_color = "#240f12", fg_color = "#f5384f" },
+		},
+	},
 	["Carbonfox"] = {
 		foreground = "#f2f4f8",
 		background = "#161616",
@@ -263,7 +282,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "rose-pine"
+config.color_scheme = "Targaryen"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to

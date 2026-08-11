@@ -10,7 +10,7 @@
     "openai-codex/gpt-5.6-terra"
   ],
   "hideThinkingBlock": false,
-  "theme": "github-dark-colorblind",
+  "theme": "targaryen",
   "packages": [
     "npm:pi-web-access",
     "npm:pi-intercom",
