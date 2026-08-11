@@ -247,7 +247,7 @@
         }
       }
     ],
-    "checkedAt": 1786373169709,
+    "checkedAt": 1786462989429,
     "lastModified": 1786351890000,
     "etag": "W/\"7572a78e60b78526600ed2a9b74b579d\""
   },
@@ -744,7 +744,7 @@
         "maxTokens": 131072
       }
     ],
-    "checkedAt": 1786373169838,
+    "checkedAt": 1786463505393,
     "lastModified": 1786098938000,
     "etag": "W/\"fc45c5903aaf73b9f2cdfd74cc3f77f9\""
   },
@@ -2356,39 +2356,6 @@
         "maxTokens": 128000
       },
       {
-        "id": "north-mini-code-free",
-        "name": "North Mini Code Free",
-        "api": "openai-completions",
-        "provider": "opencode",
-        "baseUrl": "https://opencode.ai/zen/v1",
-        "reasoning": true,
-        "input": [
-          "text"
-        ],
-        "cost": {
-          "input": 0,
-          "output": 0,
-          "cacheRead": 0,
-          "cacheWrite": 0
-        },
-        "compat": {
-          "supportsStore": false,
-          "supportsDeveloperRole": false,
-          "maxTokensField": "max_tokens"
-        },
-        "contextWindow": 256000,
-        "maxTokens": 64000,
-        "thinkingLevelMap": {
-          "off": "none",
-          "minimal": null,
-          "low": null,
-          "medium": null,
-          "high": "high",
-          "xhigh": null,
-          "max": null
-        }
-      },
-      {
         "id": "qwen3.5-plus",
         "name": "Qwen3.5 Plus",
         "api": "anthropic-messages",
@@ -2429,8 +2396,8 @@
         "maxTokens": 65536
       }
     ],
-    "checkedAt": 1786373170047,
-    "lastModified": 1786098937000,
-    "etag": "W/\"6a3d869f61e07364aa91690663bac71e\""
+    "checkedAt": 1786463253783,
+    "lastModified": 1786458594000,
+    "etag": "W/\"c965476442666d80dd99c6288492dced\""
   }
 }

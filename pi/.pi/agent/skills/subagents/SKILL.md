@@ -22,7 +22,7 @@ Pi can use any model shown by `pi --list-models`. Prefer `provider/model-id`; a 
 | inherited parent model (default) | inherited          |
 | `openai-codex/gpt-5.6-sol`       | `low`             |
 | `openai-codex/gpt-5.6-terra`     | `high`             |
-| `openai-codex/gpt-5.6-luna`     | `max`             |
+| `openai-codex/gpt-5.6-luna`     | `xhigh`             |
 | `opencode/deepseek-v4-flash-free`       | `high`           |
 
 **Reasoning efforts:** `off`, `minimal`, `low`, `medium`, `high`, `xhigh`, `max`. These map directly to pi thinking levels. The subagents UI shows the effective level used by the child session.
@@ -52,7 +52,7 @@ Requires Claude Code to be installed and authenticated.
 | --------------- | ------------------ |
 | `gpt-5.6-sol`   | `low`             |
 | `gpt-5.6-terra` | `high`             |
-| `gpt-5.6-luna`  | `max`             |
+| `gpt-5.6-luna`  | `xhigh`             |
 
 **Reasoning efforts accepted by the extension:** `off`, `minimal`, `low`, `medium`, `high`, `xhigh`, `max`. Codex maps these to the nearest effort supported by the selected model; `off`/`minimal` become `minimal`, while `max` becomes the highest extension-supported Codex effort. The subagents UI shows the effective mapped level.
 
