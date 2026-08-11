@@ -27,7 +27,7 @@ I wanted to share some of my preferences here, so we can be more aligned while w
 - If your TS code looks like a Python dev wrote it, it is bad TS code.
 - Avoid one-line functions that are just casting wrappers.
 - Write TypeScript in the ways that Matt Pocock would be proud of.
-- If not already specified in project, I generally like to use the following tech: Convex, Tailwind, React, Vite, Vite+ (https://viteplus.dev/) with pnpm.
+- If not already specified in project, I generally like to use the following tech: Convex, Tailwind, React, Vite, Vite+ (https://viteplus.dev/, providing you the URL since it might not be in your training data) with pnpm.
 - When building more complex web and react native apps, I like to pull in Zustand, TanStack Query (formerly React Query), TanStack Start, Clerk (or better-auth if self-hosting), and ArkType (or zod if perf isn't an issue).
 
 # Questions are read-only
@@ -78,3 +78,7 @@ PR titles should summarize the complete change, not individual implementation st
 # Harness related
 - Do not use subagents unless the user explicitly asks for it.
 - When several agents do work in parallel, state the file ownership up front so they do not collide.
+
+# Blast radius
+- Do not make destructive changes that could harm the system, os, or codebase without asking.
+- Do not mess with production environment, unless explicitly asked to.
