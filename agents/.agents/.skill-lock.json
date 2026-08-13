@@ -94,15 +94,6 @@
       "installedAt": "2026-07-06T13:22:37.068Z",
       "updatedAt": "2026-07-06T13:23:36.578Z"
     },
-    "html-plan": {
-      "source": "zytact/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/zytact/skills.git",
-      "skillPath": "html-plan/SKILL.md",
-      "skillFolderHash": "08c9c736c8be5ad354f6210356076603b35617df",
-      "installedAt": "2026-07-08T17:10:59.201Z",
-      "updatedAt": "2026-07-16T11:42:20.607Z"
-    },
     "grilling": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -127,9 +118,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "postplan/SKILL.md",
-      "skillFolderHash": "09d7a7bcfce2454ce1e8aedd70823d5f5081f17e",
+      "skillFolderHash": "a08ea1c89925780a81fbe55683301490054e6626",
       "installedAt": "2026-07-13T14:05:04.627Z",
-      "updatedAt": "2026-08-07T12:07:16.465Z"
+      "updatedAt": "2026-08-11T19:09:13.370Z"
     },
     "grill-with-docs": {
       "source": "mattpocock/skills",
@@ -225,6 +216,24 @@
       "skillFolderHash": "14297769565e77030c7867adaa64d05089a9ea83",
       "installedAt": "2026-08-11T18:01:24.126Z",
       "updatedAt": "2026-08-11T18:01:24.126Z"
+    },
+    "execute-tickets": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "execute-tickets/SKILL.md",
+      "skillFolderHash": "d9c8784fd1fee35eef120c8067c9af905a9452b1",
+      "installedAt": "2026-08-12T18:00:38.166Z",
+      "updatedAt": "2026-08-12T18:00:38.166Z"
+    },
+    "html-communication": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "html-communication/SKILL.md",
+      "skillFolderHash": "5d581b66d798da8fa30aa2108ab2c7c5990e550c",
+      "installedAt": "2026-08-13T01:49:46.317Z",
+      "updatedAt": "2026-08-13T01:49:46.317Z"
     }
   },
   "dismissed": {
