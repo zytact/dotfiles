@@ -28,7 +28,7 @@
     "padding": 0,
     "refreshInterval": 10
   },
-  "effortLevel": "low",
+  "effortLevel": "medium",
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "voice": {
