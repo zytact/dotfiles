@@ -104,23 +104,22 @@
       "updatedAt": "2026-08-05T15:34:07.277Z"
     },
     "code-review": {
-      "source": "mattpocock/skills",
+      "source": "zytact/skills",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/engineering/code-review/SKILL.md",
-      "skillFolderHash": "7a2057dcc514dc024d4e6bf8ad78021b97f229ae",
-      "pluginName": "mattpocock-skills",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "code-review/SKILL.md",
+      "skillFolderHash": "aff7e29d1f09568fa7e5252434fc7f90d57c0f98",
       "installedAt": "2026-07-12T08:07:02.629Z",
-      "updatedAt": "2026-08-09T08:57:35.319Z"
+      "updatedAt": "2026-08-13T17:59:44.901Z"
     },
     "postplan": {
       "source": "zytact/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "postplan/SKILL.md",
-      "skillFolderHash": "a08ea1c89925780a81fbe55683301490054e6626",
+      "skillFolderHash": "6f06ec2f476b6bb21a22b0edd3e0fbfb3fbb876d",
       "installedAt": "2026-07-13T14:05:04.627Z",
-      "updatedAt": "2026-08-11T19:09:13.370Z"
+      "updatedAt": "2026-08-13T04:36:41.659Z"
     },
     "grill-with-docs": {
       "source": "mattpocock/skills",
@@ -222,18 +221,47 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "execute-tickets/SKILL.md",
-      "skillFolderHash": "d9c8784fd1fee35eef120c8067c9af905a9452b1",
+      "skillFolderHash": "8b6dbc1a38b19d2c5c93247e347b4053996aebd9",
       "installedAt": "2026-08-12T18:00:38.166Z",
-      "updatedAt": "2026-08-12T18:00:38.166Z"
+      "updatedAt": "2026-08-13T04:36:45.277Z"
     },
     "html-communication": {
       "source": "zytact/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "html-communication/SKILL.md",
-      "skillFolderHash": "5d581b66d798da8fa30aa2108ab2c7c5990e550c",
+      "skillFolderHash": "2a4031eea02e84d740be4d741aea155f5b7fb4db",
       "installedAt": "2026-08-13T01:49:46.317Z",
-      "updatedAt": "2026-08-13T01:49:46.317Z"
+      "updatedAt": "2026-08-13T04:36:49.288Z"
+    },
+    "unslop": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "unslop/SKILL.md",
+      "skillFolderHash": "6161508c5c7959b156ff0e4e10b510863b51f9cc",
+      "installedAt": "2026-08-13T16:02:37.726Z",
+      "updatedAt": "2026-08-13T16:02:37.726Z"
+    },
+    "writing-for-agents": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/writing-for-agents/SKILL.md",
+      "skillFolderHash": "bd9c9c4762db0a9a094fd419316ebd4b0444d06e",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-08-13T17:07:26.972Z",
+      "updatedAt": "2026-08-13T17:07:26.972Z"
+    },
+    "wait-what": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/wait-what/SKILL.md",
+      "skillFolderHash": "6abe708f1bf253158a037ac49faea2944e2809dc",
+      "pluginName": "mattpocock-skills",
+      "installedAt": "2026-08-13T19:12:41.878Z",
+      "updatedAt": "2026-08-13T19:12:41.878Z"
     }
   },
   "dismissed": {

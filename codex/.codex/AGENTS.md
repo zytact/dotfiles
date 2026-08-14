@@ -27,8 +27,9 @@ I wanted to share some of my preferences here, so we can be more aligned while w
 - If your TS code looks like a Python dev wrote it, it is bad TS code.
 - Avoid one-line functions that are just casting wrappers.
 - Write TypeScript in the ways that Matt Pocock would be proud of.
-- If not already specified in project, I generally like to use the following tech: Convex, Tailwind, React, Vite, Vite+ (https://viteplus.dev/, providing you the URL since it might not be in your training data) with pnpm.
-- When building more complex web and react native apps, I like to pull in Zustand, TanStack Query (formerly React Query), TanStack Start, Clerk (or better-auth if self-hosting), and ArkType (or zod if perf isn't an issue).
+- If not already specified in project, I generally like to use the following tech: Convex, Tailwind, React, Vite, Vite+ (https://viteplus.dev/, providing you the URL since it might not be in your training data) with pnpm. Vite+ has its own pre-commit hooks (alternative to husky), formatter and linter, oxfmt and oxlint. This is true for building browser extensions too.
+- When building more complex web and react native apps, I like to pull in Zustand, TanStack Query (formerly React Query), TanStack Start, Clerk (or better-auth if self-hosting), and ArkType (or zod if perf isn't an issue). 
+- Turborepo is not necessary. Vite+ can directly handle monorepos, so use that instead.
 
 # Questions are read-only
 - A question is a request for an answer, not for changes. If the message opens with "how hard would it be", "what are your thoughts", "why does", "should we", "can X do Y", or otherwise asks rather than instructs: answer it, and do not edit files.
