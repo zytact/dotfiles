@@ -65,7 +65,7 @@ chore: upgrade dependencies
 Use lowercase, write in the imperative mood, do not end with a period, and keep each commit focused on one logical change.
 
 # Harness related
-- Do not use subagents unless the user explicitly asks for it.
+- Do not use subagents unless the user explicitly asks for it or a skill requires it.
 - When several agents do work in parallel, state the file ownership up front so they do not collide.
 
 # Blast radius
