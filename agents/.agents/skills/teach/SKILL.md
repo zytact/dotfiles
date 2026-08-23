@@ -18,6 +18,7 @@ Treat the current directory as a teaching workspace. The state of their learning
 - `./lessons/*.html`: A directory of lessons. A **lesson** is a single, self-contained HTML output that teaches one tightly-scoped thing tied to the mission. This is the primary unit of teaching in this workspace.
 - `./assets/*`: Reusable **components** shared across lessons. See [Assets](#assets).
 - `NOTES.md`: A scratchpad for you to jot down user preferences, or working notes.
+- `INDEX.md`: A index of all lessons, glossary and resources serially.
 
 ## Philosophy
 
