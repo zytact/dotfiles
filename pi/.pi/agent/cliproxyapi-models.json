@@ -23,7 +23,7 @@
           }
         ]
       },
-      "contextWindow": 372000,
+      "contextWindow": 272000,
       "maxTokens": 16384,
       "thinkingLevelMap": {
         "off": null,
@@ -59,7 +59,7 @@
           }
         ]
       },
-      "contextWindow": 372000,
+      "contextWindow": 272000,
       "maxTokens": 16384,
       "thinkingLevelMap": {
         "off": null,
@@ -95,7 +95,7 @@
           }
         ]
       },
-      "contextWindow": 372000,
+      "contextWindow": 272000,
       "maxTokens": 16384,
       "thinkingLevelMap": {
         "off": null,
@@ -644,10 +644,11 @@
     "gpt-5.6-terra",
     "gpt-5.6-luna",
     "gpt-5.5",
-    "gpt-5.4"
+    "gpt-5.4",
+    "codex-auto-review"
   ],
   "inferenceBaseUrl": "http://127.0.0.1:8317/backend-api/",
   "modelsUrl": "http://127.0.0.1:8317/v1/models?client_version=pi",
   "fastMode": false,
-  "fetchedAt": 1786731867772
+  "fetchedAt": 1787513485402
 }
