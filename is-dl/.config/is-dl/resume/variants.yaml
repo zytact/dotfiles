@@ -1,0 +1,68 @@
+variants:
+  ai:
+    headline: "Full Stack Developer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack, proj-compress]
+    drop:
+      [
+        exp-nits-2025,
+        exp-gdg,
+        proj-gramgrab,
+        proj-strokeshare,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        nits-benchmark,
+        picard-tech,
+        compress-size,
+        compress-tech,
+        inventrack-tech,
+        nits-fusion,
+      ]
+
+  research:
+    headline: "Machine Learning Research"
+    sections: [education, experience, projects, skills]
+    lead: [exp-nits-2026, exp-nits-2025, proj-system, proj-inventrack]
+    drop:
+      [
+        exp-gdg,
+        proj-gramgrab,
+        proj-strokeshare,
+        proj-compress,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        picard-tech,
+        system-oauth-adr,
+        system-tech,
+        inventrack-tech,
+      ]
+
+  fullstack:
+    headline: "Full Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [proj-system, proj-gramgrab, proj-compress, proj-strokeshare]
+    drop:
+      [
+        exp-nits-2025,
+        exp-nits-2026,
+        exp-gdg,
+        proj-inventrack,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        system-oauth-adr,
+        gramgrab-packages,
+        compress-size,
+        strokeshare-tests,
+        picard-tech,
+        gramgrab-tech,
+        strokeshare-tech,
+      ]

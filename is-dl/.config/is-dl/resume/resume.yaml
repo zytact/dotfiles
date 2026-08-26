@@ -1,0 +1,273 @@
+# Superset of facts. Variants select from this, they never rewrite it.
+# Every `text` below is copied verbatim from main.tex or zytact.com.
+
+basics:
+  name: "Arnab Chakraborty"
+  headline: "Full Stack Developer"
+  location: "Guwahati, Assam"
+  locationIcon: "faMapMarker*"
+  contacts:
+    - icon: "faEnvelope"
+      text: "that.zytact@gmail.com"
+      url: "mailto:that.zytact@gmail.com"
+    - icon: "faGlobe"
+      text: "www.zytact.com"
+      url: "https://www.zytact.com/"
+    - icon: "faLinkedin"
+      text: "linkedin.com/in/zytact"
+      url: "https://www.linkedin.com/in/zytact/"
+    - icon: "faGithub"
+      text: "github.com/zytact"
+      url: "https://github.com/zytact"
+
+sections:
+  - id: "education"
+    title: "Education"
+    items:
+      - id: "edu-gu"
+        role: "Gauhati University"
+        org: "Bachelor of Technology (B.Tech.) in Information Technology"
+        right: "Aug 2023 - May 2027 (Expected)"
+        tags: []
+        bullets: []
+      - id: "edu-coursework"
+        label: "Relevant Coursework"
+        text: "Computer Science fundamentals, Data Structures, OOP, DBMS, Operating Systems"
+        tags: []
+
+  - id: "experience"
+    title: "Experience"
+    items:
+      - id: "exp-frint"
+        role: "Full Stack Developer Intern"
+        org: "FRINT"
+        right: "Mar 2026 - Apr 2026"
+        tags: ["react", "typescript", "python", "fastapi", "node.js", "express", "socket.io", "mongodb", "redis", "webrtc", "gemini", "opencv", "llm"]
+        bullets:
+          - id: "frint-proctoring"
+            text: "Built an enterprise-grade AI proctoring system with React + Vite frontend and Express/Socket.io gateway."
+            tags: ["react", "express", "socket.io", "typescript"]
+          - id: "frint-microservices"
+            text: "Developed Python FastAPI microservices for AI/ML using Whisper STT, MediaPipe, OpenCV, MongoDB, Redis, Groq, and Gemini APIs."
+            tags: ["python", "fastapi", "opencv", "mongodb", "redis", "gemini", "llm", "machine learning"]
+          - id: "frint-tech"
+            text: "Technologies: React.js, TypeScript, Python, FastAPI, Node.js, Express, Socket.io, MongoDB, Redis, WebRTC, Groq, Gemini, Whisper, MediaPipe, OpenCV"
+            tags: ["react", "typescript", "python", "fastapi", "node.js", "express", "socket.io", "mongodb", "redis", "webrtc", "gemini", "opencv"]
+
+      - id: "exp-nits-2026"
+        role: "Research Intern"
+        org: "National Institute of Technology, Silchar"
+        right: "Jun 2026 - Jul 2026"
+        tags: ["python", "pytorch", "opencv", "scikit-learn", "deep learning", "machine learning", "computer vision"]
+        bullets:
+          - id: "nits-pipeline"
+            text: "Built a multimodal deep learning pipeline under Dr. Ram Kumar Karsh on the RASTA retinal OCTA dataset, fusing three retinal layers, clinical data, and U-Net++ segmentation masks through SimCLR-pretrained ConvNeXt encoders and cross-layer attention."
+            tags: ["python", "pytorch", "deep learning", "computer vision"]
+          - id: "nits-metrics"
+            text: "Reached 0.80 patient-level accuracy and 0.898 macro ROC-AUC under leakage-safe patient-grouped 5-fold cross-validation, with temperature calibration, MC-dropout uncertainty, and Grad-CAM/SHAP explainability."
+            tags: ["machine learning", "scikit-learn", "deep learning"]
+          - id: "nits-benchmark"
+            text: "Benchmarked six segmentation architectures, including U-Net, U-Net++, Attention U-Net, DeepLabV3+, and SegFormer, within a single controlled pipeline."
+            tags: ["python", "pytorch", "deep learning", "computer vision"]
+          - id: "nits-fusion"
+            text: "Fused SimCLR-pretrained ConvNeXt encoders, segmentation-derived vascular biomarkers, and a tabular MLP into a calibrated eight-cohort classifier."
+            tags: ["python", "pytorch", "deep learning", "machine learning"]
+          - id: "nits-tech"
+            text: "Technologies: Python, PyTorch, ConvNeXt, U-Net++, SimCLR, OpenCV, scikit-learn, SHAP"
+            tags: ["python", "pytorch", "opencv", "scikit-learn"]
+
+      - id: "exp-nits-2025"
+        role: "Research Intern"
+        org: "National Institute of Technology, Silchar"
+        right: "Jun 2025 - Jul 2025"
+        tags: ["python", "tensorflow", "opencv", "machine learning", "deep learning", "computer vision"]
+        bullets:
+          - id: "nits25-isl"
+            text: "Built a real-time Indian Sign Language recognition system under Dr. Ram Kumar Karsh using a hybrid 2D CNN and LSTM architecture trained on a custom video dataset."
+            tags: ["python", "tensorflow", "deep learning", "computer vision"]
+          - id: "nits25-tech"
+            text: "Technologies: Python, TensorFlow, Keras, OpenCV, MediaPipe"
+            tags: ["python", "tensorflow", "opencv"]
+
+      - id: "exp-gdg"
+        role: "Web Development CoLead"
+        org: "Google Developer Group on Campus"
+        right: "Sep 2025 - May 2026"
+        tags: ["react", "typescript"]
+        bullets: []
+
+      - id: "exp-picard"
+        role: "Open-Source Contributor"
+        org: "MetaBrainz Picard"
+        right: "Nov 2024 - Dec 2024"
+        tags: ["python", "git", "pytest"]
+        bullets:
+          - id: "picard-paths"
+            text: "Implemented a feature to show old and new file paths during renaming, reducing user confusion by 30%. (PR #2563)"
+            tags: ["python", "git"]
+          - id: "picard-titlecase"
+            text: "Built a custom title-casing function fixing 100+ capitalization issues and improving metadata consistency; added Pytest unit tests increasing coverage. (PR #2548)"
+            tags: ["python", "pytest"]
+          - id: "picard-tech"
+            text: "Technologies: Git, GitHub, Python, PyQT, Pytest"
+            tags: ["git", "python", "pytest"]
+
+  - id: "projects"
+    title: "Projects"
+    items:
+      - id: "proj-system"
+        role: "System  -  2026"
+        right: "system.zytact.com"
+        rightUrl: "https://system.zytact.com"
+        tags: ["typescript", "next.js", "convex", "llm", "clerk"]
+        bullets:
+          - id: "system-boundary"
+            text: "Built a personal-progression web app where external AI agents submit proposals through an authenticated MCP server, but only the human can confirm anything that alters the permanent record."
+            tags: ["typescript", "next.js", "convex", "llm"]
+          - id: "system-engine"
+            text: "Isolated all scoring in a standalone engine that derives progression from pinned rules, so neither the agent surface nor the UI can award points directly."
+            tags: ["typescript", "convex"]
+          - id: "system-oauth-adr"
+            text: "Documented a deliberate non-adoption of OAuth for the MCP surface, keeping bearer Agent Tokens as the only admission path with explicit guardrails against publishing RFC 9728 metadata or a resource_metadata challenge."
+            tags: ["typescript", "llm"]
+          - id: "system-tech"
+            text: "Technologies: TypeScript, Next.js, Convex, Clerk, MCP, Vitest"
+            tags: ["typescript", "next.js", "convex", "clerk"]
+
+      - id: "proj-inventrack"
+        role: "InvenTrack  -  2025"
+        right: "inventrack.zytact.com"
+        rightUrl: "https://inventrack.zytact.com"
+        tags: ["next.js", "typescript", "tailwind", "postgresql", "drizzle", "gemini", "llm", "prompt engineering"]
+        bullets:
+          - id: "inventrack-tenancy"
+            text: "Built a multi-tenant inventory platform with per-tenant data isolation, automated reorder triggers, and dynamic pricing rules in a single PostgreSQL schema."
+            tags: ["postgresql", "drizzle", "next.js", "typescript"]
+          - id: "inventrack-gemini"
+            text: "Integrated Gemini LLM to generate demand forecasts and restock recommendations from live inventory data, requiring careful prompt design to produce reliable, structured output."
+            tags: ["gemini", "llm", "prompt engineering"]
+          - id: "inventrack-tech"
+            text: "Technologies: Next.js, Clerk, TypeScript, Tailwind CSS, Shadcn UI, TanStack Query, Drizzle ORM, Gemini API"
+            tags: ["next.js", "typescript", "tailwind", "drizzle", "gemini"]
+
+      - id: "proj-compress"
+        role: "Compress  -  2026"
+        right: "compress.zytact.com"
+        rightUrl: "https://compress.zytact.com"
+        tags: ["rust", "webassembly", "wasm", "typescript"]
+        bullets:
+          - id: "compress-wasm"
+            text: "Built a privacy-first image compressor using Rust/WASM with Lanczos resampling and target-size binary search; 100% client-side, no server uploads or tracking."
+            tags: ["rust", "webassembly", "wasm"]
+          - id: "compress-target"
+            text: "Binary-searched JPEG quality to hit a target file size, preferring the closest result under the target rather than the nearest, so output never exceeds the requested limit."
+            tags: ["rust", "webassembly", "wasm"]
+          - id: "compress-size"
+            text: "Cut the WASM payload by building the image crate with default features off and only PNG and JPEG enabled, with LTO and a single codegen unit."
+            tags: ["rust", "webassembly", "wasm"]
+          - id: "compress-tech"
+            text: "Technologies: Rust, WebAssembly, TypeScript, TanStack Start"
+            tags: ["rust", "webassembly", "wasm", "typescript"]
+
+      - id: "proj-strokeshare"
+        role: "Strokeshare  -  2025"
+        right: "strokeshare.zytact.com"
+        rightUrl: "https://strokeshare.zytact.com"
+        tags: ["next.js", "typescript", "tailwind", "react"]
+        bullets:
+          - id: "strokeshare-canvas"
+            text: "Built an infinite-canvas drawing app with real-time shape rendering; engineered eraser hit-detection against shape outlines rather than fills, normalizing the eraser radius and cursor into the shape's scaled coordinate space so accuracy holds at any zoom."
+            tags: ["react", "next.js", "typescript"]
+          - id: "strokeshare-undo"
+            text: "Implemented undo/redo as full-state snapshots with branch erasure on new actions; handled transform decomposition for stable serialized geometry after resize/rotate."
+            tags: ["typescript", "react"]
+          - id: "strokeshare-tests"
+            text: "Covered canvas interaction with tests over eraser hit-detection and transform behaviour, which are usually left untested."
+            tags: ["typescript", "react"]
+          - id: "strokeshare-tech"
+            text: "Technologies: Next.js, TypeScript, Tailwind CSS, React Konva, Zustand, React Compiler"
+            tags: ["next.js", "typescript", "tailwind", "react"]
+
+      # Cut from the one-page resume, kept here so a variant can pull them back.
+      - id: "proj-gramgrab"
+        role: "GramGrab  -  2026"
+        right: "zytact/GramGrab"
+        rightUrl: "https://github.com/zytact/GramGrab"
+        tags: ["typescript", "react", "node.js"]
+        bullets:
+          - id: "gramgrab-session"
+            text: "Built a cross-browser Manifest V3 extension that downloads media from the user's own logged-in session, with no third-party service in the path."
+            tags: ["typescript", "react"]
+          - id: "gramgrab-framing"
+            text: "Implemented the native-messaging transport directly: length-prefixed binary framing with a 4-byte header, a 16MB frame cap, and a decoder that reassembles frames split across reads."
+            tags: ["typescript", "node.js"]
+          - id: "gramgrab-packages"
+            text: "Split the system into extension, CLI, native host, and a shared protocol package so the wire format is tested independently of either end."
+            tags: ["typescript", "node.js"]
+          - id: "gramgrab-tech"
+            text: "Technologies: TypeScript, Effect, WebExtensions (MV3), Node.js native messaging"
+            tags: ["typescript", "node.js"]
+
+      - id: "proj-exif-tuner"
+        role: "Exif Tuner  -  2024"
+        tags: ["next.js", "typescript", "tailwind"]
+        bullets:
+          - id: "exif-summary"
+            text: "A privacy-first web app to view, batch-edit, and download EXIF metadata on JPEG images directly in the browser, built with Next.js, TypeScript, Tailwind CSS, and piexifjs."
+            tags: ["next.js", "typescript", "tailwind"]
+
+      - id: "proj-rustcharge"
+        role: "RustCharge  -  2025"
+        tags: ["rust", "linux"]
+        bullets:
+          - id: "rustcharge-summary"
+            text: "Rustcharge is a compact, cross-platform battery monitor written in Rust that sends desktop notifications and plays custom sounds when your battery crosses configurable thresholds."
+            tags: ["rust", "linux"]
+
+      - id: "proj-tsukuyomi"
+        role: "Tsukuyomi  -  2025"
+        tags: ["typescript", "react"]
+        bullets:
+          - id: "tsukuyomi-summary"
+            text: "a lightweight, privacy-first browser extension (React + TypeScript) that lets users manually suspend tabs to free memory and speed up their browser."
+            tags: ["typescript", "react"]
+
+      - id: "proj-jiyu"
+        role: "Jiyu  -  2020"
+        tags: ["flutter"]
+        bullets:
+          - id: "jiyu-summary"
+            text: "A polished Flutter anime-tracker (Android-first) that syncs a locally stored watchlist with Firebase, supports Google sign-in, and presents a fast, dark-themed grid UI for tracking Watching / Completed / Dropped series."
+            tags: ["flutter"]
+
+  - id: "skills"
+    title: "Technical Skills"
+    items:
+      - id: "skills-languages"
+        label: "Programming Languages"
+        text: "Python, C, JavaScript, TypeScript, HTML, CSS"
+        tags: ["python", "javascript", "typescript"]
+      - id: "skills-ai"
+        label: "AI / Machine Learning"
+        text: "Generative AI, Large Language Models (LLMs), Prompt Engineering, PyTorch, Computer Vision, Hugging Face Transformers, OpenAI API, Gemini API, NumPy, Pandas, scikit-learn"
+        tags: ["llm", "prompt engineering", "pytorch", "computer vision", "huggingface", "openai", "gemini", "numpy", "pandas", "scikit-learn", "machine learning"]
+      - id: "skills-frontend"
+        label: "Front End Web"
+        text: "React.js, Next.js, Tailwind CSS, TanStack Query, Zustand, React Konva, Web design"
+        tags: ["react", "next.js", "tailwind"]
+      - id: "skills-backend"
+        label: "Back End"
+        text: "Node.js, Express.js, Python, RESTful APIs, tRPC, Auth.js, Better Auth, Clerk"
+        tags: ["node.js", "express", "python", "rest", "trpc"]
+      - id: "skills-database"
+        label: "Database"
+        text: "MongoDB, PostgreSQL, MySQL"
+        tags: ["mongodb", "postgresql", "mysql"]
+      - id: "skills-exposure"
+        label: "Exposure"
+        text: "AngularJS, PHP, .NET, Ruby, Oracle"
+        tags: ["angular", "php", "ruby"]
+      - id: "skills-tools"
+        label: "Tools"
+        text: "Git, GitHub Actions, Linux, Vim/NeoVim, Jest, Vitest, Pytest, ESLint, Prettier"
+        tags: ["git", "github actions", "linux", "jest", "vitest", "pytest"]
