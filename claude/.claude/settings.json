@@ -6,9 +6,8 @@
       "RemoteTrigger"
     ]
   },
-  "model": "haiku",
+  "model": "opus",
   "disableClaudeAiConnectors": true,
-  "autoMemoryEnabled": false,
   "hooks": {
     "SessionStart": [
       {
@@ -29,13 +28,20 @@
     "padding": 0,
     "refreshInterval": 10
   },
+  "outputStyle": "Concise",
   "effortLevel": "low",
+  "modelSettings": {
+    "claude-opus-5": {
+      "effortLevel": "low"
+    }
+  },
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "voice": {
     "enabled": true,
     "mode": "hold"
   },
+  "autoMemoryEnabled": false,
   "skipDangerousModePermissionPrompt": true,
   "theme": "custom:targaryen",
   "autoCompactEnabled": true,
