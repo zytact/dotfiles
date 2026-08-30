@@ -3,3 +3,4 @@
 .pi/agent/intercom
 .pi/workflows
 .pi/web-search-cache
+.pi/agent/tmp/
