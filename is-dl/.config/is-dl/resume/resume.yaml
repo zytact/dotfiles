@@ -45,10 +45,10 @@ sections:
         tags: ["react", "typescript", "python", "fastapi", "node.js", "express", "socket.io", "mongodb", "redis", "webrtc", "gemini", "opencv", "llm"]
         bullets:
           - id: "frint-proctoring"
-            text: "Built an enterprise-grade AI proctoring system with React + Vite frontend and Express/Socket.io gateway."
+            text: "Built an **AI proctoring system** with React + Vite frontend and Express/Socket.io gateway."
             tags: ["react", "express", "socket.io", "typescript"]
           - id: "frint-microservices"
-            text: "Developed Python FastAPI microservices for AI/ML using Whisper STT, MediaPipe, OpenCV, MongoDB, Redis, Groq, and Gemini APIs."
+            text: "Developed **Python FastAPI microservices** for AI/ML using Whisper STT, MediaPipe, OpenCV, MongoDB, Redis, Groq, and Gemini APIs."
             tags: ["python", "fastapi", "opencv", "mongodb", "redis", "gemini", "llm", "machine learning"]
           - id: "frint-tech"
             text: "Technologies: React.js, TypeScript, Python, FastAPI, Node.js, Express, Socket.io, MongoDB, Redis, WebRTC, Groq, Gemini, Whisper, MediaPipe, OpenCV"
@@ -61,16 +61,16 @@ sections:
         tags: ["python", "pytorch", "opencv", "scikit-learn", "deep learning", "machine learning", "computer vision"]
         bullets:
           - id: "nits-pipeline"
-            text: "Built a multimodal deep learning pipeline under Dr. Ram Kumar Karsh on the RASTA retinal OCTA dataset, fusing three retinal layers, clinical data, and U-Net++ segmentation masks through SimCLR-pretrained ConvNeXt encoders and cross-layer attention."
+            text: "Built a **multimodal deep learning pipeline** under Dr. Ram Kumar Karsh on the RASTA retinal OCTA dataset, fusing three retinal layers, clinical data, and U-Net++ segmentation masks through SimCLR-pretrained ConvNeXt encoders and cross-layer attention."
             tags: ["python", "pytorch", "deep learning", "computer vision"]
           - id: "nits-metrics"
-            text: "Reached 0.80 patient-level accuracy and 0.898 macro ROC-AUC under leakage-safe patient-grouped 5-fold cross-validation, with temperature calibration, MC-dropout uncertainty, and Grad-CAM/SHAP explainability."
+            text: "Reached **0.80 patient-level accuracy** and **0.898 macro ROC-AUC** under leakage-safe patient-grouped 5-fold cross-validation, with temperature calibration, MC-dropout uncertainty, and Grad-CAM/SHAP explainability."
             tags: ["machine learning", "scikit-learn", "deep learning"]
           - id: "nits-benchmark"
-            text: "Benchmarked six segmentation architectures, including U-Net, U-Net++, Attention U-Net, DeepLabV3+, and SegFormer, within a single controlled pipeline."
+            text: "Benchmarked **six segmentation architectures**, including U-Net, U-Net++, Attention U-Net, DeepLabV3+, and SegFormer, within a single controlled pipeline."
             tags: ["python", "pytorch", "deep learning", "computer vision"]
           - id: "nits-fusion"
-            text: "Fused SimCLR-pretrained ConvNeXt encoders, segmentation-derived vascular biomarkers, and a tabular MLP into a calibrated eight-cohort classifier."
+            text: "Fused SimCLR-pretrained ConvNeXt encoders, segmentation-derived vascular biomarkers, and a tabular MLP into a **calibrated eight-cohort classifier**."
             tags: ["python", "pytorch", "deep learning", "machine learning"]
           - id: "nits-tech"
             text: "Technologies: Python, PyTorch, ConvNeXt, U-Net++, SimCLR, OpenCV, scikit-learn, SHAP"
@@ -83,7 +83,7 @@ sections:
         tags: ["python", "tensorflow", "opencv", "machine learning", "deep learning", "computer vision"]
         bullets:
           - id: "nits25-isl"
-            text: "Built a real-time Indian Sign Language recognition system under Dr. Ram Kumar Karsh using a hybrid 2D CNN and LSTM architecture trained on a custom video dataset."
+            text: "Built a **real-time Indian Sign Language recognition system** under Dr. Ram Kumar Karsh using a hybrid 2D CNN and LSTM architecture trained on a custom video dataset."
             tags: ["python", "tensorflow", "deep learning", "computer vision"]
           - id: "nits25-tech"
             text: "Technologies: Python, TensorFlow, Keras, OpenCV, MediaPipe"
@@ -103,10 +103,10 @@ sections:
         tags: ["python", "git", "pytest"]
         bullets:
           - id: "picard-paths"
-            text: "Implemented a feature to show old and new file paths during renaming, reducing user confusion by 30%. (PR #2563)"
+            text: "Implemented **side-by-side old and new file paths** in the rename preview. ([PR #2563](https://github.com/metabrainz/picard/pull/2563))"
             tags: ["python", "git"]
           - id: "picard-titlecase"
-            text: "Built a custom title-casing function fixing 100+ capitalization issues and improving metadata consistency; added Pytest unit tests increasing coverage. (PR #2548)"
+            text: "Built a custom title-casing function fixing **100+ capitalization issues** and improving metadata consistency; added Pytest unit tests increasing coverage. ([PR #2548](https://github.com/metabrainz/picard/pull/2548))"
             tags: ["python", "pytest"]
           - id: "picard-tech"
             text: "Technologies: Git, GitHub, Python, PyQT, Pytest"
@@ -122,13 +122,13 @@ sections:
         tags: ["typescript", "next.js", "convex", "llm", "clerk"]
         bullets:
           - id: "system-boundary"
-            text: "Built a personal-progression web app where external AI agents submit proposals through an authenticated MCP server, but only the human can confirm anything that alters the permanent record."
+            text: "Built a personal-progression web app where external AI agents submit proposals through an authenticated MCP server, but **only the human can confirm** anything that alters the permanent record."
             tags: ["typescript", "next.js", "convex", "llm"]
           - id: "system-engine"
-            text: "Isolated all scoring in a standalone engine that derives progression from pinned rules, so neither the agent surface nor the UI can award points directly."
+            text: "Isolated all scoring in a **standalone engine** that derives progression from pinned rules, so neither the agent surface nor the UI can award points directly."
             tags: ["typescript", "convex"]
           - id: "system-oauth-adr"
-            text: "Documented a deliberate non-adoption of OAuth for the MCP surface, keeping bearer Agent Tokens as the only admission path with explicit guardrails against publishing RFC 9728 metadata or a resource_metadata challenge."
+            text: "Documented a **deliberate non-adoption of OAuth** for the MCP surface, keeping bearer Agent Tokens as the only admission path with explicit guardrails against publishing RFC 9728 metadata or a resource_metadata challenge."
             tags: ["typescript", "llm"]
           - id: "system-tech"
             text: "Technologies: TypeScript, Next.js, Convex, Clerk, MCP, Vitest"
@@ -141,10 +141,10 @@ sections:
         tags: ["next.js", "typescript", "tailwind", "postgresql", "drizzle", "gemini", "llm", "prompt engineering"]
         bullets:
           - id: "inventrack-tenancy"
-            text: "Built a multi-tenant inventory platform with per-tenant data isolation, automated reorder triggers, and dynamic pricing rules in a single PostgreSQL schema."
+            text: "Built a **multi-tenant inventory platform** with per-tenant data isolation, automated reorder triggers, and dynamic pricing rules in a single PostgreSQL schema."
             tags: ["postgresql", "drizzle", "next.js", "typescript"]
           - id: "inventrack-gemini"
-            text: "Integrated Gemini LLM to generate demand forecasts and restock recommendations from live inventory data, requiring careful prompt design to produce reliable, structured output."
+            text: "Integrated **Gemini LLM** to generate demand forecasts and restock recommendations from live inventory data, requiring careful prompt design to produce reliable, structured output."
             tags: ["gemini", "llm", "prompt engineering"]
           - id: "inventrack-tech"
             text: "Technologies: Next.js, Clerk, TypeScript, Tailwind CSS, Shadcn UI, TanStack Query, Drizzle ORM, Gemini API"
@@ -157,10 +157,10 @@ sections:
         tags: ["rust", "webassembly", "wasm", "typescript"]
         bullets:
           - id: "compress-wasm"
-            text: "Built a privacy-first image compressor using Rust/WASM with Lanczos resampling and target-size binary search; 100% client-side, no server uploads or tracking."
+            text: "Built a **privacy-first image compressor** using Rust/WASM with Lanczos resampling and target-size binary search; **100% client-side**, no server uploads or tracking."
             tags: ["rust", "webassembly", "wasm"]
           - id: "compress-target"
-            text: "Binary-searched JPEG quality to hit a target file size, preferring the closest result under the target rather than the nearest, so output never exceeds the requested limit."
+            text: "Binary-searched JPEG quality to hit a target file size, preferring the closest result under the target rather than the nearest, so **output never exceeds the requested limit**."
             tags: ["rust", "webassembly", "wasm"]
           - id: "compress-size"
             text: "Cut the WASM payload by building the image crate with default features off and only PNG and JPEG enabled, with LTO and a single codegen unit."
@@ -176,10 +176,10 @@ sections:
         tags: ["next.js", "typescript", "tailwind", "react"]
         bullets:
           - id: "strokeshare-canvas"
-            text: "Built an infinite-canvas drawing app with real-time shape rendering; engineered eraser hit-detection against shape outlines rather than fills, normalizing the eraser radius and cursor into the shape's scaled coordinate space so accuracy holds at any zoom."
+            text: "Built an **infinite-canvas drawing app** with real-time shape rendering; engineered **eraser hit-detection against shape outlines rather than fills**, normalizing the eraser radius and cursor into the shape's scaled coordinate space so accuracy holds at any zoom."
             tags: ["react", "next.js", "typescript"]
           - id: "strokeshare-undo"
-            text: "Implemented undo/redo as full-state snapshots with branch erasure on new actions; handled transform decomposition for stable serialized geometry after resize/rotate."
+            text: "Implemented **undo/redo as full-state snapshots** with branch erasure on new actions; handled transform decomposition for stable serialized geometry after resize/rotate."
             tags: ["typescript", "react"]
           - id: "strokeshare-tests"
             text: "Covered canvas interaction with tests over eraser hit-detection and transform behaviour, which are usually left untested."
@@ -196,13 +196,13 @@ sections:
         tags: ["typescript", "react", "node.js"]
         bullets:
           - id: "gramgrab-session"
-            text: "Built a cross-browser Manifest V3 extension that downloads media from the user's own logged-in session, with no third-party service in the path."
+            text: "Built a cross-browser **Manifest V3 extension** that downloads media from the user's own logged-in session, with **no third-party service in the path**."
             tags: ["typescript", "react"]
           - id: "gramgrab-framing"
-            text: "Implemented the native-messaging transport directly: length-prefixed binary framing with a 4-byte header, a 16MB frame cap, and a decoder that reassembles frames split across reads."
+            text: "Implemented the **native-messaging transport** directly: length-prefixed binary framing with a 4-byte header, a 16MB frame cap, and a decoder that reassembles frames split across reads."
             tags: ["typescript", "node.js"]
           - id: "gramgrab-packages"
-            text: "Split the system into extension, CLI, native host, and a shared protocol package so the wire format is tested independently of either end."
+            text: "Split the system into extension, CLI, native host, and a **shared protocol package** so the wire format is tested independently of either end."
             tags: ["typescript", "node.js"]
           - id: "gramgrab-tech"
             text: "Technologies: TypeScript, Effect, WebExtensions (MV3), Node.js native messaging"
@@ -213,7 +213,7 @@ sections:
         tags: ["next.js", "typescript", "tailwind"]
         bullets:
           - id: "exif-summary"
-            text: "A privacy-first web app to view, batch-edit, and download EXIF metadata on JPEG images directly in the browser, built with Next.js, TypeScript, Tailwind CSS, and piexifjs."
+            text: "A **privacy-first web app** to view, batch-edit, and download EXIF metadata on JPEG images directly in the browser, built with Next.js, TypeScript, Tailwind CSS, and piexifjs."
             tags: ["next.js", "typescript", "tailwind"]
 
       - id: "proj-rustcharge"
@@ -221,7 +221,7 @@ sections:
         tags: ["rust", "linux"]
         bullets:
           - id: "rustcharge-summary"
-            text: "Rustcharge is a compact, cross-platform battery monitor written in Rust that sends desktop notifications and plays custom sounds when your battery crosses configurable thresholds."
+            text: "Rustcharge is a compact, cross-platform **battery monitor written in Rust** that sends desktop notifications and plays custom sounds when your battery crosses configurable thresholds."
             tags: ["rust", "linux"]
 
       - id: "proj-tsukuyomi"
@@ -229,7 +229,7 @@ sections:
         tags: ["typescript", "react"]
         bullets:
           - id: "tsukuyomi-summary"
-            text: "a lightweight, privacy-first browser extension (React + TypeScript) that lets users manually suspend tabs to free memory and speed up their browser."
+            text: "a lightweight, **privacy-first browser extension** (React + TypeScript) that lets users manually suspend tabs to free memory and speed up their browser."
             tags: ["typescript", "react"]
 
       - id: "proj-jiyu"
@@ -237,7 +237,7 @@ sections:
         tags: ["flutter"]
         bullets:
           - id: "jiyu-summary"
-            text: "A polished Flutter anime-tracker (Android-first) that syncs a locally stored watchlist with Firebase, supports Google sign-in, and presents a fast, dark-themed grid UI for tracking Watching / Completed / Dropped series."
+            text: "A polished **Flutter anime-tracker** (Android-first) that syncs a locally stored watchlist with Firebase, supports Google sign-in, and presents a fast, dark-themed grid UI for tracking Watching / Completed / Dropped series."
             tags: ["flutter"]
 
   - id: "skills"
@@ -249,7 +249,7 @@ sections:
         tags: ["python", "javascript", "typescript"]
       - id: "skills-ai"
         label: "AI / Machine Learning"
-        text: "Generative AI, Large Language Models (LLMs), Prompt Engineering, PyTorch, Computer Vision, Hugging Face Transformers, OpenAI API, Gemini API, NumPy, Pandas, scikit-learn"
+        text: "PyTorch, scikit-learn, NumPy, Pandas, Computer Vision, Hugging Face Transformers, OpenAI API, Gemini API, Large Language Models (LLMs), Prompt Engineering, Generative AI"
         tags: ["llm", "prompt engineering", "pytorch", "computer vision", "huggingface", "openai", "gemini", "numpy", "pandas", "scikit-learn", "machine learning"]
       - id: "skills-frontend"
         label: "Front End Web"

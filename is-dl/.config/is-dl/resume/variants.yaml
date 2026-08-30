@@ -66,3 +66,285 @@ variants:
         gramgrab-tech,
         strokeshare-tech,
       ]
+
+  joveo-frontend:
+    headline: "Frontend Engineer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [proj-strokeshare, proj-system, exp-frint, proj-inventrack]
+    drop:
+      [
+        exp-nits-2025,
+        exp-gdg,
+        nits-benchmark,
+        nits-fusion,
+        nits-tech,
+        proj-compress,
+        proj-gramgrab,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        picard-tech,
+        system-oauth-adr,
+        strokeshare-tests,
+        strokeshare-tech,
+        inventrack-tech,
+        frint-tech,
+      ]
+
+  joveo-backend:
+    headline: "Backend Engineer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack, proj-gramgrab]
+    drop:
+      [
+        exp-nits-2025,
+        exp-gdg,
+        nits-benchmark,
+        nits-fusion,
+        nits-tech,
+        proj-strokeshare,
+        proj-compress,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        picard-tech,
+        gramgrab-tech,
+        gramgrab-packages,
+        inventrack-tech,
+        frint-tech,
+        system-tech,
+      ]
+
+  joveo-fullstack:
+    headline: "Full Stack Developer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack, proj-strokeshare]
+    drop:
+      [
+        exp-nits-2025,
+        exp-gdg,
+        nits-benchmark,
+        nits-fusion,
+        nits-tech,
+        proj-compress,
+        proj-gramgrab,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        picard-tech,
+        system-oauth-adr,
+        strokeshare-tests,
+        strokeshare-tech,
+        inventrack-tech,
+        frint-tech,
+      ]
+
+  branch-backend:
+    headline: "Backend Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, exp-picard, proj-system, proj-gramgrab]
+    drop:
+      [
+        exp-nits-2025,
+        exp-gdg,
+        nits-benchmark,
+        nits-fusion,
+        nits-tech,
+        proj-strokeshare,
+        proj-compress,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        gramgrab-packages,
+        system-oauth-adr,
+        gramgrab-tech,
+        system-tech,
+        inventrack-tech,
+        frint-tech,
+      ]
+
+  sony-datascience:
+    headline: "AI / Machine Learning Research"
+    sections: [education, experience, projects, skills]
+    lead: [exp-nits-2026, exp-nits-2025, exp-frint, proj-inventrack]
+    drop:
+      [
+        exp-gdg,
+        exp-picard,
+        proj-strokeshare,
+        proj-compress,
+        proj-gramgrab,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        system-oauth-adr,
+        system-tech,
+        inventrack-tech,
+        frint-tech,
+      ]
+
+  abekus-python:
+    headline: "Python Developer, Machine Learning"
+    sections: [education, experience, projects, skills]
+    lead: [exp-nits-2026, exp-nits-2025, exp-picard, exp-frint]
+    drop:
+      [
+        exp-gdg,
+        proj-strokeshare,
+        proj-compress,
+        proj-gramgrab,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        nits-fusion,
+        picard-tech,
+        system-oauth-adr,
+        inventrack-tech,
+        frint-tech,
+      ]
+
+  dioora-fullstack:
+    headline: "Full Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [proj-system, proj-strokeshare, proj-inventrack, exp-frint]
+    drop:
+      [
+        exp-nits-2025,
+        exp-nits-2026,
+        exp-gdg,
+        proj-compress,
+        proj-gramgrab,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        system-oauth-adr,
+        picard-tech,
+        inventrack-tech,
+      ]
+
+  repowise-sde:
+    headline: "Software Engineer, Developer Tools"
+    sections: [education, experience, projects, skills]
+    lead: [proj-system, exp-frint, exp-picard, proj-gramgrab]
+    drop:
+      [
+        exp-nits-2025,
+        exp-gdg,
+        nits-benchmark,
+        nits-fusion,
+        nits-tech,
+        proj-inventrack,
+        proj-compress,
+        proj-strokeshare,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        gramgrab-packages,
+        gramgrab-tech,
+        system-tech,
+        frint-tech,
+      ]
+
+  tecnod8-agentic:
+    headline: "Full Stack Developer, Agentic AI"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack]
+    drop:
+      [
+        exp-nits-2025,
+        exp-gdg,
+        exp-picard,
+        nits-benchmark,
+        nits-fusion,
+        proj-gramgrab,
+        proj-compress,
+        proj-strokeshare,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        system-oauth-adr,
+        system-tech,
+        inventrack-tech,
+      ]
+
+  sony-research:
+    headline: "AI Research"
+    sections: [education, experience, projects, skills]
+    lead: [exp-nits-2026, exp-nits-2025, exp-frint, proj-inventrack]
+    drop:
+      [
+        exp-gdg,
+        exp-picard,
+        proj-system,
+        proj-gramgrab,
+        proj-compress,
+        proj-strokeshare,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        inventrack-tech,
+        frint-tech,
+      ]
+
+  formmatters-eng:
+    headline: "Full Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-strokeshare, proj-compress]
+    drop:
+      [
+        exp-nits-2025,
+        exp-nits-2026,
+        exp-gdg,
+        exp-picard,
+        proj-inventrack,
+        proj-gramgrab,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        system-oauth-adr,
+        strokeshare-tests,
+        compress-size,
+      ]
+
+  zobyt-fullstack:
+    headline: "Full Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [proj-system, proj-strokeshare, proj-inventrack, exp-frint]
+    drop:
+      [
+        exp-nits-2025,
+        exp-nits-2026,
+        exp-gdg,
+        exp-picard,
+        proj-gramgrab,
+        proj-compress,
+        proj-exif-tuner,
+        proj-rustcharge,
+        proj-tsukuyomi,
+        proj-jiyu,
+        skills-exposure,
+        system-oauth-adr,
+        strokeshare-tests,
+      ]
