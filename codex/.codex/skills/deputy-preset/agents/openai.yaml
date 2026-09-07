@@ -1,0 +1,5 @@
+interface:
+  display_name: "Deputy Preset"
+  short_description: "Run deputy with fixed astra/terra/sol/luna models"
+policy:
+  allow_implicit_invocation: false

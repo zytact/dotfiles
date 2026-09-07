@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/frontend-design/SKILL.md",
-      "skillFolderHash": "0d5b74a14bdf3ebcd64f352d06376a2ef05ed296",
+      "skillFolderHash": "d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6",
       "installedAt": "2026-02-06T12:07:48.738Z",
-      "updatedAt": "2026-07-24T18:21:47.364Z"
+      "updatedAt": "2026-09-04T11:46:08.693Z"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
@@ -105,9 +105,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "code-review/SKILL.md",
-      "skillFolderHash": "d0c75b82f5787ce50dd8872edf0c2902d419a5fa",
+      "skillFolderHash": "cebfdfe133ec220ddbe69f7636ac24f7cd439ec6",
       "installedAt": "2026-07-12T08:07:02.629Z",
-      "updatedAt": "2026-08-23T18:33:19.601Z"
+      "updatedAt": "2026-09-06T15:54:29.882Z"
     },
     "postplan": {
       "source": "zytact/skills",
@@ -286,9 +286,63 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "is-dl/SKILL.md",
-      "skillFolderHash": "e76a04db14a9fb02e0f3af3b2e7d665ceafc2cfc",
+      "skillFolderHash": "b96fcb9c4105827447493ad8bd58db5de9864507",
       "installedAt": "2026-08-26T19:55:05.142Z",
-      "updatedAt": "2026-08-27T18:53:27.050Z"
+      "updatedAt": "2026-09-03T13:11:58.425Z"
+    },
+    "gh-stack": {
+      "source": "github/gh-stack",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/gh-stack.git",
+      "skillPath": "skills/gh-stack/SKILL.md",
+      "skillFolderHash": "6bfe555e89a6b264e09d5ece7c4040226458c8e5",
+      "installedAt": "2026-08-30T00:30:09.194Z",
+      "updatedAt": "2026-08-30T00:30:09.194Z"
+    },
+    "show-me": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "show-me/SKILL.md",
+      "skillFolderHash": "b43c52a2b053e7507f12bb614e1efc266f2eba85",
+      "installedAt": "2026-09-04T11:37:56.632Z",
+      "updatedAt": "2026-09-04T11:43:09.824Z"
+    },
+    "create-verification-skill": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "create-verification-skill/SKILL.md",
+      "skillFolderHash": "a57bbf3664d0bd56ebe58d8d0007d3d79ffd5dc1",
+      "installedAt": "2026-09-04T11:55:41.761Z",
+      "updatedAt": "2026-09-04T17:24:09.834Z"
+    },
+    "maintain-verification-skill": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "maintain-verification-skill/SKILL.md",
+      "skillFolderHash": "b5dcef3c0083d0e3d343a302c640273d8120f7fc",
+      "installedAt": "2026-09-04T11:55:41.767Z",
+      "updatedAt": "2026-09-04T17:24:16.496Z"
+    },
+    "right-hand": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "right-hand/SKILL.md",
+      "skillFolderHash": "57f73409f81735c5700422e8094a46dade68e330",
+      "installedAt": "2026-09-05T21:20:34.980Z",
+      "updatedAt": "2026-09-05T21:20:34.980Z"
+    },
+    "deputy": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "deputy/SKILL.md",
+      "skillFolderHash": "8305ff608e787b807123102d5113f8ccfab4c040",
+      "installedAt": "2026-09-06T15:25:01.385Z",
+      "updatedAt": "2026-09-06T15:25:01.385Z"
     }
   },
   "dismissed": {
