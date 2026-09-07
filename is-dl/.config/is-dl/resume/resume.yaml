@@ -271,3 +271,7 @@ sections:
         label: "Tools"
         text: "Git, GitHub Actions, Linux, Vim/NeoVim, Jest, Vitest, Pytest, ESLint, Prettier"
         tags: ["git", "github actions", "linux", "jest", "vitest", "pytest"]
+      - id: "skills-agentic"
+        label: "AI Coding Tools"
+        text: "Claude Code, Codex, OpenCode, Pi"
+        tags: ["llm", "agentic", "ai tools"]
