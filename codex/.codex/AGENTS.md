@@ -65,7 +65,8 @@ chore: upgrade dependencies
 Use lowercase, write in the imperative mood, do not end with a period, and keep each commit focused on one logical change.
 
 ## PRs
-PRs should be kept under 600 LoC if possible. Use stacked PRs (https://github.github.com/gh-stack/, github now actively supports it without third-party tools) if deemed necessary.
+- PRs should be kept under 600 LoC if possible. Do not do it, just to keep it under that line count, only if it makes sense.
+- Use stacked PRs (https://github.github.com/gh-stack/, github now actively supports it without third-party tools) if deemed necessary, which is if you want to keep the PR(s) under 600 and splitting it makes sense. Use `gh-stack` skill then.
 
 # Harness related
 - Do not use subagents unless the user explicitly asks for it or a skill requires it.
