@@ -4,3 +4,5 @@
 .pi/workflows
 .pi/web-search-cache
 .pi/agent/tmp/
+.pi/agent/mcp-cache.json
+.pi/agent/mcp-npx-cache.json
