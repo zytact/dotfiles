@@ -343,6 +343,15 @@
       "skillFolderHash": "8305ff608e787b807123102d5113f8ccfab4c040",
       "installedAt": "2026-09-06T15:25:01.385Z",
       "updatedAt": "2026-09-06T15:25:01.385Z"
+    },
+    "apprentice": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "apprentice/SKILL.md",
+      "skillFolderHash": "2367ebb0d325fa3d36c8f0ae1e1824afa8c82fbb",
+      "installedAt": "2026-09-07T23:24:45.710Z",
+      "updatedAt": "2026-09-07T23:24:45.710Z"
     }
   },
   "dismissed": {
