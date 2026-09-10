@@ -14,8 +14,8 @@ variants:
   joblet-ai-fullstack:
     headline: "Full Stack Developer, AI Products"
     sections: [education, experience, projects, skills]
-    lead: [exp-frint, proj-system, proj-inventrack, proj-strokeshare]
-    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
+    lead: [exp-frint, proj-inventrack, proj-system, exp-picard]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-strokeshare, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, system-tech, inventrack-tech, frint-tech]
 
   skillscapital-fullstack:
     headline: "Full Stack Developer, AI Products"
@@ -44,8 +44,8 @@ variants:
   daice-aiml:
     headline: "AI / Machine Learning Engineer"
     sections: [education, experience, projects, skills]
-    lead: [exp-nits-2026, exp-nits-2025, exp-frint, proj-inventrack]
-    drop: [exp-gdg, exp-picard, proj-system, proj-gramgrab, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, nits-benchmark, inventrack-tech, frint-tech, skills-agentic]
+    lead: [exp-nits-2026, exp-nits-2025, exp-frint, exp-picard]
+    drop: [exp-gdg, proj-system, proj-strokeshare, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-frontend, picard-tech, nits-tech, nits25-tech, inventrack-tech, frint-tech, skills-agentic]
 
   sony-research:
     headline: "AI Research"
@@ -172,3 +172,21 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [exp-frint, proj-inventrack, proj-system, proj-strokeshare]
     drop: [exp-nits-2025, exp-nits-2026, exp-gdg, exp-picard, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic, system-oauth-adr, system-tech, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech]
+
+  realm-backend:
+    headline: "Backend Engineer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, exp-picard, proj-system, proj-inventrack]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-gramgrab, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, system-oauth-adr, system-tech, inventrack-tech, frint-tech]
+
+  classhour-fullstack:
+    headline: "Full Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-strokeshare, proj-system, proj-inventrack]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, system-tech, strokeshare-tech, inventrack-tech, frint-tech]
+
+  domino-fde:
+    headline: "Forward Deployed Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack, exp-nits-2026]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-gramgrab, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, system-tech, inventrack-tech, frint-tech]
