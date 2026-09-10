@@ -107,7 +107,7 @@
       "skillPath": "code-review/SKILL.md",
       "skillFolderHash": "cebfdfe133ec220ddbe69f7636ac24f7cd439ec6",
       "installedAt": "2026-07-12T08:07:02.629Z",
-      "updatedAt": "2026-09-06T15:54:29.882Z"
+      "updatedAt": "2026-09-10T20:55:10.139Z"
     },
     "postplan": {
       "source": "zytact/skills",
@@ -209,15 +209,6 @@
       "installedAt": "2026-08-11T18:01:24.126Z",
       "updatedAt": "2026-08-15T18:34:12.567Z"
     },
-    "execute-tickets": {
-      "source": "zytact/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/zytact/skills.git",
-      "skillPath": "execute-tickets/SKILL.md",
-      "skillFolderHash": "3a971abcce161cabb99b6f0e217f4e9a5d7a6f10",
-      "installedAt": "2026-08-12T18:00:38.166Z",
-      "updatedAt": "2026-08-15T18:34:15.841Z"
-    },
     "html-communication": {
       "source": "zytact/skills",
       "sourceType": "github",
@@ -286,9 +277,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "is-dl/SKILL.md",
-      "skillFolderHash": "b96fcb9c4105827447493ad8bd58db5de9864507",
+      "skillFolderHash": "25950f2ffc2af869c6f81c9864ff618ecd57c837",
       "installedAt": "2026-08-26T19:55:05.142Z",
-      "updatedAt": "2026-09-03T13:11:58.425Z"
+      "updatedAt": "2026-09-10T14:54:39.905Z"
     },
     "gh-stack": {
       "source": "github/gh-stack",
@@ -326,15 +317,6 @@
       "installedAt": "2026-09-04T11:55:41.767Z",
       "updatedAt": "2026-09-04T17:24:16.496Z"
     },
-    "right-hand": {
-      "source": "zytact/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/zytact/skills.git",
-      "skillPath": "right-hand/SKILL.md",
-      "skillFolderHash": "57f73409f81735c5700422e8094a46dade68e330",
-      "installedAt": "2026-09-05T21:20:34.980Z",
-      "updatedAt": "2026-09-05T21:20:34.980Z"
-    },
     "deputy": {
       "source": "zytact/skills",
       "sourceType": "github",
@@ -349,9 +331,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "apprentice/SKILL.md",
-      "skillFolderHash": "2367ebb0d325fa3d36c8f0ae1e1824afa8c82fbb",
+      "skillFolderHash": "9ef4acfe65c59bba7d925f05884a346a53e35a2b",
       "installedAt": "2026-09-07T23:24:45.710Z",
-      "updatedAt": "2026-09-07T23:24:45.710Z"
+      "updatedAt": "2026-09-10T14:54:44.123Z"
     }
   },
   "dismissed": {
@@ -359,14 +341,13 @@
   },
   "lastSelectedAgents": [
     "amp",
-    "antigravity",
-    "antigravity-cli",
     "cline",
     "codex",
     "cursor",
-    "deepagents",
+    "droid",
     "gemini-cli",
     "github-copilot",
+    "kilo",
     "kimi-code-cli",
     "opencode",
     "warp",

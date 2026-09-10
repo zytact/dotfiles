@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Review changes since a fixed point such as a commit, branch, tag, or merge-base along two axes. Standards checks whether the code follows the repo's documented coding standards. Spec checks whether the code matches the originating issue or spec. One sub-agent finds on both axes, then the parent verifies every finding itself. Use when the user wants to review a branch, PR, work-in-progress changes, or asks to "review since X".
+description: Review changes since a fixed point such as a commit, branch, tag, or merge-base along two separate axes. Standards checks whether the code follows the repo's documented coding standards. Spec checks whether the code matches the originating issue or spec. Run both reviews in parallel sub-agents, verify every finding with adversarial verifier sub-agents, and report the axes separately. Use when the user wants to review a branch, PR, work-in-progress changes, or asks to "review since X".
 ---
 
 Review the diff between `HEAD` and a fixed point supplied by the user along two axes:
@@ -8,9 +8,8 @@ Review the diff between `HEAD` and a fixed point supplied by the user along two 
 - **Standards** checks whether the code follows the repo's documented coding standards.
 - **Spec** checks whether the code implements what the originating issue or spec asked for.
 
-One sub-agent finds on both axes and reports them separately. Its findings are claims, not results. You verify every claim yourself before reporting anything.
+Run the two reviews in parallel sub-agents so their reasoning stays independent. Treat their findings as claims: verify each one with a clean-context verifier sub-agent, then aggregate the surviving results without merging or reranking them.
 
-Spawn exactly one sub-agent for this skill. No second finder, no verifier sub-agents.
 
 ## Process
 
@@ -39,7 +38,7 @@ Before continuing:
 1. Check that the ref resolves with `git rev-parse <fixed-point>`.
 2. Check that the diff is not empty.
 
-Fail here if the ref is invalid or there is nothing to review. Do not leave either problem for the sub-agent to discover.
+Fail here if the ref is invalid or there is nothing to review. Do not leave either problem for the sub-agents to discover.
 
 ### 2. Find the spec
 
@@ -50,13 +49,13 @@ Look for the originating spec in this order:
 3. A matching spec under `docs/`, `specs/`, or `.scratch/`, using the branch name or feature as a clue.
 4. If none exists, ask the user where the spec is.
 
-If the user says there is no spec, tell the sub-agent to skip the Spec axis and report `no spec available`.
+If the user says there is no spec, skip the Spec sub-agent and report `no spec available`.
 
 ### 3. Find the standards
 
 Find files in the repo that describe how code should be written, such as `CODING_STANDARDS.md` or `CONTRIBUTING.md`.
 
-The Standards axis also uses the smell baseline below, even when the repo has no written standards.
+The Standards review also uses the smell baseline below, even when the repo has no written standards.
 
 Two rules apply:
 
@@ -80,7 +79,11 @@ Use this baseline against the diff:
 - **Middle Man.** A class or function mostly forwards calls elsewhere. Consider removing it and calling the real target directly.
 - **Refused Bequest.** A subclass or implementation ignores or replaces most inherited behavior. Consider composition instead of inheritance.
 
-### 4. Spawn the finder sub-agent
+### 4. Spawn both sub-agents in parallel
+
+Run the Standards and Spec sub-agents at the same time.
+
+#### Standards sub-agent
 
 Give it:
 
@@ -88,52 +91,75 @@ Give it:
 - The commit list.
 - Every standards file found in step 3.
 - The complete smell baseline from step 3. Paste it into the prompt because the sub-agent does not otherwise have access to it.
-- The spec path or fetched spec contents, or the fact that no spec exists.
 
 Use this brief:
 
-> Review the diff along two separate axes and report them under separate headings. Do not merge them.
+> Review the diff against the supplied repo standards and smell baseline.
 >
-> **Standards.** Review against the supplied repo standards and smell baseline. For each relevant file or hunk, report:
+> For each relevant file or hunk, report:
 >
 > 1. Every documented standard the diff violates. Cite the standards file and rule.
 > 2. Any baseline smell you find. Name the smell and quote the relevant hunk.
 >
-> Separate hard violations from judgement calls. A documented standards breach may be a hard violation. Baseline smells are always judgement calls. Repo standards override the smell baseline. Skip anything existing tooling already enforces.
+> Separate hard violations from judgement calls. A documented standards breach may be a hard violation. Baseline smells are always judgement calls. Repo standards override the smell baseline.
 >
-> **Spec.** Review against the supplied spec. Report:
+> Skip anything existing tooling already enforces.
+>
+> Stay under 400 words.
+
+#### Spec sub-agent
+
+Give it:
+
+- The full diff command.
+- The commit list.
+- The spec path or fetched spec contents.
+
+Use this brief:
+
+> Review the diff against the supplied spec.
+>
+> Report:
 >
 > 1. Requirements that are missing or only partially implemented.
 > 2. Behavior added by the diff that the spec did not request.
 > 3. Requirements that appear implemented but whose implementation looks incorrect.
 >
-> Quote the relevant spec line for every finding. If no spec was supplied, write `no spec available` under this heading and report nothing on it.
+> Quote the relevant spec line for every finding.
 >
-> Every finding needs a file path and line number.
+> Stay under 400 words.
+
+If no spec exists, do not spawn this sub-agent.
+
+### 5. Verify every finding
+
+**This step spawns sub-agents only if you are a Claude model.** Otherwise verify the claims yourself, following everything below except the spawning: take one bare claim at a time, work only from fresh tool output, and reach the same verdicts. Claude finders state plausible falsehoods with full confidence and a Claude parent checks them inside the frame that produced them, which is the failure a separate context exists to catch. Other models do not need it.
+
+A finding is a claim until a verifier grounds it. Confident falsehoods survive Claude finders and parents alike, because both are anchored by the reasoning that produced them. Verification works from a clean context with a refute mandate.
+
+Split each finder report into individual claims. Spawn one verifier sub-agent per claim, in parallel. Give each verifier:
+
+- The bare claim: one sentence plus the file and line it is about.
+- The diff command and repo access.
+- Nothing else. The finder's reasoning, quotes, and severity stay behind: a verifier that reads the argument inherits its frame and nods along.
+
+Use this brief:
+
+> Try to refute this claim about the repo or diff. Return exactly one verdict:
 >
-> Stay under 700 words.
-
-### 5. Verify every finding yourself
-
-A finding is a claim until you ground it. Do not spawn verifier sub-agents. Verify each claim yourself, from fresh tool output.
-
-Split the report into individual claims. Take one claim at a time and hold only the claim itself: one sentence plus the file and line. Set the finder's reasoning, quotes, and severity aside while you check, because reading the argument pulls you into its frame.
-
-Try to refute each claim. Assign exactly one verdict:
-
-- `confirmed`, with the evidence.
-- `refuted`, with the evidence.
-- `ungrounded`, if you can neither confirm nor refute from the repo.
-
-Evidence means tool output: a command result or quoted file lines. Your own judgement with no tool output behind it grades as `ungrounded`.
+> - `confirmed`, with the evidence.
+> - `refuted`, with the evidence.
+> - `ungrounded`, if you can neither confirm nor refute from the repo.
+>
+> Evidence means tool output: a command result or quoted file lines. Your judgement alone grades as `ungrounded`.
 
 Route each claim to the cheapest sufficient proof:
 
-- **Mechanical claims** (line length, naming, a file, API, flag, or option existing): run the measuring command. Its output is the verdict.
-- **Semantic claims** (duplication, incorrect behavior, missing requirement): read every code path the claim touches, end to end, in the working tree, not the diff hunks alone.
+- **Mechanical claims** (line length, naming, a file, API, flag, or option existing): the verifier runs the measuring command. Its output is the verdict; attestation without output grades as `ungrounded`.
+- **Semantic claims** (duplication, incorrect behavior, missing requirement): the verifier reads every code path the claim touches, end to end, in the working tree, not the diff hunks alone.
 - **Directives** (any claim whose fix says remove X or change X to Y): verify the consequence, not the statement. The proposition to test is "the change still behaves correctly with the directive applied". Trace what the targeted code does at runtime before endorsing its removal.
 
-**Spec conflicts resolve against runtime truth.** When the diff does something the spec forbids, the spec may be the wrong side. Verify which side matches actual behavior, meaning code paths, call ordering, and defaults, then report the conflict itself with that evidence. A directive to make the diff match the spec is only valid once runtime truth sides with the spec.
+**Spec conflicts resolve against runtime truth.** When the diff does something the spec forbids, the spec may be the wrong side. Verify which side matches actual behavior — code paths, call ordering, defaults — and report the conflict itself with that evidence. A directive to make the diff match the spec is only valid once runtime truth sides with the spec.
 
 Baseline smells keep their heuristic label; verify only that the quoted code exists as described.
 
@@ -153,9 +179,9 @@ Present the reports under these headings:
 ...
 ```
 
-Report `confirmed` findings under their axis, each with the evidence that grounded it. Keep the finder's wording verbatim or make only minor cleanup edits.
+Report `confirmed` findings under their axis, each with its verifier's evidence. Keep the finder's wording verbatim or make only minor cleanup edits.
 
-List `ungrounded` findings in their own short subsection per axis, stated as open questions for the human, with what you could not establish.
+List `ungrounded` findings in their own short subsection per axis, stated as open questions for the human, with what the verifier could not establish.
 
 Compress `refuted` claims to one line per axis naming what was dropped and why, so the human sees what died in verification.
 
@@ -179,8 +205,6 @@ Code may implement the requested behavior correctly while breaking the project's
 
 Keeping the reports separate prevents one kind of correctness from hiding problems in the other.
 
-## Why the parent verifies
+## Why a verifier lane
 
-Finders are tuned for recall and state plausible falsehoods with full confidence. Verification raises precision; recall stays whatever the one finder achieved, so nothing here substitutes for a second lens.
-
-You did not write the findings, so you are not defending them. That is most of what a separate verifier context buys, and it costs one sub-agent instead of one per claim. What you lose is the clean context: you have read the finder's argument. Hold the bare claim while you check, and let tool output decide.
+Finders are tuned for recall and state plausible falsehoods with full confidence. The parent cannot catch these: it assembled the findings into a narrative and checks them inside that frame. A clean-context verifier holding only the bare claim has no stake in it being true, which is the property that makes refutation possible. Verification raises precision toward its ceiling; recall stays whatever the finders achieve, so verification never substitutes for a second finder lens.
