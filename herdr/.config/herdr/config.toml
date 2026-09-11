@@ -1,12 +1,57 @@
 onboarding = false
 
 [theme]
-name = "rose-pine"
+name = "rose-pine-dawn"
+dark_name = "rose-pine"
+light_name = "rose-pine-dawn"
 
 auto_switch = false
 
-# Targaryen: matches the vscode/zed themes in this repo.
+# Targaryen Light: matches the vscode/zed light themes in this repo.
 [theme.custom]
+accent = "#b3202f"
+panel_bg = "#fffdf8"
+sidebar_bg = "#fffdf8"
+active_row_bg = "#f2e7d9"
+selection_bg = "#f0d9b5"
+surface0 = "#f2e7d9"
+surface1 = "#e2d2c6"
+surface_dim = "#faf3ea"
+overlay0 = "#877470"
+overlay1 = "#b09a92"
+text = "#2b1a18"
+subtext0 = "#6f5854"
+mauve = "#7a3f9c"
+green = "#2f7f63"
+yellow = "#8a6612"
+red = "#b3202f"
+blue = "#456e8c"
+teal = "#1f7a6e"
+peach = "#b8501e"
+
+# Used when auto_switch is enabled.
+[theme.custom.light]
+accent = "#b3202f"
+panel_bg = "#fffdf8"
+sidebar_bg = "#fffdf8"
+active_row_bg = "#f2e7d9"
+selection_bg = "#f0d9b5"
+surface0 = "#f2e7d9"
+surface1 = "#e2d2c6"
+surface_dim = "#faf3ea"
+overlay0 = "#877470"
+overlay1 = "#b09a92"
+text = "#2b1a18"
+subtext0 = "#6f5854"
+mauve = "#7a3f9c"
+green = "#2f7f63"
+yellow = "#8a6612"
+red = "#b3202f"
+blue = "#456e8c"
+teal = "#1f7a6e"
+peach = "#b8501e"
+
+[theme.custom.dark]
 accent = "#f5384f"
 panel_bg = "#050303"
 sidebar_bg = "#050303"
