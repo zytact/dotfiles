@@ -1,35 +1,35 @@
--- targaryen-light: the parchment counterpart to the targaryen colorscheme.
+-- targaryen-light: the near-neutral counterpart to the targaryen colorscheme.
 -- Derived from the ghostty targaryen-light theme palette.
 -- Supports tree-sitter, LSP diagnostics, and common plugins.
 
-local bg = "#faf3ea"
-local fg = "#2b1a18"
+local bg = "#f9f9f8"
+local fg = "#26231f"
 local cursor = "#b8501e"
 
 -- Ghostty targaryen-light palette. The alt_* tones are the deeper second shade
 -- of each hue, filling the role the bright ANSI slots play in the dark theme.
 local c = {
-  ember_black    = "#fffdf8",
+  ember_black    = "#fdfdfd",
   dragonfire     = "#b3202f",
   wildfire       = "#2f7f63",
   gold           = "#8a6612",
   steel          = "#456e8c",
   violet         = "#7a3f9c",
   dragonglass    = "#1f7a6e",
-  ash            = "#2b1a18",
-  ember_grey     = "#877470",
+  ash            = "#26231f",
+  ember_grey     = "#86837e",
   blood          = "#8f1826",
   alt_wildfire   = "#24664f",
   alt_gold       = "#6e5210",
   alt_steel      = "#35576f",
   alt_violet     = "#5f3079",
   alt_glass      = "#176159",
-  strong         = "#1a0f0e",
+  strong         = "#141210",
   ember          = "#b8501e",
-  scorch         = "#e2d2c6",
-  scar           = "#c9b3a6",
-  selection_bg   = "#f0d9b5",
-  selection_fg   = "#1a0f0e",
+  scorch         = "#dedddb",
+  scar           = "#c4c1bc",
+  selection_bg   = "#e4e2de",
+  selection_fg   = "#141210",
 }
 
 local transparent = vim.g.targaryen_light_transparent == true
@@ -69,11 +69,11 @@ local function setup()
   h("EndOfBuffer",  { fg = c.scorch })
   h("Cursor",       { fg = bg, bg = cursor })
   h("CursorColumn", { bg = c.ember_black })
-  h("CursorLine",   { bg = "#f5eade" })
+  h("CursorLine",   { bg = "#f2f1ef" })
   h("CursorLineNr", { fg = c.gold, gui = "bold" })
   h("LineNr",       { fg = c.scar })
   h("SignColumn",   { bg = main_bg })
-  h("ColorColumn",  { bg = "#f2e7d9" })
+  h("ColorColumn",  { bg = "#efeeec" })
 
   h("Visual",        { bg = c.selection_bg, fg = c.selection_fg })
   h("VisualNOS",     { bg = c.selection_bg })
@@ -113,7 +113,7 @@ local function setup()
   h("VertSplit",     { fg = c.scorch, bg = main_bg })
 
   h("FoldColumn",    { fg = c.scar, bg = main_bg })
-  h("Folded",        { fg = c.ember_grey, bg = "#f5eade" })
+  h("Folded",        { fg = c.ember_grey, bg = "#f2f1ef" })
 
   h("SpellBad",      { guisp = c.blood, gui = "undercurl" })
   h("SpellCap",      { guisp = c.gold, gui = "undercurl" })
@@ -287,7 +287,7 @@ local function setup()
   h("@markup.list.checked",   { fg = c.wildfire })
   h("@markup.list.unchecked", { fg = c.ember_grey })
   h("@markup.raw",            { fg = c.gold })
-  h("@markup.raw.block",      { fg = c.gold, bg = "#f5eade" })
+  h("@markup.raw.block",      { fg = c.gold, bg = "#f2f1ef" })
   h("@markup.quote",          { fg = c.ember_grey, gui = "italic" })
   h("@markup.math",           { fg = c.alt_glass })
   h("@markup.environment",    { fg = c.dragonglass })
@@ -400,7 +400,7 @@ local function setup()
   h("TroubleSource",     { fg = c.ember_grey })
 
   -- Indent Blankline / Ibl
-  h("IblIndent",         { fg = "#e8d9cc" })
+  h("IblIndent",         { fg = "#e6e5e2" })
   h("IblScope",          { fg = c.scar })
 
   -- Mini
