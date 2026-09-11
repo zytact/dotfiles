@@ -2,11 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
   "name": "targaryen-light",
   "vars": {
-    "bg": "#faf3ea",
-    "panel": "#fffdf8",
-    "panelAlt": "#f2e7d9",
-    "border": "#e2d2c6",
-    "select": "#f0d9b5",
+    "bg": "#f9f9f8",
+    "panel": "#fdfdfd",
+    "panelAlt": "#efeeec",
+    "border": "#dedddb",
+    "select": "#e4e2de",
     "dragonfire": "#b3202f",
     "ember": "#b8501e",
     "gold": "#8a6612",
@@ -15,10 +15,10 @@
     "steel": "#456e8c",
     "violet": "#7a3f9c",
     "blood": "#8f1826",
-    "ash": "#7a625d",
-    "fg": "#2b1a18",
-    "muted": "#6f5854",
-    "dim": "#877470"
+    "ash": "#78756f",
+    "fg": "#26231f",
+    "muted": "#625f5a",
+    "dim": "#86837e"
   },
   "colors": {
     "accent": "dragonfire",
