@@ -109,11 +109,12 @@ export default function enhancedFooter(pi: ExtensionAPI) {
 					const nameText = sessionName ? theme.fg("muted", `  ${sessionName}`) : "";
 					const locationLine = truncateToWidth(location + branchText + nameText, width, "…");
 
+					const cacheableInput = input + cacheRead + cacheWrite;
+					const cacheHitPercent = cacheableInput > 0 ? (cacheRead / cacheableInput) * 100 : 0;
 					const usageParts = [
 						theme.fg("accent", `in ${formatTokens(input)}`),
 						theme.fg("mdLink", `out ${formatTokens(output)}`),
-						theme.fg("success", `cache read ${formatTokens(cacheRead)}`),
-						theme.fg("warning", `cache write ${formatTokens(cacheWrite)}`),
+						theme.fg("success", `cache hit ${cacheHitPercent.toFixed(1)}%`),
 					];
 					if (cost > 0) usageParts.push(theme.fg("muted", `$${cost.toFixed(3)}`));
 
