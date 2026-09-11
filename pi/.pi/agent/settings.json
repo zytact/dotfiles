@@ -11,7 +11,7 @@
     "opencode/muse-spark-1.3-contributor-free"
   ],
   "hideThinkingBlock": false,
-  "theme": "targaryen",
+  "theme": "targaryen-light",
   "packages": [
     "npm:pi-web-access",
     "npm:pi-intercom",

@@ -100,6 +100,25 @@ config.color_schemes = {
 			new_tab_hover = { bg_color = "#240f12", fg_color = "#f5384f" },
 		},
 	},
+	["Targaryen Light"] = {
+		foreground = "#2b1a18",
+		background = "#faf3ea",
+		cursor_bg = "#b8501e",
+		cursor_border = "#b8501e",
+		cursor_fg = "#faf3ea",
+		selection_bg = "#f0d9b5",
+		selection_fg = "#1a0f0e",
+		ansi = { "#e2d2c6", "#b3202f", "#2f7f63", "#8a6612", "#456e8c", "#7a3f9c", "#1f7a6e", "#2b1a18" },
+		brights = { "#b09a92", "#8f1826", "#24664f", "#6e5210", "#35576f", "#5f3079", "#176159", "#1a0f0e" },
+		tab_bar = {
+			background = "#f2e7d9",
+			active_tab = { bg_color = "#faf3ea", fg_color = "#1a0f0e", intensity = "Bold" },
+			inactive_tab = { bg_color = "#f2e7d9", fg_color = "#6f5854" },
+			inactive_tab_hover = { bg_color = "#f0d9b5", fg_color = "#2b1a18" },
+			new_tab = { bg_color = "#f2e7d9", fg_color = "#6f5854" },
+			new_tab_hover = { bg_color = "#f0d9b5", fg_color = "#b3202f" },
+		},
+	},
 	["Carbonfox"] = {
 		foreground = "#f2f4f8",
 		background = "#161616",
@@ -282,7 +301,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "Targaryen"
+config.color_scheme = "Targaryen Light"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to

@@ -61,8 +61,8 @@
   },
   "relative_line_numbers": "enabled",
   "theme": {
-    "mode": "dark",
-    "light": "GitHub Light Colorblind",
+    "mode": "light",
+    "light": "Targaryen Light",
     "dark": "Targaryen"
   },
   "languages": {

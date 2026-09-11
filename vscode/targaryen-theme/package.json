@@ -1,8 +1,8 @@
 {
   "name": "targaryen-theme",
   "displayName": "Targaryen",
-  "description": "Fire and Blood - an AMOLED-black dark theme",
-  "version": "1.0.0",
+  "description": "Fire and Blood - an AMOLED-black dark theme and its parchment light counterpart",
+  "version": "1.1.0",
   "publisher": "arnab",
   "private": true,
   "engines": {
@@ -17,6 +17,11 @@
         "label": "Targaryen",
         "uiTheme": "vs-dark",
         "path": "./themes/targaryen-color-theme.json"
+      },
+      {
+        "label": "Targaryen Light",
+        "uiTheme": "vs",
+        "path": "./themes/targaryen-light-color-theme.json"
       }
     ]
   }

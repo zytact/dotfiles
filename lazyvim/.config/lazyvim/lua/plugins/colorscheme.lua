@@ -161,7 +161,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "targaryen",
+      colorscheme = "targaryen-light",
     },
   },
 
