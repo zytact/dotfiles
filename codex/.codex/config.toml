@@ -1,0 +1,440 @@
+model = "gpt-5.6-luna"
+model_reasoning_effort = "medium"
+approvals_reviewer = "user"
+service_tier = "default"
+
+[plugins."canva@openai-curated"]
+enabled = false
+
+[plugins."documents@openai-primary-runtime"]
+enabled = false
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = false
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = false
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = false
+
+[plugins."chrome@openai-bundled"]
+enabled = false
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = false
+
+[plugins."visualize@openai-bundled"]
+enabled = false
+
+[plugins."sites@openai-bundled"]
+enabled = false
+
+[plugins."browser@openai-bundled"]
+enabled = false
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = false
+
+[plugins."unified-computer-use@openai-bundled"]
+enabled = false
+
+[features]
+hooks = true
+apps = false
+multi_agent = false
+js_repl = false
+memories = false
+chronicle = false
+default_mode_request_user_input = true
+
+[features.multi_agent_v2]
+enabled = true
+root_agent_usage_hint_text = "When spawning any subagent, you MUST pass fork_turns = \"none\". Do not share parent conversation history. A subagent must receive only the explicit message you provide in its spawn request."
+subagent_usage_hint_text = "When spawning any subagent, you MUST pass fork_turns = \"none\". Do not share parent conversation history. A subagent must receive only the explicit message you provide in its spawn request."
+
+[projects."/home/arnab/Projects/frint/ai-interview-platform-extension"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/frint/interview-proctoring-frint"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/scripts"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/sandbox/Claude-Usage-Extension"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/assignments/HCI"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/instaext"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/zytact3.0"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/quartz"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/ledger"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/semester-project"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/is-dl"]
+trust_level = "trusted"
+
+[projects."/home/arnab/.claude/usage-data"]
+trust_level = "trusted"
+
+[projects."/home/arnab/dotfiles"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Downloads"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/assignments/AIML LAB Programs"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/GramGrab"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/bang"]
+trust_level = "trusted"
+
+[projects."/home/arnab/.codex"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/sandbox/codex-desktop-linux"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/sandbox/geostamp-cli"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/agent-usage"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/retina"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/gdg-webdev-resources"]
+trust_level = "trusted"
+
+[projects."/home/arnab/dotfiles/wezterm/.config/wezterm"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/learning/nightmare"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-06-26/age"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-06-26/age-2"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-06-26/age-4"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/learning/dsa"]
+trust_level = "trusted"
+
+[projects."/tmp"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/geostamp-cli"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/skills"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/geowarp"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-03/new-chat"]
+trust_level = "trusted"
+
+[projects."/home/arnab"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/sandbox"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-11/i"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-13/i"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-13/g"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-13/i-wa"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-14/wor"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-14/h"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-14/hi"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-14/world-economic-forum-has-forecast-for"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-14/go-through-my-todoist-tasks-that"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-14/i"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-14/get"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-16/i"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-16/so"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-16/mu"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-07-16/i-2"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/system"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/sandbox/codex-desktop"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/claude-desktop-rpm"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/catchment"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Downloads/WebChain Participation Certificate"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Downloads/WebChain Winning Certificate"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/system"]
+trust_level = "trusted"
+
+[projects."/home/arnab/dotfiles/pi/.pi/agent"]
+trust_level = "trusted"
+
+[projects."/tmp/oss-scout"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/sandbox/mpv"]
+trust_level = "trusted"
+
+[projects."/home/arnab/.t3/userdata/triage/2026-08-26T19-58-19-748Z"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/computation-and-simulation"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/comput-and-simu"]
+trust_level = "trusted"
+
+[projects."/home/arnab/.t3/userdata/triage/2026-08-28T18-32-42-199Z"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/compress"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/sandbox/research"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/rustcharge"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/sandbox/AutoMailer"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/tantalus"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Documents/Codex/2026-09-07/are"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Downloads/papers_used_in_marine_microplastic_report/papers_used_in_marine_microplastic_report"]
+trust_level = "trusted"
+
+[tui]
+status_line = ["model-with-reasoning", "current-dir", "git-branch", "pull-request-number", "approval-mode", "context-remaining", "five-hour-limit", "weekly-limit", "used-tokens"]
+status_line_use_colors = true
+pet = "disabled"
+theme = "targaryen"
+alternate_screen = "always"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+"gpt-5.6-sol" = 4
+gpt-6-astra = 4
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+"gpt-5.4" = "gpt-5.5"
+
+[marketplaces.openai-bundled]
+source_type = "local"
+source = "/home/arnab/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+source_type = "local"
+source = "/home/arnab/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[desktop]
+conversationDetailMode = "STEPS_COMMANDS"
+ambient-suggestions-enabled = false
+keepRemoteControlAwakeWhilePluggedIn = true
+appearanceLightCodeThemeId = "raycast"
+appearanceDarkCodeThemeId = "raycast"
+show-context-window-usage = true
+git-branch-prefix = ""
+git-show-sidebar-pr-icons = true
+preventSleepWhileRunning = true
+git-create-pull-request-as-draft = false
+followUpQueueMode = "steer"
+selected-avatar-id = "codex"
+avatar-overlay-mascot-width-px = 224
+enabled-reasoning-efforts = ["low", "medium", "high", "xhigh", "max"]
+
+[desktop.open-in-target-preferences]
+global = "fileManager"
+
+[desktop.open-in-target-preferences.perPath]
+"/home/arnab/Projects/GramGrab" = "fileManager"
+"/home/arnab/dotfiles" = "zed"
+"/home/arnab/Projects/scripts" = "vscode"
+"/home/arnab/Projects/sandbox/codex-desktop-linux" = "vscode"
+"/home/arnab/Documents/learning/dsa" = "terminal"
+
+[desktop.appearanceLightChromeTheme]
+accent = "#ff6363"
+contrast = 55
+ink = "#030303"
+opaqueWindows = false
+surface = "#ffffff"
+
+[desktop.appearanceLightChromeTheme.fonts]
+code = '"Jetbrains Mono"'
+ui = "Inter"
+
+[desktop.appearanceLightChromeTheme.semanticColors]
+diffAdded = "#006b4f"
+diffRemoved = "#b12424"
+skill = "#9a1b6e"
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#ff6363"
+contrast = 50
+ink = "#fefefe"
+opaqueWindows = false
+surface = "#101010"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+code = '"Jetbrains Mono"'
+ui = "Inter"
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#59d499"
+diffRemoved = "#ff6363"
+skill = "#cf2f98"
+
+[mcp_servers.node_repl]
+enabled = false
+args = []
+command = "/usr/lib/chatgpt/resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/usr/lib/chatgpt/resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/usr/lib/chatgpt/resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/home/arnab/.codex:/usr/lib/chatgpt/resources/cua_node/lib/node_modules"
+CODEX_HOME = "/home/arnab/.codex"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+BROWSER_USE_TINYSKY_ENABLED = "1"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.901.51231"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/home/arnab/.codex/plugins/cache/openai-bundled/browser/26.901.51231/scripts/browser-service.mjs"}'
+CODEX_CLI_PATH = "/usr/lib/chatgpt/resources/codex"
+
+[mcp_servers.openaiDeveloperDocs]
+enabled = false
+url = "https://developers.openai.com/mcp"
+
+[mcp_servers.chrome-devtools]
+enabled = true
+command = "npx"
+args = ["-y", "chrome-devtools-mcp@latest", "--autoConnect", "--userDataDir=/home/arnab/.config/net.imput.helium"]
+startup_timeout_sec = 20.0
+
+[apps.connector_68df33b1a2d081918778431a9cfca8ba]
+enabled = false
+
+[apps.connector_947e0d954944416db111db556030eea6]
+enabled = true
+
+[[skills.config]]
+path = "/home/arnab/.agents/skills/caveman/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/home/arnab/.agents/skills/design-auditor/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/home/arnab/.agents/skills/find-skills/SKILL.md"
+enabled = false
+
+[[skills.config]]
+name = "google-calendar:google-calendar"
+enabled = true
+
+[[skills.config]]
+name = "google-calendar:google-calendar-daily-brief"
+enabled = false
+
+[[skills.config]]
+name = "google-calendar:google-calendar-free-up-time"
+enabled = false
+
+[[skills.config]]
+name = "google-calendar:google-calendar-group-scheduler"
+enabled = false
+
+[[skills.config]]
+name = "google-calendar:google-calendar-meeting-prep"
+enabled = false
+
+[[skills.config]]
+path = "/home/arnab/.agents/skills/yeet/SKILL.md"
+enabled = false
+
+[memories]
+generate_memories = false
+use_memories = false
+
+[hooks.state]
+
+[hooks.state."/home/arnab/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:b8794f4b07ef4fc622e25dcd73207b89678a2e20dac442207668846ed48ce9bd"
+
+[shell_environment_policy.set]
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "e7fc907079d6797973cb63f97d2562c965aad8d33f52fb726005bf6702f30afc"
