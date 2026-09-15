@@ -78,9 +78,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "teach/SKILL.md",
-      "skillFolderHash": "9cf8f305d23c425d78980b3b28047bad801f3f4c",
+      "skillFolderHash": "9424cb4403d5711bc10ad34d3879ee5dfebd9098",
       "installedAt": "2026-06-20T07:59:23.697Z",
-      "updatedAt": "2026-08-20T17:20:13.850Z"
+      "updatedAt": "2026-09-14T16:22:04.877Z"
     },
     "skill-creator": {
       "source": "openai/skills",
@@ -105,9 +105,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "code-review/SKILL.md",
-      "skillFolderHash": "cebfdfe133ec220ddbe69f7636ac24f7cd439ec6",
+      "skillFolderHash": "e16a28e8494c9874b01117e40977b20fc9ca452a",
       "installedAt": "2026-07-12T08:07:02.629Z",
-      "updatedAt": "2026-09-10T20:55:10.139Z"
+      "updatedAt": "2026-09-14T16:22:08.148Z"
     },
     "postplan": {
       "source": "zytact/skills",
