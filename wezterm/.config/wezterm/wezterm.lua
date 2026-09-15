@@ -301,7 +301,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "Targaryen Light"
+config.color_scheme = "Targaryen"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to

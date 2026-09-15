@@ -1,4 +1,4 @@
-palette = "targaryen_light"
+palette = "targaryen"
 add_newline = false
 command_timeout = 2000
 scan_timeout = 50

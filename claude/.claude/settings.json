@@ -44,7 +44,7 @@
   },
   "autoMemoryEnabled": false,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "custom:targaryen-light",
+  "theme": "custom:targaryen",
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true
