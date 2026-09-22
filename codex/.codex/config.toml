@@ -1,4 +1,4 @@
-model = "gpt-5.6-luna"
+model = "gpt-6-astra"
 model_reasoning_effort = "medium"
 approvals_reviewer = "user"
 service_tier = "default"
@@ -270,6 +270,21 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/home/arnab/Downloads/papers_used_in_marine_microplastic_report/papers_used_in_marine_microplastic_report"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Downloads/papers_used_in_marine_microplastic_report/papers_used_in_marine_microplastic_report/review-paper/ieee-conference"]
+trust_level = "trusted"
+
+[projects."/home/arnab/.t3/userdata/triage/2026-09-18T19-34-06-567Z"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/t3code"]
+trust_level = "trusted"
+
+[projects."/home/arnab/cliproxyapi"]
+trust_level = "trusted"
+
+[projects."/home/arnab/Projects/tether"]
 trust_level = "trusted"
 
 [tui]
