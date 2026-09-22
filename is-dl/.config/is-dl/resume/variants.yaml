@@ -161,6 +161,12 @@ variants:
     lead: [exp-frint, proj-inventrack, proj-strokeshare, proj-system]
     drop: [exp-nits-2025, exp-nits-2026, exp-gdg, exp-picard, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic, system-oauth-adr, system-tech, strokeshare-tests, strokeshare-tech, inventrack-tech]
 
+  medinex-fullstack:
+    headline: "Full Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-inventrack, proj-strokeshare, proj-system]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, exp-picard, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic, system-oauth-adr, system-tech, strokeshare-tests, strokeshare-tech, inventrack-tech]
+
   aistartupimpact-swe:
     headline: "Software Engineer, AI Products"
     sections: [education, experience, projects, skills]
@@ -190,3 +196,21 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [exp-frint, proj-system, proj-inventrack, exp-nits-2026]
     drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-gramgrab, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, system-tech, inventrack-tech, frint-tech]
+
+  unloq-ai-fullstack:
+    headline: "Full Stack Developer, Agentic AI"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack]
+    drop: [exp-nits-2025, exp-gdg, exp-picard, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-strokeshare, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, system-tech, inventrack-tech, frint-tech]
+
+  meeboss-genai:
+    headline: "AI / Machine Learning Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-nits-2026, exp-nits-2025, exp-frint, proj-inventrack]
+    drop: [exp-gdg, exp-picard, proj-system, proj-gramgrab, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-frontend, nits-benchmark, nits-tech, inventrack-tech, frint-tech, skills-agentic]
+
+  interviewkickstart-sdet:
+    headline: "Software Engineer, Test Automation"
+    sections: [education, experience, projects, skills]
+    lead: [exp-picard, proj-strokeshare, exp-frint, proj-system]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-inventrack, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-ai, system-oauth-adr, strokeshare-tech, frint-tech]
