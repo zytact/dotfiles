@@ -1,0 +1,11 @@
+host: "127.0.0.1"
+port: 8317
+auth-dir: "~/.cli-proxy-api"
+api-keys:
+  - "replace-with-a-local-key"
+remote-management:
+  allow-remote: true
+  secret-key: ""
+transient-error-cooldown-seconds: 5
+routing:
+  session-affinity: true
