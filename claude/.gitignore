@@ -32,4 +32,6 @@
 .claude/tasks
 .claude/jobs
 .claude/daemon
+.claude/skills/.trash
+.claude/skills/synced/*/.last-complete-round
 daemon.log
