@@ -78,9 +78,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "teach/SKILL.md",
-      "skillFolderHash": "9424cb4403d5711bc10ad34d3879ee5dfebd9098",
+      "skillFolderHash": "8c4f3191579f5a6e26166f5ec32d27fa769ab1c5",
       "installedAt": "2026-06-20T07:59:23.697Z",
-      "updatedAt": "2026-09-14T16:22:04.877Z"
+      "updatedAt": "2026-09-26T13:27:43.793Z"
     },
     "skill-creator": {
       "source": "openai/skills",
@@ -114,9 +114,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "postplan/SKILL.md",
-      "skillFolderHash": "6f06ec2f476b6bb21a22b0edd3e0fbfb3fbb876d",
+      "skillFolderHash": "0b3d48b5c58c331e88452369ab1d8532454b113a",
       "installedAt": "2026-07-13T14:05:04.627Z",
-      "updatedAt": "2026-08-13T04:36:41.659Z"
+      "updatedAt": "2026-09-27T11:26:58.171Z"
     },
     "grill-with-docs": {
       "source": "mattpocock/skills",
@@ -277,9 +277,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "is-dl/SKILL.md",
-      "skillFolderHash": "25950f2ffc2af869c6f81c9864ff618ecd57c837",
+      "skillFolderHash": "69cd240eb38fb61ede1e586948da1856f028b21f",
       "installedAt": "2026-08-26T19:55:05.142Z",
-      "updatedAt": "2026-09-10T14:54:39.905Z"
+      "updatedAt": "2026-09-25T20:32:35.022Z"
     },
     "gh-stack": {
       "source": "github/gh-stack",

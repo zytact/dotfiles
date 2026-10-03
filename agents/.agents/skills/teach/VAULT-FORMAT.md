@@ -24,7 +24,7 @@ Create directories lazily. A vault with one lesson does not need an `exercises/`
 
 Create the vault yourself on the first session:
 
-1. `mkdir` a directory named in dash-case after the topic, and work inside it.
+1. Create `$TEACH_HOME/<dash-case-topic>/` and work inside it.
 2. Write `MISSION.md`. Interview the user first if the mission is unclear - do not create the vault around a mission you guessed.
 3. Write `INDEX.md` as the entry note.
 4. Create `.obsidian/app.json` so links and attachments behave predictably:
@@ -38,7 +38,7 @@ Create the vault yourself on the first session:
 }
 ```
 
-5. Tell the user to open the directory in Obsidian with **Open folder as vault**, once.
+5. Tell the user to open the directory in Obsidian with **Open folder as vault**, once. If they don't have Obsidian yet, point them to https://obsidian.md/download first.
 
 `alwaysUpdateLinks` matters: it means renaming a note rewrites every link to it, so the vault does not rot as lesson titles change.
 

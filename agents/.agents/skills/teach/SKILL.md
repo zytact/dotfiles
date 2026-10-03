@@ -11,12 +11,21 @@ The user has asked you to teach them something. This is a stateful request - the
 
 Teaching happens inside an Obsidian vault that **you create**. One vault holds exactly one mission. If the user wants to learn something unrelated, that is a second vault, not a second folder inside this one.
 
-At the start of a session, work out which vault you are in:
+Every vault lives directly under the **vault home**, `$TEACH_HOME`, as `$TEACH_HOME/<dash-case-topic>/`. This holds whichever directory the session starts in.
 
-- The current directory has a `MISSION.md` - you are already in a teaching vault. Continue there.
-- The current directory has a `.obsidian/` but no `MISSION.md` - this is the user's own vault. Adopt it: add the teaching files alongside their notes. Do not reorganise, rename or restyle anything that was already there, and check with the user before changing their `.obsidian/` config.
-- The current directory contains vaults from earlier sessions - if one matches what the user asked for, `cd` into it. If none does, create a new one.
-- Otherwise, create a new vault: a directory named in dash-case after the topic, set up as described in [VAULT-FORMAT.md](./VAULT-FORMAT.md).
+At the start of a session:
+
+1. Find the vault home. Read `TEACH_HOME` from the environment, or from the shell files below if the current shell predates it. If neither has it, this is the user's first session: ask where to keep their vaults, suggesting `~/Documents/learning`, **persist** it, and create the directory.
+2. Pick the vault. If a directory in the vault home matches what the user asked for, work in it. Otherwise create `$TEACH_HOME/<dash-case-topic>/`, set up as described in [VAULT-FORMAT.md](./VAULT-FORMAT.md).
+
+To **persist** a variable, tell the user you are adding it to their shell config, then append it to each of these files that already exists, creating none:
+
+- `~/.bashrc` and `~/.zshenv`: `export NAME="<value>"`
+- `~/.config/fish/config.fish`: `set -gx NAME "<value>"`
+
+Use the value directly for the rest of the session, since the change only reaches new shells.
+
+The one exception is a vault the user owns and explicitly points you at: it has `.obsidian/` but no `MISSION.md`. Adopt it where it is, and add the teaching files alongside their notes. Do not reorganise, rename or restyle anything that was already there, and check with the user before changing their `.obsidian/` config. It stays outside the vault home, so deploys leave it out.
 
 Never scatter lessons for two missions across one vault, and never nest a vault inside another.
 
@@ -68,11 +77,13 @@ Each lesson should recommend a primary source for the user to read or watch. Thi
 
 Each lesson should contain a reminder to ask followup questions to the agent. The agent is their teacher, and can assist with anything that's unclear.
 
-When you finish a lesson, open it for the user:
+When you finish a lesson, open it for the user with their OS's opener: `xdg-open` on Linux, `open` on macOS, `start ""` on Windows.
 
 ```sh
-xdg-open "obsidian://open?vault=$(basename "$PWD")&file=lessons/0001-name"
+xdg-open "obsidian://open?vault=<vault-directory-name>&file=lessons/0001-name"
 ```
+
+The link only resolves once the user has opened the vault in Obsidian (step 5 of creating the vault in [VAULT-FORMAT.md](./VAULT-FORMAT.md)). Until they confirm that, give them the lesson's path instead.
 
 ## The Mission
 
@@ -145,6 +156,10 @@ Some learning topics lend themselves to reference:
 - Glossaries for any topic with its own nomenclature
 
 Glossaries, in particular, are an essential reference. Once one is created, it should be adhered to in every lesson. Use the format in [GLOSSARY-FORMAT.md](./GLOSSARY-FORMAT.md).
+
+## Deploying
+
+When the user asks to deploy or publish the vaults online, follow [playbooks/DEPLOY.md](./playbooks/DEPLOY.md).
 
 ## `NOTES.md`
 
