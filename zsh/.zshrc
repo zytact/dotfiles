@@ -213,7 +213,6 @@ esac
 #  exec herdr --session main
 # fi
 
-# opencode
 
 # >>> Codex installer >>>
 export PATH="/home/arnab/.local/bin:$PATH"
