@@ -100,6 +100,25 @@ config.color_schemes = {
 			new_tab_hover = { bg_color = "#240f12", fg_color = "#f5384f" },
 		},
 	},
+	["T3 Dark"] = {
+		foreground = "#f5f5f5",
+		background = "#0a0a0a",
+		cursor_bg = "#b4cbff",
+		cursor_border = "#b4cbff",
+		cursor_fg = "#0a0a0a",
+		selection_bg = "#343a47",
+		selection_fg = "#ffffff",
+		ansi = { "#111111", "#fb414a", "#54c57a", "#e4b750", "#51a2ff", "#bb8aef", "#51cec7", "#f5f5f5" },
+		brights = { "#818181", "#fd7277", "#89dea1", "#f3d086", "#87bafd", "#ceacf7", "#91e2dc", "#ffffff" },
+		tab_bar = {
+			background = "#0a0a0a",
+			active_tab = { bg_color = "#181f2e", fg_color = "#ffffff", intensity = "Bold" },
+			inactive_tab = { bg_color = "#0a0a0a", fg_color = "#a3a3a3" },
+			inactive_tab_hover = { bg_color = "#141414", fg_color = "#f5f5f5" },
+			new_tab = { bg_color = "#0a0a0a", fg_color = "#a3a3a3" },
+			new_tab_hover = { bg_color = "#141414", fg_color = "#568ef9" },
+		},
+	},
 	["Targaryen Light"] = {
 		foreground = "#26231f",
 		background = "#f9f9f8",
@@ -117,6 +136,44 @@ config.color_schemes = {
 			inactive_tab_hover = { bg_color = "#e4e2de", fg_color = "#26231f" },
 			new_tab = { bg_color = "#efeeec", fg_color = "#625f5a" },
 			new_tab_hover = { bg_color = "#e4e2de", fg_color = "#b3202f" },
+		},
+	},
+	["Washi"] = {
+		foreground = "#27221d",
+		background = "#faf9f6",
+		cursor_bg = "#c44323",
+		cursor_border = "#c44323",
+		cursor_fg = "#faf9f6",
+		selection_bg = "#e8e2db",
+		selection_fg = "#15110d",
+		ansi = { "#e2dfdb", "#b32130", "#457d52", "#976712", "#32618e", "#714085", "#29706c", "#27221d" },
+		brights = { "#a39d98", "#c44323", "#31623d", "#755010", "#224a71", "#5b2f6d", "#155855", "#15110d" },
+		tab_bar = {
+			background = "#f1efeb",
+			active_tab = { bg_color = "#faf9f6", fg_color = "#15110d", intensity = "Bold" },
+			inactive_tab = { bg_color = "#f1efeb", fg_color = "#68625c" },
+			inactive_tab_hover = { bg_color = "#e8e2db", fg_color = "#27221d" },
+			new_tab = { bg_color = "#f1efeb", fg_color = "#68625c" },
+			new_tab_hover = { bg_color = "#e8e2db", fg_color = "#c44323" },
+		},
+	},
+	["Washi Neutral"] = {
+		foreground = "#232323",
+		background = "#f9f9f9",
+		cursor_bg = "#3065cd",
+		cursor_border = "#3065cd",
+		cursor_fg = "#f9f9f9",
+		selection_bg = "#e3e3e3",
+		selection_fg = "#121212",
+		ansi = { "#dfdfdf", "#b32130", "#457d52", "#976712", "#3065cd", "#714085", "#29706c", "#232323" },
+		brights = { "#9e9e9e", "#c44323", "#31623d", "#755010", "#2354b3", "#5b2f6d", "#155855", "#121212" },
+		tab_bar = {
+			background = "#efefef",
+			active_tab = { bg_color = "#f9f9f9", fg_color = "#121212", intensity = "Bold" },
+			inactive_tab = { bg_color = "#efefef", fg_color = "#636363" },
+			inactive_tab_hover = { bg_color = "#e3e3e3", fg_color = "#232323" },
+			new_tab = { bg_color = "#efefef", fg_color = "#636363" },
+			new_tab_hover = { bg_color = "#e3e3e3", fg_color = "#3065cd" },
 		},
 	},
 	["Carbonfox"] = {
@@ -301,7 +358,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "Targaryen"
+config.color_scheme = "T3 Dark"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to

@@ -1,0 +1,43 @@
+{
+  "name": "arnab-themes",
+  "displayName": "Arnab Themes",
+  "description": "Personal color themes: T3 Dark, Washi, Washi Neutral, Targaryen and Targaryen Light",
+  "version": "1.0.0",
+  "publisher": "arnab",
+  "private": true,
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Targaryen",
+        "uiTheme": "vs-dark",
+        "path": "./themes/targaryen-color-theme.json"
+      },
+      {
+        "label": "Targaryen Light",
+        "uiTheme": "vs",
+        "path": "./themes/targaryen-light-color-theme.json"
+      },
+      {
+        "label": "Washi",
+        "uiTheme": "vs",
+        "path": "./themes/washi-color-theme.json"
+      },
+      {
+        "label": "Washi Neutral",
+        "uiTheme": "vs",
+        "path": "./themes/washi-neutral-color-theme.json"
+      },
+      {
+        "label": "T3 Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/t3-dark-color-theme.json"
+      }
+    ]
+  }
+}

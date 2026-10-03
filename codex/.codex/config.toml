@@ -303,7 +303,7 @@ trust_level = "trusted"
 status_line = ["model-with-reasoning", "current-dir", "git-branch", "pull-request-number", "approval-mode", "context-remaining", "five-hour-limit", "weekly-limit", "used-tokens"]
 status_line_use_colors = true
 pet = "disabled"
-theme = "targaryen"
+theme = "t3-dark"
 alternate_screen = "always"
 screen_reader_detection_done = true
 
@@ -352,36 +352,36 @@ global = "fileManager"
 "/home/arnab/Documents/learning/dsa" = "terminal"
 
 [desktop.appearanceLightChromeTheme]
-accent = "#ff6363"
+accent = "#3065cd"
 contrast = 55
-ink = "#030303"
+ink = "#232323"
 opaqueWindows = false
-surface = "#ffffff"
+surface = "#fff7f5"
 
 [desktop.appearanceLightChromeTheme.fonts]
 code = '"Jetbrains Mono"'
 ui = "Inter"
 
 [desktop.appearanceLightChromeTheme.semanticColors]
-diffAdded = "#006b4f"
-diffRemoved = "#b12424"
-skill = "#9a1b6e"
+diffAdded = "#457d52"
+diffRemoved = "#b32130"
+skill = "#714085"
 
 [desktop.appearanceDarkChromeTheme]
-accent = "#ff6363"
+accent = "#346bf1"
 contrast = 50
-ink = "#fefefe"
+ink = "#f5f5f5"
 opaqueWindows = false
-surface = "#101010"
+surface = "#0a0a0a"
 
 [desktop.appearanceDarkChromeTheme.fonts]
 code = '"Jetbrains Mono"'
 ui = "Inter"
 
 [desktop.appearanceDarkChromeTheme.semanticColors]
-diffAdded = "#59d499"
-diffRemoved = "#ff6363"
-skill = "#cf2f98"
+diffAdded = "#54c57a"
+diffRemoved = "#ff6467"
+skill = "#bb8aef"
 
 [mcp_servers.node_repl]
 enabled = false
