@@ -7,7 +7,7 @@
       "RemoteTrigger"
     ]
   },
-  "model": "opus[1m]",
+  "model": "haiku",
   "disableClaudeAiConnectors": true,
   "hooks": {
     "SessionStart": [
