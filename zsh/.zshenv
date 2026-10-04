@@ -27,3 +27,6 @@ export PATH=/home/arnab/.opencode/bin:$PATH
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/arnab/.lmstudio/bin"
+
+export TEACH_HOME="$HOME/Documents/learning"
+export TEACH_DOMAIN="teach.zytact.com"
