@@ -1,7 +1,7 @@
 ---
 name: code-reviewer
 description: Reviews completed code changes for bugs, security issues, and maintainability.
-model: fable
+model: opus
 effort: medium
 tools: Read, Grep, Glob, Bash
 ---
