@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+# Render ~/cliproxyapi/config.yaml from the dotfiles template + secret env vars.
+# Secrets live in ~/.api-keys (untracked); the template is committed.
+# This script is stowed to ~/cliproxyapi/cliproxyapi-render-config; run it from anywhere.
+# Usage: cliproxyapi-render-config [output-path]
+set -eu
+: "${CLIPROXY_API_KEY:?export CLIPROXY_API_KEY (e.g. in ~/.api-keys)}"
+: "${CLIPROXY_MANAGEMENT_KEY:?export CLIPROXY_MANAGEMENT_KEY plaintext (cliproxyapi hashes it on startup)}"
+TEMPLATE="$HOME/dotfiles/cliproxyapi/cliproxyapi/config.yaml.template"
+TARGET="${1:-$HOME/cliproxyapi/config.yaml}"
+CLIPROXY_API_KEY="$CLIPROXY_API_KEY" CLIPROXY_MANAGEMENT_KEY="$CLIPROXY_MANAGEMENT_KEY" python3 - "$TEMPLATE" "$TARGET" <<'EOF'
+import os, sys
+tpl = open(sys.argv[1]).read()
+out = tpl.replace('__CLIPROXY_API_KEY__', os.environ['CLIPROXY_API_KEY'])
+out = out.replace('__CLIPROXY_MANAGEMENT_KEY__', os.environ['CLIPROXY_MANAGEMENT_KEY'])
+assert '__CLIPROXY_' not in out, 'unreplaced placeholder left in template'
+with open(sys.argv[2], 'w') as f:
+    f.write(out)
+EOF
+chmod 600 "$TARGET"
+echo "wrote $TARGET (config hot-reloads; no restart needed)"

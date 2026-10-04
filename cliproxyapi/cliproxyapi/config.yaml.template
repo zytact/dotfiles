@@ -1,0 +1,19 @@
+# Rendered from config.yaml.template by cliproxyapi-render-config — do not edit.
+# Edit the template in dotfiles and re-render instead. Secrets come from
+# CLIPROXY_API_KEY / CLIPROXY_MANAGEMENT_KEY in ~/.api-keys (never committed).
+host: "127.0.0.1"
+port: 8317
+auth-dir: "~/.cli-proxy-api"
+api-keys:
+  - "__CLIPROXY_API_KEY__"
+remote-management:
+  allow-remote: true
+  secret-key: "__CLIPROXY_MANAGEMENT_KEY__"
+transient-error-cooldown-seconds: 5
+routing:
+  session-affinity: true
+oauth-model-alias:
+  claude:
+    - name: "claude-haiku-4-5-20251001"
+      alias: "claude-haiku-4-5"
+      fork: true
