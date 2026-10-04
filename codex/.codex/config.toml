@@ -1,7 +1,20 @@
 model = "gpt-6.1-sol"
+model_provider = "cliproxyapi"
 model_reasoning_effort = "high"
 approvals_reviewer = "user"
 service_tier = "default"
+
+# CLIProxyAPI via Tailscale (Codex uses /v1 suffix, unlike Claude Code)
+experimental_realtime_webrtc_call_base_url = "http://100.127.35.14:8317/v1"
+experimental_realtime_ws_base_url = "http://100.127.35.14:8317/v1"
+
+[model_providers.cliproxyapi]
+name = "OpenAI"
+base_url = "http://100.127.35.14:8317/v1"
+env_key = "CLIPROXY_API_KEY"
+wire_api = "responses"
+requires_openai_auth = false
+supports_websockets = true
 
 [plugins."canva@openai-curated"]
 enabled = false
