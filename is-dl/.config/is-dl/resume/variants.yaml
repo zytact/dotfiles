@@ -256,3 +256,33 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [exp-frint, exp-nits-2025, exp-nits-2026, proj-inventrack]
     drop: [exp-gdg, exp-picard, proj-system, proj-gramgrab, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-frontend, skills-agentic, nits-benchmark, nits-tech, nits25-tech, inventrack-tech, frint-proctoring, frint-tech]
+
+  internmo-frontend-developer:
+    headline: "Frontend Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-strokeshare, proj-system, proj-inventrack]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech]
+
+  marxen-applied-ai-fullstack-intern:
+    headline: "Full Stack Developer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-inventrack, proj-system, exp-nits-2026]
+    drop: [exp-nits-2025, exp-gdg, exp-picard, nits-benchmark, nits-fusion, nits-tech, proj-strokeshare, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic, system-oauth-adr, system-tech, inventrack-tech, frint-tech]
+
+  uniai-hub-frontend-developer:
+    headline: "Frontend Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-strokeshare, proj-system, proj-inventrack]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech]
+
+  thinknovaa-backend-developer:
+    headline: "Backend Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-inventrack, proj-system, exp-picard]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-strokeshare, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic, picard-tech, system-oauth-adr, system-tech, inventrack-tech, frint-proctoring, frint-tech]
+
+  amarsia-developer-advocacy-intern:
+    headline: "Full Stack Developer, Agentic AI"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, exp-picard, proj-system, proj-inventrack, proj-gramgrab]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, system-tech, inventrack-tech, gramgrab-tech, frint-tech, skills-agentic]
