@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 # Render ~/cliproxyapi/config.yaml from the dotfiles template + secret env vars.
-# Secrets live in ~/.api-keys (untracked); the template is committed.
+# Secrets live in ~/.secrets (untracked); the template is committed.
 # This script is stowed to ~/cliproxyapi/cliproxyapi-render-config; run it from anywhere.
 # Usage: cliproxyapi-render-config [output-path]
 set -eu
-: "${CLIPROXY_API_KEY:?export CLIPROXY_API_KEY (e.g. in ~/.api-keys)}"
+: "${CLIPROXY_API_KEY:?export CLIPROXY_API_KEY (e.g. in ~/.secrets)}"
 : "${CLIPROXY_MANAGEMENT_KEY:?export CLIPROXY_MANAGEMENT_KEY plaintext (cliproxyapi hashes it on startup)}"
 TEMPLATE="$HOME/dotfiles/cliproxyapi/cliproxyapi/config.yaml.template"
 TARGET="${1:-$HOME/cliproxyapi/config.yaml}"

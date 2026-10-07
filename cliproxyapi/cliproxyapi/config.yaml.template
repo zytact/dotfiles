@@ -1,6 +1,6 @@
 # Rendered from config.yaml.template by cliproxyapi-render-config — do not edit.
 # Edit the template in dotfiles and re-render instead. Secrets come from
-# CLIPROXY_API_KEY / CLIPROXY_MANAGEMENT_KEY in ~/.api-keys (never committed).
+# CLIPROXY_API_KEY / CLIPROXY_MANAGEMENT_KEY in ~/.secrets (never committed).
 host: "127.0.0.1"
 port: 8317
 auth-dir: "~/.cli-proxy-api"

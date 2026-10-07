@@ -15,10 +15,7 @@ export ENABLE_CLAUDEAI_MCP_SERVERS=false
 export EDITOR="nvim"
 export NVIM_APPNAME="lazyvim"
 . "$HOME/.cargo/env"
-. "$HOME/.api-keys"
-
-# CLIProxyAPI via Tailscale (no /v1 suffix for Claude Code)
-export ANTHROPIC_BASE_URL="http://100.127.35.14:8317"
+. "$HOME/.secrets"
 
 # Vite+ bin (https://viteplus.dev)
 . "$HOME/.vite-plus/env"
