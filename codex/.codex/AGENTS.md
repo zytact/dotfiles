@@ -69,9 +69,10 @@ Use lowercase, write in the imperative mood, do not end with a period, and keep 
 - Before declaring a PR complete, attach before and after screenshots or video to the PR description. Use `gh`, it supports PR attachments now. Do not commit media to the repository. Verify the PR displays the uploaded attachments; a local file path does not count. If capture or upload is impossible, state the specific blocker in the PR and final report.
 - Use stacked PRs (https://github.github.com/gh-stack/, github now actively supports it without third-party tools) if deemed necessary, which is if you want to keep the PR(s) under 600 and splitting it makes sense. Use `gh-stack` skill then.
 
-# Harness related
+# Subagents
 - Do not use subagents unless the user explicitly asks for it or a skill requires it.
 - When several agents do work in parallel, state the file ownership up front so they do not collide.
+- If in T3 Code, do not create a subagent/child task in supervised mode, you'll need to approve every tool call.
 
 # Blast radius
 - Do not make destructive changes that could harm the system, os, or codebase without asking.
