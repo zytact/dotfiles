@@ -275,12 +275,6 @@ variants:
     lead: [exp-frint, proj-strokeshare, proj-system, proj-inventrack]
     drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech]
 
-  thinknovaa-backend-developer:
-    headline: "Backend Developer"
-    sections: [education, experience, projects, skills]
-    lead: [exp-frint, proj-inventrack, proj-system, exp-picard]
-    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-strokeshare, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic, picard-tech, system-oauth-adr, system-tech, inventrack-tech, frint-proctoring, frint-tech]
-
   amarsia-developer-advocacy-intern:
     headline: "Full Stack Developer, Agentic AI"
     sections: [education, experience, projects, skills]
