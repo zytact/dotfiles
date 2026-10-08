@@ -174,6 +174,8 @@ alias system-mcp="env --chdir=$HOME/Documents/system/ ENABLE_CLAUDEAI_MCP_SERVER
 # source /usr/share/doc/fzf/examples/key-bindings.zsh
 # source /usr/share/doc/fzf/examples/completion.zsh
 
+# Agent shells replay a snapshot without chpwd hooks, which trips zoxide's doctor.
+[[ -n $CLAUDECODE ]] && export _ZO_DOCTOR=0
 eval "$(zoxide init zsh)"
 eval "$(tv init zsh)"
 
