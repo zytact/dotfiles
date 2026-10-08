@@ -268,3 +268,23 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [exp-frint, exp-picard, proj-system, proj-inventrack, proj-gramgrab]
     drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, system-tech, inventrack-tech, gramgrab-tech, frint-tech, skills-agentic]
+
+  causalfunnel-software-engineer-intern:
+    headline: "Full Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack, proj-strokeshare]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
+
+
+  kangaroo-agency-mern-stack-developer-intern:
+    headline: "MERN Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack, proj-strokeshare]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
+
+
+  local-business-marketing-front-end-internship:
+    headline: "Frontend Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [proj-strokeshare, proj-system, exp-frint, proj-inventrack]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
