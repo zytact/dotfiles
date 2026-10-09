@@ -348,18 +348,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "night-shift/SKILL.md",
-      "skillFolderHash": "669e26761c33a51df25ca516f9cd502b8d61f4ba",
+      "skillFolderHash": "4f368998da9b1dd94eb5ce28327564f9bd893af0",
       "installedAt": "2026-10-06T22:59:05.706Z",
-      "updatedAt": "2026-10-08T21:48:28.785Z"
+      "updatedAt": "2026-10-09T06:46:03.698Z"
     },
     "job-apply": {
       "source": "zytact/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "job-apply/SKILL.md",
-      "skillFolderHash": "af0e152951b34cf24404cde88f8f0e40368483cd",
+      "skillFolderHash": "06749080357762cf1b5d7902961c941566cb31a4",
       "installedAt": "2026-10-07T23:52:13.901Z",
-      "updatedAt": "2026-10-09T01:33:40.095Z"
+      "updatedAt": "2026-10-09T09:15:01.963Z"
     }
   },
   "dismissed": {
