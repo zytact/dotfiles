@@ -105,9 +105,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "code-review/SKILL.md",
-      "skillFolderHash": "d06561c7333e0fb9a90009ae181525f74a5889b5",
+      "skillFolderHash": "2cae415f2ea6e22abbf7177e71c55ace6956fed7",
       "installedAt": "2026-07-12T08:07:02.629Z",
-      "updatedAt": "2026-10-08T06:53:45.058Z"
+      "updatedAt": "2026-10-08T20:54:32.821Z"
     },
     "postplan": {
       "source": "zytact/skills",
@@ -348,18 +348,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "night-shift/SKILL.md",
-      "skillFolderHash": "af3bb0406ab2fec1e8dae6bcdcc413d71c515364",
+      "skillFolderHash": "669e26761c33a51df25ca516f9cd502b8d61f4ba",
       "installedAt": "2026-10-06T22:59:05.706Z",
-      "updatedAt": "2026-10-06T23:32:54.331Z"
+      "updatedAt": "2026-10-08T21:48:28.785Z"
     },
     "job-apply": {
       "source": "zytact/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "job-apply/SKILL.md",
-      "skillFolderHash": "23da20585285097a6c59e33e9974613234c9c6ef",
+      "skillFolderHash": "af0e152951b34cf24404cde88f8f0e40368483cd",
       "installedAt": "2026-10-07T23:52:13.901Z",
-      "updatedAt": "2026-10-08T17:07:17.763Z"
+      "updatedAt": "2026-10-09T01:33:40.095Z"
     }
   },
   "dismissed": {
