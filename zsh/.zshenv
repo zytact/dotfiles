@@ -27,3 +27,6 @@ export PATH="$PATH:/home/arnab/.lmstudio/bin"
 
 export TEACH_HOME="$HOME/Documents/learning"
 export TEACH_DOMAIN="teach.zytact.com"
+
+# Agent shells replay a snapshot without chpwd hooks, which trips zoxide's doctor.
+[[ -n $CLAUDECODE ]] && export _ZO_DOCTOR=0
