@@ -275,14 +275,6 @@ variants:
     lead: [exp-frint, proj-system, proj-inventrack, proj-strokeshare]
     drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
 
-
-  kangaroo-agency-mern-stack-developer-intern:
-    headline: "MERN Stack Developer"
-    sections: [education, experience, projects, skills]
-    lead: [exp-frint, proj-system, proj-inventrack, proj-strokeshare]
-    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
-
-
   local-business-marketing-front-end-internship:
     headline: "Frontend Engineer"
     sections: [education, experience, projects, skills]
