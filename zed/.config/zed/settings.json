@@ -62,8 +62,8 @@
   "relative_line_numbers": "enabled",
   "theme": {
     "mode": "dark",
-    "light": "Washi Neutral",
-    "dark": "T3 Dark"
+    "light": "Okibi Light",
+    "dark": "Okibi"
   },
   "languages": {
     "Python": {
