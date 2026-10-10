@@ -1,7 +1,7 @@
 {
   "name": "arnab-themes",
   "displayName": "Arnab Themes",
-  "description": "Personal color themes: T3 Dark, Washi, Washi Neutral, Targaryen and Targaryen Light",
+  "description": "Personal color themes: T3 Dark, Washi, Washi Neutral, Targaryen, Targaryen Light, Okibi and Okibi Light",
   "version": "1.0.0",
   "publisher": "arnab",
   "private": true,
@@ -37,6 +37,16 @@
         "label": "T3 Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/t3-dark-color-theme.json"
+      },
+      {
+        "label": "Okibi",
+        "uiTheme": "vs-dark",
+        "path": "./themes/okibi-color-theme.json"
+      },
+      {
+        "label": "Okibi Light",
+        "uiTheme": "vs",
+        "path": "./themes/okibi-light-color-theme.json"
       }
     ]
   }
