@@ -176,6 +176,44 @@ config.color_schemes = {
 			new_tab_hover = { bg_color = "#e3e3e3", fg_color = "#3065cd" },
 		},
 	},
+	["Okibi"] = {
+		foreground = "#d7d7d7",
+		background = "#000000",
+		cursor_bg = "#f9681a",
+		cursor_border = "#f9681a",
+		cursor_fg = "#000000",
+		selection_bg = "#4a1502",
+		selection_fg = "#eeeeee",
+		ansi = { "#161616", "#dc6478", "#6cc085", "#ddb96c", "#66a8d5", "#b690e1", "#6fcac4", "#d7d7d7" },
+		brights = { "#7b7b7b", "#f9681a", "#98daa9", "#edd198", "#91bdde", "#cbb0ec", "#a0dfda", "#eeeeee" },
+		tab_bar = {
+			background = "#000000",
+			active_tab = { bg_color = "#421201", fg_color = "#eeeeee", intensity = "Bold" },
+			inactive_tab = { bg_color = "#000000", fg_color = "#999999" },
+			inactive_tab_hover = { bg_color = "#0e0e0e", fg_color = "#d7d7d7" },
+			new_tab = { bg_color = "#000000", fg_color = "#999999" },
+			new_tab_hover = { bg_color = "#0e0e0e", fg_color = "#f9681a" },
+		},
+	},
+	["Okibi Light"] = {
+		foreground = "#1f1f1f",
+		background = "#e1e1e1",
+		cursor_bg = "#c94c18",
+		cursor_border = "#c94c18",
+		cursor_fg = "#e1e1e1",
+		selection_bg = "#efac8d",
+		selection_fg = "#101010",
+		ansi = { "#c5c5c5", "#ac2e36", "#4a7c55", "#946824", "#34729b", "#6f4381", "#326f6b", "#1f1f1f" },
+		brights = { "#808080", "#c94c18", "#366140", "#72511d", "#216188", "#593269", "#1f5754", "#101010" },
+		tab_bar = {
+			background = "#d6d6d6",
+			active_tab = { bg_color = "#e1e1e1", fg_color = "#101010", intensity = "Bold" },
+			inactive_tab = { bg_color = "#d6d6d6", fg_color = "#555555" },
+			inactive_tab_hover = { bg_color = "#c9c9c9", fg_color = "#1f1f1f" },
+			new_tab = { bg_color = "#d6d6d6", fg_color = "#555555" },
+			new_tab_hover = { bg_color = "#c9c9c9", fg_color = "#c94c18" },
+		},
+	},
 	["Carbonfox"] = {
 		foreground = "#f2f4f8",
 		background = "#161616",
@@ -358,7 +396,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "T3 Dark"
+config.color_scheme = "Okibi"
 
 config.keys = {
 	-- Turn off the default CMD-m Hide action, allowing CMD-m to
