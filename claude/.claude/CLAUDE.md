@@ -64,6 +64,9 @@ chore: upgrade dependencies
 ```
 Use lowercase, write in the imperative mood, do not end with a period, and keep each commit focused on one logical change.
 
+## Issues
+- `gh` does support image uploads for issues with `--attach` flag.
+
 ## PRs
 - PRs should be kept under 600 LoC if possible. Do not do it, just to keep it under that line count, only if it makes sense.
 - Before declaring a PR complete, attach before and after screenshots or video to the PR description. Use `gh`, it supports PR attachments now. Do not commit media to the repository. Verify the PR displays the uploaded attachments; a local file path does not count. If capture or upload is impossible, state the specific blocker in the PR and final report.
