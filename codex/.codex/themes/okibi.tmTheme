@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Okibi</string>
+  <key>settings</key>
+  <array>
+    <dict>
+      <key>settings</key>
+      <dict>
+        <key>background</key><string>#000000</string>
+        <key>caret</key><string>#F9681A</string>
+        <key>foreground</key><string>#D7D7D7</string>
+        <key>invisibles</key><string>#2e2e2e</string>
+        <key>lineHighlight</key><string>#090909</string>
+        <key>selection</key><string>#4B1A07</string>
+      </dict>
+    </dict>
+    <dict><key>scope</key><string>comment, punctuation.definition.comment</string><key>settings</key><dict><key>foreground</key><string>#7b7b7b</string></dict></dict>
+    <dict><key>scope</key><string>variable, support.other.variable</string><key>settings</key><dict><key>foreground</key><string>#D7D7D7</string></dict></dict>
+    <dict><key>scope</key><string>keyword, storage.type, storage.modifier, variable.language</string><key>settings</key><dict><key>foreground</key><string>#F9681A</string></dict></dict>
+    <dict><key>scope</key><string>string, constant.other.symbol, constant.other.key</string><key>settings</key><dict><key>foreground</key><string>#6CC085</string></dict></dict>
+    <dict><key>scope</key><string>constant.numeric, constant.language, constant.character, constant.escape</string><key>settings</key><dict><key>foreground</key><string>#DDB96C</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.function, variable.function, support.function</string><key>settings</key><dict><key>foreground</key><string>#B690E1</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.type, entity.name.class, support.type, support.class</string><key>settings</key><dict><key>foreground</key><string>#6FCAC4</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.tag, entity.other.attribute-name</string><key>settings</key><dict><key>foreground</key><string>#F9681A</string></dict></dict>
+    <dict><key>scope</key><string>invalid, invalid.illegal, markup.deleted</string><key>settings</key><dict><key>foreground</key><string>#EC7386</string></dict></dict>
+    <dict><key>scope</key><string>markup.inserted</string><key>settings</key><dict><key>foreground</key><string>#6CC085</string></dict></dict>
+    <dict><key>scope</key><string>markup.heading, markup.bold, markup.underline</string><key>settings</key><dict><key>foreground</key><string>#F9681A</string></dict></dict>
+    <dict><key>scope</key><string>markup.italic</string><key>settings</key><dict><key>fontStyle</key><string>italic</string><key>foreground</key><string>#D7D7D7</string></dict></dict>
+  </array>
+</dict>
+</plist>

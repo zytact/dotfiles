@@ -309,7 +309,7 @@ trust_level = "trusted"
 status_line = ["model-with-reasoning", "current-dir", "git-branch", "pull-request-number", "approval-mode", "context-remaining", "five-hour-limit", "weekly-limit", "used-tokens"]
 status_line_use_colors = true
 pet = "disabled"
-theme = "t3-dark"
+theme = "okibi"
 alternate_screen = "always"
 screen_reader_detection_done = true
 
