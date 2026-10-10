@@ -280,3 +280,39 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [proj-strokeshare, proj-system, exp-frint, proj-inventrack]
     drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
+
+  sony-research-india-llm-research-intern:
+    headline: "AI / Machine Learning Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-nits-2026, exp-frint, proj-inventrack, proj-system]
+    drop: [exp-nits-2025, exp-gdg, proj-gramgrab, proj-strokeshare, proj-compress, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, system-tech, inventrack-tech, skills-agentic]
+
+  resonance-technical-fellow:
+    headline: "Full Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-strokeshare, proj-system, proj-inventrack]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech]
+
+  meeboss-generative-ai-engineer:
+    headline: "Generative AI Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, exp-nits-2026, proj-inventrack, proj-system]
+    drop: [exp-nits-2025, exp-gdg, proj-gramgrab, proj-strokeshare, proj-compress, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, nits-benchmark, picard-tech, system-oauth-adr, system-tech, inventrack-tech, nits-fusion, skills-agentic]
+
+  campus-collective-software-engineer-intern:
+    headline: "Software Engineer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack, proj-strokeshare]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech]
+
+  zunderdog-junior-web-developer:
+    headline: "Frontend Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [proj-strokeshare, exp-frint, proj-system, proj-inventrack]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
+
+  data-eminence-full-stack-developer:
+    headline: "Full Stack Developer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-strokeshare, proj-system, proj-inventrack]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
