@@ -1,13 +1,15 @@
 # Dotfiles
 
-My dotfiles. I use [GNU Stow](https://www.gnu.org/software/stow/) to manage them.
+Managed with [chezmoi](https://www.chezmoi.io). See `AGENTS.md` for the layout and workflow.
 
-Run `stow <package>` from this directory to install a package.
+- Edit: `chezmoi edit <file>`, then `chezmoi apply`
+- Pull live edits back: `chezmoi add <file>`
+- Review: `chezmoi diff`, `chezmoi status`
+- Update from remote: `git pull` in this repo, then `chezmoi apply`
 
-For CLIProxyAPI, `stow cliproxyapi` links `config.yaml.template` and
-`cliproxyapi-render-config` into `~/cliproxyapi/`. On a new machine, export
-`CLIPROXY_API_KEY` and `CLIPROXY_MANAGEMENT_KEY` in plaintext (e.g. from
-`~/.secrets`, which stays outside Git — the proxy hashes the management key on
-startup) and run `~/cliproxyapi/cliproxyapi-render-config` to write the live
-`config.yaml`. The live config and auth files stay outside Git. The proxy
-hot-reloads config changes, so no restart is needed after re-rendering.
+Only `home/` is deployed. Per-machine skips are in `home/.chezmoiignore`.
+
+CLIProxyAPI (not managed by chezmoi): `cliproxyapi/` holds `config.yaml.template` and
+`cliproxyapi-render-config`. Export `CLIPROXY_API_KEY` and `CLIPROXY_MANAGEMENT_KEY` (e.g.
+from `~/.secrets`, kept outside Git), copy both files into `~/cliproxyapi/` and run
+`~/cliproxyapi/cliproxyapi-render-config`.

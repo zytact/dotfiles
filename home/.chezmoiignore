@@ -1,0 +1,19 @@
+{{- /* WSL has no desktop session; these packages are only for the matching machines */ -}}
+{{- if and (hasKey .chezmoi "kernel") (contains "microsoft" (lower .chezmoi.kernel.osrelease)) }}
+.config/awesome
+.config/ghostty
+.config/kitty
+.config/mpv
+.config/ranger
+.config/wezterm
+.config/zed
+.config/fontconfig
+.config/zellij
+.config/herdr
+.config/hunk
+.config/television
+.codex
+.pi
+.vimrc
+.ideavimrc
+{{- end }}

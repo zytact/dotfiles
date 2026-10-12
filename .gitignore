@@ -1,7 +1,7 @@
-lvim/.config/lvim/lazy-lock.json
-zed/.config/zed/.*
+home/dot_config/lvim/lazy-lock.json
+home/dot_config/zed/dot_*
 .supermaven
-lazyvim/.config/lazyvim/lazy-lock.json
-is-dl/.config/is-dl/answers.md
-claude/.claude/skills/synced/
-claude/.claude/state/
+home/dot_config/lazyvim/lazy-lock.json
+home/dot_config/is-dl/answers.md
+home/dot_claude/skills/synced/
+home/dot_claude/state/
