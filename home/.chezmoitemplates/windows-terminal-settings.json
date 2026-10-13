@@ -69,6 +69,8 @@
     "profiles": {
         "defaults": {
             "colorScheme": "Okibi",
+            "opacity": 70,
+            "useAcrylic": true,
             "font": {
                 "face": "CaskaydiaCove Nerd Font",
                 "size": 12,
