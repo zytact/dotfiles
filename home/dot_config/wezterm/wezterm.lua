@@ -402,6 +402,9 @@ config.color_scheme = "Okibi"
 if wezterm.target_triple:find("windows") then
 	config.default_domain = "WSL:Ubuntu"
 	config.font_size = 12
+	config.launch_menu = {
+		{ label = "PowerShell", args = { "pwsh.exe", "-NoLogo" } },
+	}
 end
 
 config.keys = {
