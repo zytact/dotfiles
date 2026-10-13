@@ -1,0 +1,362 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{708568d5-5fa0-5371-b085-e48b70e221bd}",
+    "launchMode": "maximized",
+    "copyOnSelect": false,
+    "copyFormatting": "none",
+    "actions": [
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "right",
+                "size": 0.3
+            },
+            "id": "User.splitRight"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "profile": "Ubuntu",
+                "commandline": "wsl.exe -d Ubuntu -- zsh -ic \"nvim $(tv dotfiles)\""
+            },
+            "id": "User.editDotfiles"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "profile": "Ubuntu",
+                "commandline": "wsl.exe -d Ubuntu -- zsh -ic \"open_proj && exec zsh\""
+            },
+            "id": "User.openProject"
+        }
+    ],
+    "keybindings": [
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.FindText",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.splitRight",
+            "keys": "ctrl+enter"
+        },
+        {
+            "id": "User.editDotfiles",
+            "keys": "ctrl+shift+d"
+        },
+        {
+            "id": "User.openProject",
+            "keys": "ctrl+shift+o"
+        }
+    ],
+    "newTabMenu": [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": {
+        "defaults": {
+            "colorScheme": "Okibi",
+            "font": {
+                "face": "CaskaydiaCove Nerd Font",
+                "size": 12,
+                "weight": "semi-bold",
+                "cellHeight": "1.3"
+            }
+        },
+        "list": [
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{708568d5-5fa0-5371-b085-e48b70e221bd}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Microsoft.WSL"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Targaryen",
+            "foreground": "#ebd9d2",
+            "background": "#000000",
+            "cursorColor": "#ff7a29",
+            "selectionBackground": "#4a161c",
+            "black": "#17090b",
+            "red": "#f5384f",
+            "green": "#57b894",
+            "yellow": "#d9a441",
+            "blue": "#7d9bb5",
+            "purple": "#a06fbf",
+            "cyan": "#6fbfb2",
+            "white": "#ebd9d2",
+            "brightBlack": "#947474",
+            "brightRed": "#ff5a6e",
+            "brightGreen": "#7fd6ae",
+            "brightYellow": "#f0c98a",
+            "brightBlue": "#9fbcd4",
+            "brightPurple": "#c49ada",
+            "brightCyan": "#93d8cc",
+            "brightWhite": "#fff5f0"
+        },
+        {
+            "name": "T3 Dark",
+            "foreground": "#f5f5f5",
+            "background": "#0a0a0a",
+            "cursorColor": "#b4cbff",
+            "selectionBackground": "#343a47",
+            "black": "#111111",
+            "red": "#fb414a",
+            "green": "#54c57a",
+            "yellow": "#e4b750",
+            "blue": "#51a2ff",
+            "purple": "#bb8aef",
+            "cyan": "#51cec7",
+            "white": "#f5f5f5",
+            "brightBlack": "#818181",
+            "brightRed": "#fd7277",
+            "brightGreen": "#89dea1",
+            "brightYellow": "#f3d086",
+            "brightBlue": "#87bafd",
+            "brightPurple": "#ceacf7",
+            "brightCyan": "#91e2dc",
+            "brightWhite": "#ffffff"
+        },
+        {
+            "name": "Targaryen Light",
+            "foreground": "#26231f",
+            "background": "#f9f9f8",
+            "cursorColor": "#b8501e",
+            "selectionBackground": "#e4e2de",
+            "black": "#dedddb",
+            "red": "#b3202f",
+            "green": "#2f7f63",
+            "yellow": "#8a6612",
+            "blue": "#456e8c",
+            "purple": "#7a3f9c",
+            "cyan": "#1f7a6e",
+            "white": "#26231f",
+            "brightBlack": "#a3a09c",
+            "brightRed": "#8f1826",
+            "brightGreen": "#24664f",
+            "brightYellow": "#6e5210",
+            "brightBlue": "#35576f",
+            "brightPurple": "#5f3079",
+            "brightCyan": "#176159",
+            "brightWhite": "#141210"
+        },
+        {
+            "name": "Washi",
+            "foreground": "#27221d",
+            "background": "#faf9f6",
+            "cursorColor": "#c44323",
+            "selectionBackground": "#e8e2db",
+            "black": "#e2dfdb",
+            "red": "#b32130",
+            "green": "#457d52",
+            "yellow": "#976712",
+            "blue": "#32618e",
+            "purple": "#714085",
+            "cyan": "#29706c",
+            "white": "#27221d",
+            "brightBlack": "#a39d98",
+            "brightRed": "#c44323",
+            "brightGreen": "#31623d",
+            "brightYellow": "#755010",
+            "brightBlue": "#224a71",
+            "brightPurple": "#5b2f6d",
+            "brightCyan": "#155855",
+            "brightWhite": "#15110d"
+        },
+        {
+            "name": "Washi Neutral",
+            "foreground": "#232323",
+            "background": "#f9f9f9",
+            "cursorColor": "#3065cd",
+            "selectionBackground": "#e3e3e3",
+            "black": "#dfdfdf",
+            "red": "#b32130",
+            "green": "#457d52",
+            "yellow": "#976712",
+            "blue": "#3065cd",
+            "purple": "#714085",
+            "cyan": "#29706c",
+            "white": "#232323",
+            "brightBlack": "#9e9e9e",
+            "brightRed": "#c44323",
+            "brightGreen": "#31623d",
+            "brightYellow": "#755010",
+            "brightBlue": "#2354b3",
+            "brightPurple": "#5b2f6d",
+            "brightCyan": "#155855",
+            "brightWhite": "#121212"
+        },
+        {
+            "name": "Okibi",
+            "foreground": "#d7d7d7",
+            "background": "#000000",
+            "cursorColor": "#f9681a",
+            "selectionBackground": "#4a1502",
+            "black": "#161616",
+            "red": "#dc6478",
+            "green": "#6cc085",
+            "yellow": "#ddb96c",
+            "blue": "#66a8d5",
+            "purple": "#b690e1",
+            "cyan": "#6fcac4",
+            "white": "#d7d7d7",
+            "brightBlack": "#7b7b7b",
+            "brightRed": "#f9681a",
+            "brightGreen": "#98daa9",
+            "brightYellow": "#edd198",
+            "brightBlue": "#91bdde",
+            "brightPurple": "#cbb0ec",
+            "brightCyan": "#a0dfda",
+            "brightWhite": "#eeeeee"
+        },
+        {
+            "name": "Okibi Light",
+            "foreground": "#1f1f1f",
+            "background": "#e1e1e1",
+            "cursorColor": "#c94c18",
+            "selectionBackground": "#efac8d",
+            "black": "#c5c5c5",
+            "red": "#ac2e36",
+            "green": "#4a7c55",
+            "yellow": "#946824",
+            "blue": "#34729b",
+            "purple": "#6f4381",
+            "cyan": "#326f6b",
+            "white": "#1f1f1f",
+            "brightBlack": "#808080",
+            "brightRed": "#c94c18",
+            "brightGreen": "#366140",
+            "brightYellow": "#72511d",
+            "brightBlue": "#216188",
+            "brightPurple": "#593269",
+            "brightCyan": "#1f5754",
+            "brightWhite": "#101010"
+        },
+        {
+            "name": "Carbonfox",
+            "foreground": "#f2f4f8",
+            "background": "#161616",
+            "cursorColor": "#f2f4f8",
+            "selectionBackground": "#525253",
+            "black": "#282828",
+            "red": "#ee5396",
+            "green": "#25be6a",
+            "yellow": "#08bdba",
+            "blue": "#78a9ff",
+            "purple": "#be95ff",
+            "cyan": "#33b1ff",
+            "white": "#dfdfe0",
+            "brightBlack": "#484848",
+            "brightRed": "#ff7eb6",
+            "brightGreen": "#42be65",
+            "brightYellow": "#3ddbd9",
+            "brightBlue": "#82cfff",
+            "brightPurple": "#be95ff",
+            "brightCyan": "#3ddbd9",
+            "brightWhite": "#ffffff"
+        },
+        {
+            "name": "Blue Matrix Light",
+            "foreground": "#123047",
+            "background": "#e3ebf0",
+            "cursorColor": "#008f5a",
+            "selectionBackground": "#d8eaff",
+            "black": "#cedde6",
+            "red": "#c0266f",
+            "green": "#008f5a",
+            "yellow": "#9a6a00",
+            "blue": "#0969da",
+            "purple": "#6d5bd0",
+            "cyan": "#008aa6",
+            "white": "#123047",
+            "brightBlack": "#7aa7bd",
+            "brightRed": "#a3195b",
+            "brightGreen": "#00784c",
+            "brightYellow": "#7c5600",
+            "brightBlue": "#005fb8",
+            "brightPurple": "#5848b8",
+            "brightCyan": "#007f98",
+            "brightWhite": "#071a1f"
+        },
+        {
+            "name": "GitHub Dark Colorblind",
+            "foreground": "#c9d1d9",
+            "background": "#0d1117",
+            "cursorColor": "#58a6ff",
+            "selectionBackground": "#0c2d6b",
+            "black": "#484f58",
+            "red": "#ec8e2c",
+            "green": "#58a6ff",
+            "yellow": "#d29922",
+            "blue": "#58a6ff",
+            "purple": "#bc8cff",
+            "cyan": "#76e3ea",
+            "white": "#b1bac4",
+            "brightBlack": "#6e7681",
+            "brightRed": "#fdac54",
+            "brightGreen": "#79c0ff",
+            "brightYellow": "#e3b341",
+            "brightBlue": "#79c0ff",
+            "brightPurple": "#d2a8ff",
+            "brightCyan": "#a5f3fc",
+            "brightWhite": "#f0f6fc"
+        },
+        {
+            "name": "GitHub Light Colorblind",
+            "foreground": "#24292f",
+            "background": "#ffffff",
+            "cursorColor": "#0969da",
+            "selectionBackground": "#b6e3ff",
+            "black": "#24292f",
+            "red": "#b35900",
+            "green": "#0550ae",
+            "yellow": "#4d2d00",
+            "blue": "#0969da",
+            "purple": "#8250df",
+            "cyan": "#1b7c83",
+            "white": "#6e7781",
+            "brightBlack": "#57606a",
+            "brightRed": "#8a4600",
+            "brightGreen": "#0969da",
+            "brightYellow": "#633c01",
+            "brightBlue": "#218bff",
+            "brightPurple": "#a475f9",
+            "brightCyan": "#3192aa",
+            "brightWhite": "#8c959f"
+        }
+    ],
+    "themes": []
+}

@@ -1,0 +1,9 @@
+{{- if and (hasKey .chezmoi "kernel") (contains "microsoft" (lower .chezmoi.kernel.osrelease)) -}}
+#!/bin/sh
+# Copies the Windows Terminal settings into the Windows-side LocalState dir.
+# settings hash: {{ include ".chezmoitemplates/windows-terminal-settings.json" | sha256sum }}
+set -eu
+local_app_data=$(wslpath "$(cmd.exe /c 'echo %LOCALAPPDATA%' 2>/dev/null | tr -d '\r')")
+target="$local_app_data/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+cp "{{ .chezmoi.sourceDir }}/.chezmoitemplates/windows-terminal-settings.json" "$target"
+{{- end }}
