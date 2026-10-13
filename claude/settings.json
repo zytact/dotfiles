@@ -7,7 +7,7 @@
       "RemoteTrigger"
     ]
   },
-  "model": "opus",
+  "model": "sonnet",
   "disableClaudeAiConnectors": true,
   "hooks": {
     "SessionStart": [
@@ -39,7 +39,7 @@
   "promptSuggestionEnabled": false,
   "tui": "fullscreen",
   "voice": {
-    "enabled": true,
+    "enabled": false,
     "mode": "hold"
   },
   "autoMemoryEnabled": false,
@@ -47,5 +47,5 @@
   "theme": "custom:okibi",
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true
+  "voiceEnabled": false
 }
