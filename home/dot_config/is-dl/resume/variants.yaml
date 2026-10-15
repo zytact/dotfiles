@@ -392,3 +392,9 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [proj-strokeshare, exp-frint, proj-inventrack, proj-system]
     drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
+
+  interviewkickstart-frontend-intern:
+    headline: "Frontend Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [proj-strokeshare, exp-frint, proj-inventrack, proj-system]
+    drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
