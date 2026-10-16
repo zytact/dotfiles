@@ -398,3 +398,9 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [proj-strokeshare, exp-frint, proj-inventrack, proj-system]
     drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
+
+  inspire-careers-junior-ai-developer:
+    headline: "AI / Machine Learning Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, exp-nits-2026, proj-inventrack, proj-system]
+    drop: [exp-nits-2025, exp-gdg, proj-gramgrab, proj-strokeshare, proj-compress, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, nits-benchmark, picard-tech, system-oauth-adr, system-tech, inventrack-tech, nits-fusion]
