@@ -191,17 +191,6 @@ command -v thefuck >/dev/null && eval $(thefuck --alias)
 # bun completions
 [ -s "/home/arnab/.bun/_bun" ] && source "/home/arnab/.bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# pnpm
-export PNPM_HOME="/home/arnab/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 
 # Auto-start herdr only once and only on interactive sessions
 # if command -v herdr >/dev/null 2>&1 \
@@ -214,6 +203,3 @@ esac
 # fi
 
 
-# >>> Codex installer >>>
-export PATH="/home/arnab/.local/bin:$PATH"
-# <<< Codex installer <<<

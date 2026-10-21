@@ -5,6 +5,7 @@
 - Deployed files are **copies**, not symlinks. Edit the source (`chezmoi edit <target>` or edit under `home/`), then `chezmoi apply`. If a live file was edited directly, pull it back with `chezmoi add <target>`.
 - Naming: a leading `.` becomes `dot_` (`dot_config/nvim` -> `~/.config/nvim`), executable files get `executable_`, symlinks are `symlink_<name>` files whose content is the link target (relative to the deployed dir).
 - Per-machine differences: `home/.chezmoiignore` (templated; currently skips desktop-only tools on WSL), plus `.tmpl` files using `.chezmoi.*` data. Keep shell guards (`[ -f ... ]`, `command -v`) for optional tools.
+- Shell env (PATH, exports) lives in `home/dot_config/shell/env.sh`, sourced by both `.zshenv` and `.bashrc`. `.zshrc` is for interactive use only. Agents run commands in bash: Claude Code via `CLAUDE_CODE_SHELL` in `claude/settings.json`, Codex via a handoff in `.zshenv` (Codex always uses the login shell).
 - `~/.claude/settings.json` is a symlink (via `home/dot_claude/symlink_settings.json.tmpl`) to `claude/settings.json` in this repo, because Claude Code rewrites it.
 - No build/test/lint workflows are defined; avoid guessing commands. Useful checks: `chezmoi diff`, `chezmoi status`, `chezmoi apply -n -v`.
 
