@@ -1,4 +1,4 @@
-palette = "okibi"
+palette = "t3_light"
 add_newline = false
 command_timeout = 2000
 scan_timeout = 50
@@ -540,6 +540,37 @@ crust = "#0a0a0a"
 line = "#191919"
 fg = "#f5f5f5"
 select = "#343a47"
+
+[palettes.t3_light]
+rosewater = "#27272a"
+flamingo = "#be123c"
+pink = "#6b21a8"
+mauve = "#1b4ed8"
+red = "#dc2626"
+maroon = "#b91c1c"
+peach = "#1e40af"
+yellow = "#a16207"
+green = "#15803d"
+teal = "#0f766e"
+sky = "#115e59"
+sapphire = "#1d4ed8"
+blue = "#1e40af"
+lavender = "#1e40af"
+text = "#27272a"
+subtext1 = "#52525c"
+subtext0 = "#71717b"
+overlay2 = "#71717b"
+overlay1 = "#d4d4d8"
+overlay0 = "#e4e4e7"
+surface2 = "#efeff1"
+surface1 = "#f4f4f5"
+surface0 = "#f4f4f5"
+base = "#fcfcfc"
+mantle = "#fafafa"
+crust = "#fcfcfc"
+line = "#e4e4e7"
+fg = "#27272a"
+select = "#d0d6dd"
 
 [palettes.okibi]
 rosewater = "#d7d7d7"
