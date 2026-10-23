@@ -548,3 +548,9 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [proj-strokeshare, exp-frint, proj-system, proj-inventrack]
     drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
+
+  onespotai-research-engineer:
+    headline: "AI Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [proj-system, exp-frint, proj-inventrack, exp-nits-2026]
+    drop: [exp-nits-2025, exp-gdg, proj-gramgrab, proj-strokeshare, proj-compress, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, nits-benchmark, picard-tech, system-oauth-adr, inventrack-tech, nits-fusion]
