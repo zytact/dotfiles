@@ -119,6 +119,25 @@ config.color_schemes = {
 			new_tab_hover = { bg_color = "#141414", fg_color = "#568ef9" },
 		},
 	},
+	["T3 Light"] = {
+		foreground = "#27272a",
+		background = "#fcfcfc",
+		cursor_bg = "#26384e",
+		cursor_border = "#26384e",
+		cursor_fg = "#fcfcfc",
+		selection_bg = "#d0d6dd",
+		selection_fg = "#09090b",
+		ansi = { "#e4e4e7", "#dc2626", "#15803d", "#a16207", "#1d4ed8", "#7e22ce", "#0f766e", "#27272a" },
+		brights = { "#71717b", "#b91c1c", "#166534", "#854d0e", "#1e40af", "#6b21a8", "#115e59", "#09090b" },
+		tab_bar = {
+			background = "#fcfcfc",
+			active_tab = { bg_color = "#e0e6f7", fg_color = "#09090b", intensity = "Bold" },
+			inactive_tab = { bg_color = "#fcfcfc", fg_color = "#52525c" },
+			inactive_tab_hover = { bg_color = "#efeff1", fg_color = "#27272a" },
+			new_tab = { bg_color = "#fcfcfc", fg_color = "#52525c" },
+			new_tab_hover = { bg_color = "#efeff1", fg_color = "#1b4ed8" },
+		},
+	},
 	["Targaryen Light"] = {
 		foreground = "#26231f",
 		background = "#f9f9f8",
@@ -396,7 +415,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "Okibi"
+config.color_scheme = "T3 Light"
 
 -- On Windows, open WSL Ubuntu by default
 if wezterm.target_triple:find("windows") then
