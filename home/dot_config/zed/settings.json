@@ -28,7 +28,7 @@
   "redact_private_values": false,
   "format_on_save": "on",
   "icon_theme": {
-    "mode": "dark",
+    "mode": "light",
     "light": "Material Icon Theme",
     "dark": "Catppuccin Mocha"
   },
@@ -61,9 +61,9 @@
   },
   "relative_line_numbers": "enabled",
   "theme": {
-    "mode": "dark",
-    "light": "Okibi Light",
-    "dark": "Okibi"
+    "mode": "light",
+    "light": "T3 Light",
+    "dark": "T3 Dark"
   },
   "languages": {
     "Python": {
