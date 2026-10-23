@@ -68,8 +68,8 @@
     ],
     "profiles": {
         "defaults": {
-            "colorScheme": "Okibi",
-            "opacity": 70,
+            "colorScheme": "T3 Light",
+            "opacity": 40,
             "useAcrylic": true,
             "font": {
                 "face": "CaskaydiaCove Nerd Font",
@@ -151,6 +151,29 @@
             "brightPurple": "#ceacf7",
             "brightCyan": "#91e2dc",
             "brightWhite": "#ffffff"
+        },
+        {
+            "name": "T3 Light",
+            "foreground": "#27272a",
+            "background": "#fcfcfc",
+            "cursorColor": "#26384e",
+            "selectionBackground": "#d0d6dd",
+            "black": "#e4e4e7",
+            "red": "#dc2626",
+            "green": "#15803d",
+            "yellow": "#a16207",
+            "blue": "#1d4ed8",
+            "purple": "#7e22ce",
+            "cyan": "#0f766e",
+            "white": "#27272a",
+            "brightBlack": "#71717b",
+            "brightRed": "#b91c1c",
+            "brightGreen": "#166534",
+            "brightYellow": "#854d0e",
+            "brightBlue": "#1e40af",
+            "brightPurple": "#6b21a8",
+            "brightCyan": "#115e59",
+            "brightWhite": "#09090b"
         },
         {
             "name": "Targaryen Light",
