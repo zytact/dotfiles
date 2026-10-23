@@ -7,7 +7,6 @@ set -euo pipefail
 cd "$(dirname "$0")"
 name=$(python3 -c 'import json;m=json.load(open("package.json"));print(m["publisher"]+"."+m["name"]+"-"+m["version"])')
 out="${TMPDIR:-/tmp}/$name.vsix"
-[[ "$(command -v code)" == /mnt/* ]] && out="/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d "\r")/AppData/Local/Temp/$name.vsix"
 
 python3 - "$out" <<'PY'
 import json, sys, zipfile, pathlib
@@ -48,10 +47,5 @@ with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         z.write(p, f"extension/{p}")
 PY
 
-# Windows VS Code (launched from WSL) needs a Windows path to the vsix
-install_path="$out"
-if command -v wslpath >/dev/null && [[ "$(command -v code)" == /mnt/* ]]; then
-  install_path=$(wslpath -w "$out")
-fi
-code --install-extension "$install_path" --force
+code --install-extension "$out" --force
 rm -f "$out"
