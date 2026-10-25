@@ -1,6 +1,6 @@
 ---
 name: job-apply
-description: Find internships with is-dl and apply to them in a private browser that carries the user's logins, uploading a tailored resume, answering screening questions from the user's answer bank, and logging each submission in is-dl. Use when asked to apply to jobs, or when a scheduled application run fires.
+description: Find internships and entry-level jobs with is-dl and apply to them in a private browser that carries the user's logins, uploading a tailored resume, answering screening questions from the user's answer bank, and logging each submission in is-dl. Use when asked to apply to jobs, or when a scheduled application run fires.
 disable-model-invocation: true
 ---
 
@@ -70,14 +70,14 @@ A run the user starts by hand, and every trial, does not defer. Over the thresho
 1. On a scheduled run, the usage gate. If it trips, do nothing else.
 2. `is-dl doctor --json`. Exit 3 means the is-dl LinkedIn session expired: stop and tell the user to run `is-dl login`.
 3. Read `~/.config/is-dl/answers.md`. It holds every fact you may put in a form. The phone number is in `$APPLICANT_PHONE`. If either is missing, set it up as "First run on a machine" says.
-4. Read `~/.local/state/job-apply/pending.json` if it exists. Apply first to its `queued` jobs and to `stopped` jobs the user has since answered. They count toward the run's 5. Never reopen an `interrupted` job; see Log.
+4. Read `~/.local/state/job-apply/pending.json` if it exists. Apply first to its `queued` jobs and to `stopped` jobs the user has since answered. They count toward the run's 5. A `drafted` job waits for the user; see Y Combinator drafts. Never reopen an `interrupted` job; see Log.
 5. `node $B start`, then `open https://www.linkedin.com/feed/` and `snapshot`. The page must show the feed, not "Sign in" or "Join now". If it is signed out, stop and tell the user to sign in to LinkedIn in Helium. Never ask for credentials.
 
 ## Find
 
 ```bash
-is-dl search -k "<role> intern" --source linkedin -l "<location>" --remote-only \
-  --experience-level Internship --posted-within "Past week" --exclude-unpaid --exclude-applied --exclude-seen --json
+is-dl search -k "<role>" --source linkedin -l "<location>" --remote-only \
+  --experience-level "Internship,Entry level" --posted-within "Past week" --exclude-unpaid --exclude-applied --exclude-seen --json
 ```
 
 A search takes 2 to 5 minutes, sometimes more, and a full 50-listing run can take 50. Run each search as its own background job with a 2-hour timeout, and read its output file when the job finishes. A foreground or default-timeout job gets killed at 30 minutes and loses the listings it had collected.
@@ -88,17 +88,28 @@ When a search fails with a navigation or job-list timeout, run it once more. If 
 
 Search software engineer in all three locations first. LinkedIn's search matches meaning, so a second role in the same location mostly repeats the first search's listings and then returns on-site ones. Only if you are still short of candidates, search one more role across the three locations, in this order: full stack developer, AI engineer, forward deployed engineer. Skip Unstop. A search can return the same `jobId` twice; keep one.
 
+Also run one Y Combinator search every run, next to the LinkedIn ones:
+
+```bash
+is-dl search -k software --source ycombinator --ycombinator-skip-us-only \
+  --ycombinator-max-experience 1 --exclude-unpaid --exclude-applied --exclude-seen --json
+```
+
+It needs no browser and finishes in under a minute. Its listings are mostly full-time jobs with an annual USD range in `pay.amount`, so judge pay by the job rule below. Judge each one from its `descriptionText` and `requirementsText` instead of opening the page. It returns on-site and hybrid listings too, because Y Combinator is where the user also looks for a job after graduating (see below).
+
 `--exclude-seen` hides every listing a search has returned before, opened or not. Keep `--posted-within`: without it, the search pages past the seen listings into months-old on-site results. Before you start applying, write the kept candidates to `pending.json` (see Log), so an interrupted run does not lose them.
 
 Judge each listing by reading its description, as the is-dl skill describes. The pay label misses pay stated in the text, so read for it. Keep a listing only if all of these hold:
 
-- Actually remote. `--remote-only` only adds "remote" to the query text, which LinkedIn ranks by but does not enforce, so first drop listings whose `jobType` says `On-site` or `Hybrid`. Among the rest, required office attendance rules it out. So does anything the user cannot meet from India: work authorization or residence in another country, enrollment at a university there, or a working language other than English. Many United States and Europe listings have one of these. A listing that states none of them stays in. A form question asking whether you can work from a named office also rules the job out; reject it then. A `locationConflict` raised by an optional perk, such as an office gym, does not.
+- Actually remote, or an after-graduation listing (see below). `--remote-only` only adds "remote" to the query text, which LinkedIn ranks by but does not enforce, so first drop listings whose `jobType` says `On-site` or `Hybrid`. Among the rest, required office attendance rules it out. So does anything the user cannot meet from India: work authorization or residence in another country, enrollment at a university there, or a working language other than English. Many United States and Europe listings have one of these. A listing that states none of them stays in. A form question asking whether you can work from a named office also rules the job out; reject it then. A `locationConflict` raised by an optional perk, such as an office gym, does not.
 - Paid or pay unstated. An internship counts when its stated pay is at least INR 5,000 a month, including "up to", performance-based and incentive stipends. A job that is not an internship (contract, full-time) counts at INR 40,000 a month or more in base pay, or INR 8 LPA or more in CTC. Indian listings often quote CTC; never read a CTC as base pay unless the listing says so. Unpaid and smaller amounts are out.
 - A fit for the resume. Skip roles that need years of experience, or a language or field the resume does not show, such as Java or embedded systems. A framework the resume lacks is not a reason to skip when the resume shows its language. A Django role fits a resume with Python and FastAPI.
 - A named company. Skip a listing with no company name.
 - A real company hiring for its own product or clients. Skip internship mills: India-only outfits whose name is built around interning, skilling or mentoring (internmo, Skillzenloop, Unified Mentor), and listings that sell a "structured internship program" for freshers with a certificate, a performance-based "up to" stipend and the same template posted for many roles.
 
-Hours do not decide. Never skip a listing for a `Full-time` tag or for stated full-time hours; the user settles hours with the company after an offer. If a form asks about hours, answer from `answers.md`.
+An after-graduation listing is an on-site or hybrid role the user would start in July 2027, after graduating. Every on-site or hybrid Y Combinator listing counts as one, and so does a LinkedIn listing that says it hires 2027 graduates or starts after June 2027. It replaces the remote rule: keep it when the office is in India, or abroad with a visa line that does not say `US citizen/visa only` and nothing else that needs citizenship or residence there. The hours rule below does not apply to it. On its form, answer start date and relocation from the after-graduation lines in `answers.md`.
+
+Hours decide. Keep a listing when its hours fit the user's, as `answers.md` states them: flexible or async hours, part-time, or up to about 40 hours a week. Skip it when it needs more, or fixed working hours during the user's weekday classes. A listing that states no hours, or only says `Full-time`, stays in. If a form asks about hours or a start date, answer from `answers.md`.
 
 Fewer good listings than the limit is fine. Never pad.
 
@@ -107,8 +118,8 @@ Fewer good listings than the limit is fine. Never pad.
 For each kept listing, one at a time:
 
 1. Add a variant to `variants.yaml` named `<company>-<role>`, by copying an existing block and changing only `headline`, `lead` and `drop`. Build it with `is-dl resume build --variant <name> --json` and take the PDF path from its output. Fix overflow by dropping bullets, as the is-dl skill says.
-2. `open` the listing and `snapshot`.
-3. Click Easy Apply, or Apply when it leads to the employer's site. External sites are fine, but only those that need no new account. A site you are already signed in to, such as Google Forms, is fine. If the listing only gives an email address, stop on this job. When `click` on Easy Apply prints `dialog: false`, wait 3 seconds and snapshot before clicking again. A second click on an open form closes it and asks "Save this application?"; answer Discard and start over.
+2. `open` the listing and `snapshot`. For a Y Combinator job, `open` `https://www.workatastartup.com/jobs/<jobId>` instead. Its `applyUrl` only leads to the profile wizard.
+3. Click Easy Apply, or Apply when it leads to the employer's site. External sites are fine, but only those that need no new account. A site you are already signed in to, such as Google Forms, is fine. If the listing only gives an email address, stop on this job. On a Y Combinator job page, a signed-in user's name shows next to "My profile". If the page shows "Sign in" there instead, stop on every Y Combinator job this run and tell the user to sign in to workatastartup.com in Helium. Snapshots miss its Apply link, so click it with `eval`: the `a` element whose text is exactly `Apply`. It opens a dialog with one message to the founder, at least 50 characters, and a Send button. Write 2 or 3 sentences from `resume.yaml` and the listing: who the user is, the most relevant thing they built, and when they can start. When the dialog says the qualifications might not match, re-check the listing against the keep rules and go ahead if it still passes. Never click Send on a run; see Y Combinator drafts. When `click` on Easy Apply prints `dialog: false`, wait 3 seconds and snapshot before clicking again. A second click on an open form closes it and asks "Save this application?"; answer Discard and start over.
 4. Fill the form:
    - Contact fields and screening questions come from `answers.md`. Copy the facts. Do not round, stretch or guess. Where `answers.md` and `resume.yaml` disagree, `answers.md` wins in forms. Never edit `resume.yaml` to match.
    - Upload the built PDF. On LinkedIn, click "Upload resume" first so the file input exists, then `upload`. Snapshot and check the new file's radio is the selected one.
@@ -140,13 +151,21 @@ Record it in `pending.json` with the exact question and a link. At the end of th
 
 When the user answers, add each reusable fact under "Learned answers" in `answers.md` in their words, so the same question never reaches them twice. A cover letter is not a reusable fact.
 
+### Y Combinator drafts
+
+A Y Combinator application is the founder message alone; the founder sees the resume on the user's Work at a Startup profile. So skip the variant build and the upload for these jobs.
+
+Write the message, close the dialog without sending, and record the job in `pending.json` as `drafted` with the `message`. It counts toward the run's 5. The report shows each draft word for word.
+
+When the user replies to a report about its drafts, act on the reply right away instead of waiting for the next run. For each draft they approve, with their changes applied: open the job page, click Apply, fill the message, click Send, confirm the dialog closed and the page shows the application as sent, then log it as below. A draft the user rejects is removed from the file. A draft the user has not answered stays as it is.
+
 ## Log
 
-`~/.local/state/job-apply/pending.json` is a JSON array, one entry per job not yet logged: `jobId`, `url`, `company`, `role`, `variant`, `pdf`, `status` (`queued`, `stopped` or `interrupted`), `question` when stopped, and `sent` when interrupted: the site and every field you submitted. Keep it current as you go. Remove an entry once its job is logged, or once you reject it; rejected jobs go in the report, not the file. When you reject a job that already has a variant, delete its block from `variants.yaml` and its build folder (the parent of `pdf`). A stopped job keeps its variant.
+`~/.local/state/job-apply/pending.json` is a JSON array, one entry per job not yet logged: `jobId`, `source`, `url`, `company`, `role`, `variant`, `pdf`, `status` (`queued`, `stopped`, `drafted` or `interrupted`), `question` when stopped, `message` when drafted, and `sent` when interrupted: the site and every field you submitted. Keep it current as you go. Remove an entry once its job is logged, or once you reject it; rejected jobs go in the report, not the file. When you reject a job that already has a variant, delete its block from `variants.yaml` and its build folder (the parent of `pdf`). A stopped job keeps its variant.
 
 An interrupted job may have gone through, so no run submits it again, and it does not count toward a run's 5. It stays in the file until the user says what happened. If it went through, log it as below from its `sent` and remove the entry. If it did not, set it back to `queued`.
 
-Run both commands right after the confirmation page:
+Run both commands right after the confirmation page. For a Y Combinator job, add `--source ycombinator` to each:
 
 ```bash
 is-dl apps add <jobId> --variant <name> --json
@@ -170,6 +189,7 @@ End every run with:
 
 - Each application: company, role, link, variant, and any answer you wrote yourself.
 - Each stopped job and what it needs from the user.
+- Each drafted Y Combinator job, from every run so far: company, role, link and the message word for word. Ask the user to approve or change each one.
 - Each interrupted job, from every run so far: link and what was sent. Ask whether it went through.
 - Listings you rejected, with one line each on why.
 - How many of the run's 5 you applied to.
