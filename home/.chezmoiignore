@@ -1,4 +1,4 @@
-{{- /* WSL has no desktop session; these packages are only for the matching machines */ -}}
+{{- /* WSL skips desktop-only packages; other machines skip WSL-only ones */ -}}
 {{- if and (hasKey .chezmoi "kernel") (contains "microsoft" (lower .chezmoi.kernel.osrelease)) }}
 .config/awesome
 .config/ghostty
@@ -16,4 +16,9 @@
 .pi
 .vimrc
 .ideavimrc
+.agents/skills/computer-use-linux
+.claude/skills/computer-use-linux
+{{- else }}
+.agents/skills/windows-mcp
+.claude/skills/windows-mcp
 {{- end }}

@@ -360,6 +360,15 @@
       "skillFolderHash": "78045ebe348e97ac723252c401b8ef5483889868",
       "installedAt": "2026-10-07T23:52:13.901Z",
       "updatedAt": "2026-10-23T18:38:28.993Z"
+    },
+    "windows-mcp": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "windows-mcp/SKILL.md",
+      "skillFolderHash": "c8d69d2b23eff71204b1837a4a1c9b488fece4d9",
+      "installedAt": "2026-10-25T15:19:20.515Z",
+      "updatedAt": "2026-10-25T15:19:20.515Z"
     }
   },
   "dismissed": {
