@@ -195,9 +195,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/engineering/wizard/SKILL.md",
-      "skillFolderHash": "47010ebd1f26c8263016f14cdba835355d278b9a",
+      "skillFolderHash": "e396d3ba97c723a78ffd350fb14a3c409137b306",
       "installedAt": "2026-08-09T13:27:25.749Z",
-      "updatedAt": "2026-10-07T12:33:45.560Z"
+      "updatedAt": "2026-10-23T18:38:15.674Z"
     },
     "file-pr": {
       "source": "zytact/skills",
@@ -276,18 +276,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "is-dl/SKILL.md",
-      "skillFolderHash": "78a37c00552b6b44ea688280072536cb6d2fa103",
+      "skillFolderHash": "296dd629099bacff68819765a63296bd6428af3e",
       "installedAt": "2026-08-26T19:55:05.142Z",
-      "updatedAt": "2026-10-08T07:17:46.989Z"
+      "updatedAt": "2026-10-23T18:38:19.142Z"
     },
     "gh-stack": {
       "source": "github/gh-stack",
       "sourceType": "github",
       "sourceUrl": "https://github.com/github/gh-stack.git",
       "skillPath": "skills/gh-stack/SKILL.md",
-      "skillFolderHash": "bde7bcf5a96697d31aa55b33565fa0ff002167ca",
+      "skillFolderHash": "53018dd61238961f3aae77c6d369170ab4eb06f3",
       "installedAt": "2026-08-30T00:30:09.194Z",
-      "updatedAt": "2026-10-04T07:35:48.553Z"
+      "updatedAt": "2026-10-23T18:38:37.417Z"
     },
     "show-me": {
       "source": "zytact/skills",
@@ -339,9 +339,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "ship/SKILL.md",
-      "skillFolderHash": "4635d2265faab45115726931981f547ad75cf38d",
+      "skillFolderHash": "9f9743e09535569d4507fb3b6bda93bf1fb7590c",
       "installedAt": "2026-10-05T09:17:38.473Z",
-      "updatedAt": "2026-10-05T09:17:38.473Z"
+      "updatedAt": "2026-10-23T18:38:25.805Z"
     },
     "night-shift": {
       "source": "zytact/skills",
@@ -357,9 +357,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "job-apply/SKILL.md",
-      "skillFolderHash": "559f0e5993f20793dbdcdef6134a8c070034ca49",
+      "skillFolderHash": "78045ebe348e97ac723252c401b8ef5483889868",
       "installedAt": "2026-10-07T23:52:13.901Z",
-      "updatedAt": "2026-10-10T17:55:40.838Z"
+      "updatedAt": "2026-10-23T18:38:28.993Z"
     }
   },
   "dismissed": {
