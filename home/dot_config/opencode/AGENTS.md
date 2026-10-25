@@ -66,6 +66,7 @@ Use lowercase, write in the imperative mood, do not end with a period, and keep 
 
 ## PRs
 - PRs should be kept under 600 LoC if possible. Do not do it, just to keep it under that line count, only if it makes sense.
+- Before declaring a PR complete, attach before and after screenshots or video to the PR description. Use `gh`, it supports PR attachments now. Do not commit media to the repository. Verify the PR displays the uploaded attachments; a local file path does not count. If capture or upload is impossible, state the specific blocker in the PR and final report.
 - Use stacked PRs (https://github.github.com/gh-stack/, github now actively supports it without third-party tools) if deemed necessary, which is if you want to keep the PR(s) under 600 and splitting it makes sense. Use `gh-stack` skill then.
 
 # Harness related
