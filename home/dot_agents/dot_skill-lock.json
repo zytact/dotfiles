@@ -378,6 +378,15 @@
       "skillFolderHash": "1d6dbb0ec98a132a96dd72b65d4f2022385e7d28",
       "installedAt": "2026-10-25T15:19:54.227Z",
       "updatedAt": "2026-10-25T16:53:32.626Z"
+    },
+    "compress-videos": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "compress-videos/SKILL.md",
+      "skillFolderHash": "1244c0070aa05df6a7e22b3bfa87b9daa99809fa",
+      "installedAt": "2026-10-25T20:05:42.049Z",
+      "updatedAt": "2026-10-25T20:05:42.049Z"
     }
   },
   "dismissed": {

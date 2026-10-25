@@ -21,4 +21,6 @@
 {{- else }}
 .agents/skills/windows-mcp
 .claude/skills/windows-mcp
+.agents/skills/compress-videos
+.claude/skills/compress-videos
 {{- end }}

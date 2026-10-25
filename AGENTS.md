@@ -27,7 +27,7 @@ MCP servers are machine-specific and untracked. They live in `~/.claude.json` an
 
 Skills are installed with `npx skills` from `zytact/skills`, which is cloned at `~/Projects/skills` on Fedora, plus other GitHub repos. Each install lands in `~/.agents/skills/` (read by OpenCode and Codex), with a symlink in `~/.claude/skills/` for Claude Code. After `npx skills add` or `update`, run `chezmoi add ~/.agents ~/.claude/skills` and commit.
 
-Two skills are machine-specific: `windows-mcp` is WSL only and `computer-use-linux` is Fedora only, enforced by `.chezmoiignore`. `~/.agents/.skill-lock.json` is shared and lists both, so `npx skills update` may install the other machine's skill too. Afterwards, delete it from `~/.agents/skills/` and `~/.claude/skills/` on the wrong machine.
+Some skills are machine-specific: `windows-mcp` and `compress-videos` are WSL only and `computer-use-linux` is Fedora only, enforced by `.chezmoiignore`. `~/.agents/.skill-lock.json` is shared and lists all of them, so `npx skills update` may install the other machine's skills too. Afterwards, delete it from `~/.agents/skills/` and `~/.claude/skills/` on the wrong machine.
 
 ## New machine
 
