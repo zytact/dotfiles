@@ -369,6 +369,15 @@
       "skillFolderHash": "c8d69d2b23eff71204b1837a4a1c9b488fece4d9",
       "installedAt": "2026-10-25T15:19:20.515Z",
       "updatedAt": "2026-10-25T15:19:20.515Z"
+    },
+    "computer-use-linux": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "computer-use-linux/SKILL.md",
+      "skillFolderHash": "a657dec615ef57ae8ef493eb25a3a22a3633cd9e",
+      "installedAt": "2026-10-25T15:19:54.227Z",
+      "updatedAt": "2026-10-25T15:19:54.227Z"
     }
   },
   "dismissed": {
