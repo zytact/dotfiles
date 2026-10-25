@@ -366,18 +366,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "windows-mcp/SKILL.md",
-      "skillFolderHash": "c8d69d2b23eff71204b1837a4a1c9b488fece4d9",
+      "skillFolderHash": "0e0ac117af3605e56a1cc1fb2a3b27464c564484",
       "installedAt": "2026-10-25T15:19:20.515Z",
-      "updatedAt": "2026-10-25T15:19:20.515Z"
+      "updatedAt": "2026-10-25T15:50:58.603Z"
     },
     "computer-use-linux": {
       "source": "zytact/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "computer-use-linux/SKILL.md",
-      "skillFolderHash": "2b3ba2ad7db34a997c8f3eb3a3e491b930273be8",
+      "skillFolderHash": "63d3424cd2ab31e62daeca0f0196c54df89d9ca0",
       "installedAt": "2026-10-25T15:19:54.227Z",
-      "updatedAt": "2026-10-25T15:50:45.286Z"
+      "updatedAt": "2026-10-25T15:26:17.280Z"
     }
   },
   "dismissed": {
