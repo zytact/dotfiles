@@ -1,8 +1,8 @@
 {
-  "includeCoAuthoredBy": false,
   "env": {
     "SHELL": "/bin/bash"
   },
+  "includeCoAuthoredBy": false,
   "permissions": {
     "deny": [
       "EnterPlanMode",
