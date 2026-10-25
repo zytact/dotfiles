@@ -15,7 +15,7 @@ Dotfiles managed with [chezmoi](https://www.chezmoi.io). `.chezmoiroot` points a
 
 Two machines share this repo at `~/dotfiles`: WSL (Ubuntu) and Fedora, reachable with `ssh arnab@fedora`. Fedora commits on its own, such as is-dl variants from scheduled runs. After pushing from one machine, run `git pull --rebase` and `chezmoi apply` on the other.
 
-MCP servers are machine-specific and untracked. They live in `~/.claude.json` and `~/.config/opencode/opencode.json`. OpenCode runs a background `opencode serve`, so run `opencode reload` after changing its config.
+MCP servers are machine-specific and untracked. They live in `~/.claude.json` and `~/.config/opencode/opencode.json`. Shared OpenCode settings go in the tracked `opencode.jsonc`, which OpenCode merges with `opencode.json`. It ignores `config.json`. OpenCode runs a background `opencode serve` that caches config, so run `opencode reload` after any config change, including before `opencode debug config`.
 
 ## Shell and agents
 

@@ -1,7 +1,11 @@
 {
   "$schema": "https://opencode.ai/config.json",
-    "lsp": false,
-    "theme": "system"
+  "lsp": false,
+  "permission": {
+    "skill": {
+      "computer-use": "deny"
+    }
+  }
   // "mcp": {
   //   "context7": {
   //     "type": "local",
