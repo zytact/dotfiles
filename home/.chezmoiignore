@@ -1,4 +1,5 @@
 {{- /* WSL skips desktop-only packages; other machines skip WSL-only ones */ -}}
+.claude/skills/synced
 {{- if and (hasKey .chezmoi "kernel") (contains "microsoft" (lower .chezmoi.kernel.osrelease)) }}
 .config/awesome
 .config/ghostty
