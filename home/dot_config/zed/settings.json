@@ -61,7 +61,7 @@
   },
   "relative_line_numbers": "enabled",
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "T3 Light",
     "dark": "T3 Dark"
   },

@@ -53,7 +53,7 @@
   },
   "autoMemoryEnabled": false,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "custom:t3-light",
+  "theme": "custom:t3-dark",
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true
