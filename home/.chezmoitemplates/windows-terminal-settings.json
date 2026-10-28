@@ -68,7 +68,7 @@
     ],
     "profiles": {
         "defaults": {
-            "colorScheme": "T3 Dark",
+            "colorScheme": "T3 Light",
             "opacity": 55,
             "useAcrylic": true,
             "font": {

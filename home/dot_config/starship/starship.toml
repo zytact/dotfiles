@@ -1,4 +1,4 @@
-palette = "t3_dark"
+palette = "t3_light"
 add_newline = false
 command_timeout = 2000
 scan_timeout = 50

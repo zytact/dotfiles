@@ -415,7 +415,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "T3 Dark"
+config.color_scheme = "T3 Light"
 
 -- On Windows, open WSL Ubuntu by default
 if wezterm.target_triple:find("windows") then
