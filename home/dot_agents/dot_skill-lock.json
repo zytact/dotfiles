@@ -341,7 +341,7 @@
       "skillPath": "ship/SKILL.md",
       "skillFolderHash": "122f5e51a395b0e100440b419dcb8e62e3faf565",
       "installedAt": "2026-10-05T09:17:38.473Z",
-      "updatedAt": "2026-10-28T11:13:15.521Z"
+      "updatedAt": "2026-10-28T11:15:40.697Z"
     },
     "night-shift": {
       "source": "zytact/skills",
@@ -357,9 +357,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "job-apply/SKILL.md",
-      "skillFolderHash": "02b7fd8969f1785c785f3ae016c0e5e862e90c63",
+      "skillFolderHash": "054503b2dabe397175a637996f6ce589bd278b92",
       "installedAt": "2026-10-07T23:52:13.901Z",
-      "updatedAt": "2026-10-26T11:33:29.247Z"
+      "updatedAt": "2026-10-26T11:36:03.939Z"
     },
     "windows-mcp": {
       "source": "zytact/skills",
