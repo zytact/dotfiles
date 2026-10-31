@@ -20,8 +20,8 @@
 .agents/skills/computer-use-linux
 .claude/skills/computer-use-linux
 {{- else }}
-.agents/skills/windows-mcp
-.claude/skills/windows-mcp
+.agents/skills/agent-desktop
+.claude/skills/agent-desktop
 .agents/skills/compress-videos
 .claude/skills/compress-videos
 {{- end }}

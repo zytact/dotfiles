@@ -361,15 +361,6 @@
       "installedAt": "2026-10-07T23:52:13.901Z",
       "updatedAt": "2026-10-26T11:36:03.939Z"
     },
-    "windows-mcp": {
-      "source": "zytact/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/zytact/skills.git",
-      "skillPath": "windows-mcp/SKILL.md",
-      "skillFolderHash": "0e0ac117af3605e56a1cc1fb2a3b27464c564484",
-      "installedAt": "2026-10-25T15:19:20.515Z",
-      "updatedAt": "2026-10-25T15:50:58.603Z"
-    },
     "computer-use-linux": {
       "source": "zytact/skills",
       "sourceType": "github",
@@ -387,6 +378,15 @@
       "skillFolderHash": "1244c0070aa05df6a7e22b3bfa87b9daa99809fa",
       "installedAt": "2026-10-25T20:05:42.049Z",
       "updatedAt": "2026-10-25T20:05:42.049Z"
+    },
+    "agent-desktop": {
+      "source": "vercel-labs/agent-desktop",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-desktop.git",
+      "skillPath": "skills/agent-desktop/SKILL.md",
+      "skillFolderHash": "5cb6c7a8872e9e830a2f237cc4f96e40bbde2f10",
+      "installedAt": "2026-10-31T10:29:55.493Z",
+      "updatedAt": "2026-10-31T10:29:55.493Z"
     }
   },
   "dismissed": {
