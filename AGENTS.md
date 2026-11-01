@@ -33,6 +33,18 @@ Some skills are machine-specific: `agent-desktop` and `compress-videos` are WSL 
 
 WSL drives Windows with the `agent-desktop` CLI. The Windows binary lives in `C:\Users\arnab\.local\bin\agent-desktop\`, linked from `~/.local/bin/agent-desktop`. Neither is tracked. To update it, extract the `x86_64-pc-windows-msvc` archive from the GitHub releases of `vercel-labs/agent-desktop` into that folder. Fedora uses the `computer-use-linux` MCP server, because agent-desktop has no mouse input on Wayland.
 
+## Agent session backups
+
+`backup-agent-sessions` uploads raw Claude Code, Codex and OpenCode sessions to a restic repo in the R2 bucket `agent-sessions`. A daily T3 scheduled task runs it on each machine: WSL (restic host `MSI`) at 22:00, Fedora (host `fedora`) at 03:00. restic is the static binary from its GitHub releases in `~/.local/bin`, untracked. Credentials are in `~/.secrets`, and restic needs the R2 keys as `AWS_*`. To read the repo:
+
+```bash
+. ~/.secrets; export AWS_ACCESS_KEY_ID=$R2_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$R2_SECRET_ACCESS_KEY AWS_DEFAULT_REGION=auto
+restic snapshots
+restic restore latest --host fedora --target <dir>
+```
+
+The repo keeps every snapshot forever. Never run `restic forget` or `restic prune`.
+
 ## New machine
 
 `chezmoi init --source ~/dotfiles --apply <repo-url>` (after `git clone <repo-url> ~/dotfiles` if preferred). Then set `sourceDir = "~/dotfiles"` in `~/.config/chezmoi/chezmoi.toml`, which is untracked, and create `~/.secrets` by hand.
