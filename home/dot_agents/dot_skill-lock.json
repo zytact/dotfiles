@@ -204,9 +204,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "file-pr/SKILL.md",
-      "skillFolderHash": "c5f5aa7aaba42674c56b4c3fd5b94786bd7b804a",
+      "skillFolderHash": "51b909169631bae891c252fa2109056ed5f6b052",
       "installedAt": "2026-08-11T18:01:24.126Z",
-      "updatedAt": "2026-08-15T18:34:12.567Z"
+      "updatedAt": "2026-11-01T15:06:31.808Z"
     },
     "html-communication": {
       "source": "zytact/skills",
@@ -315,24 +315,6 @@
       "skillFolderHash": "28ac79e211c6ce95ee4c2ba98800747f39f297a6",
       "installedAt": "2026-09-04T11:55:41.767Z",
       "updatedAt": "2026-10-04T07:35:31.102Z"
-    },
-    "deputy": {
-      "source": "zytact/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/zytact/skills.git",
-      "skillPath": "deputy/SKILL.md",
-      "skillFolderHash": "8305ff608e787b807123102d5113f8ccfab4c040",
-      "installedAt": "2026-09-06T15:25:01.385Z",
-      "updatedAt": "2026-09-06T15:25:01.385Z"
-    },
-    "apprentice": {
-      "source": "zytact/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/zytact/skills.git",
-      "skillPath": "apprentice/SKILL.md",
-      "skillFolderHash": "9ef4acfe65c59bba7d925f05884a346a53e35a2b",
-      "installedAt": "2026-09-07T23:24:45.710Z",
-      "updatedAt": "2026-09-10T14:54:44.123Z"
     },
     "ship": {
       "source": "zytact/skills",
