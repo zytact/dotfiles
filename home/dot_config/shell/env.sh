@@ -24,7 +24,11 @@ export PATH=$HOME/.opencode/bin:$PATH
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:$HOME/.lmstudio/bin"
 
-export TEACH_HOME="$HOME/Documents/learning"
+if [ -n "$WSL_DISTRO_NAME" ]; then
+  export TEACH_HOME="/mnt/c/Users/arnab/Documents/learning"
+else
+  export TEACH_HOME="$HOME/Documents/learning"
+fi
 export TEACH_DOMAIN="teach.zytact.com"
 
 export BUN_INSTALL="$HOME/.bun"

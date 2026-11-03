@@ -20,6 +20,7 @@
 .agents/skills/computer-use-linux
 .claude/skills/computer-use-linux
 {{- else }}
+.local/bin/xdg-open
 .agents/skills/agent-desktop
 .claude/skills/agent-desktop
 .agents/skills/compress-videos
