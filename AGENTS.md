@@ -29,6 +29,10 @@ Skills are installed with `npx skills` from `zytact/skills`, which is cloned at 
 
 Some skills are machine-specific: `agent-desktop` and `compress-videos` are WSL only and `computer-use-linux` is Fedora only, enforced by `.chezmoiignore`. `~/.agents/.skill-lock.json` is shared and lists all of them, so `npx skills update` may install the other machine's skills too. Afterwards, delete it from `~/.agents/skills/` and `~/.claude/skills/` on the wrong machine.
 
+## Review evals
+
+`review-evals/` holds shadow reviews from the `code-review` skill, which runs DeepSeek next to the normal reviewer to compare the two. Each run directory has DeepSeek's report and the parent model's verified report. It is data, not config, and kept here so both machines' runs end up in one place. Commit new runs as `chore(review-evals): add runs`.
+
 ## Computer use
 
 WSL drives Windows with the `agent-desktop` CLI. The Windows binary lives in `C:\Users\arnab\.local\bin\agent-desktop\`, linked from `~/.local/bin/agent-desktop`. Neither is tracked. To update it, extract the `x86_64-pc-windows-msvc` archive from the GitHub releases of `vercel-labs/agent-desktop` into that folder. Fedora uses the `computer-use-linux` MCP server, because agent-desktop has no mouse input on Wayland.

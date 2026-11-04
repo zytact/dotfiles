@@ -105,9 +105,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "code-review/SKILL.md",
-      "skillFolderHash": "0e600e4b18920ec5b28dc84cd6764b5f5238426a",
+      "skillFolderHash": "2411eee31605b3364f265fe4142293f3d055f82a",
       "installedAt": "2026-07-12T08:07:02.629Z",
-      "updatedAt": "2026-11-02T06:48:17.826Z"
+      "updatedAt": "2026-11-04T15:15:15.997Z"
     },
     "postplan": {
       "source": "zytact/skills",
