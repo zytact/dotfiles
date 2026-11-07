@@ -1,6 +1,6 @@
 # AGENTS
 
-Dotfiles managed with [chezmoi](https://www.chezmoi.io). `.chezmoiroot` points at `home/`, the source state. Everything outside `home/` is reference or build material and is not deployed.
+Dotfiles managed with [chezmoi](https://www.chezmoi.io). `.chezmoiroot` points at `home/`, the source state. Everything outside `home/` is reference or build material and is not deployed. The one exception is `teach/LEARNER.md`, the teach skill's learner profile. `TEACH_LEARNER` in `env.sh` points at it, so it is read and written in place and synced through git.
 
 ## Working here
 

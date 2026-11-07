@@ -29,7 +29,7 @@ if [ -n "$WSL_DISTRO_NAME" ]; then
 else
   export TEACH_HOME="$HOME/Documents/learning"
 fi
-export TEACH_DOMAIN="teach.zytact.com"
+export TEACH_LEARNER="$HOME/dotfiles/teach/LEARNER.md"
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
