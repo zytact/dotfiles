@@ -78,9 +78,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "teach/SKILL.md",
-      "skillFolderHash": "8c4f3191579f5a6e26166f5ec32d27fa769ab1c5",
+      "skillFolderHash": "ae46e7db6b6bee63503cd27dac9faf987d091d0e",
       "installedAt": "2026-06-20T07:59:23.697Z",
-      "updatedAt": "2026-09-26T13:27:43.793Z"
+      "updatedAt": "2026-11-07T20:57:34.429Z"
     },
     "skill-creator": {
       "source": "openai/skills",
