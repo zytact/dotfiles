@@ -161,7 +161,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "t3-dark",
+      colorscheme = "t3-light",
     },
   },
 
