@@ -11,8 +11,8 @@
 - Respect skips. If he says he already knows a part, or says "no need to retry, move on", move on and log it.
 
 ## Patterns
-- Stops one step short. Gives the reasoning but not the final answer ("600s = 10 min" with no "so no request is sent"). Ask for the final value.
-- Answers the previous setup when a retry reuses it with one detail flipped. Have him say who wins or loses before he answers.
+- Stops one step short. Gives the reasoning but not the final answer ("600s = 10 min" with no "so no request is sent"; prediction-markets lesson 2, a sum of 230 with no price). Ask for the final value, and remind him written exams grade the final number.
+- Answers the previous setup when a new question reuses it with new values (prediction-markets lesson 2 used the worked example's numbers). Have him restate the question's values, or say who wins or loses, before he answers.
 - Mixes up similar names (`preventDefault` vs "back propagation", `async` vs `defer`). Give one deciding question per pair.
 - Does all the arithmetic at once instead of step by step (`"1"+2+3`, nested `em`). Ask him to work out the parent or left-hand value first.
 - Low confidence on right answers ("probably", "I guess"). Confirm the reasoning, not only the result.
