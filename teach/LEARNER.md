@@ -8,10 +8,12 @@
 - Define every syntax term on first use with a one-line example. "Object literal" and "attribute" went undefined and the questions didn't land.
 - Teach turn by turn in chat: one small idea with a visual, then 1-3 questions. He asked for this on 2026-11-07 and said it was much faster than reading pre-written lessons.
 - When a timeline or diagram doesn't land, an everyday analogy usually does (an exam mark sheet for `all` vs `allSettled`, calling cab companies for `any`). A clickable playground worked where a static flexbox diagram didn't.
+- Grade the method when he's studying. He works without a calculator and says "divide this by that" in place of the number. If the setup and operations are right, count it right, state the value yourself, and don't lecture about exam scoring (he pushed back on this on 2026-11-09).
+- He dictates answers through Wispr Flow, so odd numbers or symbols may be transcription errors ("2/5 × 100%" came out as "200%"). Read for intent before marking a slip.
 - Respect skips. If he says he already knows a part, or says "no need to retry, move on", move on and log it.
 
 ## Patterns
-- Stops one step short. Gives the reasoning but not the final answer ("600s = 10 min" with no "so no request is sent"; prediction-markets lesson 2, a sum of 230 with no price). Ask for the final value, and remind him written exams grade the final number.
+- Stops one step short. Gives the reasoning but not the final answer ("600s = 10 min" with no "so no request is sent"). For a conclusion (what happens, who wins), ask for it. For plain arithmetic, see the grading line under How to explain.
 - Answers the previous setup when a new question reuses it with new values (prediction-markets lesson 2 used the worked example's numbers). Have him restate the question's values, or say who wins or loses, before he answers.
 - Mixes up similar names (`preventDefault` vs "back propagation", `async` vs `defer`). Give one deciding question per pair.
 - Does all the arithmetic at once instead of step by step (`"1"+2+3`, nested `em`). Ask him to work out the parent or left-hand value first.
