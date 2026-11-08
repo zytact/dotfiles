@@ -25,7 +25,9 @@ MCP servers are machine-specific and untracked. They live in `~/.claude.json` an
 
 ## Skills
 
-Skills are installed with `npx skills` from `zytact/skills`, which is cloned at `~/Projects/skills` on Fedora, plus other GitHub repos. Each install lands in `~/.agents/skills/` (read by OpenCode and Codex), with a symlink in `~/.claude/skills/` for Claude Code. After `npx skills add` or `update`, run `chezmoi add ~/.agents ~/.claude/skills` and commit.
+Skills are installed with `npx skills` from `zytact/skills` and other GitHub repos. `~/.agents/.skill-lock.json` names each skill's source. Each install lands in `~/.agents/skills/` (read by OpenCode and Codex), with a symlink in `~/.claude/skills/` for Claude Code. After `npx skills add` or `update`, run `chezmoi add ~/.agents ~/.claude/skills` and commit.
+
+Skills from `zytact/skills` are Arnab's own, and their copies under `home/dot_agents/skills/` are install output that the next update overwrites. To change one, edit it in `zytact/skills`, cloned at `~/Projects/skills` on both machines: pull, commit, push, then `npx skills update -g -y <skill>` and the `chezmoi add` above. Pull the clone on the other machine too.
 
 Some skills are machine-specific: `agent-desktop` and `compress-videos` are WSL only and `computer-use-linux` is Fedora only, enforced by `.chezmoiignore`. `~/.agents/.skill-lock.json` is shared and lists all of them, so `npx skills update` may install the other machine's skills too. Afterwards, delete it from `~/.agents/skills/` and `~/.claude/skills/` on the wrong machine.
 
