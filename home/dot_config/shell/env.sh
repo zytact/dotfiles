@@ -31,6 +31,12 @@ else
 fi
 export TEACH_LEARNER="$HOME/dotfiles/teach/LEARNER.md"
 
+# Claude Code goes through the local CLIProxyAPI where it runs (Fedora).
+if [ -f "$HOME/.config/systemd/user/cliproxyapi.service" ] && [ -n "$CLIPROXY_API_KEY" ]; then
+  export ANTHROPIC_BASE_URL="http://127.0.0.1:8317"
+  export ANTHROPIC_AUTH_TOKEN="$CLIPROXY_API_KEY"
+fi
+
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
