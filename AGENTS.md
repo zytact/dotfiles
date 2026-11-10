@@ -35,6 +35,15 @@ Some skills are machine-specific: `agent-desktop` and `compress-videos` are WSL 
 
 WSL drives Windows with the `agent-desktop` CLI. The Windows binary lives in `C:\Users\arnab\.local\bin\agent-desktop\`, linked from `~/.local/bin/agent-desktop`. Neither is tracked. To update it, extract the `x86_64-pc-windows-msvc` archive from the GitHub releases of `vercel-labs/agent-desktop` into that folder. Fedora uses the `computer-use-linux` MCP server, because agent-desktop has no mouse input on Wayland.
 
+## CLIProxyAPI
+
+Fedora runs CLIProxyAPI, which pools Claude subscription accounts behind one API key. It is a `systemctl --user` service, `cliproxyapi.service`, deployed by chezmoi on Fedora only. The binary lives in `~/cliproxyapi/<version>/`, linked from `~/.local/bin/cli-proxy-api`, untracked. To upgrade, extract the `linux_amd64` release archive into a new version folder, repoint the link, and restart the service.
+
+- Config: edit `cliproxyapi/config.yaml.template`, then run `cliproxyapi/cliproxyapi-render-config` on Fedora. It fills in `CLIPROXY_API_KEY` and `CLIPROXY_MANAGEMENT_KEY` from `~/.secrets` and writes `~/cliproxyapi/config.yaml`, which the proxy hot-reloads. Changes to `server.host` or `server.port` need a restart. The template uses the v8 layout. Check `config.example.yaml` in `router-for-me/CLIProxyAPI` before adding keys.
+- Network: the proxy binds `127.0.0.1:8317`, and `tailscale serve --tcp=8317` exposes it at `100.127.35.14:8317`. Use the Tailscale IP, because MagicDNS is unreliable. The management page is `http://100.127.35.14:8317/management.html`.
+- Accounts: the user adds each one with `cli-proxy-api --config ~/cliproxyapi/config.yaml --claude-login` in a browser on Fedora. There is no Codex account.
+- Clients: Fedora's shell sets `ANTHROPIC_BASE_URL` and `ANTHROPIC_AUTH_TOKEN` in `env.sh`. T3 ignores the shell env, so the proxy is set per provider instance in T3's UI: on Fedora it is the default Claude instance, on WSL it is a separate "Claude (proxy)" instance. The user enters the token in the UI as a sensitive value. Never write it into T3's `settings.json`.
+
 ## Agent session backups
 
 `backup-agent-sessions` uploads raw Claude Code, Codex and OpenCode sessions to a restic repo in the R2 bucket `agent-sessions`. A daily T3 scheduled task runs it on each machine: WSL (restic host `MSI`) at 22:00, Fedora (host `fedora`) at 03:00. restic is the static binary from its GitHub releases in `~/.local/bin`, untracked. Credentials are in `~/.secrets`, and restic needs the R2 keys as `AWS_*`. To read the repo:
