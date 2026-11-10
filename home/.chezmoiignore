@@ -10,7 +10,7 @@
 .config/zed
 .config/fontconfig
 .config/zellij
-.config/systemd/user/cliproxyapi.service
+.config/systemd
 .config/herdr
 .config/hunk
 .config/television
