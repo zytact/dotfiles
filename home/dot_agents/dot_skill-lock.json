@@ -303,18 +303,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "create-verification-skill/SKILL.md",
-      "skillFolderHash": "a57bbf3664d0bd56ebe58d8d0007d3d79ffd5dc1",
+      "skillFolderHash": "e51bf2e2fae8f1819e98a0f6617c883ba028ef9a",
       "installedAt": "2026-09-04T11:55:41.761Z",
-      "updatedAt": "2026-09-04T17:24:09.834Z"
+      "updatedAt": "2026-11-11T17:51:06.901Z"
     },
     "maintain-verification-skill": {
       "source": "zytact/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "maintain-verification-skill/SKILL.md",
-      "skillFolderHash": "28ac79e211c6ce95ee4c2ba98800747f39f297a6",
+      "skillFolderHash": "31c424c7cea424249b02b36242b326e4db4780d9",
       "installedAt": "2026-09-04T11:55:41.767Z",
-      "updatedAt": "2026-10-04T07:35:31.102Z"
+      "updatedAt": "2026-11-11T17:51:06.972Z"
     },
     "ship": {
       "source": "zytact/skills",
