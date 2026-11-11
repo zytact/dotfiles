@@ -146,6 +146,11 @@ Use lowercase, write in the imperative mood, do not end with a period, and keep 
 - When several agents do work in parallel, state the file ownership up front so they do not collide.
 - If in T3 Code, do not create a subagent/child task in supervised mode, you'll need to approve every tool call.
 
+# Shell
+- You run commands in bash, but my terminal is zsh. A PATH or env change made only in `~/.bashrc` never reaches my terminal.
+- Put PATH entries and exports in `~/dotfiles/home/dot_config/shell/env.sh`, which both shells source, then run `chezmoi apply`. Do not edit `~/.bashrc`, `~/.zshrc` or `~/.profile` directly, because chezmoi manages them and overwrites live edits.
+- If an installer appends to a shell rc file, move those lines into `env.sh`.
+
 # Blast radius
 - Do not make destructive changes that could harm the system, os, or codebase without asking.
 - Do not mess with production environment, unless explicitly asked to.
