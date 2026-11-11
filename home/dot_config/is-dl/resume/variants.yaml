@@ -706,3 +706,15 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [proj-strokeshare, proj-system, exp-frint, proj-inventrack]
     drop: [exp-nits-2025, exp-nits-2026, exp-gdg, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tech, inventrack-tech]
+
+  digital-roundabout-jr-ml-engineer:
+    headline: "Machine Learning Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-nits-2026, exp-nits-2025, exp-frint, exp-picard]
+    drop: [exp-gdg, proj-system, proj-strokeshare, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-frontend, picard-tech, nits-tech, nits25-tech, inventrack-tech, frint-tech, skills-agentic]
+
+  newsmatics-ai-agent-engineer:
+    headline: "AI Agent Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [proj-system, exp-frint, proj-inventrack]
+    drop: [exp-nits-2025, exp-gdg, exp-picard, nits-benchmark, nits-fusion, proj-gramgrab, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, system-oauth-adr, system-tech, inventrack-tech]
