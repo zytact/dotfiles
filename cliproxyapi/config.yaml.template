@@ -27,3 +27,9 @@ routing:
 
 oauth:
   auth-dir: "~/.cli-proxy-api"
+
+observability:
+  logs:
+    # The management page's log viewer reads these files.
+    logging-to-file: true
+    logs-max-total-size-mb: 100
