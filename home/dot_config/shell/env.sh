@@ -31,8 +31,8 @@ else
 fi
 export TEACH_LEARNER="$HOME/dotfiles/teach/LEARNER.md"
 
-# Claude Code goes through the local CLIProxyAPI where it runs (Fedora).
-if [ -f "$HOME/.config/systemd/user/cliproxyapi.service" ] && [ -n "$CLIPROXY_API_KEY" ]; then
+# Claude Code goes through the local CLIProxyAPI on Fedora. WSL only uses its proxy from T3.
+if [ ! -e /proc/sys/fs/binfmt_misc/WSLInterop ] && [ -f "$HOME/.config/systemd/user/cliproxyapi.service" ] && [ -n "$CLIPROXY_API_KEY" ]; then
   export ANTHROPIC_BASE_URL="http://127.0.0.1:8317"
   export ANTHROPIC_AUTH_TOKEN="$CLIPROXY_API_KEY"
 fi
