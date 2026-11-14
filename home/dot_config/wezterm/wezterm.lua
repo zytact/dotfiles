@@ -119,6 +119,25 @@ config.color_schemes = {
 			new_tab_hover = { bg_color = "#141414", fg_color = "#568ef9" },
 		},
 	},
+	["Magna Swing"] = {
+		foreground = "#f5f5f5",
+		background = "#000000",
+		cursor_bg = "#f7941d",
+		cursor_border = "#f7941d",
+		cursor_fg = "#000000",
+		selection_bg = "#343a47",
+		selection_fg = "#ffffff",
+		ansi = { "#0a0a0a", "#fb414a", "#54c57a", "#e4b750", "#51a2ff", "#bb8aef", "#51cec7", "#f5f5f5" },
+		brights = { "#818181", "#fd7277", "#89dea1", "#f3d086", "#87bafd", "#ceacf7", "#91e2dc", "#ffffff" },
+		tab_bar = {
+			background = "#000000",
+			active_tab = { bg_color = "#181f2e", fg_color = "#ffffff", intensity = "Bold" },
+			inactive_tab = { bg_color = "#000000", fg_color = "#a3a3a3" },
+			inactive_tab_hover = { bg_color = "#141414", fg_color = "#f5f5f5" },
+			new_tab = { bg_color = "#000000", fg_color = "#a3a3a3" },
+			new_tab_hover = { bg_color = "#141414", fg_color = "#568ef9" },
+		},
+	},
 	["T3 Light"] = {
 		foreground = "#27272a",
 		background = "#fcfcfc",
@@ -415,7 +434,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "T3 Light"
+config.color_scheme = "Magna Swing"
 
 -- On Windows, open WSL Ubuntu by default
 if wezterm.target_triple:find("windows") then

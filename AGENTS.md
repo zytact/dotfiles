@@ -60,6 +60,10 @@ The repo keeps every snapshot forever. Never run `restic forget` or `restic prun
 
 `chezmoi init --source ~/dotfiles --apply <repo-url>` (after `git clone <repo-url> ~/dotfiles` if preferred). Then set `sourceDir = "~/dotfiles"` in `~/.config/chezmoi/chezmoi.toml`, which is untracked, and create `~/.secrets` by hand.
 
+## Windows Terminal (WSL)
+
+`run_onchange_after_windows-terminal.sh` copies `.chezmoitemplates/windows-terminal-settings.json` into Windows Terminal's settings folder and `wallpapers/magna-swing.png` into `C:\Users\arnab\Pictures`, where the settings point for the background image. Edit the template, never the Windows copy. `chezmoi apply --include=scripts` runs only the script.
+
 ## Windows-side wezterm (WSL)
 
 `C:\Users\arnab\.wezterm.lua` does `dofile` on `\\wsl.localhost\Ubuntu\home\arnab\dotfiles\home\dot_config\wezterm\wezterm.lua`. The config sets the WSL domain and font size when running on Windows.

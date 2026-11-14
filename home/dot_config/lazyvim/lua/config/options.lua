@@ -15,7 +15,8 @@ vim.o.termguicolors = true
 vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_python_ruff = "ruff"
 vim.opt.fillchars = { eob = "~" }
-vim.o.background = "light"
+vim.o.background = "dark"
+vim.g.magna_swing_transparent = true
 vim.o.wrap = true
 
 if vim.g.neovide then
