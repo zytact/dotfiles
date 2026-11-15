@@ -147,7 +147,6 @@ Use lowercase, write in the imperative mood, do not end with a period, and keep 
 # Subagents
 - Do not use subagents unless the user explicitly asks for it or a skill requires it.
 - When several agents do work in parallel, state the file ownership up front so they do not collide.
-- For reviewing use the latest Opus model in medium reasoning. For any sort of work you deem a weaker model can do, use the latest sonnet in medium reasoning for it.
 - If in T3 Code, do not create a subagent/child task in supervised mode, you'll need to approve every tool call.
 
 # Shell
