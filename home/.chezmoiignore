@@ -34,7 +34,7 @@
 .zshrc
 .zshenv
 .npmrc
-.local
+.local/bin/xdg-open
 .config/systemd
 {{- else }}
 Documents

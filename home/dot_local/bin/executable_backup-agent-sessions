@@ -30,4 +30,7 @@ dst.close()
   paths+=("$staging/opencode.db")
 fi
 
-restic backup --tag agent-sessions "${paths[@]}"
+# Windows and WSL share the hostname, so Windows snapshots get their own host.
+host=()
+[ "${OS:-}" = Windows_NT ] && host=(--host "$(hostname)-windows")
+restic backup --tag agent-sessions "${host[@]}" "${paths[@]}"
