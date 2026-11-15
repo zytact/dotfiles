@@ -29,6 +29,8 @@
 .claude/skills/compress-videos
 {{- end }}
 {{- if $windows }}
+.agents/skills/compress-videos
+.claude/skills/compress-videos
 .zshrc
 .zshenv
 .npmrc

@@ -151,9 +151,10 @@ Use lowercase, write in the imperative mood, do not end with a period, and keep 
 - If in T3 Code, do not create a subagent/child task in supervised mode, you'll need to approve every tool call.
 
 # Shell
-- You run commands in bash, but my terminal is zsh. A PATH or env change made only in `~/.bashrc` never reaches my terminal.
-- Put PATH entries and exports in `~/dotfiles/home/dot_config/shell/env.sh`, which both shells source, then run `chezmoi apply`. Do not edit `~/.bashrc`, `~/.zshrc` or `~/.profile` directly, because chezmoi manages them and overwrites live edits.
-- If an installer appends to a shell rc file, move those lines into `env.sh`.
+- On Linux and WSL, you run commands in bash, but my terminal is zsh. A PATH or env change made only in `~/.bashrc` never reaches my terminal.
+- On Windows, run commands in PowerShell, which is also my terminal. Use Git Bash only for bash scripts and commands a skill writes in bash.
+- Put PATH entries and exports in `~/dotfiles/home/dot_config/shell/env.sh`, which bash and zsh source. On Windows, PowerShell needs them in `~/dotfiles/home/Documents/PowerShell/Microsoft.PowerShell_profile.ps1` too. Then run `chezmoi apply`. Do not edit `~/.bashrc`, `~/.zshrc`, `~/.profile` or `$PROFILE` directly, because chezmoi manages them and overwrites live edits.
+- If an installer appends to a shell rc file or the Windows user PATH, move that into `env.sh` or the PowerShell profile.
 
 # Blast radius
 - Do not make destructive changes that could harm the system, os, or codebase without asking.

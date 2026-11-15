@@ -20,20 +20,22 @@ MCP servers are machine-specific and untracked. They live in `~/.claude.json` an
 ## Shell and agents
 
 - PATH and exports live in `home/dot_config/shell/env.sh`, sourced by `.zshenv` and `.bashrc`. `.zshrc` is for interactive use only.
-- Agents run commands in bash. Claude Code gets it through `SHELL` in the `env` of `claude/settings.json`, which also fixes the shell it reports. Codex gets it through a handoff in `.zshenv`, since Codex always uses the login shell.
+- On Linux and WSL, agents run commands in bash. Claude Code gets it through `SHELL` in the `env` of `claude/settings.json`, which also fixes the shell it reports. Codex gets it through a handoff in `.zshenv`, since Codex always uses the login shell. On Windows, agents use PowerShell and keep Git Bash for bash scripts. Claude Code's Bash tool is always Git Bash there, whatever `SHELL` says.
 - `~/.claude/settings.json` is a symlink to `claude/settings.json` in this repo, because Claude Code rewrites it. Its key-order churn is safe to commit.
 
 ## Skills
 
 Skills are installed with `npx skills` from `zytact/skills` and other GitHub repos. `~/.agents/.skill-lock.json` names each skill's source. Each install lands in `~/.agents/skills/` (read by OpenCode and Codex), with a symlink in `~/.claude/skills/` for Claude Code. After `npx skills add` or `update`, run `chezmoi add ~/.agents ~/.claude/skills` and commit.
 
-Skills from `zytact/skills` are Arnab's own, and their copies under `home/dot_agents/skills/` are install output that the next update overwrites. To change one, edit it in `zytact/skills`, cloned at `~/Projects/skills` on both machines: pull, commit, push, then `npx skills update -g -y <skill>` and the `chezmoi add` above. Pull the clone on the other machine too.
+Skills from `zytact/skills` are Arnab's own, and their copies under `home/dot_agents/skills/` are install output that the next update overwrites. To change one, edit it in `zytact/skills`, cloned at `~/Projects/skills` on every machine: pull, commit, push, then `npx skills update -g -y <skill>` from WSL or Fedora and the `chezmoi add` above. Pull the clone and the dotfiles on the other machines too.
 
-Some skills are machine-specific: `agent-desktop` and `compress-videos` are WSL only and `computer-use-linux` is Fedora only, enforced by `.chezmoiignore`. `~/.agents/.skill-lock.json` is shared and lists all of them, so `npx skills update` may install the other machine's skills too. Afterwards, delete it from `~/.agents/skills/` and `~/.claude/skills/` on the wrong machine.
+Skills run on Linux, WSL and Windows. A skill gives one set of commands, and its scripts branch inside on the platform (`process.platform`, `WSL_DISTRO_NAME`). Detail only one platform needs goes in a sibling file, and SKILL.md gives it one line saying when to read it, so other platforms never load it.
+
+Some skills are machine-specific: `agent-desktop` runs on WSL and Windows, `compress-videos` is WSL only and `computer-use-linux` is Fedora only, enforced by `.chezmoiignore`. `~/.agents/.skill-lock.json` is shared and lists all of them, so `npx skills update` may install the other machine's skills too. Afterwards, delete it from `~/.agents/skills/` and `~/.claude/skills/` on the wrong machine.
 
 ## Computer use
 
-WSL drives Windows with the `agent-desktop` CLI. The Windows binary lives in `C:\Users\arnab\.local\bin\agent-desktop\`, linked from `~/.local/bin/agent-desktop`. Neither is tracked. To update it, extract the `x86_64-pc-windows-msvc` archive from the GitHub releases of `vercel-labs/agent-desktop` into that folder. Fedora uses the `computer-use-linux` MCP server, because agent-desktop has no mouse input on Wayland.
+WSL and Windows drive the Windows desktop with the `agent-desktop` CLI. The Windows binary lives in `C:\Users\arnab\.local\bin\agent-desktop\`, which the PowerShell profile puts on PATH and WSL links from `~/.local/bin/agent-desktop`. Neither is tracked. To update it, extract the `x86_64-pc-windows-msvc` archive from the GitHub releases of `vercel-labs/agent-desktop` into that folder. Fedora uses the `computer-use-linux` MCP server, because agent-desktop has no mouse input on Wayland.
 
 ## CLIProxyAPI
 
@@ -65,7 +67,7 @@ The repo keeps every snapshot forever. Never run `restic forget` or `restic prun
 ## Windows
 
 - chezmoi, starship and fastfetch come from winget. Symlinks need Developer Mode, which is on.
-- Line endings: Git for Windows sets `core.autocrlf=true`, so `.gitattributes` forces LF. Without it, deployed shell scripts get CRLF and bash fails on them.
+- Line endings: Git for Windows sets `core.autocrlf=true` system-wide, which checks out CRLF and breaks bash scripts. The tracked `.gitconfig` turns it off for every clone, and `.gitattributes` forces LF in this repo.
 - The PowerShell 7 profile is `home/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`. It loads every `export NAME=value` line of `~\.secrets` (a copy of the WSL one) into `$env:`, starts starship, then fastfetch.
 - Bash is Git Bash, which reads the deployed `.bashrc` and so `env.sh` and `~/.secrets`. Plain `bash` in PowerShell is WSL's launcher, not Git Bash.
 - opencode v2 comes from `curl -fsSL https://opencode.ai/v2/install | bash -s -- --no-modify-path`, run in Git Bash. It installs to `~\.opencode\bin`, which `env.sh` and the PowerShell profile put on PATH.

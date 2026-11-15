@@ -3,6 +3,8 @@
 	tool = nvimdiff
 [init]
 	defaultBranch = main
+[core]
+	autocrlf = false
 [user]
 	name = Arnab Chakraborty
 	email = that.zytact@gmail.com

@@ -11,7 +11,7 @@ if (Test-Path $secretsFile) {
 }
 Remove-Variable secretsFile, line -ErrorAction SilentlyContinue
 
-$env:Path = "$HOME\.opencode\bin;$env:Path"
+$env:Path = "$HOME\.opencode\bin;$HOME\.local\bin\agent-desktop;$env:Path"
 $env:EDITOR = 'nvim'
 $env:NVIM_APPNAME = 'lazyvim'
 $env:TEACH_HOME = "$HOME\Documents\learning"
