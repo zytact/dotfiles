@@ -13,8 +13,12 @@ $vars = @{
 }
 foreach ($name in $vars.Keys) { [Environment]::SetEnvironmentVariable($name, $vars[$name], 'User') }
 
-$path = [Environment]::GetEnvironmentVariable('Path', 'User') -split ';' | Where-Object { $_ }
-foreach ($dir in "$home_\.opencode\bin", "$home_\.local\bin\agent-desktop", "$home_\.local\bin\tectonic", "$home_\.local\share\is-dl\current\node_modules\.bin") {
+# Python's real launchers go ahead of the WindowsApps aliases, which nvim's executable() rejects.
+$pythonBin = "$env:LOCALAPPDATA\Python\bin"
+$path = @($pythonBin) + ([Environment]::GetEnvironmentVariable('Path', 'User') -split ';' | Where-Object { $_ -and $_ -ne $pythonBin })
+# WinLibs gcc builds nvim-treesitter parsers.
+$winlibs = "$env:LOCALAPPDATA\Microsoft\WinGet\Packages\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\mingw64\bin"
+foreach ($dir in "$home_\.opencode\bin", "$home_\.local\bin\agent-desktop", "$home_\.local\bin\tectonic", "$home_\.local\share\is-dl\current\node_modules\.bin", $winlibs) {
     if ($path -notcontains $dir) { $path += $dir }
 }
 [Environment]::SetEnvironmentVariable('Path', ($path -join ';'), 'User')
