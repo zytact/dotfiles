@@ -5,12 +5,10 @@ scan_timeout = 50
 
 format = """
 [](fg:mauve)$os$directory[](fg:lavender bg:surface0)$git_branch$git_status[](fg:surface0 bg:surface1)$python$nodejs$rust$golang$lua[](fg:surface1)
-$character
-"""
+$character"""
 
 right_format = """
-[](fg:surface2)$cmd_duration$time$status[](fg:surface2)
-"""
+[](fg:surface2)$cmd_duration$time$status[](fg:surface2)"""
 
 [palettes.github_light_colorblind]
 rosewater = "#24292f"
