@@ -369,6 +369,15 @@
       "skillFolderHash": "5cb6c7a8872e9e830a2f237cc4f96e40bbde2f10",
       "installedAt": "2026-10-31T10:29:55.493Z",
       "updatedAt": "2026-10-31T10:29:55.493Z"
+    },
+    "photo-editing": {
+      "source": "zytact/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/zytact/skills.git",
+      "skillPath": "photo-editing/SKILL.md",
+      "skillFolderHash": "bb97acc55636d6049fb58c60653d4b7482028893",
+      "installedAt": "2026-11-15T19:55:37.333Z",
+      "updatedAt": "2026-11-15T19:55:37.333Z"
     }
   },
   "dismissed": {
