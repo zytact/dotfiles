@@ -1,53 +1,11 @@
+-- Syntax highlighting only: no LSP, Mason, completion, formatting or linting.
 return {
-  {
-    "mason-org/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "vtsls",
-        "clangd",
-        "emmet-language-server",
-        "html-lsp",
-        "json-lsp",
-        "css-lsp",
-        "prettier",
-        "tailwindcss-language-server",
-        "rust-analyzer",
-        "shfmt",
-        "sqlfluff",
-        "stylua",
-        "markdown-toc",
-        "markdownlint-cli2",
-        "prisma-language-server",
-        "basedpyright",
-        "ruff",
-        "zls",
-        "taplo",
-        "nomicfoundation-solidity-language-server",
-      },
-    },
-  },
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      inlay_hints = { enabled = false },
-      servers = {
-        vtsls = {
-          settings = {
-            typescript = {
-              inlayHints = {
-                parameterNames = { enabled = "all" },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  {
-    "quarto-dev/quarto-nvim",
-    dependencies = {
-      "jmbuhr/otter.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-  },
+  { "neovim/nvim-lspconfig", enabled = false },
+  { "mason-org/mason.nvim", enabled = false },
+  { "mason-org/mason-lspconfig.nvim", enabled = false },
+  { "stevearc/conform.nvim", enabled = false },
+  { "mfussenegger/nvim-lint", enabled = false },
+  { "saghen/blink.cmp", enabled = false },
+  { "rafamadriz/friendly-snippets", enabled = false },
+  { "folke/lazydev.nvim", enabled = false },
 }

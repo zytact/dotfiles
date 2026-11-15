@@ -2,8 +2,6 @@ return {
   {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
-    lazy = false,
-    priority = 1000,
   },
 
   {
@@ -107,8 +105,6 @@ return {
   },
   {
     "ellisonleao/gruvbox.nvim",
-    priority = 1000,
-    opts = ...,
     config = function()
       require("gruvbox").setup({
         transparent_mode = false,
@@ -136,7 +132,6 @@ return {
   },
   {
     "olimorris/onedarkpro.nvim",
-    priority = 1000, -- Ensure it loads first
   },
 
   {
@@ -150,8 +145,6 @@ return {
   },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
     opts = {
       transparent = false,
       style = "night",
