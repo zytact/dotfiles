@@ -8,12 +8,12 @@ Dotfiles managed with [chezmoi](https://www.chezmoi.io). `.chezmoiroot` points a
 - Before `chezmoi apply`, check `chezmoi status`. An `M` in the first column means the live file changed since the last apply, and applying would overwrite it.
 - Symlinks are `symlink_<name>` files whose content is the link target, relative to the deployed directory.
 - Track config only. Runtime state, caches, credentials and history stay out.
-- Per-machine differences go in `home/.chezmoiignore`, which is templated: WSL skips desktop-only tools, other machines skip WSL-only ones. Use `.tmpl` files for smaller differences, and shell guards (`[ -f ... ]`, `command -v`) for optional tools.
+- Per-machine differences go in `home/.chezmoiignore`, which is templated: WSL and Windows skip Linux desktop tools, Fedora skips WSL- and Windows-only ones, and Windows also skips zsh, `.local` and systemd. Use `.tmpl` files for smaller differences, and shell guards (`[ -f ... ]`, `command -v`) for optional tools.
 - There is no build, test or lint. Check with `chezmoi diff`, `chezmoi status` and `chezmoi apply -n -v`.
 
 ## Machines
 
-Two machines share this repo at `~/dotfiles`: WSL (Ubuntu) and Fedora, reachable with `ssh arnab@fedora`. Fedora commits on its own, such as is-dl variants from scheduled runs. After pushing from one machine, sync the other one yourself over ssh: `git pull --rebase`, then `chezmoi apply`. Do not hand this step to the user.
+Three environments share this repo at `~/dotfiles`: native Windows and WSL (Ubuntu) on the MSI laptop, both in active use, and Fedora, reachable with `ssh arnab@fedora`. WSL and Windows have separate clones. Fedora commits on its own, such as is-dl variants from scheduled runs. After pushing from one machine, sync the others yourself, over ssh for Fedora and `wsl.exe` for WSL: `git pull --rebase`, then `chezmoi apply`. Do not hand this step to the user.
 
 MCP servers are machine-specific and untracked. They live in `~/.claude.json` and `~/.config/opencode/opencode.json`. Shared OpenCode settings go in the tracked `opencode.jsonc`, which OpenCode merges with `opencode.json`. It ignores `config.json`. OpenCode runs a background `opencode serve` that caches config, so run `opencode reload` after any config change, including before `opencode debug config`. For about 5 seconds after the service starts, `opencode mcp list` reports "No MCP servers configured", so wait before trusting it.
 
@@ -37,12 +37,14 @@ WSL drives Windows with the `agent-desktop` CLI. The Windows binary lives in `C:
 
 ## CLIProxyAPI
 
-Both machines run their own CLIProxyAPI, which pools Claude subscription accounts behind one API key. Each has its own accounts in `~/.cli-proxy-api`. Never copy them between machines, because both proxies would then refresh the same OAuth tokens. It is a `systemctl --user` service, `cliproxyapi.service`, deployed by chezmoi. WSL has lingering enabled so the service starts with WSL. The binary lives in `~/cliproxyapi/<version>/`, linked from `~/.local/bin/cli-proxy-api`, untracked. To upgrade, extract the `linux_amd64` release archive into a new version folder, repoint the link, and restart the service.
+Fedora and Windows (MSI) each run their own CLIProxyAPI, which pools Claude subscription accounts behind one API key. Each has its own accounts in `~/.cli-proxy-api`. Never copy them between machines, because both proxies would then refresh the same OAuth tokens. The MSI proxy used to run inside WSL. Its accounts moved to Windows on 2026-11-15, WSL's `cliproxyapi.service` is disabled, and the old WSL auth dir was renamed to `~/.cli-proxy-api.moved-to-windows`. Never re-enable the WSL service or restore that folder.
 
-- Config: edit `cliproxyapi/config.yaml.template`, then run `cliproxyapi/cliproxyapi-render-config` on each machine. It fills in `CLIPROXY_API_KEY` and `CLIPROXY_MANAGEMENT_KEY` from `~/.secrets` and writes `~/cliproxyapi/config.yaml`, which the proxy hot-reloads. Changes to `server.host` or `server.port` need a restart. The template uses the v8 layout. Check `config.example.yaml` in `router-for-me/CLIProxyAPI` before adding keys.
-- Network: the proxy binds `127.0.0.1:8317`. On WSL, clients use `http://127.0.0.1:8317`. On Fedora, `tailscale serve --tcp=8317` also exposes it at `100.127.35.14:8317`. Use the Tailscale IP, because MagicDNS is unreliable. The management page is `http://100.127.35.14:8317/management.html`.
-- Accounts: the user adds each one with `cli-proxy-api --config ~/cliproxyapi/config.yaml --claude-login` on the machine whose proxy should use it. There is no Codex account.
-- Clients: Fedora's shell sets `ANTHROPIC_BASE_URL` and `ANTHROPIC_AUTH_TOKEN` in `env.sh`. T3 ignores the shell env, so the proxy is set per provider instance in T3's UI: on Fedora it is the default Claude instance, on WSL it is a separate "Claude (proxy)" instance pointed at the local proxy. The user enters the token in the UI as a sensitive value. Never write it into T3's `settings.json`.
+- Fedora: a `systemctl --user` service, `cliproxyapi.service`, deployed by chezmoi. The binary lives in `~/cliproxyapi/<version>/`, linked from `~/.local/bin/cli-proxy-api`, untracked. To upgrade, extract the `linux_amd64` release archive into a new version folder, repoint the link, and restart the service.
+- Windows: a logon scheduled task, `CLIProxyAPI`, registered by `cliproxyapi/install-windows-task.ps1`. It runs `conhost --headless` so no window shows. The binary lives in `C:\Users\arnab\cliproxyapi\<version>\`, reached through the junction `cliproxyapi\current`, untracked. Stopping the task does not stop the proxy, so restart by re-running `install-windows-task.ps1`, which kills the process and starts the task. To upgrade, extract the `windows_amd64` release archive into a new version folder, repoint the junction (`New-Item -ItemType Junction`), and re-run the script. Logs are in `~\.cli-proxy-api\logs\main.log`.
+- Config: edit `cliproxyapi/config.yaml.template`, then render it on each machine: `cliproxyapi/cliproxyapi-render-config` on Fedora, `cliproxyapi/cliproxyapi-render-config.ps1` on Windows. Both fill in `CLIPROXY_API_KEY` and `CLIPROXY_MANAGEMENT_KEY` from `~/.secrets` (on Windows, `C:\Users\arnab\.secrets`) and write `~/cliproxyapi/config.yaml`, which the proxy hot-reloads. Changes to `server.host` or `server.port` need a restart. The template uses the v8 layout. Check `config.example.yaml` in `router-for-me/CLIProxyAPI` before adding keys.
+- Network: the proxy binds `127.0.0.1:8317`. On Windows, clients use `http://127.0.0.1:8317`. WSL uses NAT networking, so it cannot reach that address. On Fedora, `tailscale serve --tcp=8317` also exposes it at `100.127.35.14:8317`. Use the Tailscale IP, because MagicDNS is unreliable. The management page is `http://100.127.35.14:8317/management.html` (on Windows, `http://127.0.0.1:8317/management.html`).
+- Accounts: the user adds each one with `cli-proxy-api --config ~/cliproxyapi/config.yaml --claude-login` on the machine whose proxy should use it. On Windows, that is `~\cliproxyapi\current\cli-proxy-api.exe`. There is no Codex account.
+- Clients: Fedora's shell sets `ANTHROPIC_BASE_URL` and `ANTHROPIC_AUTH_TOKEN` in `env.sh`. T3 ignores the shell env, so the proxy is set per provider instance in T3's UI: on Fedora it is the default Claude instance, on MSI it is a separate "Claude (proxy)" instance pointed at `http://127.0.0.1:8317`. The user enters the token in the UI as a sensitive value. Never write it into T3's `settings.json`.
 
 ## Agent session backups
 
@@ -60,9 +62,18 @@ The repo keeps every snapshot forever. Never run `restic forget` or `restic prun
 
 `chezmoi init --source ~/dotfiles --apply <repo-url>` (after `git clone <repo-url> ~/dotfiles` if preferred). Then set `sourceDir = "~/dotfiles"` in `~/.config/chezmoi/chezmoi.toml`, which is untracked, and create `~/.secrets` by hand.
 
-## Windows Terminal (WSL)
+## Windows
 
-`run_onchange_after_windows-terminal.sh` copies `.chezmoitemplates/windows-terminal-settings.json` into Windows Terminal's settings folder and `wallpapers/magna-swing.png` into `C:\Users\arnab\Pictures`, where the settings point for the background image. Edit the template, never the Windows copy. `chezmoi apply --include=scripts` runs only the script.
+- chezmoi, starship and fastfetch come from winget. Symlinks need Developer Mode, which is on.
+- Line endings: Git for Windows sets `core.autocrlf=true`, so `.gitattributes` forces LF. Without it, deployed shell scripts get CRLF and bash fails on them.
+- The PowerShell 7 profile is `home/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`. It loads every `export NAME=value` line of `~\.secrets` (a copy of the WSL one) into `$env:`, starts starship, then fastfetch.
+- Bash is Git Bash, which reads the deployed `.bashrc` and so `env.sh` and `~/.secrets`. Plain `bash` in PowerShell is WSL's launcher, not Git Bash.
+- opencode v2 comes from `curl -fsSL https://opencode.ai/v2/install | bash -s -- --no-modify-path`, run in Git Bash. It installs to `~\.opencode\bin`, which `env.sh` and the PowerShell profile put on PATH.
+- T3 themes are stored per T3 server in `~/.t3/userdata/themes/<id>.json`, so Windows and WSL each need their own copy. `t3code/` holds the tracked copies.
+
+## Windows Terminal
+
+`run_onchange_after_windows-terminal.ps1` (on Windows) and `.sh` (on WSL) copy `.chezmoitemplates/windows-terminal-settings.json` into Windows Terminal's settings folder and `wallpapers/magna-swing.png` into `C:\Users\arnab\Pictures\Wallpapers`, where the settings point for the background image. Edit the template, never the live copy, which Windows Terminal reformats. `chezmoi apply --include=scripts` runs only the script.
 
 ## Windows-side wezterm (WSL)
 

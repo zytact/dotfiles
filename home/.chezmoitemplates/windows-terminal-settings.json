@@ -1,7 +1,7 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "defaultProfile": "{708568d5-5fa0-5371-b085-e48b70e221bd}",
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "launchMode": "maximized",
     "copyOnSelect": false,
     "copyFormatting": "none",
@@ -70,7 +70,7 @@
         "defaults": {
             "colorScheme": "Magna Swing",
             "background": "#000000",
-            "backgroundImage": "%USERPROFILE%\\Pictures\\magna-swing.png",
+            "backgroundImage": "%USERPROFILE%\\Pictures\\Wallpapers\\magna-swing.png",
             "backgroundImageOpacity": 0.2,
             "backgroundImageStretchMode": "uniformToFill",
             "backgroundImageAlignment": "center",
@@ -84,6 +84,20 @@
             }
         },
         "list": [
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe -li",
+                "guid": "{3f1c2b8e-6d4a-4c7e-9b5a-2e8d7f0a1c63}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Git\\ucrt64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash",
+                "startingDirectory": "%USERPROFILE%"
+            },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",

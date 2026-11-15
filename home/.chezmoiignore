@@ -1,6 +1,8 @@
-{{- /* WSL skips desktop-only packages; other machines skip WSL-only ones */ -}}
+{{- /* WSL and Windows skip desktop-only Linux packages; Fedora skips WSL- and Windows-only ones */ -}}
+{{- $wsl := and (hasKey .chezmoi "kernel") (hasKey .chezmoi.kernel "osrelease") (contains "microsoft" (lower (.chezmoi.kernel.osrelease | toString))) -}}
+{{- $windows := eq .chezmoi.os "windows" -}}
 .claude/skills/synced
-{{- if and (hasKey .chezmoi "kernel") (contains "microsoft" (lower .chezmoi.kernel.osrelease)) }}
+{{- if or $wsl $windows }}
 .config/awesome
 .config/ghostty
 .config/kitty
@@ -25,4 +27,13 @@
 .claude/skills/agent-desktop
 .agents/skills/compress-videos
 .claude/skills/compress-videos
+{{- end }}
+{{- if $windows }}
+.zshrc
+.zshenv
+.npmrc
+.local
+.config/systemd
+{{- else }}
+Documents
 {{- end }}
