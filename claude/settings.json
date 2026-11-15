@@ -13,20 +13,6 @@
   },
   "model": "opus",
   "disableClaudeAiConnectors": true,
-  "hooks": {
-    "SessionStart": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash \"$HOME/.claude/hooks/herdr-agent-state.sh\" session",
-            "timeout": 10
-          }
-        ]
-      }
-    ]
-  },
   "statusLine": {
     "type": "command",
     "command": "input=$(cat); base=$(printf '%s' \"$input\" | npx -y ccstatusline@latest); effort=$(printf '%s' \"$input\" | node -e 'let d=\"\";process.stdin.on(\"data\",c=>d+=c).on(\"end\",()=>{const e=JSON.parse(d).effort;console.log((e&&(e.level??e))||\"unknown\")})'); printf '%s | Effort: %s\\n' \"$base\" \"$effort\"",

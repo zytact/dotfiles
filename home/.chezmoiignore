@@ -12,7 +12,6 @@
 .config/zed
 .config/fontconfig
 .config/zellij
-.config/herdr
 .config/hunk
 .config/television
 .codex
