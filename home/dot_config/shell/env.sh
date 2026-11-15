@@ -25,12 +25,14 @@ export PATH=$HOME/.opencode/bin:$PATH
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:$HOME/.lmstudio/bin"
 
+# WSL shares the Windows vaults and the Windows clone's LEARNER.md, so the laptop edits one copy.
 if [ -n "$WSL_DISTRO_NAME" ]; then
   export TEACH_HOME="/mnt/c/Users/arnab/Documents/learning"
+  export TEACH_LEARNER="/mnt/c/Users/arnab/dotfiles/teach/LEARNER.md"
 else
   export TEACH_HOME="$HOME/Documents/learning"
+  export TEACH_LEARNER="$HOME/dotfiles/teach/LEARNER.md"
 fi
-export TEACH_LEARNER="$HOME/dotfiles/teach/LEARNER.md"
 
 # Claude Code goes through the local CLIProxyAPI on Fedora. WSL only uses its proxy from T3.
 if [ ! -e /proc/sys/fs/binfmt_misc/WSLInterop ] && [ -f "$HOME/.config/systemd/user/cliproxyapi.service" ] && [ -n "$CLIPROXY_API_KEY" ]; then
@@ -41,10 +43,13 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# Windows pnpm keeps its own home in %LOCALAPPDATA%, so Git Bash leaves it alone.
+if [ "${OS:-}" != Windows_NT ]; then
+  export PNPM_HOME="$HOME/.local/share/pnpm"
+  case ":$PATH:" in
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
+  esac
+fi
 
 export PATH="$HOME/.local/bin:$PATH"

@@ -11,7 +11,6 @@ if (Test-Path $secretsFile) {
 }
 Remove-Variable secretsFile, line -ErrorAction SilentlyContinue
 
-$env:Path = "$HOME\.opencode\bin;$HOME\.local\bin\agent-desktop;$env:Path"
 $env:EDITOR = 'nvim'
 $env:NVIM_APPNAME = 'lazyvim'
 $env:TEACH_HOME = "$HOME\Documents\learning"
@@ -37,5 +36,13 @@ function ccr { claude --dangerously-skip-permissions -r @args }
 function cx { codex --yolo @args }
 if (Get-Command lazygit -ErrorAction SilentlyContinue) { Set-Alias lg lazygit }
 if (Get-Command nvim -ErrorAction SilentlyContinue) { Set-Alias vim nvim }
+if (Get-Command eza -ErrorAction SilentlyContinue) {
+    Remove-Item alias:ls -Force -ErrorAction SilentlyContinue
+    function ls { eza -l --color=always --group-directories-first --icons @args }
+}
+if (Get-Command bat -ErrorAction SilentlyContinue) {
+    Remove-Item alias:cat -Force -ErrorAction SilentlyContinue
+    function cat { bat @args }
+}
 
 if (Get-Command fastfetch -ErrorAction SilentlyContinue) { fastfetch }

@@ -1,6 +1,6 @@
 # AGENTS
 
-Dotfiles managed with [chezmoi](https://www.chezmoi.io). `.chezmoiroot` points at `home/`, the source state. Everything outside `home/` is reference or build material and is not deployed. The one exception is `teach/LEARNER.md`, the teach skill's learner profile. `TEACH_LEARNER` in `env.sh` points at it, so it is read and written in place and synced through git.
+Dotfiles managed with [chezmoi](https://www.chezmoi.io). `.chezmoiroot` points at `home/`, the source state. Everything outside `home/` is reference or build material and is not deployed. The one exception is `teach/LEARNER.md`, the teach skill's learner profile. `TEACH_LEARNER` points at it, so it is read and written in place and synced through git. On the MSI laptop, WSL points at the Windows clone's copy, so the laptop edits one file.
 
 ## Working here
 
@@ -8,7 +8,7 @@ Dotfiles managed with [chezmoi](https://www.chezmoi.io). `.chezmoiroot` points a
 - Before `chezmoi apply`, check `chezmoi status`. An `M` in the first column means the live file changed since the last apply, and applying would overwrite it.
 - Symlinks are `symlink_<name>` files whose content is the link target, relative to the deployed directory.
 - Track config only. Runtime state, caches, credentials and history stay out.
-- Per-machine differences go in `home/.chezmoiignore`, which is templated: WSL and Windows skip Linux desktop tools, Fedora skips WSL- and Windows-only ones, and Windows also skips zsh, `.local` and systemd. Use `.tmpl` files for smaller differences, and shell guards (`[ -f ... ]`, `command -v`) for optional tools.
+- Per-machine differences go in `home/.chezmoiignore`, which is templated: WSL and Windows skip Linux desktop tools, Fedora skips WSL- and Windows-only ones, and Windows also skips zsh, `xdg-open` and systemd. Use `.tmpl` files for smaller differences, and shell guards (`[ -f ... ]`, `command -v`) for optional tools.
 - There is no build, test or lint. Check with `chezmoi diff`, `chezmoi status` and `chezmoi apply -n -v`.
 
 ## Machines
@@ -50,7 +50,7 @@ Fedora and Windows (MSI) each run their own CLIProxyAPI, which pools Claude subs
 
 ## Agent session backups
 
-`backup-agent-sessions` uploads raw Claude Code, Codex and OpenCode sessions to a restic repo in the R2 bucket `agent-sessions`. A daily T3 scheduled task runs it on each machine: WSL (restic host `MSI`) at 22:00, Fedora (host `fedora`) at 03:00. restic is the static binary from its GitHub releases in `~/.local/bin`, untracked. Credentials are in `~/.secrets`, and restic needs the R2 keys as `AWS_*`. To read the repo:
+`backup-agent-sessions` uploads raw Claude Code, Codex and OpenCode sessions to a restic repo in the R2 bucket `agent-sessions`. A daily T3 scheduled task runs it on each machine: WSL (restic host `MSI`) and Windows (host `MSI-windows`, set by the script because both report the hostname `MSI`) at 22:00, Fedora (host `fedora`) at 03:00. On Linux, restic is the static binary from its GitHub releases in `~/.local/bin`, untracked. On Windows it comes from winget, and the script runs in Git Bash. Credentials are in `~/.secrets`, and restic needs the R2 keys as `AWS_*`. To read the repo:
 
 ```bash
 . ~/.secrets; export AWS_ACCESS_KEY_ID=$R2_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$R2_SECRET_ACCESS_KEY AWS_DEFAULT_REGION=auto
@@ -66,11 +66,13 @@ The repo keeps every snapshot forever. Never run `restic forget` or `restic prun
 
 ## Windows
 
-- chezmoi, starship and fastfetch come from winget. Symlinks need Developer Mode, which is on.
+- chezmoi, starship, fastfetch, restic, Poppler and the CLI tools come from winget. tectonic is the release zip in `~\.local\bin\tectonic`. Symlinks need Developer Mode, which is on.
+- `run_onchange_after_windows-env.ps1` sets user environment variables, which T3 and its scheduled runs see too. `XDG_CONFIG_HOME`, `XDG_DATA_HOME`, `XDG_STATE_HOME` and `XDG_CACHE_HOME` give the Linux layout under `~`, and PATH gains the opencode, agent-desktop, tectonic and is-dl folders. is-dl, nvim, lazygit and gh follow XDG, so gh reads `~\.config\gh`. Running processes keep their old environment, so restart T3 and terminals after changing it.
+- is-dl is installed by hand from its release `is-dl.tgz`: `npm install --prefix ~\.local\share\is-dl\versions\<version>`, `playwright install chromium` from there, and a junction `current` to that folder. Its `install.sh` needs symlinks and a bash launcher. job-apply runs on Windows; its state and is-dl data moved from WSL on 2026-11-15.
 - Line endings: Git for Windows sets `core.autocrlf=true` system-wide, which checks out CRLF and breaks bash scripts. The tracked `.gitconfig` turns it off for every clone, and `.gitattributes` forces LF in this repo.
 - The PowerShell 7 profile is `home/Documents/PowerShell/Microsoft.PowerShell_profile.ps1`. It loads every `export NAME=value` line of `~\.secrets` (a copy of the WSL one) into `$env:`, starts starship, then fastfetch.
 - Bash is Git Bash, which reads the deployed `.bashrc` and so `env.sh` and `~/.secrets`. Plain `bash` in PowerShell is WSL's launcher, not Git Bash.
-- opencode v2 comes from `curl -fsSL https://opencode.ai/v2/install | bash -s -- --no-modify-path`, run in Git Bash. It installs to `~\.opencode\bin`, which `env.sh` and the PowerShell profile put on PATH.
+- opencode v2 comes from `curl -fsSL https://opencode.ai/v2/install | bash -s -- --no-modify-path`, run in Git Bash. It installs to `~\.opencode\bin`, which `env.sh` and the env script put on PATH.
 - T3 themes are stored per T3 server in `~/.t3/userdata/themes/<id>.json`, so Windows and WSL each need their own copy. `t3code/` holds the tracked copies.
 
 ## Windows Terminal
