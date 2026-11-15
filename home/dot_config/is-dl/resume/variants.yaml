@@ -718,3 +718,43 @@ variants:
     sections: [education, experience, projects, skills]
     lead: [proj-system, exp-frint, proj-inventrack]
     drop: [exp-nits-2025, exp-gdg, exp-picard, nits-benchmark, nits-fusion, proj-gramgrab, proj-compress, proj-strokeshare, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, system-oauth-adr, system-tech, inventrack-tech]
+
+  vaiu-swe-intern:
+    headline: "Full Stack Developer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack, proj-strokeshare]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, skills-agentic]
+
+  lexsi-agent-intern:
+    headline: "AI Agent Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [proj-system, exp-frint, exp-nits-2026, proj-inventrack]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-tech, proj-compress, proj-strokeshare, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, inventrack-tech, frint-tech]
+
+  appinventiv-swe-intern:
+    headline: "Software Engineer"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-system, proj-inventrack, exp-picard]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, skills-agentic]
+
+
+  a4g-ai-product-intern:
+    headline: "Full Stack Developer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [proj-system, exp-frint, proj-inventrack, proj-strokeshare]
+    drop: [exp-nits-2025, nits-benchmark, nits-fusion, nits-tech, proj-compress, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, picard-tech, system-oauth-adr, strokeshare-tests, strokeshare-tech, inventrack-tech, frint-tech, skills-agentic]
+
+
+
+  nammu-swe-intern:
+    headline: "Full Stack Developer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [exp-frint, proj-inventrack, proj-system, exp-picard]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, system-oauth-adr, compress-target, compress-size, proj-strokeshare, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic]
+
+
+  elevenlabs-fullstack:
+    headline: "Full Stack Developer, AI Products"
+    sections: [education, experience, projects, skills]
+    lead: [proj-system, exp-frint, proj-inventrack, exp-picard]
+    drop: [exp-nits-2025, exp-gdg, nits-benchmark, nits-fusion, system-oauth-adr, compress-target, compress-size, proj-strokeshare, proj-gramgrab, proj-exif-tuner, proj-rustcharge, proj-tsukuyomi, proj-jiyu, skills-exposure, skills-agentic]
