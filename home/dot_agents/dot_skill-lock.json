@@ -339,9 +339,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "job-apply/SKILL.md",
-      "skillFolderHash": "10bc5166d17a65bcf1b406b5ce81bab0c3fa0d88",
+      "skillFolderHash": "de2c17f53ef9105e65d7a23e04cfc31985712ef0",
       "installedAt": "2026-10-07T23:52:13.901Z",
-      "updatedAt": "2026-11-11T18:12:45.140Z"
+      "updatedAt": "2026-11-15T13:10:50.252Z"
     },
     "computer-use-linux": {
       "source": "zytact/skills",
