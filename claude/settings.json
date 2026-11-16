@@ -40,7 +40,7 @@
   },
   "autoMemoryEnabled": false,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "custom:magna-swing",
+  "theme": "custom:t3-clawd",
   "autoCompactEnabled": true,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,

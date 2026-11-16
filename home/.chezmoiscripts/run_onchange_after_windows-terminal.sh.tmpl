@@ -1,12 +1,9 @@
 {{- if and (hasKey .chezmoi "kernel") (hasKey .chezmoi.kernel "osrelease") (contains "microsoft" (lower (.chezmoi.kernel.osrelease | toString))) -}}
 #!/bin/sh
-# Copies the Windows Terminal settings and its wallpaper to the Windows side.
+# Copies the Windows Terminal settings to the Windows side.
 # settings hash: {{ include ".chezmoitemplates/windows-terminal-settings.json" | sha256sum }}
-# wallpaper hash: {{ output "sha256sum" (joinPath .chezmoi.workingTree "wallpapers/magna-swing.png") | trim }}
 set -eu
 local_app_data=$(wslpath "$(cmd.exe /c 'echo %LOCALAPPDATA%' 2>/dev/null | tr -d '\r')")
 target="$local_app_data/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 cp "{{ .chezmoi.sourceDir }}/.chezmoitemplates/windows-terminal-settings.json" "$target"
-pictures=$(wslpath "$(cmd.exe /c 'echo %USERPROFILE%' 2>/dev/null | tr -d '\r')")/Pictures/Wallpapers
-cp "{{ .chezmoi.workingTree }}/wallpapers/magna-swing.png" "$pictures/magna-swing.png"
 {{- end }}

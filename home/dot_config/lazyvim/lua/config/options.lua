@@ -13,7 +13,7 @@ vim.o.exrc = true
 vim.o.termguicolors = true
 vim.opt.fillchars = { eob = "~" }
 vim.o.background = "dark"
-vim.g.magna_swing_transparent = true
+vim.g.t3_clawd_transparent = true
 vim.o.wrap = true
 vim.o.undodir = vim.fn.expand("~/.undodir")
 

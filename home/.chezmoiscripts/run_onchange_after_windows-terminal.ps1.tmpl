@@ -1,9 +1,7 @@
 {{- if eq .chezmoi.os "windows" -}}
-# Windows twin of run_onchange_after_windows-terminal.sh: copies the Windows Terminal settings and its wallpaper.
+# Windows twin of run_onchange_after_windows-terminal.sh: copies the Windows Terminal settings.
 # settings hash: {{ include ".chezmoitemplates/windows-terminal-settings.json" | sha256sum }}
-# wallpaper hash: {{ joinPath .chezmoi.workingTree "wallpapers/magna-swing.png" | include | sha256sum }}
 $ErrorActionPreference = 'Stop'
 $target = "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 Copy-Item '{{ joinPath .chezmoi.sourceDir ".chezmoitemplates/windows-terminal-settings.json" }}' $target -Force
-Copy-Item '{{ joinPath .chezmoi.workingTree "wallpapers/magna-swing.png" }}' "$env:USERPROFILE\Pictures\Wallpapers\magna-swing.png" -Force
 {{- end }}

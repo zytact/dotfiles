@@ -77,7 +77,7 @@ The repo keeps every snapshot forever. Never run `restic forget` or `restic prun
 
 ## Windows Terminal
 
-`run_onchange_after_windows-terminal.ps1` (on Windows) and `.sh` (on WSL) copy `.chezmoitemplates/windows-terminal-settings.json` into Windows Terminal's settings folder and `wallpapers/magna-swing.png` into `C:\Users\arnab\Pictures\Wallpapers`, where the settings point for the background image. Edit the template, never the live copy, which Windows Terminal reformats. `chezmoi apply --include=scripts` runs only the script.
+`run_onchange_after_windows-terminal.ps1` (on Windows) and `.sh` (on WSL) copy `.chezmoitemplates/windows-terminal-settings.json` into Windows Terminal's settings folder. Edit the template, never the live copy, which Windows Terminal reformats. `chezmoi apply --include=scripts` runs only the script.
 
 ## Windows-side wezterm (WSL)
 

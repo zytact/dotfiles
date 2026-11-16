@@ -1,4 +1,4 @@
-palette = "magna_swing"
+palette = "t3_clawd"
 add_newline = false
 command_timeout = 2000
 scan_timeout = 50
@@ -569,6 +569,37 @@ crust = "#000000"
 line = "#1f1f1f"
 fg = "#f5f5f5"
 select = "#343a47"
+
+[palettes.t3_clawd]
+rosewater = "#efeff0"
+flamingo = "#f08a75"
+pink = "#dbbedb"
+mauve = "#d97757"
+red = "#e5644e"
+maroon = "#f08a75"
+peach = "#e8937a"
+yellow = "#e0a458"
+green = "#a8b77f"
+teal = "#8fbcaa"
+sky = "#abd1c2"
+sapphire = "#8fbcaa"
+blue = "#d4a27f"
+lavender = "#d97757"
+text = "#efeff0"
+subtext1 = "#a3a3a3"
+subtext0 = "#8e8f8f"
+overlay2 = "#7e7f80"
+overlay1 = "#3c3c3c"
+overlay0 = "#2e2e2e"
+surface2 = "#262626"
+surface1 = "#262626"
+surface0 = "#2e2e2e"
+base = "#191919"
+mantle = "#1f1f1f"
+crust = "#191919"
+line = "#2e2e2e"
+fg = "#efeff0"
+select = "#44342d"
 
 [palettes.t3_light]
 rosewater = "#27272a"
