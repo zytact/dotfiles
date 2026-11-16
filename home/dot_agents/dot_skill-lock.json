@@ -276,9 +276,10 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "is-dl/SKILL.md",
-      "skillFolderHash": "099e9b750bb726a4709f0d9d91dbef74e6a8ecd1",
+      "skillFolderHash": "87ccb3e9316c80482177557ba242d57fd9094354",
       "installedAt": "2026-08-26T19:55:05.142Z",
-      "updatedAt": "2026-11-09T19:38:44.117Z"
+      "updatedAt": "2026-11-16T14:31:56.871Z",
+      "commit": "a2ea3b296db2ab35e6680ace42b2020491bae341"
     },
     "gh-stack": {
       "source": "github/gh-stack",
@@ -339,9 +340,10 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "job-apply/SKILL.md",
-      "skillFolderHash": "de2c17f53ef9105e65d7a23e04cfc31985712ef0",
+      "skillFolderHash": "79c177663bbe88026dd09ab1b3563079bf138592",
       "installedAt": "2026-10-07T23:52:13.901Z",
-      "updatedAt": "2026-11-15T13:10:50.252Z"
+      "updatedAt": "2026-11-16T14:31:56.940Z",
+      "commit": "a2ea3b296db2ab35e6680ace42b2020491bae341"
     },
     "computer-use-linux": {
       "source": "zytact/skills",
