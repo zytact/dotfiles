@@ -154,7 +154,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "t3-clawd-light",
+      colorscheme = "t3-clawd",
     },
   },
 

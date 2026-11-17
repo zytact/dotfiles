@@ -40,7 +40,7 @@
   },
   "autoMemoryEnabled": false,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "custom:t3-clawd-light",
+  "theme": "custom:t3-clawd",
   "autoCompactEnabled": true,
   "switchModelsOnFlag": false,
   "agentPushNotifEnabled": true,
