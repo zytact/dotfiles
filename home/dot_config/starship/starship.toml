@@ -1,4 +1,4 @@
-palette = "t3_clawd"
+palette = "t3_clawd_light"
 add_newline = false
 command_timeout = 2000
 scan_timeout = 50
@@ -600,6 +600,37 @@ crust = "#191919"
 line = "#2e2e2e"
 fg = "#efeff0"
 select = "#44342d"
+
+[palettes.t3_clawd_light]
+rosewater = "#141413"
+flamingo = "#9a3624"
+pink = "#75497a"
+mauve = "#c96442"
+red = "#b5452f"
+maroon = "#9a3624"
+peach = "#b5573a"
+yellow = "#a86a1c"
+green = "#5f7a3a"
+teal = "#3d7a68"
+sky = "#2e6656"
+sapphire = "#3d7a68"
+blue = "#9a6a45"
+lavender = "#c96442"
+text = "#141413"
+subtext1 = "#6b6a64"
+subtext0 = "#73726c"
+overlay2 = "#87867f"
+overlay1 = "#d1cfc5"
+overlay0 = "#e5e3da"
+surface2 = "#edebe3"
+surface1 = "#edebe3"
+surface0 = "#e5e3da"
+base = "#faf9f5"
+mantle = "#f5f4ed"
+crust = "#faf9f5"
+line = "#e5e3da"
+fg = "#141413"
+select = "#f2d6c9"
 
 [palettes.t3_light]
 rosewater = "#27272a"

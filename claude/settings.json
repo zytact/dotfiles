@@ -40,9 +40,9 @@
   },
   "autoMemoryEnabled": false,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "custom:t3-clawd",
+  "theme": "custom:t3-clawd-light",
   "autoCompactEnabled": true,
+  "switchModelsOnFlag": false,
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true,
-  "switchModelsOnFlag": false
+  "voiceEnabled": true
 }

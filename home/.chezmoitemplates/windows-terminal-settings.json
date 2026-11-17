@@ -68,8 +68,8 @@
     ],
     "profiles": {
         "defaults": {
-            "colorScheme": "T3 Clawd",
-            "background": "#191919",
+            "colorScheme": "T3 Clawd Light",
+            "background": "#faf9f5",
             "opacity": 100,
             "useAcrylic": false,
             "font": {
@@ -212,6 +212,29 @@
             "brightPurple": "#dbbedb",
             "brightCyan": "#abd1c2",
             "brightWhite": "#ffffff"
+        },
+        {
+            "name": "T3 Clawd Light",
+            "foreground": "#141413",
+            "background": "#faf9f5",
+            "cursorColor": "#c96442",
+            "selectionBackground": "#f2d6c9",
+            "black": "#3d3d3a",
+            "red": "#b5452f",
+            "green": "#5f7a3a",
+            "yellow": "#a86a1c",
+            "blue": "#4a6688",
+            "purple": "#8a5a8a",
+            "cyan": "#3d7a68",
+            "white": "#87867f",
+            "brightBlack": "#73726c",
+            "brightRed": "#9a3624",
+            "brightGreen": "#4e6630",
+            "brightYellow": "#8c5a16",
+            "brightBlue": "#3a5574",
+            "brightPurple": "#75497a",
+            "brightCyan": "#2e6656",
+            "brightWhite": "#9c9a92"
         },
         {
             "name": "T3 Light",

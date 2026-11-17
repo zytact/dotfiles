@@ -1,7 +1,7 @@
 {
   "name": "arnab-themes",
   "displayName": "Arnab Themes",
-  "description": "Personal color themes: T3 Clawd, Magna Swing, T3 Dark, T3 Light, Washi, Washi Neutral, Targaryen, Targaryen Light, Okibi and Okibi Light",
+  "description": "Personal color themes: T3 Clawd, T3 Clawd Light, Magna Swing, T3 Dark, T3 Light, Washi, Washi Neutral, Targaryen, Targaryen Light, Okibi and Okibi Light",
   "version": "1.0.0",
   "publisher": "arnab",
   "private": true,
@@ -17,6 +17,11 @@
         "label": "T3 Clawd",
         "uiTheme": "vs-dark",
         "path": "./themes/t3-clawd-color-theme.json"
+      },
+      {
+        "label": "T3 Clawd Light",
+        "uiTheme": "vs",
+        "path": "./themes/t3-clawd-light-color-theme.json"
       },
       {
         "label": "Targaryen",

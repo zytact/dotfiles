@@ -157,6 +157,25 @@ config.color_schemes = {
 			new_tab_hover = { bg_color = "#262626", fg_color = "#d97757" },
 		},
 	},
+	["T3 Clawd Light"] = {
+		foreground = "#141413",
+		background = "#faf9f5",
+		cursor_bg = "#c96442",
+		cursor_border = "#c96442",
+		cursor_fg = "#faf9f5",
+		selection_bg = "#f2d6c9",
+		selection_fg = "#141413",
+		ansi = { "#3d3d3a", "#b5452f", "#5f7a3a", "#a86a1c", "#4a6688", "#8a5a8a", "#3d7a68", "#87867f" },
+		brights = { "#73726c", "#9a3624", "#4e6630", "#8c5a16", "#3a5574", "#75497a", "#2e6656", "#9c9a92" },
+		tab_bar = {
+			background = "#f5f4ed",
+			active_tab = { bg_color = "#faf9f5", fg_color = "#141413", intensity = "Bold" },
+			inactive_tab = { bg_color = "#f5f4ed", fg_color = "#73726c" },
+			inactive_tab_hover = { bg_color = "#edebe3", fg_color = "#141413" },
+			new_tab = { bg_color = "#f5f4ed", fg_color = "#73726c" },
+			new_tab_hover = { bg_color = "#edebe3", fg_color = "#c96442" },
+		},
+	},
 	["T3 Light"] = {
 		foreground = "#27272a",
 		background = "#fcfcfc",
@@ -453,7 +472,7 @@ config.color_schemes = {
 
 }
 
-config.color_scheme = "T3 Clawd"
+config.color_scheme = "T3 Clawd Light"
 
 -- On Windows, open WSL Ubuntu by default
 if wezterm.target_triple:find("windows") then
