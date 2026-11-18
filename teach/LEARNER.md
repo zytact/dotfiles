@@ -11,6 +11,7 @@
 - Grade the method when he's studying. He works without a calculator and says "divide this by that" in place of the number. If the setup and operations are right, count it right, state the value yourself, and don't lecture about exam scoring (he pushed back on this on 2026-11-09).
 - He dictates answers through Wispr Flow, so odd numbers or symbols may be transcription errors ("2/5 × 100%" came out as "200%"). Don't pass over a suspected slip: say what it says, what it should say, and ask whether it was dictation. He wants to be sure.
 - Breaks: every 15 minutes of study, ask him to take a 10 minute break (asked 2026-11-16, R exam cram). Check the clock each turn.
+- Ask which hours are free before scheduling. Don't fill gaps in his day by assumption (2026-11-18: assumed 1-3 pm was free, it wasn't).
 - Respect skips. If he says he already knows a part, or says "no need to retry, move on", move on and log it.
 
 ## Patterns
