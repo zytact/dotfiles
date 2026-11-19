@@ -341,10 +341,10 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
       "skillPath": "job-apply/SKILL.md",
-      "skillFolderHash": "79c177663bbe88026dd09ab1b3563079bf138592",
+      "skillFolderHash": "87c8b3dee26ec984a902b6972c1a7c3e6fb46329",
       "installedAt": "2026-10-07T23:52:13.901Z",
-      "updatedAt": "2026-11-16T14:31:56.940Z",
-      "commit": "a2ea3b296db2ab35e6680ace42b2020491bae341"
+      "updatedAt": "2026-11-19T14:20:14.116Z",
+      "commit": "23ff6769bfa80c7afc31bd916583fb139a4742e5"
     },
     "computer-use-linux": {
       "source": "zytact/skills",
