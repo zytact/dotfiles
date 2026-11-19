@@ -33,6 +33,10 @@ Skills run on Linux, WSL and Windows. A skill gives one set of commands, and its
 
 Some skills are machine-specific: `agent-desktop` runs on WSL and Windows, `compress-videos` is WSL only and `computer-use-linux` is Fedora only, enforced by `.chezmoiignore`. `~/.agents/.skill-lock.json` is shared and lists all of them, so `npx skills update` may install the other machine's skills too. Afterwards, delete it from `~/.agents/skills/` and `~/.claude/skills/` on the wrong machine.
 
+## Antigravity
+
+The Antigravity CLI (`agy`) runs on WSL and Windows. Its global rules file `~/.gemini/config/AGENTS.md` links to `~/.claude/CLAUDE.md`, and `~/.gemini/config/skills.json` adds `~/.agents/skills`. Skills with `disable-model-invocation: true` stay hidden from the model, as in Claude Code. Antigravity has only preset color schemes and no custom themes, so `antigravity/settings.json` uses `terminal`, which takes the terminal's T3 Clawd colors. `~/.gemini/antigravity-cli/settings.json` links to that file, because agy rewrites it.
+
 ## Computer use
 
 WSL and Windows drive the Windows desktop with the `agent-desktop` CLI. The Windows binary lives in `C:\Users\arnab\.local\bin\agent-desktop\`, which the PowerShell profile puts on PATH and WSL links from `~/.local/bin/agent-desktop`. Neither is tracked. To update it, extract the `x86_64-pc-windows-msvc` archive from the GitHub releases of `vercel-labs/agent-desktop` into that folder. Fedora uses the `computer-use-linux` MCP server, because agent-desktop has no mouse input on Wayland.
