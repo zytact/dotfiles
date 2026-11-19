@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 target=$1
-[[ -e $target ]] && target=$(wslpath -w "$target")
-explorer.exe "$target" || true
+if [[ -e $target ]]; then
+  explorer.exe "$(wslpath -w "$target")" || true
+else
+  rundll32.exe url.dll,FileProtocolHandler "$target"
+fi
