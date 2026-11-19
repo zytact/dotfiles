@@ -25,7 +25,7 @@ MCP servers are machine-specific and untracked. They live in `~/.claude.json` an
 
 ## Skills
 
-Skills are installed with `npx skills` from `zytact/skills` and other GitHub repos. `~/.agents/.skill-lock.json` names each skill's source. Each install lands in `~/.agents/skills/` (read by OpenCode and Codex), with a symlink in `~/.claude/skills/` for Claude Code. After `npx skills add` or `update`, run `chezmoi add ~/.agents ~/.claude/skills` and commit.
+Skills are installed with `npx skills` from `zytact/skills` and other GitHub repos. `~/.agents/.skill-lock.json` names each skill's source. Each install lands in `~/.agents/skills/` (read by OpenCode and Codex), with symlinks in `~/.claude/skills/` for Claude Code and `~/.gemini/config/skills/` for Antigravity. After `npx skills add` or `update`, run `chezmoi add ~/.agents ~/.claude/skills ~/.gemini/config/skills` and commit.
 
 Skills from `zytact/skills` are Arnab's own, and their copies under `home/dot_agents/skills/` are install output that the next update overwrites. To change one, edit it in `zytact/skills`, cloned at `~/Projects/skills` on every machine: pull, commit, push, then `npx skills update -g -y <skill>` from WSL or Fedora and the `chezmoi add` above. Pull the clone and the dotfiles on the other machines too.
 
@@ -35,7 +35,7 @@ Some skills are machine-specific: `agent-desktop` runs on WSL and Windows, `comp
 
 ## Antigravity
 
-The Antigravity CLI (`agy`) runs on WSL and Windows. Its global rules file `~/.gemini/config/AGENTS.md` links to `~/.claude/CLAUDE.md`, and `~/.gemini/config/skills.json` adds `~/.agents/skills`. Skills with `disable-model-invocation: true` stay hidden from the model, as in Claude Code. Antigravity has only preset color schemes and no custom themes, so `antigravity/settings.json` uses `terminal`, which takes the terminal's T3 Clawd colors. `~/.gemini/antigravity-cli/settings.json` links to that file, because agy rewrites it.
+The Antigravity CLI (`agy`) runs on WSL and Windows. Its global rules file `~/.gemini/config/AGENTS.md` links to `~/.claude/CLAUDE.md`. Skills reach it through `~/.gemini/config/skills/`, which `npx skills` fills with per-skill links because `antigravity-cli` is in the lock's `lastSelectedAgents`. T3 runs agy with its own `GEMINI_HOME` and links in only that skills folder and `~/.gemini/antigravity-cli/skills`, so `skills.json` and `rules.json` manifests never reach T3. Skills with `disable-model-invocation: true` stay hidden from the model, as in Claude Code. Antigravity has only preset color schemes and no custom themes, so `antigravity/settings.json` uses `terminal`, which takes the terminal's T3 Clawd colors. `~/.gemini/antigravity-cli/settings.json` links to that file, because agy rewrites it.
 
 ## Computer use
 

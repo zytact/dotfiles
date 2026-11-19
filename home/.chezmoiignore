@@ -20,16 +20,20 @@
 .ideavimrc
 .agents/skills/computer-use-linux
 .claude/skills/computer-use-linux
+.gemini/config/skills/computer-use-linux
 {{- else }}
 .local/bin/xdg-open
 .agents/skills/agent-desktop
 .claude/skills/agent-desktop
+.gemini/config/skills/agent-desktop
 .agents/skills/compress-videos
 .claude/skills/compress-videos
+.gemini/config/skills/compress-videos
 {{- end }}
 {{- if $windows }}
 .agents/skills/compress-videos
 .claude/skills/compress-videos
+.gemini/config/skills/compress-videos
 .zshrc
 .zshenv
 .npmrc
