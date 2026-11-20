@@ -212,10 +212,11 @@
       "source": "zytact/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/zytact/skills.git",
+      "commit": "4bd571ec14b274a493512860d91294df2393d6e8",
       "skillPath": "html-communication/SKILL.md",
-      "skillFolderHash": "2a4031eea02e84d740be4d741aea155f5b7fb4db",
+      "skillFolderHash": "168894c60c3bf61024038a618a6ad68b1269b494",
       "installedAt": "2026-08-13T01:49:46.317Z",
-      "updatedAt": "2026-08-13T04:36:49.288Z"
+      "updatedAt": "2026-11-20T18:26:47.531Z"
     },
     "unslop": {
       "source": "zytact/skills",

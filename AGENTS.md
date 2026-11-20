@@ -4,6 +4,7 @@ Dotfiles managed with [chezmoi](https://www.chezmoi.io). `.chezmoiroot` points a
 
 ## Working here
 
+- Arnab's agents are Claude Code and Antigravity. Make every agent change, such as a skill, rule or setting, for both.
 - Deployed files are copies. Edit the source under `home/`, then `chezmoi apply`. If a live file changed, pull it back with `chezmoi add <target>`.
 - Before `chezmoi apply`, check `chezmoi status`. An `M` in the first column means the live file changed since the last apply, and applying would overwrite it.
 - Symlinks are `symlink_<name>` files whose content is the link target, relative to the deployed directory.
